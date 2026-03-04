@@ -277,8 +277,8 @@
     <div class="container" style="max-width: 700px; text-align: center;">
       <h2>More Tools Coming Soon</h2>
       <p style="font-size: 1.05rem; margin-top: var(--space-md); margin-bottom: var(--space-2xl);">We're constantly adding new calculators and simulators to help you make better decisions. Join our community to get notified when new tools launch.</p>
-      <form style="display: flex; gap: 12px; max-width: 480px; margin-left: auto; margin-right: auto; flex-wrap: wrap;" id="join-form">
-        <input type="email" placeholder="Enter your email" class="form-input" style="flex: 1; min-width: 200px;" required>
+      <form action="javascript:void(0)" onsubmit="handleEmailSubmit(event)" style="display: flex; gap: 12px; max-width: 480px; margin-left: auto; margin-right: auto; flex-wrap: wrap;" id="join-form">
+        <input type="email" placeholder="Enter your email" aria-label="Email address" class="form-input" style="flex: 1; min-width: 200px;" required>
         <button type="submit" class="btn btn-cta">Get Notified →</button>
       </form>
       <p style="color: var(--text-muted); font-size: 0.8rem; margin-top: var(--space-md);">Free forever. No credit card required. Unsubscribe anytime.</p>

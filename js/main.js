@@ -153,4 +153,27 @@
     return num.toFixed(1) + '%';
   };
 
+  // ── Email signup handler ──
+  window.handleEmailSubmit = function(event) {
+    event.preventDefault();
+    const form = event.target;
+    const input = form.querySelector('input[type="email"]');
+    const button = form.querySelector('button[type="submit"]');
+
+    if (input && input.value.trim()) {
+      const originalText = button.textContent;
+      button.textContent = 'Thank you! Check your email.';
+      button.disabled = true;
+      button.style.opacity = '0.6';
+
+      // Reset after 3 seconds
+      setTimeout(() => {
+        button.textContent = originalText;
+        button.disabled = false;
+        button.style.opacity = '1';
+        input.value = '';
+      }, 3000);
+    }
+  };
+
 })();

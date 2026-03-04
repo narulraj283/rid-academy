@@ -736,6 +736,42 @@ tr:hover td { background: var(--teal-bg); }
 .article-card-body p { font-size: 0.9rem; flex: 1; }
 .article-card-meta { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-md); }
 
+/* ── Filter Buttons ── */
+.filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg-white);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: var(--teal-bg);
+}
+
+.filter-btn.active {
+  background: var(--teal);
+  color: white;
+  border-color: var(--teal);
+}
+
+.filter-btn.active:hover {
+  background: var(--teal-dark);
+  border-color: var(--teal-dark);
+}
+
 /* ── Glossary ── */
 .glossary-letter {
   font-size: 2rem;
@@ -787,6 +823,64 @@ tr:hover td { background: var(--teal-bg); }
 /* No-JS fallback: show all elements if JS hasn't loaded */
 @media (prefers-reduced-motion: reduce) {
   .animate-in { opacity: 1; transform: none; transition: none; }
+}
+
+/* ── Tool Cards ── */
+.tool-card {
+  display: flex;
+  flex-direction: column;
+  background: var(--bg-white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  transition: all var(--duration) var(--ease);
+  height: 100%;
+}
+
+.tool-card:hover {
+  box-shadow: var(--shadow-lg);
+  border-color: transparent;
+  transform: translateY(-2px);
+}
+
+.tool-card h3 { margin-bottom: var(--space-md); }
+.tool-card p { flex: 1; }
+
+.tool-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--space-md);
+}
+
+.tool-card-features {
+  margin: var(--space-lg) 0;
+}
+
+/* ── Filter Buttons ── */
+.filter-btn {
+  padding: 8px 16px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 500;
+  background: var(--bg-white);
+  color: var(--text-secondary);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-full);
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  white-space: nowrap;
+}
+
+.filter-btn:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+}
+
+.filter-btn.active {
+  background: var(--teal);
+  color: white;
+  border-color: var(--teal);
 }
 
 /* ── Share Buttons ── */

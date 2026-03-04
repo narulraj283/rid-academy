@@ -225,8 +225,8 @@
     <div class="container text-center" style="max-width: 700px;">
       <h2 style="color: white; font-size: 2.25rem;">Join the Movement</h2>
       <p style="color: rgba(255,255,255,0.8); font-size: 1.1rem; margin-top: 16px;">Be part of a community of 10,000+ dental professionals who are taking control of their practices and their futures.</p>
-      <form style="margin-top: 32px; display: flex; gap: 12px; max-width: 480px; margin-left: auto; margin-right: auto; flex-wrap: wrap;">
-        <input type="email" placeholder="Enter your email" class="form-input" style="flex: 1; min-width: 200px; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white;">
+      <form action="javascript:void(0)" onsubmit="handleEmailSubmit(event)" style="margin-top: 32px; display: flex; gap: 12px; max-width: 480px; margin-left: auto; margin-right: auto; flex-wrap: wrap;">
+        <input type="email" placeholder="Enter your email" aria-label="Email address" class="form-input" style="flex: 1; min-width: 200px; border-color: rgba(255,255,255,0.2); background: rgba(255,255,255,0.1); color: white;" required>
         <button type="submit" class="btn btn-cta">Join Free →</button>
       </form>
       <p style="color: rgba(255,255,255,0.5); font-size: 0.8rem; margin-top: 12px;">Free forever. No credit card required. Unsubscribe anytime.</p>

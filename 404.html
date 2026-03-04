@@ -31,78 +31,97 @@
 </script>
 </head>
 <body>
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="/">RID Academy</a>
-            </div>
-            <ul class="nav-menu">
-                <li><a href="/" class="nav-link">Home</a></li>
-                <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
-                <li><a href="/resources/" class="nav-link">Resources</a></li>
-                <li><a href="/blog/" class="nav-link">Blog</a></li>
-                <li><a href="/tools/" class="nav-link">Tools</a></li>
-            </ul>
-            <div class="nav-toggle">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-    </nav>
-
-    <div class="error-container">
-        <div class="error-content">
-            <div class="error-code">
-                <h1>404</h1>
-            </div>
-            <div class="error-message">
-                <h2>Page Not Found</h2>
-                <p>Looks like this page went out of network.</p>
-                <p class="error-subtext">We couldn't find the page you're looking for. It might have been moved or removed.</p>
-            </div>
-            <div class="error-actions">
-                <a href="/" class="btn-primary">Back to Home</a>
-                <a href="/tools/" class="btn-secondary">Explore Tools</a>
-                <a href="/blog/" class="btn-secondary">Read Blog</a>
-            </div>
-            <div class="error-help">
-                <h3>Still need help?</h3>
-                <p>Try these popular pages:</p>
-                <ul class="error-links">
-                    <li><a href="/pages/glossary.html">Dental Insurance Glossary</a></li>
-                    <li><a href="/resources/">Free Resources</a></li>
-                    <li><a href="/">Homepage</a></li>
-                </ul>
-            </div>
-        </div>
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
+  </nav>
 
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>RID Academy</h3>
-                <p>Empowering dental professionals to reduce insurance dependence and build thriving practices.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="/">Home</a></li>
-                    <li><a href="/pages/glossary.html">Glossary</a></li>
-                    <li><a href="/resources/">Resources</a></li>
-                    <li><a href="/blog/">Blog</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <p>Email: info@rida.narenlife.com</p>
-                <p>Phone: (555) 123-4567</p>
-            </div>
+  <!-- ═══ 404 ERROR SECTION ═══ -->
+  <section style="padding-top: calc(var(--nav-height) + var(--space-4xl)); padding-bottom: var(--space-4xl); text-align: center;">
+    <div class="container" style="max-width: 700px;">
+      <div style="font-size: 5rem; font-weight: 800; color: var(--coral); font-family: var(--font-mono); margin-bottom: var(--space-lg);">404</div>
+      <h1 style="color: var(--navy); margin-bottom: var(--space-md);">Page Not Found</h1>
+      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: var(--space-2xl);">Looks like this page went out of network. We couldn't find the page you're looking for. It might have been moved or removed.</p>
+
+      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-3xl);">
+        <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
+        <a href="/tools/" class="btn btn-secondary btn-lg">Explore Tools</a>
+        <a href="/blog/" class="btn btn-secondary btn-lg">Read Blog</a>
+      </div>
+
+      <div style="background: var(--bg-subtle); border-radius: var(--radius-lg); padding: var(--space-2xl); margin-top: var(--space-2xl);">
+        <h3 style="color: var(--navy); margin-bottom: var(--space-lg);">Still need help?</h3>
+        <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Try these popular pages:</p>
+        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
+          <li><a href="/pages/glossary.html" style="color: var(--teal-dark); font-weight: 500;">Dental Insurance Glossary</a></li>
+          <li><a href="/resources/" style="color: var(--teal-dark); font-weight: 500;">Free Resources</a></li>
+          <li><a href="/tools/" style="color: var(--teal-dark); font-weight: 500;">Tools & Calculators</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 48px;">
+        <div>
+          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2026 RID Academy. All rights reserved.</p>
+        <div>
+          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
+            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
+            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
+            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+          </ul>
         </div>
-    </footer>
+        <div>
+          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Learn</h4>
+          <ul class="footer-links">
+            <li><a href="/blog/">Articles & Guides</a></li>
+            <li><a href="/pages/summit.html">Annual Summit</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/pages/glossary.html">Glossary</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Company</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/about.html">About RID Academy</a></li>
+            <li><a href="/pages/community.html">Community</a></li>
+            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
+            <li><a href="mailto:info@rid.academy">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RID Academy (Reducing Insurance Dependence Academy). All rights reserved.</span>
+        <div class="flex gap-md">
+          <a href="/pages/privacy.html">Privacy Policy</a>
+          <a href="/pages/terms.html">Terms of Use</a>
+          <a href="/pages/disclaimer.html">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
 
     <script src="/js/main.js"></script>
 </body>
