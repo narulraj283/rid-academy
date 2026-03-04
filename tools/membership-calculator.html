@@ -1,0 +1,668 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Membership Plan Pricing Calculator — Find Your Optimal Price | RID Academy</title>
+  <meta name="description" content="Free membership plan pricing calculator for dentists. Calculate optimal monthly and annual pricing for your in-house membership plan based on your services, location, and target members.">
+  <meta name="keywords" content="dental membership plan pricing, in-house membership calculator, dental membership fees, practice membership plan, membership plan revenue">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Membership Plan Pricing Calculator — Find Your Optimal Price">
+  <meta property="og:description" content="Calculate optimal pricing for your dental membership plan. See projected revenue, patient savings, and break-even analysis in minutes.">
+  <meta property="og:url" content="https://test.rid.academy/tools/membership-calculator.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Membership Plan Pricing Calculator",
+    "description": "Calculate optimal pricing for your dental in-house membership plan based on your services, location, and practice type.",
+    "url": "https://test.rid.academy/tools/membership-calculator.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link active">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom: 48px;">
+    <div class="hero-bg"></div>
+    <div class="container text-center" style="max-width: 700px;">
+      <span class="badge badge-green" style="margin-bottom: 16px;">Pricing Calculator</span>
+      <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Membership Plan Pricing Calculator</h1>
+      <p>Find the optimal monthly and annual pricing for your in-house membership plan. See projected revenue, member savings, and break-even analysis instantly.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="section" style="margin-top: -48px; position: relative; z-index: 10;">
+    <div class="container tool-container">
+      <div class="card" style="padding: 40px; box-shadow: var(--shadow-xl); border: none;">
+
+        <div id="calculator-form">
+          <!-- Step 1: Practice Location -->
+          <div class="form-group">
+            <label class="form-label">Practice Location (State)</label>
+            <select id="practice-location" class="form-input">
+              <option value="1.0" selected>Select a state...</option>
+              <option value="0.85">Alabama</option>
+              <option value="0.92">Alaska</option>
+              <option value="0.88">Arizona</option>
+              <option value="0.84">Arkansas</option>
+              <option value="1.15">California</option>
+              <option value="1.08">Colorado</option>
+              <option value="1.12">Connecticut</option>
+              <option value="0.86">Delaware</option>
+              <option value="0.98">Florida</option>
+              <option value="0.89">Georgia</option>
+              <option value="1.10">Hawaii</option>
+              <option value="0.87">Idaho</option>
+              <option value="0.95">Illinois</option>
+              <option value="0.83">Indiana</option>
+              <option value="0.80">Iowa</option>
+              <option value="0.82">Kansas</option>
+              <option value="0.84">Kentucky</option>
+              <option value="0.83">Louisiana</option>
+              <option value="1.05">Maine</option>
+              <option value="1.13">Maryland</option>
+              <option value="1.15">Massachusetts</option>
+              <option value="0.97">Michigan</option>
+              <option value="1.02">Minnesota</option>
+              <option value="0.81">Mississippi</option>
+              <option value="0.85">Missouri</option>
+              <option value="0.86">Montana</option>
+              <option value="0.84">Nebraska</option>
+              <option value="1.05">Nevada</option>
+              <option value="1.08">New Hampshire</option>
+              <option value="1.18">New Jersey</option>
+              <option value="0.88">New Mexico</option>
+              <option value="1.20">New York</option>
+              <option value="0.88">North Carolina</option>
+              <option value="0.81">North Dakota</option>
+              <option value="0.93">Ohio</option>
+              <option value="0.82">Oklahoma</option>
+              <option value="1.06">Oregon</option>
+              <option value="1.10">Pennsylvania</option>
+              <option value="1.12">Rhode Island</option>
+              <option value="0.87">South Carolina</option>
+              <option value="0.80">South Dakota</option>
+              <option value="0.85">Tennessee</option>
+              <option value="0.90">Texas</option>
+              <option value="0.91">Utah</option>
+              <option value="1.07">Vermont</option>
+              <option value="1.11">Virginia</option>
+              <option value="1.13">Washington</option>
+              <option value="0.87">West Virginia</option>
+              <option value="0.92">Wisconsin</option>
+              <option value="0.86">Wyoming</option>
+            </select>
+            <div class="form-hint">This helps adjust pricing for regional cost-of-living differences.</div>
+          </div>
+
+          <!-- Step 2: Practice Type -->
+          <div class="form-group mt-lg">
+            <label class="form-label">Practice Type</label>
+            <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="practice-type" value="general" checked class="form-radio">
+                <span>General Dentistry</span>
+              </label>
+              <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
+                <input type="radio" name="practice-type" value="specialty" class="form-radio">
+                <span>Specialty (Ortho, Perio, Implants, etc.)</span>
+              </label>
+            </div>
+            <div class="form-hint">This affects pricing recommendations and break-even calculations.</div>
+          </div>
+
+          <!-- Step 3: Services Included -->
+          <div class="form-group mt-lg">
+            <label class="form-label">Services Included in Basic Plan (Your Fees)</label>
+            <div style="background: var(--bg-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 16px;">
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <input type="checkbox" id="service-cleaning" checked class="form-checkbox">
+                  <span style="font-weight: 600;">2 Cleanings Per Year</span>
+                </label>
+                <div style="display: flex; align-items: center; gap: 12px; margin-left: 32px;">
+                  <span style="font-size: 0.9rem; min-width: 80px;">Fee each:</span>
+                  <div style="position: relative; flex: 1; max-width: 150px;">
+                    <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+                    <input type="text" id="fee-cleaning" class="form-input" style="padding-left: 28px;" placeholder="150" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <input type="checkbox" id="service-exam" checked class="form-checkbox">
+                  <span style="font-weight: 600;">2 Exams Per Year</span>
+                </label>
+                <div style="display: flex; align-items: center; gap: 12px; margin-left: 32px;">
+                  <span style="font-size: 0.9rem; min-width: 80px;">Fee each:</span>
+                  <div style="position: relative; flex: 1; max-width: 150px;">
+                    <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+                    <input type="text" id="fee-exam" class="form-input" style="padding-left: 28px;" placeholder="75" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <input type="checkbox" id="service-xrays" checked class="form-checkbox">
+                  <span style="font-weight: 600;">Full Mouth X-Rays (1x Per Year)</span>
+                </label>
+                <div style="display: flex; align-items: center; gap: 12px; margin-left: 32px;">
+                  <span style="font-size: 0.9rem; min-width: 80px;">Fee:</span>
+                  <div style="position: relative; flex: 1; max-width: 150px;">
+                    <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+                    <input type="text" id="fee-xrays" class="form-input" style="padding-left: 28px;" placeholder="125" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+
+              <div style="margin-bottom: 20px;">
+                <label style="display: flex; align-items: center; gap: 12px; margin-bottom: 8px;">
+                  <input type="checkbox" id="service-emergency" checked class="form-checkbox">
+                  <span style="font-weight: 600;">Emergency Exam (Unlimited)</span>
+                </label>
+                <div style="display: flex; align-items: center; gap: 12px; margin-left: 32px;">
+                  <span style="font-size: 0.9rem; min-width: 80px;">Fee each:</span>
+                  <div style="position: relative; flex: 1; max-width: 150px;">
+                    <span style="position: absolute; left: 12px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+                    <input type="text" id="fee-emergency" class="form-input" style="padding-left: 28px;" placeholder="100" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Step 4: Discount -->
+          <div class="form-group mt-lg">
+            <label class="form-label">Discount on Additional Treatment</label>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <input type="range" id="treatment-discount" class="range-slider" min="10" max="30" value="20" style="flex: 1;">
+              <span id="discount-display" class="mono" style="font-size: 1.5rem; font-weight: 700; color: var(--navy); min-width: 60px; text-align: right;">20%</span>
+            </div>
+            <div class="form-hint">Members get this discount on all other procedures beyond the included services. Typical range is 10-30%.</div>
+          </div>
+
+          <!-- Step 5: Target Members -->
+          <div class="form-group mt-lg">
+            <label class="form-label">Target Number of Members (First Year)</label>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <input type="range" id="target-members" class="range-slider" min="50" max="500" value="150" step="10" style="flex: 1;">
+              <span id="members-display" class="mono" style="font-size: 1.5rem; font-weight: 700; color: var(--teal); min-width: 80px; text-align: right;">150</span>
+            </div>
+            <div class="form-hint">How many members do you aim to enroll in the first year?</div>
+          </div>
+
+          <button id="calculate-btn" class="btn btn-cta btn-lg mt-xl" style="width: 100%;">Calculate Optimal Pricing →</button>
+        </div>
+
+        <!-- RESULTS (hidden initially) -->
+        <div id="results" style="display: none;">
+
+          <!-- Main Result -->
+          <div class="tool-result">
+            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em;">Recommended Monthly Price</div>
+            <div id="result-monthly" class="tool-result-value" style="margin-top: 8px;">$0</div>
+            <div class="tool-result-label">with annual option at <span id="result-annual" style="font-weight: 700;">$0</span></div>
+
+            <div class="tool-result-sub">
+              <div>
+                <div id="result-monthly-low" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Conservative</div>
+              </div>
+              <div>
+                <div id="result-monthly-mid" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Recommended</div>
+              </div>
+              <div>
+                <div id="result-monthly-high" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Premium</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Value Proposition -->
+          <div class="card-flat mt-xl" style="border-left: 4px solid var(--green);">
+            <h4>Value Proposition</h4>
+            <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 16px;">
+              <div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Patient Saves Per Year</p>
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--green); font-family: var(--font-mono);" id="result-patient-savings">$0</div>
+              </div>
+              <div>
+                <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 8px;">Practice Earns vs PPO (Per Patient)</p>
+                <div style="font-size: 1.5rem; font-weight: 700; color: var(--green); font-family: var(--font-mono);" id="result-practice-gain">$0</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Financial Metrics -->
+          <div class="mt-xl">
+            <h3>Financial Metrics</h3>
+            <div class="table-wrap mt-md">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th style="text-align: right;">Value</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Total Annual Value (Full Fees)</td><td style="text-align: right;" id="row-total-value">—</td></tr>
+                  <tr><td>Recommended Monthly Price</td><td style="text-align: right;" id="row-monthly-price">—</td></tr>
+                  <tr><td>Recommended Annual Price (11x Monthly)</td><td style="text-align: right;" id="row-annual-price">—</td></tr>
+                  <tr><td>Annual Price Savings vs Full Fees</td><td style="text-align: right;" id="row-price-savings">—</td></tr>
+                  <tr style="font-weight: 700; background: var(--bg-subtle);"><td style="color: var(--green);">Projected Annual Recurring Revenue</td><td style="text-align: right; color: var(--green);" id="row-arr">—</td></tr>
+                  <tr><td>Average Revenue Per Member/Year</td><td style="text-align: right;" id="row-revenue-per-member">—</td></tr>
+                  <tr><td>Break-Even Members Needed</td><td style="text-align: right;" id="row-breakeven">—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Comparison Table -->
+          <div class="mt-xl">
+            <h3>Pricing Comparison: Membership vs PPO vs Fee-for-Service</h3>
+            <div class="table-wrap mt-md">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Model</th>
+                    <th style="text-align: right;">Annual Patient Cost</th>
+                    <th style="text-align: right;">Practice Revenue/Patient</th>
+                    <th style="text-align: right;">Patient Savings</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td><strong>Membership Plan</strong></td><td style="text-align: right;" id="comp-member-cost">$0</td><td style="text-align: right;" id="comp-member-revenue" style="color: var(--green); font-weight: 700;">$0</td><td style="text-align: right;" id="comp-member-savings">$0</td></tr>
+                  <tr><td>PPO (Avg 42% Write-off)</td><td style="text-align: right;">Variable</td><td style="text-align: right;">~<span id="comp-ppo-revenue">$0</span></td><td style="text-align: right;">N/A</td></tr>
+                  <tr><td>Fee-for-Service (Full Fees)</td><td style="text-align: right;" id="comp-ffs-cost">$0</td><td style="text-align: right;">$0</td><td style="text-align: right;">$0</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Key Insights -->
+          <div class="card-flat mt-xl" style="border-left: 4px solid var(--coral);">
+            <h4>Key Insights</h4>
+            <ul id="insights-list" style="margin-top: 12px; list-style: none; padding: 0;">
+              <li style="margin-bottom: 8px;"><span style="color: var(--coral); font-weight: 700;">•</span> <span id="insight-1"></span></li>
+              <li style="margin-bottom: 8px;"><span style="color: var(--coral); font-weight: 700;">•</span> <span id="insight-2"></span></li>
+              <li style="margin-bottom: 8px;"><span style="color: var(--coral); font-weight: 700;">•</span> <span id="insight-3"></span></li>
+            </ul>
+          </div>
+
+          <!-- Next Steps -->
+          <div class="mt-xl">
+            <h3>Next Steps</h3>
+            <div class="grid grid-2 mt-md" style="gap: 16px;">
+              <a href="/tools/ppo-calculator.html" class="card" style="text-decoration: none;">
+                <div class="card-icon coral">$</div>
+                <h4 style="font-size: 1rem;">Calculate PPO Losses</h4>
+                <p style="font-size: 0.85rem;">See how much you're losing to PPO write-offs and compare to membership revenue.</p>
+              </a>
+              <a href="/tools/revenue-simulator.html" class="card" style="text-decoration: none;">
+                <div class="card-icon navy">⟳</div>
+                <h4 style="font-size: 1rem;">Model Your Transition</h4>
+                <p style="font-size: 0.85rem;">Simulate dropping PPO plans and replacing revenue with membership plans.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Share -->
+          <div class="mt-xl text-center" style="padding: 24px; background: var(--bg-subtle); border-radius: var(--radius-lg);">
+            <p style="font-weight: 600; color: var(--navy); margin-bottom: 8px;">Share your pricing plan with a colleague</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Help other dentists discover the power of membership plans.</p>
+            <div class="share-bar" style="justify-content: center;">
+              <button class="share-btn" onclick="shareOnPlatform('twitter', window.location.href, '', shareText())" title="Share on X/Twitter">𝕏</button>
+              <button class="share-btn" onclick="shareOnPlatform('linkedin', window.location.href, '', shareText())" title="Share on LinkedIn">in</button>
+              <button class="share-btn" onclick="shareOnPlatform('facebook', window.location.href, '', shareText())" title="Share on Facebook">f</button>
+              <button class="share-btn" onclick="shareOnPlatform('email', window.location.href, 'Membership Plan Pricing', shareText())" title="Share via Email">✉</button>
+              <button class="share-btn" onclick="copyResults()" id="copy-btn" title="Copy Results">⎘</button>
+            </div>
+          </div>
+
+          <button id="recalculate-btn" class="btn btn-secondary mt-xl" style="width: 100%;">← Recalculate with Different Numbers</button>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-2xl" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="mt-xl">
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What is a dental membership plan?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">A dental membership plan is an alternative to insurance where patients pay a monthly or annual fee directly to your practice for access to preventive care and a discount on additional treatment. Unlike insurance, there are no deductibles, waiting periods, or claim denials. It's a direct relationship between patient and practice.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">How should I price my membership plan?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">The recommended approach is to price at 30-40% of the total annual value of included services. This ensures patients get clear savings (they see they're getting $500+ worth of services for $40-50/month) while you maintain profitability. It should be higher than your PPO write-down but lower than full fee-for-service. Use your market location and patient demographics to adjust within this range.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What services should I include in my membership plan?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Typically, membership plans include preventive services: 2 cleanings per year, 2 exams per year, annual full mouth x-rays, and emergency exams. Some practices add fluoride or additional x-rays. The key is that these services are predictable and establish the patient relationship. Restorative and cosmetic work is discounted but not included.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What discount should I offer on additional treatment?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Most practices offer 10-30% on additional treatment. A 20% discount is common and competitive. This gives members incentive to have treatment done at your practice while still protecting your margins. Remember: a 20% discount on a $1,000 crown ($200 off) is still better than the 40%+ loss on a PPO case.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">How many members do I need to break even?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">This varies by practice, but the calculator shows you exactly how many members you need to replace your annual costs (staff time, supplies, etc.). Most practices find they need 40-100 members in the first year to break even on membership, and profit on each member after that. Additional treatment discounts are where the real profitability comes in.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">How does membership revenue compare to PPO?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">A membership patient who pays $45/month ($540/year) plus treatment at discounted fees is typically more profitable than a PPO patient. For example: PPO patient generates $600 in collections with 42% write-off = $348 net. Membership patient: $540 membership + (say) $400 in treatment at 20% discount ($320) = $860 net. Plus, no claim denials, no coding disputes, predictable cash flow.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What's the "one month free" incentive?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">A common membership pricing strategy is to offer 11 months of service for 12 monthly payments, or price the annual plan at 11x the monthly fee (e.g., if monthly is $45, annual is $495 instead of $540). This creates perceived value and incentivizes annual payment, which improves cash flow and retention.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">Can I run membership and PPO plans simultaneously?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Yes, many practices do. However, the membership plan becomes more powerful as you phase out PPO plans. Start by offering membership to new patients and current PPO patients as they renew insurance. Then, gradually reduce or drop the worst-performing PPO plans. This transition typically happens over 18-36 months. The calculator helps you see how membership revenue can replace PPO revenue.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What if I'm in a high-cost area like California or New York?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">This calculator includes cost-of-living adjustments by state. If you're in California, your recommended pricing will be higher than if you were in Arkansas. This is because patient fees are already higher in high-cost markets, so membership pricing adjusts accordingly. Use the location selector to get an accurate recommendation for your market.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">Is membership plan pricing different for specialty practices?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Yes. Specialty practices (ortho, perio, implants, etc.) often have higher procedure values and may structure memberships differently. A membership plan for an ortho practice might focus on treatment plans and discounts rather than preventive care. This calculator gives different recommendations based on practice type. Specialty practices often benefit more from membership revenue because treatment case values are higher.</p>
+          </details>
+
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What about family membership plans?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Family plans are a great way to increase membership value and patient lifetime value. A typical family plan might be 1.5-1.75x the individual plan price. For example, if individual is $45/month, family might be $70-75/month. This calculator focuses on individual membership pricing, but the same principles apply to family plans. Many practices offer both options.</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 48px;">
+        <div>
+          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Empowering dental practice owners to achieve financial independence.</p>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
+            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
+            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
+            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-links">
+            <li><a href="/blog/">Articles & Guides</a></li>
+            <li><a href="/pages/summit.html">Annual Summit</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/pages/glossary.html">Glossary</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/community.html">Community</a></li>
+            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
+            <li><a href="mailto:info@rid.academy">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RID Academy. All rights reserved.</span>
+        <div class="flex gap-md"><a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Disclaimer</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // ── Membership Plan Calculator Logic ──
+    const locationSelect = document.getElementById('practice-location');
+    const practiceTypeRadios = document.querySelectorAll('input[name="practice-type"]');
+    const discountSlider = document.getElementById('treatment-discount');
+    const discountDisplay = document.getElementById('discount-display');
+    const membersSlider = document.getElementById('target-members');
+    const membersDisplay = document.getElementById('members-display');
+    const calcBtn = document.getElementById('calculate-btn');
+    const recalcBtn = document.getElementById('recalculate-btn');
+    const formEl = document.getElementById('calculator-form');
+    const resultsEl = document.getElementById('results');
+
+    const feeCheckboxes = {
+      cleaning: document.getElementById('service-cleaning'),
+      exam: document.getElementById('service-exam'),
+      xrays: document.getElementById('service-xrays'),
+      emergency: document.getElementById('service-emergency')
+    };
+
+    const feeInputs = {
+      cleaning: document.getElementById('fee-cleaning'),
+      exam: document.getElementById('fee-exam'),
+      xrays: document.getElementById('fee-xrays'),
+      emergency: document.getElementById('fee-emergency')
+    };
+
+    let lastResults = {};
+
+    // Set default values
+    feeInputs.cleaning.value = '150';
+    feeInputs.exam.value = '75';
+    feeInputs.xrays.value = '125';
+    feeInputs.emergency.value = '100';
+
+    // Format currency inputs
+    Object.values(feeInputs).forEach(input => {
+      input.addEventListener('input', function() {
+        let val = this.value.replace(/[^0-9]/g, '');
+        if (val && !isNaN(val)) this.value = val;
+      });
+    });
+
+    // Update slider displays
+    discountSlider.addEventListener('input', () => discountDisplay.textContent = discountSlider.value + '%');
+    membersSlider.addEventListener('input', () => membersDisplay.textContent = membersSlider.value);
+
+    // Calculate
+    calcBtn.addEventListener('click', () => {
+      // Collect inputs
+      const colFactor = parseFloat(locationSelect.value);
+      const practiceType = document.querySelector('input[name="practice-type"]:checked').value;
+      const discount = parseInt(discountSlider.value) / 100;
+      const targetMembers = parseInt(membersSlider.value);
+
+      // Get service values
+      const services = {};
+      let totalValue = 0;
+
+      if (feeCheckboxes.cleaning.checked) {
+        services.cleaning = parseInt(feeInputs.cleaning.value || 0) * 2;
+        totalValue += services.cleaning;
+      }
+      if (feeCheckboxes.exam.checked) {
+        services.exam = parseInt(feeInputs.exam.value || 0) * 2;
+        totalValue += services.exam;
+      }
+      if (feeCheckboxes.xrays.checked) {
+        services.xrays = parseInt(feeInputs.xrays.value || 0);
+        totalValue += services.xrays;
+      }
+      if (feeCheckboxes.emergency.checked) {
+        services.emergency = parseInt(feeInputs.emergency.value || 0);
+        totalValue += services.emergency;
+      }
+
+      if (totalValue < 200) {
+        alert('Please set service fees and ensure total value is at least $200/year');
+        return;
+      }
+
+      // Recommended pricing: 30-40% of total value
+      const monthlyLow = Math.round((totalValue * 0.30 * colFactor) / 12);
+      const monthlyMid = Math.round((totalValue * 0.35 * colFactor) / 12);
+      const monthlyHigh = Math.round((totalValue * 0.40 * colFactor) / 12);
+
+      // Specialty practices get slightly higher pricing
+      const monthlyMidAdjusted = practiceType === 'specialty' ? Math.round(monthlyMid * 1.15) : monthlyMid;
+
+      const annualMid = monthlyMidAdjusted * 11; // One month free
+
+      // ARR
+      const arr = monthlyMidAdjusted * 12 * targetMembers;
+      const revenuePerMember = monthlyMidAdjusted * 12;
+
+      // Patient savings vs full fees
+      const patientSavings = totalValue - annualMid;
+
+      // Practice earnings vs PPO (assuming 42% average write-off)
+      // PPO collected would be: totalValue * 0.58 (after 42% write-off)
+      // But practice earns membership + discount on treatment
+      // Simplified: membership plan pays better than PPO in most cases
+      const ppoCollected = totalValue * 0.58;
+      const practiceGain = annualMid - ppoCollected;
+
+      // Break-even calculation
+      // Assume $30-40 per month per patient in operational costs
+      const monthlyCost = practiceType === 'specialty' ? 35 : 30;
+      const breakEven = Math.ceil((monthlyCost * 12 * 1.3) / monthlyMidAdjusted);
+
+      // Store for sharing
+      lastResults = {
+        totalValue,
+        monthlyMid: monthlyMidAdjusted,
+        annualMid,
+        arr,
+        patientSavings,
+        practiceGain,
+        targetMembers,
+        breakEven
+      };
+
+      // Update results display
+      document.getElementById('result-monthly').textContent = formatCurrency(monthlyMidAdjusted);
+      document.getElementById('result-annual').textContent = formatCurrency(annualMid);
+      document.getElementById('result-monthly-low').textContent = formatCurrency(monthlyLow);
+      document.getElementById('result-monthly-mid').textContent = formatCurrency(monthlyMidAdjusted);
+      document.getElementById('result-monthly-high').textContent = formatCurrency(monthlyHigh);
+
+      document.getElementById('result-patient-savings').textContent = formatCurrency(patientSavings);
+      document.getElementById('result-practice-gain').textContent = formatCurrency(practiceGain);
+
+      document.getElementById('row-total-value').textContent = formatCurrency(totalValue);
+      document.getElementById('row-monthly-price').textContent = formatCurrency(monthlyMidAdjusted);
+      document.getElementById('row-annual-price').textContent = formatCurrency(annualMid);
+      document.getElementById('row-price-savings').textContent = formatCurrency(patientSavings);
+      document.getElementById('row-arr').textContent = formatCurrency(arr);
+      document.getElementById('row-revenue-per-member').textContent = formatCurrency(revenuePerMember);
+      document.getElementById('row-breakeven').textContent = breakEven + ' members';
+
+      // Comparison table
+      const ppoRevenue = totalValue * 0.58;
+      document.getElementById('comp-member-cost').textContent = formatCurrency(annualMid);
+      document.getElementById('comp-member-revenue').textContent = formatCurrency(annualMid);
+      document.getElementById('comp-member-savings').textContent = formatCurrency(patientSavings);
+      document.getElementById('comp-ppo-revenue').textContent = formatCurrency(ppoRevenue);
+      document.getElementById('comp-ffs-cost').textContent = formatCurrency(totalValue);
+
+      // Insights
+      const insights = [];
+      insights.push(`At ${formatCurrency(monthlyMidAdjusted)}/month, patients save ${Math.round((patientSavings / totalValue) * 100)}% vs your full fees while you earn more per patient than typical PPO cases.`);
+      insights.push(`With ${targetMembers} members, you'll generate ${formatCurrency(arr)} in annual recurring revenue — equivalent to ${Math.round(arr / 1000)} in additional daily production.`);
+      insights.push(`You need just ${breakEven} members to break even on membership costs. Every member beyond that is pure profit for your practice.`);
+
+      document.getElementById('insight-1').textContent = insights[0];
+      document.getElementById('insight-2').textContent = insights[1];
+      document.getElementById('insight-3').textContent = insights[2];
+
+      formEl.style.display = 'none';
+      resultsEl.style.display = 'block';
+      window.scrollTo({ top: resultsEl.offsetTop - 100, behavior: 'smooth' });
+    });
+
+    recalcBtn.addEventListener('click', () => {
+      formEl.style.display = 'block';
+      resultsEl.style.display = 'none';
+      window.scrollTo({ top: formEl.offsetTop - 100, behavior: 'smooth' });
+    });
+
+    function shareText() {
+      if (lastResults.monthlyMid) {
+        return `I just calculated the optimal pricing for my dental membership plan: ${formatCurrency(lastResults.monthlyMid)}/month (${formatCurrency(lastResults.annualMid)}/year). Calculate yours:`;
+      }
+      return 'Calculate the optimal pricing for your dental membership plan:';
+    }
+
+    function copyResults() {
+      const text = `Membership Plan Pricing Analysis (via RID Academy)
+Monthly Price: ${formatCurrency(lastResults.monthlyMid)}
+Annual Price: ${formatCurrency(lastResults.annualMid)}
+Annual Value (Full Fees): ${formatCurrency(lastResults.totalValue)}
+Patient Saves Per Year: ${formatCurrency(lastResults.patientSavings)}
+Projected Annual Revenue (${lastResults.targetMembers} members): ${formatCurrency(lastResults.arr)}
+Break-Even Members: ${lastResults.breakEven}
+
+Calculate yours at: ${window.location.href}`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = '✓';
+        btn.style.background = 'var(--green)';
+        btn.style.color = 'white';
+        setTimeout(() => { btn.textContent = '⎘'; btn.style.background = ''; btn.style.color = ''; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>

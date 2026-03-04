@@ -1,0 +1,1018 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Insurance Independence Readiness Scorecard | RID Academy</title>
+  <meta name="description" content="Free 15-question readiness assessment for dental practices. Get your personalized score and step-by-step roadmap to reduce insurance dependence and achieve practice independence.">
+  <meta name="keywords" content="dental practice readiness assessment, drop PPO plans, insurance independence, dental practice evaluation, practice independence">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Insurance Independence Readiness Scorecard">
+  <meta property="og:description" content="Take our free 15-question assessment and get a personalized readiness score with a step-by-step roadmap for your practice.">
+  <meta property="og:url" content="https://test.rid.academy/tools/readiness-scorecard.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Insurance Independence Readiness Scorecard",
+    "description": "Free 15-question readiness assessment for dental practices looking to reduce insurance dependence.",
+    "url": "https://test.rid.academy/tools/readiness-scorecard.html",
+    "applicationCategory": "EducationApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "@id": "#q1",
+        "name": "What is the Insurance Independence Readiness Scorecard?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Readiness Scorecard is a 15-question assessment that evaluates your dental practice's readiness to reduce PPO insurance dependence. Based on your answers, you'll receive a score and a personalized roadmap with specific recommendations tailored to your practice's strengths and weaknesses."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#q2",
+        "name": "What does the Readiness Score mean?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Scores range from 15–75. A score of 60–75 (Ready to Launch) means you have the foundation to begin reducing PPO dependence. Scores of 45–59 (Almost There) suggest you're close but should address a few areas first. Scores of 30–44 (Building Foundation) indicate you need to strengthen fundamentals. Scores below 30 (Early Stage) suggest starting with the basics like patient acquisition and team alignment."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#q3",
+        "name": "How long does the assessment take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The Readiness Scorecard takes about 5–10 minutes to complete. You'll answer one question at a time, and the assessment automatically advances as you select your answers. At the end, you'll receive your score and personalized recommendations."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#q4",
+        "name": "Can I retake the assessment?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes! You can retake the assessment as many times as you want. Many practices use it to track progress — for example, taking it again after addressing the recommended areas to see how their readiness score has improved."
+        }
+      },
+      {
+        "@type": "Question",
+        "@id": "#q5",
+        "name": "What if I score low? Does that mean I shouldn't drop PPO plans?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Not necessarily. A lower score simply means there are some prerequisites to address first. The assessment shows you exactly which areas need attention and provides a step-by-step roadmap. Many practices have successfully reduced PPO dependence by following the recommendations specific to their score tier."
+        }
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    /* Scorecard-specific styles */
+    .scorecard-container {
+      max-width: 700px;
+      margin: 0 auto;
+    }
+
+    .question-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 40px;
+      box-shadow: var(--shadow-md);
+    }
+
+    .question-header {
+      margin-bottom: 32px;
+    }
+
+    .question-number {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      margin-bottom: 12px;
+    }
+
+    .question-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--navy);
+      line-height: 1.3;
+    }
+
+    .answer-options {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .answer-option {
+      padding: 16px 20px;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      background: white;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      font-size: 0.95rem;
+      color: var(--text-primary);
+      text-align: left;
+    }
+
+    .answer-option:hover {
+      border-color: var(--teal);
+      background: var(--teal-bg);
+    }
+
+    .answer-option input {
+      display: none;
+    }
+
+    .answer-option input:checked + .option-label {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .answer-option.selected {
+      border-color: var(--teal);
+      background: var(--teal-bg);
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    .option-label {
+      display: block;
+      cursor: pointer;
+    }
+
+    .progress-container {
+      margin-bottom: 32px;
+    }
+
+    .progress-text {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-bottom: 12px;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    /* Results page styles */
+    .results-page {
+      display: none;
+    }
+
+    .score-ring-container {
+      text-align: center;
+      margin-bottom: 48px;
+    }
+
+    .score-ring {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto 24px;
+      position: relative;
+      background: conic-gradient(var(--teal) 0deg, var(--teal) calc(var(--score-pct) * 360deg), var(--border) calc(var(--score-pct) * 360deg), var(--border) 360deg);
+      padding: 8px;
+    }
+
+    .score-ring::after {
+      content: '';
+      position: absolute;
+      width: 164px;
+      height: 164px;
+      border-radius: 50%;
+      background: white;
+      inset: 8px;
+    }
+
+    .score-ring-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+    }
+
+    .score-value {
+      font-size: 3rem;
+      font-weight: 800;
+      color: var(--navy);
+      font-family: var(--font-mono);
+      line-height: 1;
+    }
+
+    .score-max {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .score-label {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-top: 16px;
+    }
+
+    .score-label.ready-launch {
+      color: var(--green);
+    }
+
+    .score-label.almost-there {
+      color: var(--teal);
+    }
+
+    .score-label.building {
+      color: var(--amber);
+    }
+
+    .score-label.early-stage {
+      color: var(--red);
+    }
+
+    .score-tier {
+      font-size: 0.9rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .score-description {
+      font-size: 1.1rem;
+      color: var(--text-primary);
+      line-height: 1.6;
+      margin-top: 20px;
+      padding: 20px;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-md);
+      border-left: 4px solid var(--teal);
+    }
+
+    .category-breakdown {
+      margin-top: 48px;
+    }
+
+    .category-title {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--navy);
+      margin-bottom: 24px;
+    }
+
+    .category-item {
+      margin-bottom: 20px;
+    }
+
+    .category-label {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 8px;
+      font-weight: 600;
+      color: var(--text-primary);
+      font-size: 0.95rem;
+    }
+
+    .category-bar {
+      height: 12px;
+      background: var(--border);
+      border-radius: 6px;
+      overflow: hidden;
+    }
+
+    .category-fill {
+      height: 100%;
+      background: var(--teal);
+      border-radius: 6px;
+      transition: width 600ms var(--ease);
+    }
+
+    .recommendations {
+      margin-top: 48px;
+      padding: 32px;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-lg);
+      border-left: 4px solid var(--coral);
+    }
+
+    .recommendations h3 {
+      color: var(--navy);
+      margin-bottom: 16px;
+    }
+
+    .recommendations ol {
+      list-style: decimal;
+      padding-left: 24px;
+      color: var(--text-secondary);
+      line-height: 1.8;
+    }
+
+    .recommendations li {
+      margin-bottom: 12px;
+      color: var(--text-secondary);
+    }
+
+    .recommendations li strong {
+      color: var(--navy);
+    }
+
+    .next-steps {
+      margin-top: 48px;
+    }
+
+    .next-steps h3 {
+      color: var(--navy);
+      margin-bottom: 20px;
+    }
+
+    .next-steps-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+    }
+
+    @media (max-width: 600px) {
+      .next-steps-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .question-card {
+        padding: 24px;
+      }
+
+      .score-ring {
+        width: 140px;
+        height: 140px;
+      }
+
+      .score-ring::after {
+        width: 124px;
+        height: 124px;
+        inset: 8px;
+      }
+
+      .score-value {
+        font-size: 2.25rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link active">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom: 48px;">
+    <div class="hero-bg"></div>
+    <div class="container text-center" style="max-width: 700px;">
+      <span class="badge badge-teal" style="margin-bottom: 16px;">Free Assessment</span>
+      <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Insurance Independence Readiness Scorecard</h1>
+      <p>Answer 15 quick questions and get a personalized readiness score with a step-by-step roadmap to reduce insurance dependence.</p>
+    </div>
+  </section>
+
+  <!-- ASSESSMENT -->
+  <section class="section" style="margin-top: -48px; position: relative; z-index: 10;">
+    <div class="container scorecard-container">
+      <div class="question-card" id="assessment-form">
+
+        <!-- Progress Bar -->
+        <div class="progress-container">
+          <div class="progress-text">
+            <span id="progress-text">Question 1 of 15</span>
+            <span id="progress-pct">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress-bar-fill" id="progress-fill" style="width: 0%;"></div>
+          </div>
+        </div>
+
+        <!-- Question Container -->
+        <div class="question-header">
+          <div class="question-number" id="q-number">Question 1</div>
+          <div class="question-title" id="q-title"></div>
+        </div>
+
+        <div class="answer-options" id="answers-container"></div>
+
+      </div>
+
+      <!-- RESULTS PAGE (hidden initially) -->
+      <div id="results-page" class="results-page">
+
+        <!-- Score Ring -->
+        <div class="score-ring-container">
+          <div class="score-ring" id="score-ring-el">
+            <div class="score-ring-content">
+              <div class="score-value" id="final-score">0</div>
+              <div class="score-max">/75</div>
+            </div>
+          </div>
+          <div class="score-label" id="score-label-text">Ready to Launch</div>
+          <div class="score-tier" id="score-tier-text"></div>
+          <div class="score-description" id="score-description"></div>
+        </div>
+
+        <!-- Category Breakdown -->
+        <div class="category-breakdown">
+          <h2 class="category-title">Your Strengths & Growth Areas</h2>
+          <div id="categories-container"></div>
+        </div>
+
+        <!-- Recommendations -->
+        <div class="recommendations">
+          <h3>Your Personalized Roadmap</h3>
+          <ol id="recommendations-list"></ol>
+        </div>
+
+        <!-- Next Steps -->
+        <div class="next-steps">
+          <h3>Recommended Next Steps</h3>
+          <div class="next-steps-grid">
+            <a href="/tools/ppo-calculator.html" class="card" style="text-decoration: none;">
+              <div class="card-icon coral">$</div>
+              <h4 style="font-size: 0.95rem;">Calculate PPO Losses</h4>
+              <p style="font-size: 0.85rem;">Quantify your annual revenue lost to write-offs with precise numbers.</p>
+            </a>
+            <a href="/tools/revenue-simulator.html" class="card" style="text-decoration: none;">
+              <div class="card-icon navy">⟳</div>
+              <h4 style="font-size: 0.95rem;">Model Revenue Impact</h4>
+              <p style="font-size: 0.85rem;">Simulate the financial impact of dropping specific PPO plans.</p>
+            </a>
+          </div>
+        </div>
+
+        <!-- Share -->
+        <div class="mt-xl text-center" style="padding: 24px; background: var(--bg-subtle); border-radius: var(--radius-lg);">
+          <p style="font-weight: 600; color: var(--navy); margin-bottom: 8px;">Share your insights with colleagues</p>
+          <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Help other practice owners assess their readiness for insurance independence.</p>
+          <div class="share-bar" style="justify-content: center;">
+            <button class="share-btn" onclick="shareOnPlatform('twitter', window.location.href, '', shareText())" title="Share on X/Twitter">𝕏</button>
+            <button class="share-btn" onclick="shareOnPlatform('linkedin', window.location.href, '', shareText())" title="Share on LinkedIn">in</button>
+            <button class="share-btn" onclick="shareOnPlatform('facebook', window.location.href, '', shareText())" title="Share on Facebook">f</button>
+            <button class="share-btn" onclick="shareOnPlatform('email', window.location.href, 'Take the Readiness Scorecard', shareText())" title="Share via Email">✉</button>
+            <button class="share-btn" onclick="copyResults()" id="copy-btn" title="Copy Results">⎘</button>
+          </div>
+        </div>
+
+        <button id="retake-btn" class="btn btn-secondary mt-xl" style="width: 100%;">← Retake Assessment</button>
+
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <div class="section" style="background: var(--bg-subtle);">
+    <div class="container" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+      <h2 class="text-center">Frequently Asked Questions</h2>
+      <div class="mt-xl">
+        <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+          <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What is the Insurance Independence Readiness Scorecard?</summary>
+          <p style="margin-top: 12px; font-size: 0.95rem;">The Readiness Scorecard is a 15-question assessment that evaluates your dental practice's readiness to reduce PPO insurance dependence. Based on your answers, you'll receive a score and a personalized roadmap with specific recommendations tailored to your practice's strengths and weaknesses.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+          <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What do the different readiness levels mean?</summary>
+          <p style="margin-top: 12px; font-size: 0.95rem;">60–75 (Ready to Launch): Your practice has the foundation to begin reducing insurance dependence. 45–59 (Almost There): You're close—focus on your lowest-scoring areas. 30–44 (Building Foundation): You need to strengthen key fundamentals first. 15–29 (Early Stage): Start with the basics like patient acquisition and team alignment.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+          <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">How long does the assessment take?</summary>
+          <p style="margin-top: 12px; font-size: 0.95rem;">The Readiness Scorecard takes about 5–10 minutes to complete. You'll answer one question at a time, and the assessment automatically advances as you select your answers.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+          <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">Can I retake the assessment?</summary>
+          <p style="margin-top: 12px; font-size: 0.95rem;">Yes! You can retake the assessment as many times as you want. Many practices use it to track progress over time by retaking it after addressing the recommended areas.</p>
+        </details>
+        <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+          <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What if I score low? Should I drop PPO plans anyway?</summary>
+          <p style="margin-top: 12px; font-size: 0.95rem;">A lower score simply means there are prerequisites to address first. The assessment shows exactly which areas need attention and provides a step-by-step roadmap. Many practices in our community have successfully reduced PPO dependence by following the tier-specific recommendations.</p>
+        </details>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 48px;">
+        <div>
+          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Empowering dental practice owners to achieve financial independence.</p>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
+            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
+            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
+            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-links">
+            <li><a href="/blog/">Articles & Guides</a></li>
+            <li><a href="/pages/summit.html">Annual Summit</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/pages/glossary.html">Glossary</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/community.html">Community</a></li>
+            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
+            <li><a href="mailto:info@rid.academy">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RID Academy. All rights reserved.</span>
+        <div class="flex gap-md"><a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Disclaimer</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // ── Readiness Scorecard Logic ──
+
+    // Questions data (15 questions, each scored 1-5)
+    const questions = [
+      {
+        id: 1,
+        text: "What percentage of your revenue comes from PPO insurance?",
+        answers: [
+          { text: "Less than 30%", score: 5 },
+          { text: "30-50%", score: 4 },
+          { text: "50-70%", score: 3 },
+          { text: "70-85%", score: 2 },
+          { text: "Over 85%", score: 1 }
+        ]
+      },
+      {
+        id: 2,
+        text: "How many active patients does your practice have?",
+        answers: [
+          { text: "2,000+", score: 5 },
+          { text: "1,500-2,000", score: 4 },
+          { text: "1,000-1,500", score: 3 },
+          { text: "500-1,000", score: 2 },
+          { text: "Under 500", score: 1 }
+        ]
+      },
+      {
+        id: 3,
+        text: "What is your patient retention rate?",
+        answers: [
+          { text: "Over 90%", score: 5 },
+          { text: "80-90%", score: 4 },
+          { text: "70-80%", score: 3 },
+          { text: "60-70%", score: 2 },
+          { text: "Under 60%", score: 1 }
+        ]
+      },
+      {
+        id: 4,
+        text: "Do you have an in-house membership/savings plan?",
+        answers: [
+          { text: "Yes, well-established", score: 5 },
+          { text: "Yes, just started", score: 4 },
+          { text: "Planning to launch", score: 3 },
+          { text: "Considering it", score: 2 },
+          { text: "No", score: 1 }
+        ]
+      },
+      {
+        id: 5,
+        text: "How strong is your online presence?",
+        answers: [
+          { text: "Excellent reviews + strong SEO + active social", score: 5 },
+          { text: "Good reviews + some SEO", score: 4 },
+          { text: "Some online presence", score: 3 },
+          { text: "Minimal", score: 2 },
+          { text: "Almost none", score: 1 }
+        ]
+      },
+      {
+        id: 6,
+        text: "How would you rate your team's alignment on reducing insurance dependence?",
+        answers: [
+          { text: "Fully on board and trained", score: 5 },
+          { text: "Mostly supportive", score: 4 },
+          { text: "Mixed feelings", score: 3 },
+          { text: "Resistant", score: 2 },
+          { text: "Haven't discussed", score: 1 }
+        ]
+      },
+      {
+        id: 7,
+        text: "Do you have a patient communication strategy for insurance changes?",
+        answers: [
+          { text: "Yes, tested and refined", score: 5 },
+          { text: "Yes, basic scripts", score: 4 },
+          { text: "Working on one", score: 3 },
+          { text: "No, but plan to", score: 2 },
+          { text: "No", score: 1 }
+        ]
+      },
+      {
+        id: 8,
+        text: "How is your practice's current cash flow?",
+        answers: [
+          { text: "Very strong", score: 5 },
+          { text: "Healthy", score: 4 },
+          { text: "Adequate", score: 3 },
+          { text: "Tight", score: 2 },
+          { text: "Struggling", score: 1 }
+        ]
+      },
+      {
+        id: 9,
+        text: "Do you track your PPO write-offs by plan?",
+        answers: [
+          { text: "Yes, detailed tracking", score: 5 },
+          { text: "Yes, basic tracking", score: 4 },
+          { text: "Somewhat", score: 3 },
+          { text: "Rarely", score: 2 },
+          { text: "Never", score: 1 }
+        ]
+      },
+      {
+        id: 10,
+        text: "Have you negotiated better PPO rates recently?",
+        answers: [
+          { text: "Yes, successfully", score: 5 },
+          { text: "Yes, some improvement", score: 4 },
+          { text: "Tried, no luck", score: 3 },
+          { text: "Haven't tried", score: 2 },
+          { text: "Didn't know you could", score: 1 }
+        ]
+      },
+      {
+        id: 11,
+        text: "What's your new patient flow like?",
+        answers: [
+          { text: "Very strong (30+/month)", score: 5 },
+          { text: "Good (20-30/month)", score: 4 },
+          { text: "Moderate (10-20/month)", score: 3 },
+          { text: "Low (5-10/month)", score: 2 },
+          { text: "Very low (<5/month)", score: 1 }
+        ]
+      },
+      {
+        id: 12,
+        text: "Do you have a dental marketing strategy beyond insurance directories?",
+        answers: [
+          { text: "Comprehensive multi-channel", score: 5 },
+          { text: "Good digital marketing", score: 4 },
+          { text: "Some marketing", score: 3 },
+          { text: "Minimal", score: 2 },
+          { text: "Only insurance directories", score: 1 }
+        ]
+      },
+      {
+        id: 13,
+        text: "How comfortable are you with fee-for-service conversations?",
+        answers: [
+          { text: "Very comfortable", score: 5 },
+          { text: "Comfortable", score: 4 },
+          { text: "Somewhat", score: 3 },
+          { text: "Uncomfortable", score: 2 },
+          { text: "Very uncomfortable", score: 1 }
+        ]
+      },
+      {
+        id: 14,
+        text: "Have any colleagues in your area successfully dropped PPOs?",
+        answers: [
+          { text: "Yes, several", score: 5 },
+          { text: "Yes, a few", score: 4 },
+          { text: "One or two", score: 3 },
+          { text: "Not sure", score: 2 },
+          { text: "No", score: 1 }
+        ]
+      },
+      {
+        id: 15,
+        text: "How urgently do you want to reduce insurance dependence?",
+        answers: [
+          { text: "Starting immediately", score: 5 },
+          { text: "Within 6 months", score: 4 },
+          { text: "Within a year", score: 3 },
+          { text: "Exploring options", score: 2 },
+          { text: "Just curious", score: 1 }
+        ]
+      }
+    ];
+
+    // Score categories for breakdown (3 categories)
+    const categories = [
+      { name: "Financial Health", questions: [1, 8, 9, 10], color: "var(--coral)" },
+      { name: "Operational Readiness", questions: [2, 3, 4, 6, 7], color: "var(--teal)" },
+      { name: "Market Position", questions: [5, 11, 12, 13, 14, 15] }
+    ];
+
+    // Score tier definitions
+    const scoreTiers = {
+      ready: {
+        min: 60,
+        max: 75,
+        name: "Ready to Launch",
+        color: "var(--green)",
+        description: "Your practice is well-positioned to begin reducing insurance dependence. You have the foundation in place—strong patient base, financial health, team alignment, and market position. Your next steps are to finalize your strategy, set a timeline, and execute your first PPO resignation.",
+        colorClass: "ready-launch"
+      },
+      almost: {
+        min: 45,
+        max: 59,
+        name: "Almost There",
+        color: "var(--teal)",
+        description: "You're close to launch readiness. Focus on the areas where you scored lowest before making your move. Typically, this involves strengthening one or two key areas—whether that's team buy-in, patient communication planning, or marketing strategy. Address these areas over the next 3-6 months, then reassess.",
+        colorClass: "almost-there"
+      },
+      building: {
+        min: 30,
+        max: 44,
+        name: "Building Foundation",
+        color: "var(--amber)",
+        description: "You have work to do, but you're on the right track. Focus on the fundamentals first: growing your patient base, strengthening cash flow, developing team alignment, and building your market position. These foundation items typically take 6-12 months to address properly.",
+        colorClass: "building"
+      },
+      early: {
+        min: 15,
+        max: 29,
+        name: "Early Stage",
+        color: "var(--red)",
+        description: "Start with the basics: build your patient base, strengthen your online presence, improve team communication, and educate your practice on insurance alternatives. This is a 12-18 month journey. Focus on the RID resources to address each area systematically.",
+        colorClass: "early-stage"
+      }
+    };
+
+    // Scoring recommendations by tier
+    const tierRecommendations = {
+      ready: [
+        "<strong>Timeline:</strong> Target your first PPO resignation within 60 days.",
+        "<strong>Strategy:</strong> Identify the PPO plan with the worst fee schedule and fewest patients—this is your launch plan.",
+        "<strong>Communication:</strong> Prepare your patient notification letters and staff talking points.",
+        "<strong>Membership Plan:</strong> Ensure your in-house membership/savings plan is fully refined and ready to present.",
+        "<strong>Revenue Replacement:</strong> Monitor closely for 90 days and adjust your membership pricing if needed.",
+        "<strong>Next PPO:</strong> Plan your second resignation within 6 months of the first."
+      ],
+      almost: [
+        "<strong>Identify weak areas:</strong> Which specific items scored below 4? Address those first.",
+        "<strong>Team alignment:</strong> If your team is uncertain, invest in one team meeting to review data and build buy-in.",
+        "<strong>Marketing:</strong> If your new patient flow is below ideal, implement one new marketing channel (Google Ads, social, referral program).",
+        "<strong>Communication strategy:</strong> Draft and test your patient communication plan with a focus group of 5-10 loyal patients.",
+        "<strong>Membership plan:</strong> If you don't have one yet, build a basic version before resigning from any PPO.",
+        "<strong>Timeline:</strong> Complete these items over 3-6 months, then move to 'Ready to Launch' phase."
+      ],
+      building: [
+        "<strong>Patient acquisition:</strong> Implement at least one new patient generation strategy (Google Ads, referral incentives, or community engagement).",
+        "<strong>Cash flow:</strong> Review your practice operating expenses and look for 2-3 areas to optimize.",
+        "<strong>Team communication:</strong> Hold a practice meeting to discuss the vision for insurance independence—get buy-in.",
+        "<strong>Membership plan:</strong> Research and design a simple membership/savings plan if you don't have one.",
+        "<strong>Online presence:</strong> Audit your Google Business profile, website, and social media—improve at least one area.",
+        "<strong>Financial tracking:</strong> Begin detailed tracking of PPO write-offs by plan to understand your true exposure.",
+        "<strong>Timeline:</strong> Focus on these fundamentals for 6-12 months before moving to launch."
+      ],
+      early: [
+        "<strong>Patient base:</strong> Launch an aggressive new patient acquisition plan. Aim for 20+ new patients per month over the next 12 months.",
+        "<strong>Team alignment:</strong> Communicate the long-term vision for insurance independence. Consider bringing in a consultant or coach to train your team.",
+        "<strong>Online visibility:</strong> Build or rebuild your website, Google Business profile, and social media presence—this is critical for patient acquisition.",
+        "<strong>Financial foundation:</strong> Work with an accountant to understand your cash flow and cost structure. Identify areas to improve.",
+        "<strong>Knowledge:</strong> Listen to 10-15 RID Podcast episodes on patient communication, PPO negotiation, and membership plans.",
+        "<strong>Community:</strong> Join the RID Academy community to learn from practices ahead of you.",
+        "<strong>Timeline:</strong> Expect 12-18 months to address these fundamentals before you're ready to resign from any PPO."
+      ]
+    };
+
+    // State
+    let currentQuestion = 0;
+    let answers = [];
+    let lastResults = {};
+
+    // Initialize
+    function init() {
+      renderQuestion(0);
+    }
+
+    // Render question
+    function renderQuestion(index) {
+      const q = questions[index];
+      document.getElementById('q-number').textContent = `Question ${index + 1}`;
+      document.getElementById('q-title').textContent = q.text;
+
+      const container = document.getElementById('answers-container');
+      container.innerHTML = '';
+
+      q.answers.forEach((answer, answerIndex) => {
+        const label = document.createElement('label');
+        label.className = 'answer-option';
+        label.innerHTML = `
+          <input type="radio" name="answer" value="${answerIndex}">
+          <span class="option-label">${answer.text}</span>
+        `;
+        label.addEventListener('click', (e) => selectAnswer(index, answerIndex, label));
+        container.appendChild(label);
+
+        // If already answered, mark it
+        if (answers[index] !== undefined && answers[index] === answerIndex) {
+          label.classList.add('selected');
+        }
+      });
+
+      // Update progress
+      const progress = ((index + 1) / questions.length) * 100;
+      document.getElementById('progress-fill').style.width = progress + '%';
+      document.getElementById('progress-text').textContent = `Question ${index + 1} of 15`;
+      document.getElementById('progress-pct').textContent = Math.round(progress) + '%';
+
+      currentQuestion = index;
+    }
+
+    // Select answer and advance
+    function selectAnswer(questionIndex, answerIndex, labelEl) {
+      answers[questionIndex] = answerIndex;
+
+      // Mark as selected
+      document.querySelectorAll('.answer-option').forEach(el => el.classList.remove('selected'));
+      labelEl.classList.add('selected');
+
+      // Auto-advance after short delay
+      setTimeout(() => {
+        if (questionIndex < questions.length - 1) {
+          renderQuestion(questionIndex + 1);
+          document.querySelector('.question-card').scrollIntoView({ behavior: 'smooth', block: 'start' });
+        } else {
+          showResults();
+        }
+      }, 300);
+    }
+
+    // Calculate results
+    function showResults() {
+      // Calculate total score
+      let totalScore = 0;
+      answers.forEach((answerIndex, qIndex) => {
+        totalScore += questions[qIndex].answers[answerIndex].score;
+      });
+
+      // Calculate category scores
+      const categoryScores = {};
+      categories.forEach(cat => {
+        let catScore = 0;
+        let catCount = 0;
+        cat.questions.forEach(qNum => {
+          const answerIndex = answers[qNum - 1];
+          catScore += questions[qNum - 1].answers[answerIndex].score;
+          catCount++;
+        });
+        categoryScores[cat.name] = { score: catScore, max: catCount * 5 };
+      });
+
+      // Determine tier
+      let tier;
+      if (totalScore >= 60) tier = scoreTiers.ready;
+      else if (totalScore >= 45) tier = scoreTiers.almost;
+      else if (totalScore >= 30) tier = scoreTiers.building;
+      else tier = scoreTiers.early;
+
+      // Store results for sharing
+      lastResults = { score: totalScore, tier: tier.name, categoryScores };
+
+      // Render results
+      document.getElementById('assessment-form').style.display = 'none';
+      document.getElementById('results-page').style.display = 'block';
+
+      // Score ring
+      const scorePct = (totalScore / 75);
+      const scoreRing = document.getElementById('score-ring-el');
+      scoreRing.style.setProperty('--score-pct', scorePct);
+      document.getElementById('final-score').textContent = totalScore;
+
+      // Score label and tier
+      document.getElementById('score-label-text').textContent = tier.name;
+      document.getElementById('score-label-text').className = 'score-label ' + tier.colorClass;
+      document.getElementById('score-tier-text').textContent = tier.description;
+      document.getElementById('score-description').textContent = tier.description;
+
+      // Category breakdown
+      const catContainer = document.getElementById('categories-container');
+      catContainer.innerHTML = '';
+      categories.forEach(cat => {
+        const catData = categoryScores[cat.name];
+        const pct = (catData.score / catData.max) * 100;
+        const catEl = document.createElement('div');
+        catEl.className = 'category-item';
+        catEl.innerHTML = `
+          <div class="category-label">
+            <span>${cat.name}</span>
+            <span style="color: var(--text-muted);">${catData.score}/${catData.max}</span>
+          </div>
+          <div class="category-bar">
+            <div class="category-fill" style="width: ${pct}%; background: ${cat.color || 'var(--teal)'}; transition: width 600ms var(--ease);"></div>
+          </div>
+        `;
+        catContainer.appendChild(catEl);
+      });
+
+      // Recommendations
+      const recommendations = tierRecommendations[tier.name === 'Ready to Launch' ? 'ready' : tier.name === 'Almost There' ? 'almost' : tier.name === 'Building Foundation' ? 'building' : 'early'];
+      const recList = document.getElementById('recommendations-list');
+      recList.innerHTML = '';
+      recommendations.forEach(rec => {
+        const li = document.createElement('li');
+        li.innerHTML = rec;
+        recList.appendChild(li);
+      });
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    // Retake assessment
+    document.addEventListener('DOMContentLoaded', () => {
+      const retakeBtn = document.getElementById('retake-btn');
+      if (retakeBtn) {
+        retakeBtn.addEventListener('click', () => {
+          answers = [];
+          currentQuestion = 0;
+          document.getElementById('assessment-form').style.display = 'block';
+          document.getElementById('results-page').style.display = 'none';
+          renderQuestion(0);
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+    });
+
+    // Share and copy functions
+    function shareText() {
+      if (lastResults.score) {
+        return `I just completed the Insurance Independence Readiness Scorecard and scored ${lastResults.score}/75 (${lastResults.tier}). Take the free assessment:`;
+      }
+      return 'Take the free Insurance Independence Readiness Scorecard:';
+    }
+
+    function copyResults() {
+      const text = `Insurance Independence Readiness Assessment (via RID Academy)
+Readiness Score: ${lastResults.score}/75
+Readiness Level: ${lastResults.tier}
+
+Financial Health: ${lastResults.categoryScores['Financial Health'].score}/${lastResults.categoryScores['Financial Health'].max}
+Operational Readiness: ${lastResults.categoryScores['Operational Readiness'].score}/${lastResults.categoryScores['Operational Readiness'].max}
+Market Position: ${lastResults.categoryScores['Market Position'].score}/${lastResults.categoryScores['Market Position'].max}
+
+Take the assessment: ${window.location.href}`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = '✓';
+        btn.style.background = 'var(--green)';
+        btn.style.color = 'white';
+        setTimeout(() => { btn.textContent = '⎘'; btn.style.background = ''; btn.style.color = ''; }, 2000);
+      });
+    }
+
+    // Initialize on page load
+    window.addEventListener('load', init);
+  </script>
+</body>
+</html>

@@ -1,0 +1,1126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Revenue Impact Simulator — Model PPO Plan Drops | RID Academy</title>
+  <meta name="description" content="Free dental revenue simulator tool. Model your practice revenue when dropping 1, 2, or 3 PPO plans over 12-24 months. See month-by-month impact, patient retention, and membership plan effects.">
+  <meta name="keywords" content="dental revenue simulator, PPO drop calculator, dental practice revenue planning, membership plans, fee increase calculator">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Revenue Impact Simulator — What Happens When You Drop PPOs?">
+  <meta property="og:description" content="Model your revenue scenario when dropping PPO plans. See exactly when you'll recover and how membership plans impact your bottom line.">
+  <meta property="og:url" content="https://test.rid.academy/tools/revenue-simulator.html">
+  <meta property="og:image" content="https://test.rid.academy/images/og-revenue-simulator.png">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Chart.js -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"></script>
+
+  <!-- Structured Data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "Revenue Impact Simulator",
+    "description": "Simulate and visualize revenue impact of dropping PPO insurance plans for your dental practice.",
+    "url": "https://test.rid.academy/tools/revenue-simulator.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+
+  <style>
+    .simulator-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+      margin-top: 32px;
+    }
+
+    @media (max-width: 1024px) {
+      .simulator-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .input-section {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .input-label {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--navy);
+    }
+
+    .input-hint {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin-top: 4px;
+    }
+
+    .toggle-group {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .toggle-btn {
+      flex: 1;
+      min-width: 100px;
+      padding: 12px 16px;
+      border: 2px solid var(--border);
+      background: white;
+      border-radius: var(--radius-md);
+      font-size: 0.95rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      color: var(--text-secondary);
+    }
+
+    .toggle-btn:hover {
+      border-color: var(--teal);
+      color: var(--teal);
+    }
+
+    .toggle-btn.active {
+      background: var(--navy);
+      border-color: var(--navy);
+      color: white;
+    }
+
+    .slider-container {
+      display: flex;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .range-slider {
+      flex: 1;
+      height: 6px;
+      border-radius: 3px;
+      background: var(--border);
+      outline: none;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .range-slider::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--navy);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .range-slider::-moz-range-thumb {
+      width: 20px;
+      height: 20px;
+      border-radius: 50%;
+      background: var(--navy);
+      cursor: pointer;
+      box-shadow: var(--shadow-sm);
+      border: none;
+    }
+
+    .slider-value {
+      min-width: 60px;
+      text-align: right;
+      font-size: 1.25rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: var(--navy);
+    }
+
+    .plan-inputs {
+      display: grid;
+      gap: 16px;
+    }
+
+    .plan-input-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      padding: 16px;
+      background: var(--bg-subtle);
+      border-radius: var(--radius-md);
+      border: 1px solid var(--border);
+    }
+
+    .scenario-toggle {
+      display: flex;
+      gap: 12px;
+      margin-top: 12px;
+    }
+
+    .scenario-btn {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid var(--border);
+      background: white;
+      border-radius: var(--radius-sm);
+      font-size: 0.85rem;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      color: var(--text-secondary);
+      font-weight: 600;
+    }
+
+    .scenario-btn.active {
+      background: var(--teal);
+      border-color: var(--teal);
+      color: white;
+    }
+
+    .results-section {
+      display: flex;
+      flex-direction: column;
+      gap: 24px;
+    }
+
+    .chart-container {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .summary-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .summary-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .summary-card-label {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      margin-bottom: 8px;
+    }
+
+    .summary-card-value {
+      font-size: 1.75rem;
+      font-weight: 700;
+      font-family: var(--font-mono);
+      color: var(--navy);
+    }
+
+    .summary-card.positive .summary-card-value {
+      color: var(--green);
+    }
+
+    .summary-card.negative .summary-card-value {
+      color: var(--coral);
+    }
+
+    .summary-card-detail {
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      margin-top: 8px;
+    }
+
+    .table-wrap {
+      overflow-x: auto;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-sm);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      background: white;
+    }
+
+    thead {
+      background: var(--bg-subtle);
+      border-bottom: 1px solid var(--border);
+    }
+
+    th {
+      padding: 16px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--navy);
+    }
+
+    td {
+      padding: 16px;
+      border-bottom: 1px solid var(--border);
+      font-size: 0.9rem;
+    }
+
+    tbody tr:last-child td {
+      border-bottom: none;
+    }
+
+    tbody tr:hover {
+      background: var(--bg-subtle);
+    }
+
+    .month-num {
+      font-weight: 600;
+      color: var(--navy);
+      font-family: var(--font-mono);
+    }
+
+    .currency {
+      font-family: var(--font-mono);
+      font-weight: 600;
+    }
+
+    .currency.positive {
+      color: var(--green);
+    }
+
+    .currency.negative {
+      color: var(--coral);
+    }
+
+    .faq-section {
+      margin-top: 48px;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 24px 0;
+    }
+
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+
+    .faq-question {
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--navy);
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      user-select: none;
+    }
+
+    .faq-question::before {
+      content: '+';
+      display: inline-flex;
+      width: 28px;
+      height: 28px;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-sm);
+      font-weight: 700;
+      color: var(--navy);
+      flex-shrink: 0;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .faq-item.open .faq-question::before {
+      content: '−';
+      border-color: var(--teal);
+      background: var(--teal-bg);
+      color: var(--teal);
+    }
+
+    .faq-answer {
+      display: none;
+      margin-top: 16px;
+      color: var(--text-secondary);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer {
+      display: block;
+    }
+
+    .conditional-section {
+      display: none;
+      padding: 16px;
+      background: var(--teal-bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      margin-top: 16px;
+    }
+
+    .conditional-section.active {
+      display: block;
+    }
+
+    .info-box {
+      background: var(--teal-bg);
+      border-left: 4px solid var(--teal);
+      padding: 16px;
+      border-radius: var(--radius-sm);
+      margin: 16px 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .form-input {
+      padding: 12px 16px;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+      font-size: 0.95rem;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .form-input:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link active">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom: 48px;">
+    <div class="hero-bg"></div>
+    <div class="container text-center" style="max-width: 700px;">
+      <span class="badge badge-navy" style="margin-bottom: 16px;">Interactive Simulator</span>
+      <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">Revenue Impact Simulator</h1>
+      <p>Model what happens to your revenue when you drop PPO plans. See month-by-month projections, recovery timelines, and the impact of membership plans.</p>
+    </div>
+  </section>
+
+  <!-- SIMULATOR -->
+  <section class="section" style="margin-top: -48px; position: relative; z-index: 10;">
+    <div class="container tool-container">
+      <div class="card" style="padding: 40px; box-shadow: var(--shadow-xl); border: none;">
+
+        <!-- INPUT SECTION -->
+        <div class="simulator-grid">
+          <div class="input-section">
+            <h3 style="font-size: 1.25rem; margin-bottom: 16px;">Your Practice Details</h3>
+
+            <!-- Current Annual Collections -->
+            <div class="input-group">
+              <label class="input-label">Current Annual Collections</label>
+              <div style="position: relative;">
+                <span style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+                <input type="text" id="annual-collections" class="form-input" style="padding-left: 32px;" placeholder="e.g. 1,000,000" inputmode="numeric">
+              </div>
+              <div class="input-hint">Your total annual revenue from all sources</div>
+            </div>
+
+            <!-- Number of Plans to Drop -->
+            <div class="input-group">
+              <label class="input-label">How Many PPO Plans to Drop?</label>
+              <div class="toggle-group">
+                <button class="toggle-btn active" data-plans="1">1 Plan</button>
+                <button class="toggle-btn" data-plans="2">2 Plans</button>
+                <button class="toggle-btn" data-plans="3">3 Plans</button>
+              </div>
+              <div class="input-hint">Select the number of PPO plans you plan to resign from</div>
+            </div>
+
+            <!-- Plan Revenue Percentages -->
+            <div class="input-group">
+              <label class="input-label">Revenue % from Each Plan Being Dropped</label>
+              <div class="plan-inputs" id="plan-inputs-container">
+                <!-- Dynamically populated -->
+              </div>
+              <div class="input-hint">Estimated percentage of your current revenue from each plan</div>
+            </div>
+
+            <!-- Patient Retention -->
+            <div class="input-group">
+              <label class="input-label">Expected Patient Retention Rate per Plan</label>
+              <div class="slider-container">
+                <input type="range" id="retention-rate" class="range-slider" min="50" max="95" value="80" style="flex: 1;">
+                <span class="slider-value" id="retention-display">80%</span>
+              </div>
+              <div class="input-hint">What percentage of patients will stay when you drop out-of-network (typical: 75–85%)</div>
+            </div>
+
+            <!-- Fee Increase -->
+            <div class="input-group">
+              <label class="input-label">Fee Increase After Going Out-of-Network</label>
+              <div class="slider-container">
+                <input type="range" id="fee-increase" class="range-slider" min="20" max="60" value="40" style="flex: 1;">
+                <span class="slider-value" id="fee-increase-display">40%</span>
+              </div>
+              <div class="input-hint">How much will you raise fees after dropping PPO (typical: 30–50%)</div>
+            </div>
+
+            <!-- Timeline -->
+            <div class="input-group">
+              <label class="input-label">Transition Timeline</label>
+              <div class="toggle-group">
+                <button class="toggle-btn active" data-timeline="12">12 Months</button>
+                <button class="toggle-btn" data-timeline="24">24 Months</button>
+              </div>
+              <div class="input-hint">How long to model revenue impact</div>
+            </div>
+
+            <!-- Membership Plan -->
+            <div class="input-group">
+              <label class="input-label">Implement a Membership Plan?</label>
+              <div class="toggle-group">
+                <button class="toggle-btn" data-membership="no">No</button>
+                <button class="toggle-btn active" data-membership="yes">Yes</button>
+              </div>
+              <div class="input-hint">Add an in-house membership program to offset revenue loss</div>
+            </div>
+
+            <!-- Conditional Membership Inputs -->
+            <div class="conditional-section active" id="membership-section">
+              <div class="input-group">
+                <label class="input-label">Estimated Members</label>
+                <div class="slider-container">
+                  <input type="range" id="member-count" class="range-slider" min="50" max="500" value="150" style="flex: 1;">
+                  <span class="slider-value" id="member-count-display">150</span>
+                </div>
+                <div class="input-hint">How many patients will enroll in your membership plan</div>
+              </div>
+
+              <div class="input-group">
+                <label class="input-label">Monthly Membership Fee</label>
+                <div style="position: relative;">
+                  <span style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+                  <input type="text" id="membership-fee" class="form-input" style="padding-left: 32px;" placeholder="e.g. 40" inputmode="numeric" value="40">
+                </div>
+                <div class="input-hint">Monthly fee per member (typical: $25–60)</div>
+              </div>
+            </div>
+
+            <!-- Scenario Toggle -->
+            <div class="input-group">
+              <label class="input-label">View Scenario</label>
+              <div class="scenario-toggle">
+                <button class="scenario-btn active" data-scenario="expected">Expected</button>
+                <button class="scenario-btn" data-scenario="pessimistic">Worst Case</button>
+                <button class="scenario-btn" data-scenario="optimistic">Best Case</button>
+              </div>
+              <div class="input-hint">Adjusts patient retention ±10% to show range of outcomes</div>
+            </div>
+
+            <!-- Calculate Button -->
+            <button class="btn btn-cta btn-lg" style="width: 100%; margin-top: 16px;" id="simulate-btn">Run Simulation →</button>
+          </div>
+
+          <!-- RESULTS SECTION -->
+          <div class="results-section">
+            <h3 style="font-size: 1.25rem;">Simulation Results</h3>
+
+            <!-- Summary Cards -->
+            <div class="summary-cards" id="summary-cards">
+              <div class="summary-card">
+                <div class="summary-card-label">Recovery Month</div>
+                <div class="summary-card-value" id="recovery-month">—</div>
+                <div class="summary-card-detail">When revenue recovers</div>
+              </div>
+              <div class="summary-card">
+                <div class="summary-card-label">Total Change at End</div>
+                <div class="summary-card-value" id="total-change">—</div>
+                <div class="summary-card-detail" id="total-change-detail"></div>
+              </div>
+              <div class="summary-card">
+                <div class="summary-card-label">Monthly Revenue (End)</div>
+                <div class="summary-card-value" id="end-monthly">—</div>
+                <div class="summary-card-detail" id="end-monthly-detail"></div>
+              </div>
+              <div class="summary-card">
+                <div class="summary-card-label">Avg Monthly Revenue</div>
+                <div class="summary-card-value" id="avg-monthly">—</div>
+                <div class="summary-card-detail" id="avg-monthly-detail"></div>
+              </div>
+            </div>
+
+            <!-- Chart -->
+            <div class="chart-container">
+              <h4 style="margin-bottom: 16px;">Revenue Projection Over Time</h4>
+              <canvas id="revenue-chart" height="300"></canvas>
+            </div>
+          </div>
+        </div>
+
+        <!-- DETAILED BREAKDOWN TABLE -->
+        <div style="margin-top: 48px;">
+          <h3 style="font-size: 1.25rem; margin-bottom: 24px;">Month-by-Month Breakdown</h3>
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Month</th>
+                  <th style="text-align: right;">Lost Revenue</th>
+                  <th style="text-align: right;">Fee Increase Revenue</th>
+                  <th style="text-align: right;">Membership Revenue</th>
+                  <th style="text-align: right;">Net Revenue</th>
+                  <th style="text-align: right;">vs. Current</th>
+                </tr>
+              </thead>
+              <tbody id="breakdown-table">
+                <!-- Dynamically populated -->
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="section" style="background: var(--bg-subtle);">
+    <div class="container" style="max-width: 900px;">
+      <div class="text-center" style="margin-bottom: 48px;">
+        <span class="badge badge-navy">Common Questions</span>
+        <h2 class="mt-md">FAQ: Revenue Impact of Dropping PPOs</h2>
+        <p>Answers to the questions most dentists ask about the financial impact of leaving PPO plans.</p>
+      </div>
+
+      <div class="faq-section">
+        <div class="faq-item">
+          <div class="faq-question">How long does it take to recover revenue after dropping a PPO plan?</div>
+          <div class="faq-answer">
+            <p>Recovery time depends on several factors: patient retention rate, fee increase percentage, and whether you implement a membership plan. Most practices that drop a single PPO plan recover within 2–6 months if they retain 75%+ of patients and increase fees by 35%+. Practices with membership plans typically recover faster. The key is maintaining patient communication before and after the transition.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What's a realistic patient retention rate?</div>
+          <div class="faq-answer">
+            <p>Industry data suggests 70–85% patient retention when dropping a PPO plan, assuming proper communication and transition planning. Factors that improve retention include: (1) advance notice of 60+ days, (2) written explanation of the change, (3) membership plan alternatives, (4) flexible payment options, and (5) emphasis on care quality. Practices with strong patient relationships and clear communication often see 80%+ retention.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How much should I raise fees after going out-of-network?</div>
+          <div class="faq-answer">
+            <p>PPO discounts typically range from 30–50%. Most practices increase fees by 35–45% to bring out-of-network fees closer to their full fees. However, consider your market: competitive urban markets may support smaller increases (25–35%), while less saturated markets can support larger increases (45–60%). Use this simulator to test different scenarios and see your recovery timeline.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Should I implement a membership plan before or after dropping PPOs?</div>
+          <div class="faq-answer">
+            <p>Either can work, but most successful practices introduce membership plans 2–4 weeks before the PPO transition. This gives patients an alternative to offset fee increases and provides a revenue bridge. Membership plans also improve patient retention—members are less likely to switch practices. Start with 50–100 members and scale up as you refine your offering.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Can I drop multiple PPO plans at once?</div>
+          <div class="faq-answer">
+            <p>While possible, staggering PPO drops is often smarter. Dropping 1–2 plans gives you time to adjust operations, refine patient communication, and collect data before dropping more. Dropping 3+ simultaneously creates operational stress and patient turnover risk. Use this simulator to model different timelines—you'll see that staggered drops often lead to faster overall recovery and less revenue disruption.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What about insurance-dependent patients who leave?</div>
+          <div class="faq-answer">
+            <p>Patients who leave after a PPO drop typically choose competitors who still take their insurance. However, remember: (1) You'll be more profitable on remaining patients, (2) High-retention patients are more valuable long-term, (3) A smaller base of well-paying patients often generates more profit than a larger base of discount patients. This simulator assumes a 25–30% patient loss, which is typical and usually results in higher profitability despite lower volume.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">Should I negotiate better PPO rates before dropping?</div>
+          <div class="faq-answer">
+            <p>Yes. Attempt negotiation first—you might achieve 50%+ of your PPO-drop goals without losing the patient base. However, if negotiations fail and rates remain unprofitable, dropping is often smarter than continuing. This simulator helps you quantify the breakeven point: if you can negotiate from 42% write-offs down to 25%, that's revenue gain without patient risk. Use our <a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a> to assess your current situation first.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">How does membership plan pricing work in this simulator?</div>
+          <div class="faq-answer">
+            <p>The simulator assumes members enroll gradually over 3 months and continue paying throughout the period. So if you start with 150 members at $40/month, that's $72,000 annual membership revenue. Most practices price memberships at $30–60/month and offer benefits like cleanings, exams, X-rays, and discounts on major work. See our <a href="/tools/membership-calculator.html">Membership Pricing Calculator</a> to optimize your plan design.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What if my market is very price-sensitive?</div>
+          <div class="faq-answer">
+            <p>Use the "Worst Case" scenario in this simulator to model lower retention (70%) and smaller fee increases (20–30%). Even in price-sensitive markets, you'll likely recover revenue within 6–12 months because remaining patients are more profitable. Additionally, membership plans help: they provide predictable revenue and keep price-conscious patients engaged at a lower effective fee. Consider geographic repositioning: some dentists in competitive markets have succeeded by targeting quality-seeking rather than price-seeking patients.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">What about the psychological impact of telling patients you're dropping their insurance?</div>
+          <div class="faq-answer">
+            <p>This is the biggest non-financial factor. Successful transitions require: (1) 60+ day advance notice, (2) personalized letters and calls, (3) clear explanation of why (insurance fees don't reflect costs), (4) emphasis on quality benefits, (5) membership plan alternatives, (6) flexible payment plans. Practices that frame it as "improving care quality" rather than "increasing fees" see higher retention. See our <a href="/blog/">Learn section</a> for detailed patient communication templates.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA SECTION -->
+  <section class="section" style="background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--teal-dark) 100%); color: white;">
+    <div class="container text-center" style="max-width: 700px;">
+      <h2 style="color: white; font-size: 2rem;">Ready to Model Your Transition?</h2>
+      <p style="color: rgba(255,255,255,0.8); margin-top: 16px;">This simulator is one of four free tools that help you plan your journey. Use the results to build a step-by-step roadmap for your practice.</p>
+      <div style="display: flex; gap: 16px; margin-top: 32px; flex-wrap: wrap; justify-content: center;">
+        <a href="/tools/ppo-calculator.html" class="btn btn-cta">Calculate PPO Losses</a>
+        <a href="/tools/membership-calculator.html" class="btn btn-ghost" style="border: 1px solid rgba(255,255,255,0.3); color: white;">Membership Pricing</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 48px;">
+        <div>
+          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
+            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
+            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
+            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-links">
+            <li><a href="/blog/">Articles & Guides</a></li>
+            <li><a href="/pages/summit.html">Annual Summit</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/pages/glossary.html">Glossary</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/about.html">About RID Academy</a></li>
+            <li><a href="/pages/community.html">Community</a></li>
+            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
+            <li><a href="mailto:info@rid.academy">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RID Academy. All rights reserved.</span>
+        <div class="flex gap-md">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+
+  <script>
+    // ═══════════════════════════════════════════════════════════
+    // Revenue Impact Simulator
+    // ═══════════════════════════════════════════════════════════
+
+    let simulationData = {
+      currentCollections: 1000000,
+      numPlans: 1,
+      planRevenues: [30],
+      retentionRate: 0.80,
+      feeIncrease: 0.40,
+      timeline: 12,
+      membershipEnabled: true,
+      memberCount: 150,
+      membershipFee: 40,
+      scenario: 'expected'
+    };
+
+    let chart = null;
+
+    // Update plan inputs based on number of plans
+    function updatePlanInputs() {
+      const container = document.getElementById('plan-inputs-container');
+      container.innerHTML = '';
+
+      for (let i = 0; i < simulationData.numPlans; i++) {
+        const defaultRevenue = simulationData.numPlans === 1 ? 30 : simulationData.numPlans === 2 ? 25 : 20;
+        const html = `
+          <div class="plan-input-row">
+            <div>
+              <label style="font-size: 0.9rem; font-weight: 600; color: var(--navy);">Plan ${i + 1} Revenue %</label>
+              <input type="number" class="form-input plan-revenue-input" data-plan="${i}" min="5" max="40" value="${simulationData.planRevenues[i] || defaultRevenue}" style="margin-top: 8px;">
+            </div>
+          </div>
+        `;
+        container.innerHTML += html;
+      }
+
+      // Reset plan revenues array
+      simulationData.planRevenues = Array(simulationData.numPlans).fill(0).map((_, i) => {
+        const inputs = container.querySelectorAll(`[data-plan="${i}"]`);
+        return inputs.length > 0 ? parseInt(inputs[0].value) : (simulationData.numPlans === 1 ? 30 : simulationData.numPlans === 2 ? 25 : 20);
+      });
+
+      // Add event listeners to inputs
+      document.querySelectorAll('.plan-revenue-input').forEach(input => {
+        input.addEventListener('change', () => {
+          const idx = parseInt(input.dataset.plan);
+          simulationData.planRevenues[idx] = parseInt(input.value);
+        });
+      });
+    }
+
+    // Update membership section visibility
+    function toggleMembershipSection() {
+      const section = document.getElementById('membership-section');
+      section.classList.toggle('active', simulationData.membershipEnabled);
+    }
+
+    // Toggle buttons for plans
+    document.querySelectorAll('[data-plans]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-plans]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        simulationData.numPlans = parseInt(btn.dataset.plans);
+        updatePlanInputs();
+      });
+    });
+
+    // Toggle buttons for timeline
+    document.querySelectorAll('[data-timeline]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-timeline]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        simulationData.timeline = parseInt(btn.dataset.timeline);
+      });
+    });
+
+    // Toggle buttons for membership
+    document.querySelectorAll('[data-membership]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-membership]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        simulationData.membershipEnabled = btn.dataset.membership === 'yes';
+        toggleMembershipSection();
+      });
+    });
+
+    // Toggle buttons for scenario
+    document.querySelectorAll('[data-scenario]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('[data-scenario]').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        simulationData.scenario = btn.dataset.scenario;
+        runSimulation();
+      });
+    });
+
+    // Retention rate slider
+    document.getElementById('retention-rate').addEventListener('input', (e) => {
+      simulationData.retentionRate = parseInt(e.target.value) / 100;
+      document.getElementById('retention-display').textContent = e.target.value + '%';
+    });
+
+    // Fee increase slider
+    document.getElementById('fee-increase').addEventListener('input', (e) => {
+      simulationData.feeIncrease = parseInt(e.target.value) / 100;
+      document.getElementById('fee-increase-display').textContent = e.target.value + '%';
+    });
+
+    // Member count slider
+    document.getElementById('member-count').addEventListener('input', (e) => {
+      simulationData.memberCount = parseInt(e.target.value);
+      document.getElementById('member-count-display').textContent = e.target.value;
+    });
+
+    // Membership fee input
+    document.getElementById('membership-fee').addEventListener('input', (e) => {
+      simulationData.membershipFee = parseInt(e.target.value) || 40;
+    });
+
+    // Annual collections input
+    document.getElementById('annual-collections').addEventListener('input', (e) => {
+      const val = e.target.value.replace(/[^0-9]/g, '');
+      simulationData.currentCollections = parseInt(val) || 0;
+    });
+
+    // Format currency display
+    function formatMoney(num) {
+      return '$' + Math.round(num).toLocaleString('en-US', { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    }
+
+    // Run simulation
+    function runSimulation() {
+      if (!simulationData.currentCollections) {
+        alert('Please enter your current annual collections');
+        return;
+      }
+
+      // Update plan revenues from input fields
+      document.querySelectorAll('.plan-revenue-input').forEach(input => {
+        const idx = parseInt(input.dataset.plan);
+        simulationData.planRevenues[idx] = parseInt(input.value);
+      });
+
+      // Apply scenario adjustments
+      let retentionRate = simulationData.retentionRate;
+      if (simulationData.scenario === 'pessimistic') {
+        retentionRate = Math.max(0.4, retentionRate - 0.1);
+      } else if (simulationData.scenario === 'optimistic') {
+        retentionRate = Math.min(1.0, retentionRate + 0.1);
+      }
+
+      const currentMonthlyRevenue = simulationData.currentCollections / 12;
+      const totalPlanRevenuePercent = simulationData.planRevenues.reduce((a, b) => a + b, 0) / 100;
+      const currentPpoRevenue = currentMonthlyRevenue * totalPlanRevenuePercent;
+
+      const months = [];
+      const revenueData = [];
+      const currentPathData = [];
+
+      for (let month = 1; month <= simulationData.timeline; month++) {
+        // Calculate patient loss (gradual over first 6 months)
+        const lossProgress = Math.min(month / 6, 1);
+        const patientsLost = currentPpoRevenue * (1 - retentionRate) * lossProgress;
+
+        // Calculate fee increase revenue (gradual over first 6 months)
+        const feeIncreaseProgress = Math.min(month / 6, 1);
+        const remainingPpoPatients = currentPpoRevenue * retentionRate;
+        const feeIncreaseRevenue = remainingPpoPatients * simulationData.feeIncrease * feeIncreaseProgress;
+
+        // Calculate membership revenue (ramp up over 3 months)
+        let membershipRevenue = 0;
+        if (simulationData.membershipEnabled) {
+          const memberRampUp = Math.min(month / 3, 1);
+          const activeMembers = simulationData.memberCount * memberRampUp;
+          membershipRevenue = (activeMembers * simulationData.membershipFee * 12) / 12; // Monthly
+        }
+
+        // Non-PPO revenue (stays constant)
+        const nonPpoRevenue = currentMonthlyRevenue * (1 - totalPlanRevenuePercent);
+
+        // Total revenue
+        const totalRevenue = nonPpoRevenue + remainingPpoPatients + feeIncreaseRevenue + membershipRevenue;
+        const netChange = totalRevenue - currentMonthlyRevenue;
+
+        months.push(`Month ${month}`);
+        revenueData.push(totalRevenue);
+        currentPathData.push(currentMonthlyRevenue);
+      }
+
+      // Calculate summary metrics
+      const endMonthRevenue = revenueData[revenueData.length - 1];
+      const startMonthRevenue = currentMonthlyRevenue;
+      const recoveryMonth = revenueData.findIndex(r => r >= startMonthRevenue) + 1;
+      const totalChange = (endMonthRevenue - startMonthRevenue) * simulationData.timeline;
+      const avgMonthlyRevenue = revenueData.reduce((a, b) => a + b, 0) / revenueData.length;
+
+      // Update summary cards
+      const recoveryDisplay = recoveryMonth && recoveryMonth <= simulationData.timeline ? `Month ${recoveryMonth}` : 'After Timeline';
+      document.getElementById('recovery-month').textContent = recoveryDisplay;
+
+      const changeCard = document.querySelector('#total-change').parentElement.parentElement;
+      if (endMonthRevenue >= startMonthRevenue) {
+        changeCard.classList.remove('negative');
+        changeCard.classList.add('positive');
+      } else {
+        changeCard.classList.remove('positive');
+        changeCard.classList.add('negative');
+      }
+      document.getElementById('total-change').textContent = formatMoney(totalChange);
+      document.getElementById('total-change-detail').textContent = `Over ${simulationData.timeline} months`;
+
+      document.getElementById('end-monthly').textContent = formatMoney(endMonthRevenue);
+      document.getElementById('end-monthly-detail').textContent = `vs. ${formatMoney(startMonthRevenue)} today`;
+
+      document.getElementById('avg-monthly').textContent = formatMoney(avgMonthlyRevenue);
+      document.getElementById('avg-monthly-detail').textContent = `Average over period`;
+
+      // Update chart
+      updateChart(months, revenueData, currentPathData, startMonthRevenue);
+
+      // Update breakdown table
+      updateBreakdownTable(months);
+    }
+
+    function updateChart(months, revenueData, currentPathData, startRevenue) {
+      const ctx = document.getElementById('revenue-chart').getContext('2d');
+
+      if (chart) {
+        chart.destroy();
+      }
+
+      chart = new Chart(ctx, {
+        type: 'line',
+        data: {
+          labels: months,
+          datasets: [
+            {
+              label: 'Current Path (No Change)',
+              data: currentPathData,
+              borderColor: '#94A3B8',
+              backgroundColor: 'rgba(148, 163, 184, 0.05)',
+              borderWidth: 2,
+              borderDash: [5, 5],
+              fill: false,
+              pointRadius: 0,
+              tension: 0.4
+            },
+            {
+              label: 'Projected Path (With PPO Drop)',
+              data: revenueData,
+              borderColor: '#00B4A6',
+              backgroundColor: 'rgba(0, 180, 166, 0.1)',
+              borderWidth: 3,
+              fill: true,
+              pointRadius: 0,
+              tension: 0.4
+            }
+          ]
+        },
+        options: {
+          responsive: true,
+          maintainAspectRatio: true,
+          plugins: {
+            legend: {
+              display: true,
+              position: 'top',
+              labels: {
+                font: { family: "Inter, sans-serif", size: 13, weight: '500' },
+                color: '#475569',
+                padding: 16,
+                boxPadding: 8
+              }
+            }
+          },
+          scales: {
+            x: {
+              display: true,
+              grid: { color: 'rgba(226, 232, 240, 0.5)' },
+              ticks: { font: { family: "Inter, sans-serif", size: 12 }, color: '#94A3B8' }
+            },
+            y: {
+              beginAtZero: false,
+              grid: { color: 'rgba(226, 232, 240, 0.5)' },
+              ticks: {
+                font: { family: "DM Mono, monospace", size: 12 },
+                color: '#94A3B8',
+                callback: (value) => '$' + (value / 1000).toFixed(0) + 'K'
+              }
+            }
+          }
+        }
+      });
+    }
+
+    function updateBreakdownTable(months) {
+      const tbody = document.getElementById('breakdown-table');
+      tbody.innerHTML = '';
+
+      const currentMonthlyRevenue = simulationData.currentCollections / 12;
+      const totalPlanRevenuePercent = simulationData.planRevenues.reduce((a, b) => a + b, 0) / 100;
+      const currentPpoRevenue = currentMonthlyRevenue * totalPlanRevenuePercent;
+
+      // Apply scenario adjustments
+      let retentionRate = simulationData.retentionRate;
+      if (simulationData.scenario === 'pessimistic') {
+        retentionRate = Math.max(0.4, retentionRate - 0.1);
+      } else if (simulationData.scenario === 'optimistic') {
+        retentionRate = Math.min(1.0, retentionRate + 0.1);
+      }
+
+      for (let month = 1; month <= simulationData.timeline; month++) {
+        const lossProgress = Math.min(month / 6, 1);
+        const patientsLost = currentPpoRevenue * (1 - retentionRate) * lossProgress;
+
+        const feeIncreaseProgress = Math.min(month / 6, 1);
+        const remainingPpoPatients = currentPpoRevenue * retentionRate;
+        const feeIncreaseRevenue = remainingPpoPatients * simulationData.feeIncrease * feeIncreaseProgress;
+
+        let membershipRevenue = 0;
+        if (simulationData.membershipEnabled) {
+          const memberRampUp = Math.min(month / 3, 1);
+          const activeMembers = simulationData.memberCount * memberRampUp;
+          membershipRevenue = (activeMembers * simulationData.membershipFee * 12) / 12;
+        }
+
+        const nonPpoRevenue = currentMonthlyRevenue * (1 - totalPlanRevenuePercent);
+        const totalRevenue = nonPpoRevenue + remainingPpoPatients + feeIncreaseRevenue + membershipRevenue;
+        const netChange = totalRevenue - currentMonthlyRevenue;
+
+        const row = `
+          <tr>
+            <td><span class="month-num">Month ${month}</span></td>
+            <td style="text-align: right;"><span class="currency negative">${formatMoney(-patientsLost)}</span></td>
+            <td style="text-align: right;"><span class="currency positive">${formatMoney(feeIncreaseRevenue)}</span></td>
+            <td style="text-align: right;"><span class="currency">${formatMoney(membershipRevenue)}</span></td>
+            <td style="text-align: right;"><span class="currency" style="font-weight: 700;">${formatMoney(totalRevenue)}</span></td>
+            <td style="text-align: right;"><span class="currency ${netChange >= 0 ? 'positive' : 'negative'}" style="font-weight: 700;">${netChange >= 0 ? '+' : ''}${formatMoney(netChange)}</span></td>
+          </tr>
+        `;
+        tbody.innerHTML += row;
+      }
+    }
+
+    // FAQ toggle
+    document.querySelectorAll('.faq-question').forEach(question => {
+      question.addEventListener('click', () => {
+        const item = question.parentElement;
+        item.classList.toggle('open');
+      });
+    });
+
+    // Initialize
+    updatePlanInputs();
+    toggleMembershipSection();
+
+    // Simulate button
+    document.getElementById('simulate-btn').addEventListener('click', runSimulation);
+
+    // Run initial simulation on load
+    window.addEventListener('load', () => {
+      setTimeout(runSimulation, 500);
+    });
+  </script>
+
+</body>
+</html>

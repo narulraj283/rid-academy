@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PPO Write-Off Calculator — How Much Are You Losing? | RID Academy</title>
+  <meta name="description" content="Free PPO write-off calculator for dentists. Enter your real numbers and instantly see how much revenue you're losing to insurance write-offs each year.">
+  <meta name="keywords" content="PPO write-off calculator, dental insurance losses, PPO fees calculator, dental practice revenue, insurance dependence">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="PPO Write-Off Calculator — How Much Are You Losing?">
+  <meta property="og:description" content="Dentists lose an average of $250K+/year to PPO write-offs. Calculate your exact losses in 60 seconds.">
+  <meta property="og:url" content="https://test.rid.academy/tools/ppo-calculator.html">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "PPO Write-Off Calculator",
+    "description": "Calculate how much revenue your dental practice loses to PPO insurance write-offs annually.",
+    "url": "https://test.rid.academy/tools/ppo-calculator.html",
+    "applicationCategory": "FinanceApplication",
+    "operatingSystem": "Web",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" }
+  }
+  </script>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="nav">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link active">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" style="padding-bottom: 48px;">
+    <div class="hero-bg"></div>
+    <div class="container text-center" style="max-width: 700px;">
+      <span class="badge badge-coral" style="margin-bottom: 16px;">Free Calculator</span>
+      <h1 style="font-size: clamp(1.75rem, 4vw, 2.5rem);">PPO Write-Off Calculator</h1>
+      <p>See exactly how much revenue your practice is losing to PPO insurance write-offs. Takes less than 60 seconds.</p>
+    </div>
+  </section>
+
+  <!-- CALCULATOR -->
+  <section class="section" style="margin-top: -48px; position: relative; z-index: 10;">
+    <div class="container tool-container">
+      <div class="card" style="padding: 40px; box-shadow: var(--shadow-xl); border: none;">
+
+        <div id="calculator-form">
+          <!-- Step 1: Collections -->
+          <div class="form-group">
+            <label class="form-label">Annual Collections (Total Revenue)</label>
+            <div style="position: relative;">
+              <span style="position: absolute; left: 16px; top: 50%; transform: translateY(-50%); color: var(--text-muted); font-weight: 600;">$</span>
+              <input type="text" id="annual-collections" class="form-input" style="padding-left: 32px;" placeholder="e.g. 1,200,000" inputmode="numeric">
+            </div>
+            <div class="form-hint">Your total annual collections from all sources</div>
+          </div>
+
+          <!-- Step 2: PPO Percentage -->
+          <div class="form-group mt-lg">
+            <label class="form-label">Percentage of Revenue from PPO Plans</label>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <input type="range" id="ppo-percent" class="range-slider" min="0" max="100" value="65" style="flex: 1;">
+              <span id="ppo-percent-display" class="mono" style="font-size: 1.5rem; font-weight: 700; color: var(--navy); min-width: 60px; text-align: right;">65%</span>
+            </div>
+            <div class="form-hint">What percentage of your patients use PPO insurance? The US average is ~65%.</div>
+          </div>
+
+          <!-- Step 3: Write-off Rate -->
+          <div class="form-group mt-lg">
+            <label class="form-label">Average PPO Write-Off Rate</label>
+            <div style="display: flex; align-items: center; gap: 16px;">
+              <input type="range" id="writeoff-rate" class="range-slider" min="10" max="60" value="42" style="flex: 1;">
+              <span id="writeoff-display" class="mono" style="font-size: 1.5rem; font-weight: 700; color: var(--coral); min-width: 60px; text-align: right;">42%</span>
+            </div>
+            <div class="form-hint">The average discount between your full fees and PPO-allowed amounts. US average is 42–45%.</div>
+          </div>
+
+          <!-- Step 4: Number of PPO Plans -->
+          <div class="form-group mt-lg">
+            <label class="form-label">How many PPO plans do you currently participate in?</label>
+            <select id="ppo-plans" class="form-input" style="max-width: 300px;">
+              <option value="1">1 plan</option>
+              <option value="2">2 plans</option>
+              <option value="3" selected>3 plans</option>
+              <option value="4">4 plans</option>
+              <option value="5">5+ plans</option>
+            </select>
+          </div>
+
+          <button id="calculate-btn" class="btn btn-cta btn-lg mt-xl" style="width: 100%;">Calculate My PPO Losses →</button>
+        </div>
+
+        <!-- RESULTS (hidden initially) -->
+        <div id="results" style="display: none;">
+          <div class="tool-result">
+            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em;">You're Losing Approximately</div>
+            <div id="result-total" class="tool-result-value" style="margin-top: 8px;">$0</div>
+            <div class="tool-result-label">per year to PPO write-offs</div>
+
+            <div class="tool-result-sub">
+              <div>
+                <div id="result-monthly" style="font-size: 1.5rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Per Month</div>
+              </div>
+              <div>
+                <div id="result-daily" style="font-size: 1.5rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Per Working Day</div>
+              </div>
+              <div>
+                <div id="result-5year" style="font-size: 1.5rem; font-weight: 700; color: var(--coral-light); font-family: var(--font-mono);">$0</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Over 5 Years</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Breakdown -->
+          <div class="mt-xl">
+            <h3>Your Breakdown</h3>
+            <div class="table-wrap mt-md">
+              <table>
+                <thead>
+                  <tr>
+                    <th>Metric</th>
+                    <th style="text-align: right;">Amount</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr><td>Annual Collections</td><td style="text-align: right;" id="row-collections">—</td></tr>
+                  <tr><td>PPO Revenue (at <span id="row-ppo-pct">65</span>%)</td><td style="text-align: right;" id="row-ppo-revenue">—</td></tr>
+                  <tr><td>Full Fees (if no write-off)</td><td style="text-align: right;" id="row-full-fees">—</td></tr>
+                  <tr style="font-weight: 700;"><td style="color: var(--coral);">Annual Write-Off Loss</td><td style="text-align: right; color: var(--coral);" id="row-loss">—</td></tr>
+                  <tr><td>Monthly Loss</td><td style="text-align: right;" id="row-monthly">—</td></tr>
+                  <tr><td>Loss Per Working Day (250 days)</td><td style="text-align: right;" id="row-daily">—</td></tr>
+                  <tr><td>5-Year Cumulative Loss</td><td style="text-align: right;" id="row-5year">—</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <!-- Context -->
+          <div class="card-flat mt-xl" style="border-left: 4px solid var(--teal);">
+            <h4>What This Means for Your Practice</h4>
+            <p id="context-text" style="margin-top: 8px;"></p>
+          </div>
+
+          <!-- Next Steps -->
+          <div class="mt-xl">
+            <h3>Recommended Next Steps</h3>
+            <div class="grid grid-2 mt-md" style="gap: 16px;">
+              <a href="/tools/readiness-scorecard.html" class="card" style="text-decoration: none;">
+                <div class="card-icon">✓</div>
+                <h4 style="font-size: 1rem;">Take the Readiness Scorecard</h4>
+                <p style="font-size: 0.85rem;">Find out if your practice is ready to start dropping PPO plans.</p>
+              </a>
+              <a href="/tools/revenue-simulator.html" class="card" style="text-decoration: none;">
+                <div class="card-icon navy">⟳</div>
+                <h4 style="font-size: 1rem;">Simulate Revenue Impact</h4>
+                <p style="font-size: 0.85rem;">Model what happens when you drop your lowest-performing PPO plan.</p>
+              </a>
+            </div>
+          </div>
+
+          <!-- Share -->
+          <div class="mt-xl text-center" style="padding: 24px; background: var(--bg-subtle); border-radius: var(--radius-lg);">
+            <p style="font-weight: 600; color: var(--navy); margin-bottom: 8px;">Share your results with a colleague</p>
+            <p style="font-size: 0.85rem; color: var(--text-muted); margin-bottom: 16px;">Help other dental professionals understand what PPO write-offs are costing them.</p>
+            <div class="share-bar" style="justify-content: center;">
+              <button class="share-btn" onclick="shareOnPlatform('twitter', window.location.href, '', shareText())" title="Share on X/Twitter">𝕏</button>
+              <button class="share-btn" onclick="shareOnPlatform('linkedin', window.location.href, '', shareText())" title="Share on LinkedIn">in</button>
+              <button class="share-btn" onclick="shareOnPlatform('facebook', window.location.href, '', shareText())" title="Share on Facebook">f</button>
+              <button class="share-btn" onclick="shareOnPlatform('email', window.location.href, 'PPO Write-Off Calculator', shareText())" title="Share via Email">✉</button>
+              <button class="share-btn" onclick="copyResults()" id="copy-btn" title="Copy Results">⎘</button>
+            </div>
+          </div>
+
+          <button id="recalculate-btn" class="btn btn-secondary mt-xl" style="width: 100%;">← Recalculate with Different Numbers</button>
+        </div>
+      </div>
+
+      <!-- FAQ -->
+      <div class="mt-2xl" style="max-width: 700px; margin-left: auto; margin-right: auto;">
+        <h2 class="text-center">Frequently Asked Questions</h2>
+        <div class="mt-xl">
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">What are PPO write-offs?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">PPO write-offs are the difference between your full (UCR) fees and the amount the PPO plan allows you to charge. If your fee for a crown is $1,200 but the PPO allows $720, the $480 difference is a "write-off" — revenue you can never collect.</p>
+          </details>
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">How accurate is this calculator?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">This calculator provides an estimate based on industry averages. Your actual write-offs may vary by plan, procedure mix, and region. For a precise analysis, review your actual fee schedules against your UCR fees. The calculator uses a simplified model — real-world results from practices in our community typically find the actual numbers are within 10-15% of this estimate.</p>
+          </details>
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">Is the average write-off really 42-45%?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Yes. According to industry data and surveys of dental practices, the average PPO write-off ranges from 38-48%, with 42-45% being the most common range. Some plans (especially Delta Dental PPO) can have write-offs exceeding 50% for certain procedures.</p>
+          </details>
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">Can I really drop PPO plans without losing all my patients?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">Absolutely. Data from thousands of practices shows that when done strategically, most practices retain 70-90% of their patients after dropping a PPO plan. The key is proper communication, timing, and having an alternative like an in-house membership plan. Our community has extensive resources on exactly how to do this.</p>
+          </details>
+          <details style="border-bottom: 1px solid var(--border); padding: 20px 0;">
+            <summary style="font-weight: 600; cursor: pointer; color: var(--navy);">Should I drop all my PPO plans at once?</summary>
+            <p style="margin-top: 12px; font-size: 0.95rem;">No — that's rarely recommended. The strategic approach is to start with the plan that has the worst reimbursement rates and the fewest patients. This minimizes risk while building confidence and refining your process. Most practices phase out plans over 12-36 months.</p>
+          </details>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="grid grid-4" style="gap: 48px;">
+        <div>
+          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Empowering dental practice owners to achieve financial independence.</p>
+        </div>
+        <div>
+          <h4>Tools</h4>
+          <ul class="footer-links">
+            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
+            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
+            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
+            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Learn</h4>
+          <ul class="footer-links">
+            <li><a href="/blog/">Articles & Guides</a></li>
+            <li><a href="/pages/summit.html">Annual Summit</a></li>
+            <li><a href="/resources/">Resources</a></li>
+            <li><a href="/pages/glossary.html">Glossary</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul class="footer-links">
+            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/community.html">Community</a></li>
+            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
+            <li><a href="mailto:info@rid.academy">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <span>&copy; 2026 RID Academy. All rights reserved.</span>
+        <div class="flex gap-md"><a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Disclaimer</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/js/main.js"></script>
+  <script>
+    // ── PPO Calculator Logic ──
+    const collectionsInput = document.getElementById('annual-collections');
+    const ppoSlider = document.getElementById('ppo-percent');
+    const ppoDisplay = document.getElementById('ppo-percent-display');
+    const writeoffSlider = document.getElementById('writeoff-rate');
+    const writeoffDisplay = document.getElementById('writeoff-display');
+    const calcBtn = document.getElementById('calculate-btn');
+    const recalcBtn = document.getElementById('recalculate-btn');
+    const formEl = document.getElementById('calculator-form');
+    const resultsEl = document.getElementById('results');
+
+    let lastResults = {};
+
+    // Format input as currency
+    collectionsInput.addEventListener('input', function() {
+      let val = this.value.replace(/[^0-9]/g, '');
+      if (val) this.value = parseInt(val).toLocaleString();
+    });
+
+    // Update slider displays
+    ppoSlider.addEventListener('input', () => ppoDisplay.textContent = ppoSlider.value + '%');
+    writeoffSlider.addEventListener('input', () => writeoffDisplay.textContent = writeoffSlider.value + '%');
+
+    // Calculate
+    calcBtn.addEventListener('click', () => {
+      const collections = parseInt(collectionsInput.value.replace(/[^0-9]/g, ''));
+      if (!collections || collections < 1000) {
+        collectionsInput.classList.add('error');
+        collectionsInput.focus();
+        return;
+      }
+      collectionsInput.classList.remove('error');
+
+      const ppoPct = parseInt(ppoSlider.value) / 100;
+      const writeoffPct = parseInt(writeoffSlider.value) / 100;
+
+      const ppoRevenue = collections * ppoPct;
+      // PPO revenue is what you collect AFTER write-offs. Full fees = ppoRevenue / (1 - writeoffPct)
+      const fullFees = ppoRevenue / (1 - writeoffPct);
+      const annualLoss = fullFees - ppoRevenue;
+      const monthlyLoss = annualLoss / 12;
+      const dailyLoss = annualLoss / 250;
+      const fiveYearLoss = annualLoss * 5;
+
+      lastResults = { collections, ppoPct, writeoffPct, ppoRevenue, fullFees, annualLoss, monthlyLoss, dailyLoss, fiveYearLoss };
+
+      // Animate results
+      document.getElementById('result-total').textContent = formatCurrency(annualLoss);
+      document.getElementById('result-monthly').textContent = formatCurrency(monthlyLoss);
+      document.getElementById('result-daily').textContent = formatCurrency(dailyLoss);
+      document.getElementById('result-5year').textContent = formatCurrency(fiveYearLoss);
+
+      document.getElementById('row-collections').textContent = formatCurrency(collections);
+      document.getElementById('row-ppo-pct').textContent = Math.round(ppoPct * 100);
+      document.getElementById('row-ppo-revenue').textContent = formatCurrency(ppoRevenue);
+      document.getElementById('row-full-fees').textContent = formatCurrency(fullFees);
+      document.getElementById('row-loss').textContent = formatCurrency(annualLoss);
+      document.getElementById('row-monthly').textContent = formatCurrency(monthlyLoss);
+      document.getElementById('row-daily').textContent = formatCurrency(dailyLoss);
+      document.getElementById('row-5year').textContent = formatCurrency(fiveYearLoss);
+
+      // Context text
+      let context = '';
+      if (annualLoss > 500000) {
+        context = `Your practice is losing over half a million dollars per year to PPO write-offs. This is significantly above average and represents an enormous opportunity. Even recovering 30% of this through strategic PPO resignations would add ${formatCurrency(annualLoss * 0.3)} to your annual revenue. This is the equivalent of hiring additional staff, upgrading equipment, or significantly increasing your take-home pay — and that's the conservative scenario.`;
+      } else if (annualLoss > 200000) {
+        context = `Your practice is losing ${formatCurrency(annualLoss)} per year — that's ${formatCurrency(dailyLoss)} every single working day that you're giving away. For context, over a typical 30-year career, this adds up to ${formatCurrency(annualLoss * 30)} in lost revenue. Practices in our community that have strategically reduced PPO dependence typically recover 50-70% of these write-offs within 18 months.`;
+      } else if (annualLoss > 100000) {
+        context = `You're losing ${formatCurrency(annualLoss)} annually to write-offs. While this may seem manageable, consider that over 5 years that's ${formatCurrency(fiveYearLoss)} — money that could fund practice improvements, team compensation, or your retirement. Many practices in your range have successfully reduced PPO dependence by starting with their worst-performing plan.`;
+      } else {
+        context = `Your PPO write-off exposure of ${formatCurrency(annualLoss)} per year is on the lower end. This could mean you have fewer PPO patients, or your plans have better reimbursement rates. This is actually an ideal position to start reducing dependence — the risk is lower, and you can build confidence before tackling larger plans.`;
+      }
+      document.getElementById('context-text').textContent = context;
+
+      formEl.style.display = 'none';
+      resultsEl.style.display = 'block';
+      window.scrollTo({ top: resultsEl.offsetTop - 100, behavior: 'smooth' });
+    });
+
+    recalcBtn.addEventListener('click', () => {
+      formEl.style.display = 'block';
+      resultsEl.style.display = 'none';
+      window.scrollTo({ top: formEl.offsetTop - 100, behavior: 'smooth' });
+    });
+
+    function shareText() {
+      if (lastResults.annualLoss) {
+        return `I just calculated that my dental practice loses ${formatCurrency(lastResults.annualLoss)}/year to PPO write-offs. Calculate yours:`;
+      }
+      return 'Calculate how much your dental practice loses to PPO write-offs:';
+    }
+
+    function copyResults() {
+      const text = `PPO Write-Off Analysis (via RID Academy)
+Annual Collections: ${formatCurrency(lastResults.collections)}
+PPO Revenue: ${formatCurrency(lastResults.ppoRevenue)} (${Math.round(lastResults.ppoPct*100)}% of total)
+Write-Off Rate: ${Math.round(lastResults.writeoffPct*100)}%
+Annual Loss: ${formatCurrency(lastResults.annualLoss)}
+Monthly Loss: ${formatCurrency(lastResults.monthlyLoss)}
+Daily Loss: ${formatCurrency(lastResults.dailyLoss)}
+5-Year Loss: ${formatCurrency(lastResults.fiveYearLoss)}
+
+Calculate yours at: ${window.location.href}`;
+
+      navigator.clipboard.writeText(text).then(() => {
+        const btn = document.getElementById('copy-btn');
+        btn.textContent = '✓';
+        btn.style.background = 'var(--green)';
+        btn.style.color = 'white';
+        setTimeout(() => { btn.textContent = '⎘'; btn.style.background = ''; btn.style.color = ''; }, 2000);
+      });
+    }
+  </script>
+</body>
+</html>
