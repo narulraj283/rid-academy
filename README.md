@@ -3,7 +3,7 @@
 The #1 resource for dental practice owners reducing dependence on PPO insurance plans.
 
 **Live at:** [rida.narenlife.com](https://rida.narenlife.com)
-**Production target:** [test.rid.academy](https://test.rid.academy) → [rid.academy](https://rid.academy)
+**Production target:** [rida.narenlife.com](https://rida.narenlife.com) → [rid.academy](https://rid.academy)
 
 ---
 
