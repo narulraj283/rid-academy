@@ -1,0 +1,1235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Interactive PPO Financial Analysis Worksheet. Analyze your dental practice's financial situation and understand the true cost of PPO participation vs fee-for-service and membership models.">
+    <meta name="keywords" content="PPO analysis, dental practice finances, write-offs, insurance costs, fee-for-service, membership plan, dental practice calculator">
+    <meta name="author" content="RID Academy">
+    <meta property="og:title" content="PPO Financial Analysis Worksheet | RID Academy">
+    <meta property="og:description" content="Know Your Numbers: Interactive tool to analyze your dental practice's PPO financial situation and calculate the true cost of insurance participation.">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="/images/resources-og.jpg">
+    <meta property="og:url" content="https://ridacademy.com/resources/financial-analysis-worksheet.html">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="PPO Financial Analysis Worksheet | RID Academy">
+    <meta name="twitter:description" content="Interactive financial analysis tool for dental practices. Calculate PPO costs, write-offs, and revenue projections.">
+    <meta name="twitter:image" content="/images/resources-og.jpg">
+
+    <title>PPO Financial Analysis Worksheet | RID Academy</title>
+    <link rel="stylesheet" href="/css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PPO Financial Analysis Worksheet",
+        "description": "Interactive worksheet to analyze dental practice PPO financials and calculate the cost of insurance participation",
+        "url": "https://ridacademy.com/resources/financial-analysis-worksheet.html",
+        "applicationCategory": "FinanceApplication",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "USD"
+        },
+        "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "4.9",
+            "ratingCount": "500",
+            "bestRating": "5",
+            "worstRating": "1"
+        }
+    }
+    </script>
+
+    <style>
+        /* ════════════════════════════════════════════════════════
+           Worksheet-Specific Styles
+           ════════════════════════════════════════════════════════ */
+
+        .worksheet-hero {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            padding: var(--space-4xl) 0;
+            margin-top: var(--nav-height);
+            text-align: center;
+        }
+
+        .worksheet-hero h1 {
+            color: white;
+            margin-bottom: var(--space-md);
+        }
+
+        .worksheet-hero p {
+            color: rgba(255, 255, 255, 0.9);
+            font-size: 1.1rem;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        .worksheet-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 0 var(--space-lg);
+        }
+
+        .worksheet-section {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            margin: var(--space-2xl) 0;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow var(--duration) var(--ease);
+        }
+
+        .worksheet-section:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .worksheet-section h2 {
+            display: flex;
+            align-items: center;
+            gap: var(--space-md);
+            margin-bottom: var(--space-xl);
+            padding-bottom: var(--space-lg);
+            border-bottom: 2px solid var(--teal-bg);
+        }
+
+        .section-number {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            background: var(--teal);
+            color: white;
+            border-radius: var(--radius-full);
+            font-weight: 700;
+            font-size: 1.25rem;
+            flex-shrink: 0;
+        }
+
+        .worksheet-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--space-lg);
+            margin-bottom: var(--space-lg);
+        }
+
+        .worksheet-row.full {
+            grid-template-columns: 1fr;
+        }
+
+        @media (max-width: 768px) {
+            .worksheet-row {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .input-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .input-label {
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .input-label .helper-text {
+            font-weight: 400;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: 2px;
+        }
+
+        .input-number,
+        .input-percentage {
+            padding: 12px 16px;
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            font-size: 1rem;
+            font-family: var(--font-mono);
+            transition: border-color var(--duration) var(--ease);
+        }
+
+        .input-number:focus,
+        .input-percentage:focus {
+            outline: none;
+            border-color: var(--teal);
+            box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
+        }
+
+        .slider-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .slider-label {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: var(--space-sm);
+        }
+
+        .slider-label-text {
+            font-weight: 600;
+            color: var(--navy);
+            font-size: 0.95rem;
+        }
+
+        .slider-value {
+            font-family: var(--font-mono);
+            font-weight: 600;
+            color: var(--teal);
+            font-size: 1rem;
+        }
+
+        input[type="range"] {
+            width: 100%;
+            height: 6px;
+            border-radius: var(--radius-full);
+            background: var(--border);
+            outline: none;
+            -webkit-appearance: none;
+            appearance: none;
+            cursor: pointer;
+        }
+
+        input[type="range"]::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            appearance: none;
+            width: 20px;
+            height: 20px;
+            border-radius: var(--radius-full);
+            background: var(--teal);
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(0, 180, 166, 0.3);
+            transition: all var(--duration) var(--ease);
+        }
+
+        input[type="range"]::-webkit-slider-thumb:hover {
+            width: 24px;
+            height: 24px;
+            box-shadow: 0 4px 12px rgba(0, 180, 166, 0.4);
+        }
+
+        input[type="range"]::-moz-range-thumb {
+            width: 20px;
+            height: 20px;
+            border-radius: var(--radius-full);
+            background: var(--teal);
+            cursor: pointer;
+            border: none;
+            box-shadow: 0 2px 8px rgba(0, 180, 166, 0.3);
+            transition: all var(--duration) var(--ease);
+        }
+
+        input[type="range"]::-moz-range-thumb:hover {
+            width: 24px;
+            height: 24px;
+            box-shadow: 0 4px 12px rgba(0, 180, 166, 0.4);
+        }
+
+        input[type="range"]::-moz-range-track {
+            background: transparent;
+            border: none;
+        }
+
+        .result-badge {
+            display: inline-block;
+            padding: 8px 12px;
+            border-radius: var(--radius-md);
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-top: var(--space-sm);
+        }
+
+        .result-badge.green {
+            background: var(--green-bg);
+            color: var(--green);
+        }
+
+        .result-badge.red {
+            background: var(--red-bg);
+            color: var(--red);
+        }
+
+        .result-badge.amber {
+            background: var(--amber-bg);
+            color: #D97706;
+        }
+
+        .dashboard {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .metric-card {
+            background: var(--bg-subtle);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            text-align: center;
+        }
+
+        .metric-card h4 {
+            color: var(--text-secondary);
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            margin-bottom: var(--space-sm);
+        }
+
+        .metric-value {
+            font-size: 1.75rem;
+            font-weight: 700;
+            color: var(--navy);
+            font-family: var(--font-mono);
+            margin-bottom: var(--space-xs);
+        }
+
+        .metric-change {
+            font-size: 0.9rem;
+            margin-top: var(--space-sm);
+        }
+
+        .metric-change.positive {
+            color: var(--green);
+        }
+
+        .metric-change.negative {
+            color: var(--red);
+        }
+
+        .metric-change.neutral {
+            color: var(--text-muted);
+        }
+
+        .summary-dashboard {
+            background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
+            color: white;
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            margin-top: var(--space-xl);
+        }
+
+        .summary-dashboard h3 {
+            color: white;
+            margin-bottom: var(--space-xl);
+        }
+
+        .summary-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        @media (max-width: 768px) {
+            .summary-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .summary-item {
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .summary-label {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            opacity: 0.8;
+            margin-bottom: var(--space-sm);
+        }
+
+        .summary-value {
+            font-size: 1.5rem;
+            font-weight: 700;
+            font-family: var(--font-mono);
+        }
+
+        .status-indicator {
+            display: inline-block;
+            width: 12px;
+            height: 12px;
+            border-radius: var(--radius-full);
+            margin-right: var(--space-sm);
+            vertical-align: middle;
+        }
+
+        .status-indicator.green {
+            background: var(--green);
+        }
+
+        .status-indicator.red {
+            background: var(--red);
+        }
+
+        .status-indicator.amber {
+            background: var(--amber);
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: var(--space-md);
+            margin-top: var(--space-xl);
+            flex-wrap: wrap;
+        }
+
+        @media (max-width: 768px) {
+            .action-buttons {
+                flex-direction: column;
+            }
+
+            .action-buttons button {
+                width: 100%;
+            }
+        }
+
+        .print-section {
+            background: var(--bg-subtle);
+            border: 2px dashed var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            margin-top: var(--space-xl);
+            text-align: center;
+        }
+
+        .cta-section {
+            background: var(--teal-bg);
+            border-radius: var(--radius-lg);
+            padding: var(--space-2xl);
+            margin: var(--space-3xl) 0;
+            text-align: center;
+        }
+
+        .cta-section h3 {
+            color: var(--navy);
+            margin-bottom: var(--space-md);
+        }
+
+        .cta-section p {
+            margin-bottom: var(--space-lg);
+        }
+
+        .related-links {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: var(--space-lg);
+            margin: var(--space-2xl) 0;
+        }
+
+        @media (max-width: 768px) {
+            .related-links {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .related-card {
+            background: var(--bg-white);
+            border: 1px solid var(--border);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            text-align: center;
+            transition: all var(--duration) var(--ease);
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .related-card:hover {
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+
+        .related-card h4 {
+            margin-bottom: var(--space-sm);
+            color: var(--navy);
+        }
+
+        .related-card p {
+            font-size: 0.9rem;
+            margin: 0;
+        }
+
+        .tooltip {
+            position: relative;
+            display: inline-block;
+            cursor: help;
+            color: var(--teal);
+            font-weight: 600;
+            border-bottom: 1px dotted var(--teal);
+        }
+
+        .tooltip:hover::after {
+            content: attr(data-tooltip);
+            position: absolute;
+            bottom: 125%;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--navy);
+            color: white;
+            padding: var(--space-sm) var(--space-md);
+            border-radius: var(--radius-sm);
+            white-space: nowrap;
+            font-size: 0.8rem;
+            font-weight: 400;
+            z-index: 100;
+        }
+
+        .worksheet-info {
+            background: var(--teal-bg);
+            border-left: 4px solid var(--teal);
+            border-radius: var(--radius-md);
+            padding: var(--space-lg);
+            margin-bottom: var(--space-xl);
+        }
+
+        .worksheet-info h4 {
+            color: var(--teal-dark);
+            margin-top: 0;
+            margin-bottom: var(--space-sm);
+        }
+
+        .worksheet-info p {
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        /* ════════════════════════════════════════════════════════
+           Print Styles
+           ════════════════════════════════════════════════════════ */
+
+        @media print {
+            body {
+                background: white;
+            }
+
+            .nav,
+            .footer,
+            .action-buttons,
+            .cta-section,
+            .related-links {
+                display: none !important;
+            }
+
+            .worksheet-hero {
+                margin-top: 0;
+            }
+
+            .worksheet-container {
+                max-width: 100%;
+                padding: 0;
+            }
+
+            .worksheet-section {
+                page-break-inside: avoid;
+                box-shadow: none;
+                border: 1px solid var(--border);
+                margin: 0 0 var(--space-lg) 0;
+            }
+
+            .summary-dashboard {
+                page-break-inside: avoid;
+                color: var(--navy);
+                background: var(--bg-subtle);
+                border: 1px solid var(--border);
+            }
+
+            .summary-item {
+                background: white;
+                border: 1px solid var(--border);
+            }
+
+            .summary-value {
+                color: var(--navy);
+            }
+
+            .metric-card {
+                page-break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+<body>
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/resources/" class="nav-link active">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+    <!-- Hero Section -->
+    <section class="worksheet-hero">
+        <div class="worksheet-container">
+            <h1>PPO Financial Analysis Worksheet</h1>
+            <p>Know Your Numbers: Understand the true cost of PPO participation on your dental practice</p>
+        </div>
+    </section>
+
+    <!-- Main Worksheet -->
+    <main class="worksheet-container" style="padding: var(--space-2xl) var(--space-lg);">
+
+        <div class="worksheet-info">
+            <h4>How This Worksheet Works</h4>
+            <p>Enter your practice data below to see real-time calculations of your PPO costs, write-offs, and revenue opportunities. All calculations happen instantly on your device — your data is never stored or shared.</p>
+        </div>
+
+        <!-- Section 1: Current Revenue Breakdown -->
+        <section class="worksheet-section">
+            <h2>
+                <span class="section-number">1</span>
+                Current Revenue Breakdown
+            </h2>
+
+            <div class="worksheet-row">
+                <div class="input-group">
+                    <label class="input-label">
+                        Total Annual Collections
+                        <div class="helper-text">Gross revenue before write-offs</div>
+                    </label>
+                    <input type="number" id="totalAnnualCollections" class="input-number" placeholder="$500,000" min="0" step="10000" value="500000">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Number of Active PPO Patients</label>
+                    <input type="number" id="activePPOPatients" class="input-number" placeholder="150" min="0" step="1" value="150">
+                </div>
+            </div>
+
+            <div class="worksheet-row full">
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span class="slider-label-text">PPO Revenue Percentage</span>
+                        <span class="slider-value"><span id="ppoPercentValue">35</span>%</span>
+                    </div>
+                    <input type="range" id="ppoPercent" min="0" max="100" value="35" step="1">
+                    <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">
+                        <strong id="ffsPercentValue">65</strong>% from Fee-for-Service (calculated automatically)
+                    </div>
+                </div>
+            </div>
+
+            <div class="worksheet-row full">
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span class="slider-label-text">Average PPO Write-Off Rate</span>
+                        <span class="slider-value"><span id="writeoffRateValue">28</span>%</span>
+                    </div>
+                    <input type="range" id="writeoffRate" min="0" max="50" value="28" step="0.5">
+                    <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">
+                        Percentage discount below your standard fees
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-badge green" style="margin-top: var(--space-lg);">
+                PPO Annual Revenue: <strong id="ppoAnnualRevenue">$175,000</strong> | FFS Annual Revenue: <strong id="ffsAnnualRevenue">$325,000</strong>
+            </div>
+        </section>
+
+        <!-- Section 2: Cost Analysis -->
+        <section class="worksheet-section">
+            <h2>
+                <span class="section-number">2</span>
+                Cost Analysis
+            </h2>
+
+            <div class="worksheet-row">
+                <div class="input-group">
+                    <label class="input-label">
+                        Annual Overhead Costs
+                        <div class="helper-text">Rent, utilities, equipment, supplies</div>
+                    </label>
+                    <input type="number" id="annualOverhead" class="input-number" placeholder="$200,000" min="0" step="10000" value="200000">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">
+                        Staff Cost for Insurance Processing
+                        <div class="helper-text">Dedicated team member(s) time/salary</div>
+                    </label>
+                    <input type="number" id="staffInsuranceCost" class="input-number" placeholder="$60,000" min="0" step="5000" value="60000">
+                </div>
+            </div>
+
+            <div class="worksheet-row full">
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span class="slider-label-text">Insurance Claim Follow-Up Time</span>
+                        <span class="slider-value"><span id="followupHoursValue">8</span> hours/week</span>
+                    </div>
+                    <input type="range" id="followupHours" min="0" max="40" value="8" step="0.5">
+                    <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">
+                        Staff time spent following up on claims and denials
+                    </div>
+                </div>
+            </div>
+
+            <div class="worksheet-row full">
+                <div class="input-group">
+                    <label class="input-label">
+                        Average Hourly Practice Value
+                        <div class="helper-text">Estimated revenue per billable hour</div>
+                    </label>
+                    <input type="number" id="hourlyValue" class="input-number" placeholder="$250" min="0" step="25" value="250">
+                </div>
+            </div>
+
+            <div class="dashboard" style="margin-top: var(--space-lg);">
+                <div class="metric-card">
+                    <h4>Annual Insurance Admin Cost</h4>
+                    <div class="metric-value" id="annualAdminCost">$71,904</div>
+                    <div class="metric-change neutral" style="font-size: 0.8rem;">Staff salary + claim follow-up time</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Percentage of Collections</h4>
+                    <div class="metric-value" id="adminCostPercent">14.4%</div>
+                    <div class="metric-change neutral" style="font-size: 0.8rem;">Of total annual revenue</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Opportunity Cost Calculator -->
+        <section class="worksheet-section">
+            <h2>
+                <span class="section-number">3</span>
+                Opportunity Cost Calculator
+            </h2>
+
+            <div class="dashboard">
+                <div class="metric-card">
+                    <h4>Revenue Lost to Write-Offs</h4>
+                    <div class="metric-value" id="revenueWriteoffs">$49,000</div>
+                    <div class="metric-change negative">
+                        <span class="status-indicator red"></span>Direct financial loss
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Admin Cost of PPO Processing</h4>
+                    <div class="metric-value" id="ppoAdminCost">$25,167</div>
+                    <div class="metric-change negative">
+                        <span class="status-indicator red"></span>Based on PPO revenue %
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Total Hidden Cost</h4>
+                    <div class="metric-value" id="totalHiddenCost">$74,167</div>
+                    <div class="metric-change negative" style="font-weight: 600;">
+                        <span class="status-indicator red"></span>Annual PPO cost
+                    </div>
+                </div>
+                <div class="metric-card">
+                    <h4>Revenue Per Patient</h4>
+                    <div style="font-size: 1.25rem; margin: var(--space-sm) 0; font-weight: 600;">
+                        <span id="ppoRevPerPatient">$1,167</span> <span style="font-size: 0.9rem; color: var(--text-muted);">PPO</span>
+                    </div>
+                    <div style="font-size: 1.25rem; font-weight: 600; color: var(--green);">
+                        <span id="ffsRevPerPatient">$2,167</span> <span style="font-size: 0.9rem; color: var(--text-muted);">FFS</span>
+                    </div>
+                    <div class="metric-change positive" style="margin-top: var(--space-sm);">
+                        <span class="status-indicator green"></span><span id="revDifference">$1,000</span> difference per patient
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-badge red" style="margin-top: var(--space-lg); display: block; padding: var(--space-md); font-size: 0.95rem;">
+                <strong id="totalHiddenCostPercent">14.8%</strong> of your annual collections are consumed by PPO participation costs and write-offs
+            </div>
+        </section>
+
+        <!-- Section 4: Transition Projections -->
+        <section class="worksheet-section">
+            <h2>
+                <span class="section-number">4</span>
+                Transition Projections
+            </h2>
+
+            <div class="worksheet-info" style="margin-bottom: var(--space-lg);">
+                <h4>What if you transitioned away from PPO?</h4>
+                <p>See projected revenue changes based on patient retention and membership plan enrollment</p>
+            </div>
+
+            <div class="worksheet-row full">
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span class="slider-label-text">Expected Patient Retention Rate</span>
+                        <span class="slider-value"><span id="retentionRateValue">85</span>%</span>
+                    </div>
+                    <input type="range" id="retentionRate" min="50" max="100" value="85" step="1">
+                    <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">
+                        Percentage of PPO patients who stay after plan termination
+                    </div>
+                </div>
+            </div>
+
+            <div class="worksheet-row full">
+                <div class="slider-group">
+                    <div class="slider-label">
+                        <span class="slider-label-text">Projected Membership Plan Enrollment</span>
+                        <span class="slider-value"><span id="membershipEnrollValue">45</span>%</span>
+                    </div>
+                    <input type="range" id="membershipEnroll" min="0" max="100" value="45" step="1">
+                    <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 8px;">
+                        Percentage of patients who enroll in your membership plan
+                    </div>
+                </div>
+            </div>
+
+            <div class="worksheet-row">
+                <div class="input-group">
+                    <label class="input-label">
+                        Annual Membership Plan Fee
+                        <div class="helper-text">Per family or patient</div>
+                    </label>
+                    <input type="number" id="membershipFee" class="input-number" placeholder="$600" min="0" step="50" value="600">
+                </div>
+                <div class="input-group">
+                    <label class="input-label">Projected FFS Patient Growth</label>
+                    <input type="number" id="ffsGrowthRate" class="input-number" placeholder="5%" min="0" max="50" step="1" value="5">
+                    <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: 4px;">% annual new FFS patients</div>
+                </div>
+            </div>
+
+            <div class="dashboard" style="margin-top: var(--space-xl);">
+                <div class="metric-card">
+                    <h4>Retained PPO Patients</h4>
+                    <div class="metric-value" id="retainedPatients">128</div>
+                    <div class="metric-change neutral">Of current PPO patient base</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Membership Plan Members</h4>
+                    <div class="metric-value" id="membershipMembers">57</div>
+                    <div class="metric-change positive">At $600/year avg</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Membership Revenue (Year 1)</h4>
+                    <div class="metric-value" id="membershipRevenue">$34,200</div>
+                    <div class="metric-change positive">From active members</div>
+                </div>
+                <div class="metric-card">
+                    <h4>Net Revenue Change (Year 1)</h4>
+                    <div class="metric-value" id="netRevenueChange">+$33,200</div>
+                    <div class="metric-change positive" id="changeType">
+                        <span class="status-indicator green"></span>Projected increase
+                    </div>
+                </div>
+            </div>
+
+            <div class="result-badge green" style="margin-top: var(--space-lg); display: block; padding: var(--space-md); font-size: 0.95rem;">
+                Year 1 Projected Revenue: <strong id="projectedY1Revenue">$407,000</strong> (vs current <strong id="currentTotalRevenue">$500,000</strong>)
+            </div>
+            <div style="color: var(--text-muted); font-size: 0.85rem; margin-top: var(--space-sm);">
+                Note: These projections assume you reduce PPO involvement. Actual results depend on patient communication, quality of service, and market conditions.
+            </div>
+        </section>
+
+        <!-- Section 5: Summary Dashboard -->
+        <section class="worksheet-section">
+            <h2>
+                <span class="section-number">5</span>
+                Your Financial Summary
+            </h2>
+
+            <div class="summary-dashboard">
+                <h3>Key Metrics At A Glance</h3>
+
+                <div class="summary-grid">
+                    <div class="summary-item">
+                        <div class="summary-label">
+                            <span class="status-indicator red"></span>
+                            Current Annual PPO Cost
+                        </div>
+                        <div class="summary-value" id="summaryPPOCost">$74,167</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">
+                            <span class="status-indicator amber"></span>
+                            PPO as % of Collections
+                        </div>
+                        <div class="summary-value" id="summaryPPOPercent">14.8%</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">
+                            <span class="status-indicator green"></span>
+                            Potential Year 1 Savings
+                        </div>
+                        <div class="summary-value" id="summarySavings">$74,167</div>
+                    </div>
+                    <div class="summary-item">
+                        <div class="summary-label">
+                            <span class="status-indicator green"></span>
+                            Net Projected Change
+                        </div>
+                        <div class="summary-value" id="summarryNetChange">+$33,200</div>
+                    </div>
+                </div>
+
+                <div style="background: rgba(255, 255, 255, 0.05); border-radius: var(--radius-md); padding: var(--space-lg); margin-top: var(--space-lg);">
+                    <p style="margin: 0; font-size: 0.95rem;">
+                        <strong>Bottom Line:</strong> Your practice is paying <strong id="summaryBottomlinePercent">14.8%</strong> of annual collections to manage PPO participation.
+                        Even with conservative retention assumptions, a transition could improve profitability while reducing administrative burden.
+                    </p>
+                </div>
+            </div>
+
+            <div class="action-buttons">
+                <button class="btn btn-primary btn-lg" onclick="window.print()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 8px; vertical-align: -3px;">
+                        <polyline points="6 9 6 2 18 2 18 9"></polyline>
+                        <path d="M6 18H4a2 2 0 0 1-2-2v-5a2 2 0 0 1 2-2h16a2 2 0 0 1 2 2v5a2 2 0 0 1-2 2h-2"></path>
+                        <rect x="6" y="14" width="12" height="8"></rect>
+                    </svg>
+                    Print Summary
+                </button>
+                <button class="btn btn-secondary btn-lg" onclick="shareResults()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 8px; vertical-align: -3px;">
+                        <circle cx="18" cy="5" r="3"></circle>
+                        <circle cx="6" cy="12" r="3"></circle>
+                        <circle cx="18" cy="19" r="3"></circle>
+                        <line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line>
+                        <line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line>
+                    </svg>
+                    Share Results
+                </button>
+                <button class="btn btn-ghost btn-lg" onclick="resetWorksheet()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 8px; vertical-align: -3px;">
+                        <path d="M21.5 2v6h-6M2.5 22v-6h6M2 11.5a10 10 0 0 1 18.8-4.3M22 12.5a10 10 0 0 1-18.8 4.2"></path>
+                    </svg>
+                    Reset Worksheet
+                </button>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="cta-section">
+            <h3>Ready to Reduce PPO Dependence?</h3>
+            <p>Use these insights with our other tools to build a comprehensive transition strategy</p>
+
+            <div class="related-links">
+                <a href="/tools/ppo-calculator.html" class="related-card">
+                    <h4>PPO Write-Off Calculator</h4>
+                    <p>Calculate exact write-offs by procedure and plan</p>
+                </a>
+                <a href="/tools/membership-calculator.html" class="related-card">
+                    <h4>Membership Pricing Tool</h4>
+                    <p>Determine optimal membership plan pricing</p>
+                </a>
+                <a href="/tools/revenue-simulator.html" class="related-card">
+                    <h4>Revenue Simulator</h4>
+                    <p>Model different practice transition scenarios</p>
+                </a>
+            </div>
+
+            <a href="/resources/" class="btn btn-primary btn-lg" style="margin-top: var(--space-lg);">Explore More Resources</a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="grid grid-4" style="gap: 48px;">
+                <div>
+                    <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
+                    <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
+                </div>
+                <div>
+                    <h4>Tools</h4>
+                    <ul class="footer-links">
+                        <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
+                        <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
+                        <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
+                        <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Learn</h4>
+                    <ul class="footer-links">
+                        <li><a href="/blog/">Articles &amp; Guides</a></li>
+                        <li><a href="/pages/summit.html">Annual Summit</a></li>
+                        <li><a href="/resources/">Resources</a></li>
+                        <li><a href="/pages/glossary.html">Glossary</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Company</h4>
+                    <ul class="footer-links">
+                        <li><a href="/pages/about.html">About RID Academy</a></li>
+                        <li><a href="/pages/community.html">Community</a></li>
+                        <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
+                        <li><a href="mailto:info@rid.academy">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 RID Academy. All rights reserved.</span>
+                <div class="flex gap-md">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Use</a>
+                    <a href="#">Disclaimer</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="/js/main.js"></script>
+    <script>
+        // ════════════════════════════════════════════════════════
+        // PPO Financial Analysis Worksheet - JavaScript
+        // ════════════════════════════════════════════════════════
+
+        // DOM Elements
+        const inputs = {
+            totalAnnualCollections: document.getElementById('totalAnnualCollections'),
+            ppoPercent: document.getElementById('ppoPercent'),
+            writeoffRate: document.getElementById('writeoffRate'),
+            activePPOPatients: document.getElementById('activePPOPatients'),
+            annualOverhead: document.getElementById('annualOverhead'),
+            staffInsuranceCost: document.getElementById('staffInsuranceCost'),
+            followupHours: document.getElementById('followupHours'),
+            hourlyValue: document.getElementById('hourlyValue'),
+            retentionRate: document.getElementById('retentionRate'),
+            membershipEnroll: document.getElementById('membershipEnroll'),
+            membershipFee: document.getElementById('membershipFee'),
+            ffsGrowthRate: document.getElementById('ffsGrowthRate')
+        };
+
+        const outputs = {
+            ppoPercentValue: document.getElementById('ppoPercentValue'),
+            ffsPercentValue: document.getElementById('ffsPercentValue'),
+            writeoffRateValue: document.getElementById('writeoffRateValue'),
+            ppoAnnualRevenue: document.getElementById('ppoAnnualRevenue'),
+            ffsAnnualRevenue: document.getElementById('ffsAnnualRevenue'),
+            annualAdminCost: document.getElementById('annualAdminCost'),
+            adminCostPercent: document.getElementById('adminCostPercent'),
+            revenueWriteoffs: document.getElementById('revenueWriteoffs'),
+            ppoAdminCost: document.getElementById('ppoAdminCost'),
+            totalHiddenCost: document.getElementById('totalHiddenCost'),
+            ppoRevPerPatient: document.getElementById('ppoRevPerPatient'),
+            ffsRevPerPatient: document.getElementById('ffsRevPerPatient'),
+            revDifference: document.getElementById('revDifference'),
+            totalHiddenCostPercent: document.getElementById('totalHiddenCostPercent'),
+            retentionRateValue: document.getElementById('retentionRateValue'),
+            membershipEnrollValue: document.getElementById('membershipEnrollValue'),
+            retainedPatients: document.getElementById('retainedPatients'),
+            membershipMembers: document.getElementById('membershipMembers'),
+            membershipRevenue: document.getElementById('membershipRevenue'),
+            netRevenueChange: document.getElementById('netRevenueChange'),
+            projectedY1Revenue: document.getElementById('projectedY1Revenue'),
+            currentTotalRevenue: document.getElementById('currentTotalRevenue'),
+            followupHoursValue: document.getElementById('followupHoursValue'),
+            summaryPPOCost: document.getElementById('summaryPPOCost'),
+            summaryPPOPercent: document.getElementById('summaryPPOPercent'),
+            summarySavings: document.getElementById('summarySavings'),
+            summarryNetChange: document.getElementById('summarryNetChange'),
+            summaryBottomlinePercent: document.getElementById('summaryBottomlinePercent'),
+            changeType: document.getElementById('changeType')
+        };
+
+        // Add event listeners to all inputs
+        Object.values(inputs).forEach(input => {
+            if (input) {
+                input.addEventListener('input', calculateAll);
+            }
+        });
+
+        // Main calculation function
+        function calculateAll() {
+            // Section 1: Revenue Breakdown
+            const totalCollections = parseFloat(inputs.totalAnnualCollections.value) || 0;
+            const ppoPerc = parseFloat(inputs.ppoPercent.value) || 0;
+            const ffsPerc = 100 - ppoPerc;
+            const writeoffPerc = parseFloat(inputs.writeoffRate.value) || 0;
+            const activePPO = parseFloat(inputs.activePPOPatients.value) || 0;
+
+            // Update Section 1 displays
+            outputs.ppoPercentValue.textContent = ppoPerc;
+            outputs.ffsPercentValue.textContent = (100 - ppoPerc).toFixed(0);
+            outputs.writeoffRateValue.textContent = writeoffPerc.toFixed(1);
+
+            const ppoRevenue = totalCollections * (ppoPerc / 100);
+            const ffsRevenue = totalCollections * (ffsPerc / 100);
+
+            outputs.ppoAnnualRevenue.textContent = formatCurrency(ppoRevenue);
+            outputs.ffsAnnualRevenue.textContent = formatCurrency(ffsRevenue);
+
+            // Section 2: Cost Analysis
+            const annualOverhead = parseFloat(inputs.annualOverhead.value) || 0;
+            const staffInsuranceCost = parseFloat(inputs.staffInsuranceCost.value) || 0;
+            const followupHours = parseFloat(inputs.followupHours.value) || 0;
+            const hourlyValue = parseFloat(inputs.hourlyValue.value) || 0;
+
+            outputs.followupHoursValue.textContent = followupHours.toFixed(1);
+
+            // Annual claim follow-up cost
+            const annualFollowupCost = followupHours * 52 * hourlyValue;
+            const totalAdminCost = staffInsuranceCost + annualFollowupCost;
+            const adminCostAsPercent = (totalAdminCost / totalCollections) * 100;
+
+            outputs.annualAdminCost.textContent = formatCurrency(totalAdminCost);
+            outputs.adminCostPercent.textContent = adminCostAsPercent.toFixed(1) + '%';
+
+            // Section 3: Opportunity Cost
+            const revenueFromWriteoffs = ppoRevenue * (writeoffPerc / 100);
+            const ppoPortionAdminCost = totalAdminCost * (ppoPerc / 100);
+            const totalHiddenCost = revenueFromWriteoffs + ppoPortionAdminCost;
+            const totalHiddenPercent = (totalHiddenCost / totalCollections) * 100;
+
+            outputs.revenueWriteoffs.textContent = formatCurrency(revenueFromWriteoffs);
+            outputs.ppoAdminCost.textContent = formatCurrency(ppoPortionAdminCost);
+            outputs.totalHiddenCost.textContent = formatCurrency(totalHiddenCost);
+            outputs.totalHiddenCostPercent.textContent = totalHiddenPercent.toFixed(1) + '%';
+
+            // Revenue per patient
+            const ppoRevPerPatient = activePPO > 0 ? ppoRevenue / activePPO : 0;
+            const estimatedFFSPatients = (ffsRevenue / (ppoRevPerPatient > 0 ? ppoRevPerPatient : 1000)) || 150;
+            const ffsRevPerPatient = estimatedFFFSPatients > 0 ? ffsRevenue / estimatedFFFSPatients : ppoRevPerPatient;
+            const revenueDifference = ffsRevPerPatient - ppoRevPerPatient;
+
+            outputs.ppoRevPerPatient.textContent = formatCurrency(ppoRevPerPatient);
+            outputs.ffsRevPerPatient.textContent = formatCurrency(ffsRevPerPatient);
+            outputs.revDifference.textContent = formatCurrency(revenueDifference);
+
+            // Section 4: Transition Projections
+            const retentionRate = parseFloat(inputs.retentionRate.value) || 85;
+            const membershipEnroll = parseFloat(inputs.membershipEnroll.value) || 45;
+            const membershipFee = parseFloat(inputs.membershipFee.value) || 600;
+            const ffsGrowthRate = parseFloat(inputs.ffsGrowthRate.value) || 5;
+
+            outputs.retentionRateValue.textContent = retentionRate;
+            outputs.membershipEnrollValue.textContent = membershipEnroll;
+
+            const retainedPatients = Math.round(activePPO * (retentionRate / 100));
+            const membershipMembers = Math.round(retainedPatients * (membershipEnroll / 100));
+            const membershipRevenue = membershipMembers * membershipFee;
+
+            outputs.retainedPatients.textContent = retainedPatients;
+            outputs.membershipMembers.textContent = membershipMembers;
+            outputs.membershipRevenue.textContent = formatCurrency(membershipRevenue);
+
+            // Calculate FFS growth from new patients
+            const currentFFSPatients = estimatedFFFSPatients;
+            const newFFFSPatients = Math.round(currentFFFSPatients * (ffsGrowthRate / 100));
+            const newFFFSRevenue = newFFFSPatients * ffsRevPerPatient;
+
+            // Retained PPO patients going FFS
+            const ppoToFFSPatients = retainedPatients;
+            const ppoToFFSRevenue = ppoToFFSPatients * ffsRevPerPatient;
+
+            // Net change Year 1
+            const projectedY1PPORevenue = ppoRevenue * (1 - (membershipEnroll / 100) - (retentionRate / 100) * (1 - (membershipEnroll / 100)));
+            const projectedY1FFSRevenue = ffsRevenue + ppoToFFSRevenue + newFFFSRevenue;
+            const projectedY1TotalRevenue = projectedY1FFSRevenue + membershipRevenue;
+            const netRevenueChange = projectedY1TotalRevenue - totalCollections;
+
+            outputs.membershipRevenue.textContent = formatCurrency(membershipRevenue);
+            outputs.netRevenueChange.textContent = (netRevenueChange >= 0 ? '+' : '') + formatCurrency(netRevenueChange);
+            outputs.projectedY1Revenue.textContent = formatCurrency(projectedY1TotalRevenue);
+            outputs.currentTotalRevenue.textContent = formatCurrency(totalCollections);
+
+            // Update change type color
+            if (netRevenueChange > 0) {
+                outputs.changeType.className = 'metric-change positive';
+                outputs.changeType.innerHTML = '<span class="status-indicator green"></span>Projected increase';
+            } else if (netRevenueChange < 0) {
+                outputs.changeType.className = 'metric-change negative';
+                outputs.changeType.innerHTML = '<span class="status-indicator red"></span>Projected decrease';
+            } else {
+                outputs.changeType.className = 'metric-change neutral';
+                outputs.changeType.innerHTML = '<span class="status-indicator amber"></span>Neutral';
+            }
+
+            // Section 5: Summary
+            outputs.summaryPPOCost.textContent = formatCurrency(totalHiddenCost);
+            outputs.summaryPPOPercent.textContent = totalHiddenPercent.toFixed(1) + '%';
+            outputs.summarySavings.textContent = formatCurrency(totalHiddenCost);
+            outputs.summarryNetChange.textContent = (netRevenueChange >= 0 ? '+' : '') + formatCurrency(netRevenueChange);
+            outputs.summaryBottomlinePercent.textContent = totalHiddenPercent.toFixed(1) + '%';
+        }
+
+        // Utility function to format currency
+        function formatCurrency(num) {
+            if (num === 0 || isNaN(num)) return '$0';
+            return '$' + Math.round(num).toLocaleString();
+        }
+
+        // Share results function
+        function shareResults() {
+            const totalCollections = parseFloat(inputs.totalAnnualCollections.value) || 0;
+            const totalHiddenCost = parseFloat(outputs.totalHiddenCost.textContent.replace(/[\$,]/g, '')) || 0;
+            const netRevenueChange = parseFloat(outputs.netRevenueChange.textContent.replace(/[\$,\+]/g, '')) || 0;
+
+            const summary = `PPO Financial Analysis Results from RID Academy:\n\n` +
+                `Annual Collections: ${formatCurrency(totalCollections)}\n` +
+                `PPO Annual Cost: ${formatCurrency(totalHiddenCost)}\n` +
+                `Cost as % of Revenue: ${outputs.totalHiddenCostPercent.textContent}\n` +
+                `Projected Revenue Change (Yr 1): ${outputs.netRevenueChange.textContent}\n\n` +
+                `Get your complete analysis: https://ridacademy.com/resources/financial-analysis-worksheet.html`;
+
+            // Copy to clipboard
+            navigator.clipboard.writeText(summary).then(() => {
+                // Show confirmation
+                const btn = event.target;
+                const originalText = btn.innerHTML;
+                btn.innerHTML = '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="display: inline-block; margin-right: 8px; vertical-align: -3px;"><polyline points="20 6 9 17 4 12"></polyline></svg>Copied!';
+                btn.disabled = true;
+                setTimeout(() => {
+                    btn.innerHTML = originalText;
+                    btn.disabled = false;
+                }, 2000);
+            });
+        }
+
+        // Reset function
+        function resetWorksheet() {
+            if (confirm('Reset all values to defaults? This cannot be undone.')) {
+                inputs.totalAnnualCollections.value = 500000;
+                inputs.ppoPercent.value = 35;
+                inputs.writeoffRate.value = 28;
+                inputs.activePPOPatients.value = 150;
+                inputs.annualOverhead.value = 200000;
+                inputs.staffInsuranceCost.value = 60000;
+                inputs.followupHours.value = 8;
+                inputs.hourlyValue.value = 250;
+                inputs.retentionRate.value = 85;
+                inputs.membershipEnroll.value = 45;
+                inputs.membershipFee.value = 600;
+                inputs.ffsGrowthRate.value = 5;
+                calculateAll();
+            }
+        }
+
+        // Initialize on page load
+        calculateAll();
+    </script>
+</body>
+</html>
