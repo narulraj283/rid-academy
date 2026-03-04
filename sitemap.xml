@@ -120,4 +120,22 @@
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
+  <url>
+    <loc>https://rida.narenlife.com/pages/privacy.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rida.narenlife.com/pages/terms.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://rida.narenlife.com/pages/disclaimer.html</loc>
+    <lastmod>2026-03-04</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
 </urlset>

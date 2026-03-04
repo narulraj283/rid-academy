@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Teal background circle -->
+  <circle cx="50" cy="50" r="50" fill="#00B4A6"/>
+
+  <!-- Navy "R" letter -->
+  <text x="50" y="70" font-family="Inter, sans-serif" font-size="72" font-weight="700" fill="#0F2B46" text-anchor="middle" dominant-baseline="middle">R</text>
+</svg>
