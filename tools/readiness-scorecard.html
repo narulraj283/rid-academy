@@ -381,9 +381,9 @@
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
+  <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
-      <a href="/" class="nav-logo">RID<span>.academy</span></a>
+      <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
       <ul class="nav-links">
         <li><a href="/tools/" class="nav-link active">Tools</a></li>
         <li><a href="/blog/" class="nav-link">Learn</a></li>
@@ -392,9 +392,11 @@
         <li><a href="/pages/community.html" class="nav-link">Community</a></li>
         <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
         <li><a href="/pages/about.html" class="nav-link">About</a></li>
-        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+        <li><a href="#join" class="btn btn-primary btn-sm">Join Free</a></li>
       </ul>
-      <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
     </div>
   </nav>
 
@@ -534,7 +536,7 @@
       <div class="grid grid-4" style="gap: 48px;">
         <div>
           <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
-          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Empowering dental practice owners to achieve financial independence.</p>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
           <h4>Tools</h4>
@@ -548,7 +550,7 @@
         <div>
           <h4>Learn</h4>
           <ul class="footer-links">
-            <li><a href="/blog/">Articles & Guides</a></li>
+            <li><a href="/blog/">Articles &amp; Guides</a></li>
             <li><a href="/pages/summit.html">Annual Summit</a></li>
             <li><a href="/resources/">Resources</a></li>
             <li><a href="/pages/glossary.html">Glossary</a></li>
@@ -557,7 +559,7 @@
         <div>
           <h4>Company</h4>
           <ul class="footer-links">
-            <li><a href="/pages/about.html">About</a></li>
+            <li><a href="/pages/about.html">About RID Academy</a></li>
             <li><a href="/pages/community.html">Community</a></li>
             <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
             <li><a href="mailto:info@rid.academy">Contact</a></li>
@@ -566,7 +568,11 @@
       </div>
       <div class="footer-bottom">
         <span>&copy; 2026 RID Academy. All rights reserved.</span>
-        <div class="flex gap-md"><a href="#">Privacy</a> <a href="#">Terms</a> <a href="#">Disclaimer</a></div>
+        <div class="flex gap-md">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Use</a>
+          <a href="#">Disclaimer</a>
+        </div>
       </div>
     </div>
   </footer>
