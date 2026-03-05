@@ -1,0 +1,1159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rida.narenlife.com/blog/{{ARTICLE_SLUG}}/">
+
+    <!-- Open Graph Tags -->
+    <meta property="og:type" content="article">
+    <meta property="og:title" content="{{ARTICLE_TITLE}}">
+    <meta property="og:description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta property="og:image" content="{{OG_IMAGE_URL}}">
+    <meta property="og:url" content="https://rida.narenlife.com/blog/{{ARTICLE_SLUG}}/">
+    <meta property="og:site_name" content="RID Academy">
+    <meta property="article:published_time" content="{{ARTICLE_DATE}}">
+    <meta property="article:author" content="{{ARTICLE_AUTHOR}}">
+
+    <!-- Twitter Card Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="{{ARTICLE_TITLE}}">
+    <meta name="twitter:description" content="{{ARTICLE_DESCRIPTION}}">
+    <meta name="twitter:image" content="{{OG_IMAGE_URL}}">
+
+    <!-- JSON-LD Schema.org Article -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Article",
+        "headline": "{{ARTICLE_TITLE}}",
+        "description": "{{ARTICLE_DESCRIPTION}}",
+        "image": "{{OG_IMAGE_URL}}",
+        "datePublished": "{{ARTICLE_DATE}}",
+        "author": {
+            "@type": "Person",
+            "name": "{{ARTICLE_AUTHOR}}",
+            "url": "https://rida.narenlife.com/about/"
+        },
+        "publisher": {
+            "@type": "Organization",
+            "name": "RID Academy",
+            "logo": {
+                "@type": "ImageObject",
+                "url": "https://rida.narenlife.com/logo.png"
+            }
+        },
+        "url": "https://rida.narenlife.com/blog/{{ARTICLE_SLUG}}/",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://rida.narenlife.com/blog/{{ARTICLE_SLUG}}/"
+        }
+    }
+    </script>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YB2QDRNZ1D');
+    </script>
+
+    <title>{{ARTICLE_TITLE}} | RID Academy</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            color: #1a1a1a;
+            background-color: #f8f9fa;
+            line-height: 1.6;
+        }
+
+        /* ========== READING PROGRESS BAR ========== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 3px;
+            background: linear-gradient(90deg, #00B4A6 0%, #FF6B35 100%);
+            width: 0%;
+            z-index: 9999;
+            transition: width 0.1s ease;
+        }
+
+        /* ========== NAVIGATION ========== */
+        .navbar {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 2rem;
+        }
+
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: #0F2B46;
+            text-decoration: none;
+            letter-spacing: -0.5px;
+        }
+
+        .nav-logo:hover {
+            color: #00B4A6;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: #1a1a1a;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links a:hover {
+            color: #00B4A6;
+        }
+
+        /* ========== HERO SECTION ========== */
+        .hero {
+            background: linear-gradient(135deg, #0F2B46 0%, #1a3a5c 100%);
+            color: white;
+            padding: 4rem 2rem;
+            text-align: center;
+            border-bottom: 4px solid #00B4A6;
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .hero-meta {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: #00B4A6;
+            color: white;
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-meta-item {
+            font-size: 0.95rem;
+            opacity: 0.9;
+        }
+
+        .hero-meta-separator {
+            width: 1px;
+            height: 20px;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            line-height: 1.2;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-description {
+            font-size: 1.2rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .hero-author {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 1rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .author-avatar {
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #00B4A6;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        .author-info h4 {
+            margin: 0;
+            font-size: 0.95rem;
+            font-weight: 600;
+        }
+
+        .author-info p {
+            margin: 0;
+            font-size: 0.85rem;
+            opacity: 0.85;
+        }
+
+        /* ========== MAIN CONTENT WRAPPER ========== */
+        .article-wrapper {
+            display: grid;
+            grid-template-columns: 60px 1fr 280px;
+            gap: 2rem;
+            max-width: 1400px;
+            margin: 3rem auto;
+            padding: 0 2rem;
+        }
+
+        /* ========== FLOATING SHARE SIDEBAR ========== */
+        .share-sidebar {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .share-button {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            font-size: 1.2rem;
+            cursor: pointer;
+            border: none;
+        }
+
+        .share-twitter {
+            background: #1DA1F2;
+            color: white;
+        }
+
+        .share-twitter:hover {
+            background: #1a8cd8;
+            transform: scale(1.1);
+        }
+
+        .share-facebook {
+            background: #1877F2;
+            color: white;
+        }
+
+        .share-facebook:hover {
+            background: #0a66c2;
+            transform: scale(1.1);
+        }
+
+        .share-linkedin {
+            background: #0A66C2;
+            color: white;
+        }
+
+        .share-linkedin:hover {
+            background: #084ba4;
+            transform: scale(1.1);
+        }
+
+        .share-email {
+            background: #FF6B35;
+            color: white;
+        }
+
+        .share-email:hover {
+            background: #e55a27;
+            transform: scale(1.1);
+        }
+
+        /* ========== MAIN ARTICLE ========== */
+        .article-content {
+            background: white;
+            padding: 3rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .article-content h2 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-top: 2.5rem;
+            margin-bottom: 1rem;
+            line-height: 1.3;
+            letter-spacing: -0.3px;
+        }
+
+        .article-content h2:first-child {
+            margin-top: 0;
+        }
+
+        .article-content h3 {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #0F2B46;
+            margin-top: 1.8rem;
+            margin-bottom: 0.8rem;
+            line-height: 1.3;
+        }
+
+        .article-content p {
+            margin-bottom: 1.2rem;
+            line-height: 1.8;
+            font-size: 1rem;
+            color: #333;
+        }
+
+        .article-content a {
+            color: #00B4A6;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .article-content a:hover {
+            border-bottom-color: #00B4A6;
+        }
+
+        .article-content ul,
+        .article-content ol {
+            margin-bottom: 1.5rem;
+            margin-left: 1.5rem;
+        }
+
+        .article-content li {
+            margin-bottom: 0.8rem;
+            line-height: 1.7;
+            color: #333;
+        }
+
+        .article-content blockquote {
+            border-left: 4px solid #00B4A6;
+            background: #f0fdfb;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            font-style: italic;
+            color: #0F2B46;
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .article-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 2rem 0;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+        }
+
+        /* ========== CALLOUT BOX ========== */
+        .callout {
+            background: linear-gradient(135deg, rgba(0, 180, 166, 0.05) 0%, rgba(255, 107, 53, 0.05) 100%);
+            border-left: 4px solid #FF6B35;
+            border-radius: 6px;
+            padding: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .callout-label {
+            font-weight: 700;
+            color: #FF6B35;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+            margin-bottom: 0.5rem;
+        }
+
+        .callout p {
+            color: #0F2B46;
+            margin-bottom: 0;
+            line-height: 1.7;
+        }
+
+        /* ========== TABLE OF CONTENTS ========== */
+        .toc-sticky {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+            background: white;
+            padding: 1.5rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            font-size: 0.9rem;
+        }
+
+        .toc-title {
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .toc-list {
+            list-style: none;
+        }
+
+        .toc-list li {
+            margin-bottom: 0.6rem;
+        }
+
+        .toc-list a {
+            color: #666;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            display: block;
+            padding-left: 0.5rem;
+            border-left: 2px solid transparent;
+        }
+
+        .toc-list a:hover {
+            color: #00B4A6;
+            border-left-color: #00B4A6;
+            padding-left: 0.8rem;
+        }
+
+        /* ========== LEAD CAPTURE SECTION ========== */
+        .lead-capture {
+            background: linear-gradient(135deg, #0F2B46 0%, #1a3a5c 100%);
+            color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .lead-capture h3 {
+            color: white;
+            margin-bottom: 0.5rem;
+            font-size: 1.6rem;
+        }
+
+        .lead-capture-subtitle {
+            font-size: 1rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            line-height: 1.5;
+        }
+
+        .lead-form {
+            display: grid;
+            gap: 1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            text-align: left;
+        }
+
+        .form-group input {
+            padding: 0.8rem 1rem;
+            border: none;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.2);
+        }
+
+        .lead-submit-btn {
+            background: linear-gradient(135deg, #00B4A6 0%, #009d91 100%);
+            color: white;
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 6px;
+            font-weight: 700;
+            font-size: 1rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 0.5rem;
+        }
+
+        .lead-submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 180, 166, 0.3);
+        }
+
+        .lead-submit-btn:active {
+            transform: translateY(0);
+        }
+
+        .lead-form-hidden {
+            display: none;
+        }
+
+        .lead-success-message {
+            text-align: center;
+        }
+
+        .lead-success-message h4 {
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            color: #00B4A6;
+        }
+
+        .lead-success-message p {
+            color: white;
+            margin: 0;
+        }
+
+        /* ========== RELATED ARTICLES ========== */
+        .related-section {
+            margin-top: 4rem;
+            padding-top: 3rem;
+            border-top: 2px solid #e0e0e0;
+        }
+
+        .related-title {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 2rem;
+        }
+
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .related-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .related-card:hover {
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+            transform: translateY(-4px);
+        }
+
+        .related-card-content {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .related-card h4 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #0F2B46;
+            margin-bottom: 0.8rem;
+            line-height: 1.4;
+            flex-grow: 1;
+        }
+
+        .related-card-desc {
+            font-size: 0.9rem;
+            color: #666;
+            margin-bottom: 1rem;
+            line-height: 1.5;
+        }
+
+        .related-card-link {
+            color: #00B4A6;
+            font-weight: 600;
+            font-size: 0.95rem;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .related-card-link:hover {
+            color: #FF6B35;
+        }
+
+        /* ========== FOOTER ========== */
+        .footer {
+            background: #0F2B46;
+            color: white;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            text-align: center;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin-bottom: 1.5rem;
+            flex-wrap: wrap;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: #00B4A6;
+        }
+
+        .footer-copyright {
+            font-size: 0.9rem;
+            opacity: 0.8;
+        }
+
+        /* ========== RESPONSIVE DESIGN ========== */
+        @media (max-width: 1200px) {
+            .article-wrapper {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+
+            .share-sidebar {
+                flex-direction: row;
+                justify-content: center;
+                position: relative;
+                top: 0;
+                gap: 1rem;
+                margin-bottom: 2rem;
+            }
+
+            .toc-sticky {
+                position: relative;
+                top: 0;
+                grid-column: 1;
+                order: -1;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-container {
+                padding: 1rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .hero {
+                padding: 2.5rem 1.5rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .hero-meta {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+
+            .hero-meta-separator {
+                width: 0;
+                height: 0;
+            }
+
+            .article-content {
+                padding: 1.5rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.2rem;
+            }
+
+            .lead-capture {
+                padding: 2rem 1.5rem;
+            }
+
+            .lead-capture h3 {
+                font-size: 1.3rem;
+            }
+
+            .toc-sticky {
+                display: none;
+            }
+
+            .share-sidebar {
+                flex-direction: row;
+                position: relative;
+                top: auto;
+                justify-content: center;
+                margin: 2rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .nav-logo {
+                font-size: 1.2rem;
+            }
+
+            .nav-links {
+                gap: 1rem;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 1.5rem;
+            }
+
+            .hero-description {
+                font-size: 1rem;
+            }
+
+            .article-content {
+                padding: 1rem;
+            }
+
+            .article-content h2 {
+                font-size: 1.3rem;
+                margin-top: 1.5rem;
+            }
+
+            .article-content h3 {
+                font-size: 1.1rem;
+            }
+
+            .article-content p {
+                font-size: 0.95rem;
+            }
+
+            .callout {
+                padding: 1rem;
+                margin: 1.5rem 0;
+            }
+
+            .lead-capture {
+                padding: 1.5rem 1rem;
+                margin: 2rem 0;
+            }
+
+            .related-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer {
+                padding: 2rem 1rem;
+            }
+
+            .footer-links {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Reading Progress Bar -->
+    <div class="progress-bar" id="progressBar"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="/" class="nav-logo">RID.ACADEMY</a>
+            <ul class="nav-links">
+                <li><a href="/blog/">Articles</a></li>
+                <li><a href="/about/">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-container">
+            <div class="hero-meta">
+                <span class="hero-badge">{{ARTICLE_CATEGORY}}</span>
+                <span class="hero-meta-item">{{ARTICLE_READ_TIME}} min read</span>
+                <div class="hero-meta-separator"></div>
+                <span class="hero-meta-item" id="articleDate">{{ARTICLE_DATE}}</span>
+            </div>
+            <h1>{{ARTICLE_TITLE}}</h1>
+            <p class="hero-description">{{ARTICLE_DESCRIPTION}}</p>
+            <div class="hero-author">
+                <div class="author-avatar" id="authorInitial">G</div>
+                <div class="author-info">
+                    <h4>{{ARTICLE_AUTHOR}}</h4>
+                    <p>RID Academy Contributor</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content Wrapper -->
+    <div class="article-wrapper">
+        <!-- Floating Share Sidebar -->
+        <aside class="share-sidebar">
+            <a href="#" class="share-button share-twitter" id="shareTwitter" title="Share on Twitter/X">𝕏</a>
+            <a href="#" class="share-button share-facebook" id="shareFacebook" title="Share on Facebook">f</a>
+            <a href="#" class="share-button share-linkedin" id="shareLinkedIn" title="Share on LinkedIn">in</a>
+            <a href="#" class="share-button share-email" id="shareEmail" title="Share via Email">✉</a>
+        </aside>
+
+        <!-- Article Content -->
+        <main class="article-content" id="articleContent">
+            {{ARTICLE_CONTENT}}
+
+            <!-- Lead Capture Section (Mid-Article) -->
+            <div class="lead-capture">
+                <h3>Download Your Free Guide</h3>
+                <p class="lead-capture-subtitle">Get instant access to: <strong>{{PDF_GUIDE_TITLE}}</strong></p>
+                <p class="lead-capture-subtitle">{{PDF_GUIDE_DESCRIPTION}}</p>
+
+                <form class="lead-form" id="leadFormMid">
+                    <div class="form-group">
+                        <label for="fullNameMid">Full Name *</label>
+                        <input type="text" id="fullNameMid" name="fullName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="emailMid">Email Address *</label>
+                        <input type="email" id="emailMid" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="practiceMid">Practice Name</label>
+                        <input type="text" id="practiceMid" name="practice">
+                    </div>
+                    <div class="form-group">
+                        <label for="phoneMid">Mobile Phone</label>
+                        <input type="tel" id="phoneMid" name="phone">
+                    </div>
+                    <button type="submit" class="lead-submit-btn">Download Free Guide</button>
+                </form>
+
+                <div class="lead-form-hidden lead-success-message" id="successMessageMid">
+                    <h4>✓ Success!</h4>
+                    <p>Check your email for the guide. We'll also keep you updated with valuable insights.</p>
+                </div>
+            </div>
+        </main>
+
+        <!-- Table of Contents Sidebar -->
+        <aside class="toc-sticky">
+            <div class="toc-title">Contents</div>
+            <ul class="toc-list" id="tocList"></ul>
+        </aside>
+    </div>
+
+    <!-- Related Articles Section -->
+    <section class="related-section" style="max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 2rem;">
+        <h2 class="related-title">Related Articles</h2>
+        <div class="related-grid">
+            <a href="{{RELATED_1_URL}}" class="related-card">
+                <div class="related-card-content">
+                    <h4>{{RELATED_1_TITLE}}</h4>
+                    <p class="related-card-desc">{{RELATED_1_DESCRIPTION}}</p>
+                    <span class="related-card-link">Read Article →</span>
+                </div>
+            </a>
+            <a href="{{RELATED_2_URL}}" class="related-card">
+                <div class="related-card-content">
+                    <h4>{{RELATED_2_TITLE}}</h4>
+                    <p class="related-card-desc">{{RELATED_2_DESCRIPTION}}</p>
+                    <span class="related-card-link">Read Article →</span>
+                </div>
+            </a>
+            <a href="{{RELATED_3_URL}}" class="related-card">
+                <div class="related-card-content">
+                    <h4>{{RELATED_3_TITLE}}</h4>
+                    <p class="related-card-desc">{{RELATED_3_DESCRIPTION}}</p>
+                    <span class="related-card-link">Read Article →</span>
+                </div>
+            </a>
+        </div>
+    </section>
+
+    <!-- Bottom Lead Capture Section -->
+    <section style="max-width: 1400px; margin-left: auto; margin-right: auto; padding: 0 2rem; margin-top: 2rem;">
+        <div class="lead-capture">
+            <h3>Ready to Transform Your Practice?</h3>
+            <p class="lead-capture-subtitle">Download <strong>{{PDF_GUIDE_TITLE}}</strong> and start reducing insurance dependence today.</p>
+
+            <form class="lead-form" id="leadFormBottom">
+                <div class="form-group">
+                    <label for="fullNameBottom">Full Name *</label>
+                    <input type="text" id="fullNameBottom" name="fullName" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailBottom">Email Address *</label>
+                    <input type="email" id="emailBottom" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="practiceBottom">Practice Name</label>
+                    <input type="text" id="practiceBottom" name="practice">
+                </div>
+                <div class="form-group">
+                    <label for="phoneBottom">Mobile Phone</label>
+                    <input type="tel" id="phoneBottom" name="phone">
+                </div>
+                <button type="submit" class="lead-submit-btn">Download Free Guide</button>
+            </form>
+
+            <div class="lead-form-hidden lead-success-message" id="successMessageBottom">
+                <h4>✓ Success!</h4>
+                <p>Check your email for the guide. We'll also keep you updated with valuable insights.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-links">
+                <a href="/">Home</a>
+                <a href="/blog/">Articles</a>
+                <a href="/about/">About</a>
+                <a href="/contact/">Contact</a>
+                <a href="/privacy/">Privacy Policy</a>
+            </div>
+            <p class="footer-copyright">&copy; 2024 RID Academy. Empowering dental professionals to reduce insurance dependence.</p>
+        </div>
+    </footer>
+
+    <script>
+        // ========== READING PROGRESS BAR ==========
+        function updateProgressBar() {
+            const windowHeight = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+            const scrolled = (window.scrollY / windowHeight) * 100;
+            document.getElementById('progressBar').style.width = scrolled + '%';
+        }
+
+        window.addEventListener('scroll', updateProgressBar);
+
+        // ========== TABLE OF CONTENTS ==========
+        function generateTableOfContents() {
+            const headings = document.querySelectorAll('#articleContent h2');
+            const tocList = document.getElementById('tocList');
+
+            headings.forEach((heading, index) => {
+                const id = heading.id || `heading-${index}`;
+                heading.id = id;
+
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = `#${id}`;
+                a.textContent = heading.textContent;
+
+                li.appendChild(a);
+                tocList.appendChild(li);
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', generateTableOfContents);
+
+        // ========== SOCIAL SHARING ==========
+        function initializeSocialSharing() {
+            const pageTitle = document.querySelector('h1').textContent;
+            const pageUrl = window.location.href;
+            const pageDescription = document.querySelector('meta[name="description"]').getAttribute('content');
+
+            // Twitter/X
+            document.getElementById('shareTwitter').addEventListener('click', (e) => {
+                e.preventDefault();
+                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(pageTitle)}&url=${encodeURIComponent(pageUrl)}`;
+                window.open(twitterUrl, '_blank', 'width=550,height=420');
+            });
+
+            // Facebook
+            document.getElementById('shareFacebook').addEventListener('click', (e) => {
+                e.preventDefault();
+                const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(pageUrl)}`;
+                window.open(facebookUrl, '_blank', 'width=550,height=420');
+            });
+
+            // LinkedIn
+            document.getElementById('shareLinkedIn').addEventListener('click', (e) => {
+                e.preventDefault();
+                const linkedinUrl = `https://www.linkedin.com/sharing/share-offsite/?url=${encodeURIComponent(pageUrl)}`;
+                window.open(linkedinUrl, '_blank', 'width=550,height=420');
+            });
+
+            // Email
+            document.getElementById('shareEmail').addEventListener('click', (e) => {
+                e.preventDefault();
+                const subject = `Check out: ${pageTitle}`;
+                const body = `I thought you'd find this interesting:\n\n${pageTitle}\n${pageUrl}`;
+                window.location.href = `mailto:?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            });
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeSocialSharing);
+
+        // ========== LEAD CAPTURE FORMS ==========
+        function initializeLeadCapture() {
+            // Initialize both forms with the same logic
+            const formsMid = document.getElementById('leadFormMid');
+            const formsBottom = document.getElementById('leadFormBottom');
+
+            [formsMid, formsBottom].forEach(form => {
+                form.addEventListener('submit', handleFormSubmit);
+            });
+        }
+
+        function handleFormSubmit(e) {
+            e.preventDefault();
+
+            const form = e.target;
+            const formId = form.id;
+            const successMessageId = formId === 'leadFormMid' ? 'successMessageMid' : 'successMessageBottom';
+
+            // Collect form data
+            const formData = {
+                fullName: form.querySelector('input[name="fullName"]').value,
+                email: form.querySelector('input[name="email"]').value,
+                practice: form.querySelector('input[name="practice"]').value,
+                phone: form.querySelector('input[name="phone"]').value,
+                timestamp: new Date().toISOString(),
+                source: '{{ARTICLE_SLUG}}',
+                pageTitle: '{{ARTICLE_TITLE}}'
+            };
+
+            // Save to localStorage
+            saveLeadToLocalStorage(formData);
+
+            // TODO: Send to GitHub API (requires backend authentication)
+            // For a static site without backend, leads are saved to localStorage
+            // An admin dashboard can retrieve leads from user's local storage
+            // In production, consider using:
+            // - Formspree.io - POST to https://formspree.io/f/YOUR_FORM_ID
+            // - Basin.io - Form backend service
+            // - Firebase Realtime Database - with authentication
+            // - AWS Lambda + DynamoDB - serverless approach
+            // For now, leads persist in localStorage and can be exported by users
+
+            // Show success message
+            form.classList.add('lead-form-hidden');
+            document.getElementById(successMessageId).classList.remove('lead-form-hidden');
+
+            // Track in GA
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'lead_captured', {
+                    'form_location': formId,
+                    'article_slug': '{{ARTICLE_SLUG}}'
+                });
+            }
+        }
+
+        function saveLeadToLocalStorage(leadData) {
+            const leadsKey = 'rid_academy_leads';
+            const existingLeads = JSON.parse(localStorage.getItem(leadsKey)) || [];
+            existingLeads.push(leadData);
+            localStorage.setItem(leadsKey, JSON.stringify(existingLeads));
+
+            console.log('Lead saved to localStorage:', leadData);
+            console.log('Total leads:', existingLeads.length);
+        }
+
+        document.addEventListener('DOMContentLoaded', initializeLeadCapture);
+
+        // ========== SCROLL ANALYTICS ==========
+        // Track scroll depth for article engagement
+        let maxScroll = 0;
+        window.addEventListener('scroll', () => {
+            const scrollPercent = (window.scrollY / (document.documentElement.scrollHeight - window.innerHeight)) * 100;
+            if (scrollPercent > maxScroll) {
+                maxScroll = scrollPercent;
+
+                // Track scroll milestones
+                if (maxScroll > 25 && maxScroll < 30) {
+                    gtag('event', 'scroll_depth', { 'depth': '25%' });
+                } else if (maxScroll > 50 && maxScroll < 55) {
+                    gtag('event', 'scroll_depth', { 'depth': '50%' });
+                } else if (maxScroll > 75 && maxScroll < 80) {
+                    gtag('event', 'scroll_depth', { 'depth': '75%' });
+                } else if (maxScroll > 90) {
+                    gtag('event', 'scroll_depth', { 'depth': '90%' });
+                }
+            }
+        });
+
+        // ========== INITIALIZE ==========
+        document.addEventListener('DOMContentLoaded', function() {
+            // Format date nicely
+            const dateElement = document.getElementById('articleDate');
+            if (dateElement && dateElement.textContent.includes('{{ARTICLE_DATE}}') === false) {
+                const date = new Date(dateElement.textContent);
+                dateElement.textContent = date.toLocaleDateString('en-US', {
+                    year: 'numeric',
+                    month: 'long',
+                    day: 'numeric'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
