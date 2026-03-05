@@ -3,126 +3,1495 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://rida.narenlife.com/404.html">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="description" content="Page not found. Return to RID Academy for free resources and tools on reducing insurance dependence for your dental practice.">
-    <meta name="robots" content="noindex, follow">
-    <meta property="og:title" content="Page Not Found | RID Academy">
-    <meta property="og:description" content="This page has gone out of network. Let's get you back on track.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://rida.narenlife.com/404.html">
-    <meta property="og:image" content="https://rida.narenlife.com/images/og-default.png">
-    <meta name="twitter:card" content="summary">
-    <meta name="twitter:title" content="Page Not Found | RID Academy">
-    <meta name="twitter:description" content="This page has gone out of network. Let's get you back on track.">
+    <title>RID.Academy Admin Dashboard</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-    <title>Page Not Found | RID Academy</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YB2QDRNZ1D');
-</script>
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background: #f8f9fa;
+            color: #333;
+        }
+
+        /* LOGIN SCREEN */
+        .login-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+
+        .login-card {
+            background: white;
+            border-radius: 12px;
+            padding: 48px;
+            width: 100%;
+            max-width: 420px;
+            box-shadow: 0 20px 60px rgba(15, 43, 70, 0.15);
+        }
+
+        .login-header {
+            text-align: center;
+            margin-bottom: 32px;
+        }
+
+        .login-logo {
+            font-size: 32px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 16px;
+        }
+
+        .login-subtitle {
+            color: #666;
+            font-size: 14px;
+        }
+
+        .login-input-group {
+            margin-bottom: 20px;
+        }
+
+        .login-label {
+            display: block;
+            font-size: 13px;
+            font-weight: 600;
+            color: #0F2B46;
+            margin-bottom: 8px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 12px 14px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.2s;
+        }
+
+        .login-input:focus {
+            outline: none;
+            border-color: #00B4A6;
+            box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 12px;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            margin-top: 8px;
+        }
+
+        .login-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(0, 180, 166, 0.3);
+        }
+
+        .login-button:active {
+            transform: translateY(0);
+        }
+
+        .login-error {
+            color: #FF6B35;
+            font-size: 13px;
+            margin-top: 12px;
+            text-align: center;
+            display: none;
+        }
+
+        .login-error.show {
+            display: block;
+        }
+
+        .hidden {
+            display: none !important;
+        }
+
+        /* DASHBOARD LAYOUT */
+        .dashboard {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            min-height: 100vh;
+        }
+
+        .sidebar {
+            background: #0F2B46;
+            color: white;
+            padding: 24px 0;
+            position: fixed;
+            left: 0;
+            top: 0;
+            height: 100vh;
+            width: 280px;
+            overflow-y: auto;
+        }
+
+        .sidebar-logo {
+            padding: 0 24px;
+            margin-bottom: 32px;
+            font-size: 20px;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00B4A6, #FF6B35);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .sidebar-menu {
+            list-style: none;
+        }
+
+        .sidebar-menu-item {
+            border-left: 3px solid transparent;
+            margin: 0;
+        }
+
+        .sidebar-menu-item.active {
+            border-left-color: #00B4A6;
+            background: rgba(0, 180, 166, 0.1);
+        }
+
+        .sidebar-menu-link {
+            display: flex;
+            align-items: center;
+            padding: 14px 24px;
+            color: rgba(255, 255, 255, 0.7);
+            text-decoration: none;
+            font-size: 14px;
+            font-weight: 500;
+            transition: all 0.2s;
+            cursor: pointer;
+        }
+
+        .sidebar-menu-item.active .sidebar-menu-link {
+            color: white;
+        }
+
+        .sidebar-menu-link:hover {
+            color: #00B4A6;
+            background: rgba(0, 180, 166, 0.05);
+        }
+
+        .sidebar-menu-icon {
+            width: 20px;
+            height: 20px;
+            margin-right: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .sidebar-footer {
+            position: absolute;
+            bottom: 24px;
+            left: 0;
+            right: 0;
+            padding: 0 24px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            padding-top: 24px;
+        }
+
+        .logout-button {
+            width: 100%;
+            padding: 10px 12px;
+            background: rgba(255, 107, 53, 0.1);
+            color: #FF6B35;
+            border: 1px solid #FF6B35;
+            border-radius: 6px;
+            font-weight: 600;
+            font-size: 13px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .logout-button:hover {
+            background: #FF6B35;
+            color: white;
+        }
+
+        /* MAIN CONTENT */
+        .main-content {
+            margin-left: 280px;
+            flex: 1;
+        }
+
+        .topbar {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 16px 32px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .topbar-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: #0F2B46;
+        }
+
+        .topbar-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            font-size: 13px;
+            color: #666;
+        }
+
+        .topbar-sync {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            padding: 6px 12px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            font-size: 12px;
+            color: #666;
+        }
+
+        .sync-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 50%;
+            background: #00B4A6;
+        }
+
+        .sync-dot.syncing {
+            animation: pulse 1s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+
+        /* CONTENT AREA */
+        .content {
+            padding: 32px;
+            max-width: 1600px;
+        }
+
+        .tab-buttons {
+            display: flex;
+            gap: 12px;
+            margin-bottom: 32px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab-button {
+            padding: 12px 20px;
+            background: none;
+            border: none;
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            cursor: pointer;
+            border-bottom: 3px solid transparent;
+            transition: all 0.2s;
+            margin-bottom: -2px;
+        }
+
+        .tab-button.active {
+            color: #0F2B46;
+            border-bottom-color: #00B4A6;
+        }
+
+        .tab-button:hover {
+            color: #0F2B46;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* OVERVIEW TAB */
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 32px;
+        }
+
+        .metric-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e0e0e0;
+            transition: all 0.2s;
+        }
+
+        .metric-card:hover {
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            border-color: #00B4A6;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 12px;
+        }
+
+        .metric-value {
+            font-size: 40px;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 8px;
+        }
+
+        .metric-change {
+            font-size: 12px;
+            color: #00B4A6;
+        }
+
+        /* CHART */
+        .chart-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            border: 1px solid #e0e0e0;
+            margin-bottom: 32px;
+        }
+
+        .chart-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 24px;
+        }
+
+        .bar-chart {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .bar-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .bar-label {
+            width: 200px;
+            font-size: 13px;
+            color: #333;
+            word-break: break-word;
+            flex-shrink: 0;
+        }
+
+        .bar-track {
+            flex: 1;
+            height: 28px;
+            background: #f0f0f0;
+            border-radius: 6px;
+            overflow: hidden;
+            position: relative;
+        }
+
+        .bar-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00B4A6, #0F2B46);
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding: 0 12px;
+            color: white;
+            font-size: 12px;
+            font-weight: 600;
+            transition: width 0.3s;
+        }
+
+        .bar-count {
+            width: 40px;
+            text-align: right;
+            font-size: 13px;
+            font-weight: 600;
+            color: #333;
+        }
+
+        /* RECENT LEADS TABLE */
+        .recent-leads-card {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+        }
+
+        .table-header {
+            padding: 20px 24px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 14px;
+            font-weight: 700;
+            color: #0F2B46;
+        }
+
+        .table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .table th {
+            background: #f8f9fa;
+            padding: 14px 24px;
+            text-align: left;
+            font-size: 12px;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            border-bottom: 1px solid #e0e0e0;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .table th:hover {
+            background: #f0f0f0;
+        }
+
+        .table td {
+            padding: 14px 24px;
+            border-bottom: 1px solid #e0e0e0;
+            font-size: 13px;
+        }
+
+        .table tr:hover {
+            background: #f8f9fa;
+        }
+
+        .table tr.expandable {
+            cursor: pointer;
+        }
+
+        .table-name {
+            font-weight: 600;
+            color: #0F2B46;
+        }
+
+        .table-source {
+            color: #666;
+            font-size: 12px;
+        }
+
+        .status-badge {
+            display: inline-block;
+            padding: 4px 10px;
+            border-radius: 20px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .status-new {
+            background: #e3f2fd;
+            color: #1976d2;
+        }
+
+        .status-contacted {
+            background: #fff3e0;
+            color: #f57c00;
+        }
+
+        .status-converted {
+            background: #e8f5e9;
+            color: #388e3c;
+        }
+
+        .table-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .action-button {
+            padding: 5px 10px;
+            background: #f0f0f0;
+            border: none;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .action-button:hover {
+            background: #00B4A6;
+            color: white;
+        }
+
+        /* ALL LEADS TAB */
+        .filters-section {
+            background: white;
+            border-radius: 12px;
+            padding: 20px 24px;
+            margin-bottom: 20px;
+            border: 1px solid #e0e0e0;
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+
+        .filter-group {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .filter-label {
+            font-size: 12px;
+            font-weight: 600;
+            color: #666;
+            text-transform: uppercase;
+        }
+
+        .filter-input, .filter-select {
+            padding: 8px 12px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-family: 'Inter', sans-serif;
+            font-size: 13px;
+        }
+
+        .filter-input:focus, .filter-select:focus {
+            outline: none;
+            border-color: #00B4A6;
+            box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
+        }
+
+        .export-button {
+            padding: 8px 16px;
+            background: linear-gradient(135deg, #FF6B35, #FF8A52);
+            color: white;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .export-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(255, 107, 53, 0.3);
+        }
+
+        .all-leads-table {
+            background: white;
+            border-radius: 12px;
+            border: 1px solid #e0e0e0;
+            overflow: hidden;
+        }
+
+        .expanded-row {
+            background: #f8f9fa;
+        }
+
+        .expanded-content {
+            padding: 20px 24px;
+            border-top: 1px solid #e0e0e0;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .expanded-field {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .expanded-label {
+            font-size: 11px;
+            font-weight: 700;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-bottom: 4px;
+        }
+
+        .expanded-value {
+            font-size: 13px;
+            color: #333;
+            word-break: break-all;
+        }
+
+        .expanded-actions {
+            grid-column: 1 / -1;
+            display: flex;
+            gap: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #e0e0e0;
+        }
+
+        .status-button {
+            padding: 10px 16px;
+            background: none;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .status-button.mark-contacted {
+            border-color: #f57c00;
+            color: #f57c00;
+        }
+
+        .status-button.mark-contacted:hover {
+            background: #f57c00;
+            color: white;
+        }
+
+        .status-button.mark-converted {
+            border-color: #388e3c;
+            color: #388e3c;
+        }
+
+        .status-button.mark-converted:hover {
+            background: #388e3c;
+            color: white;
+        }
+
+        .no-data {
+            padding: 48px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .dashboard {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                position: fixed;
+                left: -280px;
+                transition: left 0.3s;
+                z-index: 999;
+            }
+
+            .sidebar.open {
+                left: 0;
+            }
+
+            .main-content {
+                margin-left: 0;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .expanded-content {
+                grid-template-columns: 1fr;
+            }
+
+            .filters-section {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-group {
+                width: 100%;
+            }
+
+            .filter-input, .filter-select {
+                width: 100%;
+            }
+
+            .export-button {
+                width: 100%;
+            }
+
+            .bar-label {
+                width: 100px;
+                font-size: 11px;
+            }
+
+            .topbar {
+                padding: 12px 20px;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .table th, .table td {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 48px;
+            margin-bottom: 16px;
+            opacity: 0.5;
+        }
+
+        .empty-state-text {
+            font-size: 14px;
+        }
+    </style>
 </head>
 <body>
-  <!-- ═══ NAVIGATION ═══ -->
-  <nav class="nav" role="navigation" aria-label="Main navigation">
-    <div class="nav-inner">
-      <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
-      <ul class="nav-links">
-        <li><a href="/tools/" class="nav-link">Tools</a></li>
-        <li><a href="/blog/" class="nav-link">Learn</a></li>
-        <li><a href="/resources/" class="nav-link">Resources</a></li>
-        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
-        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
-        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
-        <li><a href="/pages/about.html" class="nav-link">About</a></li>
-        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
-      </ul>
-      <button class="nav-toggle" aria-label="Toggle menu">
-        <span></span><span></span><span></span>
-      </button>
+    <!-- LOGIN SCREEN -->
+    <div id="loginContainer" class="login-container">
+        <div class="login-card">
+            <div class="login-header">
+                <div class="login-logo">RID.ACADEMY</div>
+                <div class="login-subtitle">Admin Dashboard</div>
+            </div>
+            <form id="loginForm" onsubmit="handleLogin(event)">
+                <div class="login-input-group">
+                    <label class="login-label">Password</label>
+                    <input
+                        type="password"
+                        id="passwordInput"
+                        class="login-input"
+                        placeholder="Enter admin password"
+                        autocomplete="off"
+                    >
+                </div>
+                <div class="login-input-group">
+                    <label class="login-label">API Key</label>
+                    <input
+                        type="password"
+                        id="patInput"
+                        class="login-input"
+                        placeholder="Enter GitHub API key"
+                        autocomplete="off"
+                    >
+                </div>
+                <button type="submit" class="login-button">Sign In</button>
+                <div id="loginError" class="login-error"></div>
+            </form>
+        </div>
     </div>
-  </nav>
 
-  <!-- ═══ 404 ERROR SECTION ═══ -->
-  <section style="padding-top: calc(var(--nav-height) + var(--space-4xl)); padding-bottom: var(--space-4xl); text-align: center;">
-    <div class="container" style="max-width: 700px;">
-      <div style="font-size: 5rem; font-weight: 800; color: var(--coral); font-family: var(--font-mono); margin-bottom: var(--space-lg);">404</div>
-      <h1 style="color: var(--navy); margin-bottom: var(--space-md);">Page Not Found</h1>
-      <p style="font-size: 1.1rem; color: var(--text-secondary); margin-bottom: var(--space-2xl);">Looks like this page went out of network. We couldn't find the page you're looking for. It might have been moved or removed.</p>
+    <!-- DASHBOARD -->
+    <div id="dashboard" class="dashboard hidden">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-logo">RID.ACADEMY</div>
+            <ul class="sidebar-menu">
+                <li class="sidebar-menu-item active">
+                    <a class="sidebar-menu-link" onclick="switchTab('overview')">
+                        <span class="sidebar-menu-icon">📊</span>
+                        <span>Overview</span>
+                    </a>
+                </li>
+                <li class="sidebar-menu-item">
+                    <a class="sidebar-menu-link" onclick="switchTab('leads')">
+                        <span class="sidebar-menu-icon">👥</span>
+                        <span>All Leads</span>
+                    </a>
+                </li>
+            </ul>
+            <div class="sidebar-footer">
+                <button class="logout-button" onclick="handleLogout()">Logout</button>
+            </div>
+        </aside>
 
-      <div style="display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-bottom: var(--space-3xl);">
-        <a href="/" class="btn btn-primary btn-lg">Back to Home</a>
-        <a href="/tools/" class="btn btn-secondary btn-lg">Explore Tools</a>
-        <a href="/blog/" class="btn btn-secondary btn-lg">Read Blog</a>
-      </div>
+        <!-- MAIN CONTENT -->
+        <div class="main-content">
+            <!-- TOPBAR -->
+            <div class="topbar">
+                <div class="topbar-title" id="pageTitle">Dashboard Overview</div>
+                <div class="topbar-info">
+                    <div class="topbar-sync">
+                        <span class="sync-dot" id="syncDot"></span>
+                        <span id="syncText">Last synced now</span>
+                    </div>
+                </div>
+            </div>
 
-      <div style="background: var(--bg-subtle); border-radius: var(--radius-lg); padding: var(--space-2xl); margin-top: var(--space-2xl);">
-        <h3 style="color: var(--navy); margin-bottom: var(--space-lg);">Still need help?</h3>
-        <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Try these popular pages:</p>
-        <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
-          <li><a href="/pages/glossary.html" style="color: var(--teal-dark); font-weight: 500;">Dental Insurance Glossary</a></li>
-          <li><a href="/resources/" style="color: var(--teal-dark); font-weight: 500;">Free Resources</a></li>
-          <li><a href="/tools/" style="color: var(--teal-dark); font-weight: 500;">Tools & Calculators</a></li>
-        </ul>
-      </div>
+            <!-- CONTENT -->
+            <div class="content">
+                <!-- TAB BUTTONS -->
+                <div class="tab-buttons">
+                    <button class="tab-button active" onclick="switchTab('overview')">Overview</button>
+                    <button class="tab-button" onclick="switchTab('leads')">All Leads</button>
+                </div>
+
+                <!-- OVERVIEW TAB -->
+                <div id="overviewTab" class="tab-content active">
+                    <!-- METRICS -->
+                    <div class="metrics-grid">
+                        <div class="metric-card">
+                            <div class="metric-label">Total Leads</div>
+                            <div class="metric-value" id="totalLeads">0</div>
+                            <div class="metric-change" id="totalChange">All time</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">New Today</div>
+                            <div class="metric-value" id="newToday">0</div>
+                            <div class="metric-change">Last 24 hours</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">This Week</div>
+                            <div class="metric-value" id="thisWeek">0</div>
+                            <div class="metric-change">Last 7 days</div>
+                        </div>
+                        <div class="metric-card">
+                            <div class="metric-label">This Month</div>
+                            <div class="metric-value" id="thisMonth">0</div>
+                            <div class="metric-change">Last 30 days</div>
+                        </div>
+                    </div>
+
+                    <!-- TOP SOURCES CHART -->
+                    <div class="chart-card">
+                        <div class="chart-title">Top Lead Sources</div>
+                        <div class="bar-chart" id="topSourcesChart">
+                            <div class="empty-state">
+                                <div class="empty-state-icon">📈</div>
+                                <div class="empty-state-text">No data yet</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RECENT LEADS -->
+                    <div class="recent-leads-card">
+                        <div class="table-header">Recent Leads (Last 10)</div>
+                        <table class="table" id="recentLeadsTable">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortTable('date')">Date</th>
+                                    <th onclick="sortTable('name')">Name</th>
+                                    <th onclick="sortTable('email')">Email</th>
+                                    <th onclick="sortTable('practiceName')">Practice</th>
+                                    <th onclick="sortTable('source')">Source</th>
+                                    <th onclick="sortTable('status')">Status</th>
+                                </tr>
+                            </thead>
+                            <tbody id="recentLeadsBody">
+                                <tr><td colspan="6" class="no-data">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- ALL LEADS TAB -->
+                <div id="leadsTab" class="tab-content">
+                    <!-- FILTERS -->
+                    <div class="filters-section">
+                        <div class="filter-group" style="flex: 1; min-width: 200px;">
+                            <label class="filter-label">Search</label>
+                            <input
+                                type="text"
+                                class="filter-input"
+                                id="searchInput"
+                                placeholder="Name, email, phone..."
+                                style="width: 100%;"
+                                onkeyup="filterLeads()"
+                            >
+                        </div>
+                        <div class="filter-group">
+                            <label class="filter-label">Status</label>
+                            <select class="filter-select" id="statusFilter" onchange="filterLeads()">
+                                <option value="">All</option>
+                                <option value="new">New</option>
+                                <option value="contacted">Contacted</option>
+                                <option value="converted">Converted</option>
+                            </select>
+                        </div>
+                        <button class="export-button" onclick="exportToCSV()">📥 Export CSV</button>
+                    </div>
+
+                    <!-- ALL LEADS TABLE -->
+                    <div class="all-leads-table">
+                        <table class="table" id="allLeadsTable">
+                            <thead>
+                                <tr>
+                                    <th onclick="sortAllLeads('date')">Date ↕</th>
+                                    <th onclick="sortAllLeads('name')">Name ↕</th>
+                                    <th onclick="sortAllLeads('email')">Email ↕</th>
+                                    <th onclick="sortAllLeads('practiceName')">Practice ↕</th>
+                                    <th onclick="sortAllLeads('mobile')">Mobile ↕</th>
+                                    <th onclick="sortAllLeads('source')">Source ↕</th>
+                                    <th onclick="sortAllLeads('status')">Status ↕</th>
+                                </tr>
+                            </thead>
+                            <tbody id="allLeadsBody">
+                                <tr><td colspan="7" class="no-data">Loading...</td></tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-  </section>
 
-  <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
-    <div class="container">
-      <div class="grid grid-4" style="gap: 48px;">
-        <div>
-          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
-          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
-        </div>
-        <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Tools</h4>
-          <ul class="footer-links">
-            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
-            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
-            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
-            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Learn</h4>
-          <ul class="footer-links">
-            <li><a href="/blog/">Articles & Guides</a></li>
-            <li><a href="/pages/summit.html">Annual Summit</a></li>
-            <li><a href="/resources/">Resources</a></li>
-            <li><a href="/pages/glossary.html">Glossary</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Company</h4>
-          <ul class="footer-links">
-            <li><a href="/pages/about.html">About RID Academy</a></li>
-            <li><a href="/pages/community.html">Community</a></li>
-            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
-            <li><a href="mailto:info@rid.academy">Contact</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 RID Academy (Reducing Insurance Dependence Academy). All rights reserved.</span>
-        <div class="flex gap-md">
-          <a href="/pages/privacy.html">Privacy Policy</a>
-          <a href="/pages/terms.html">Terms of Use</a>
-          <a href="/pages/disclaimer.html">Disclaimer</a>
-        </div>
-      </div>
-    </div>
-  </footer>
+    <script>
+        // ==========================================
+        // CONFIGURATION
+        // ==========================================
+        const CONFIG = {
+            GITHUB_PAT: '', // Set at runtime after login
+            GITHUB_API: 'https://api.github.com/repos/narulraj283/rid-academy',
+            LEADS_PATH: 'data/leads.json',
+            ADMIN_PASSWORD: 'ridadmin2026'
+        };
 
-    <script src="/js/main.js"></script>
+        // ==========================================
+        // STATE
+        // ==========================================
+        let allLeads = [];
+        let filteredLeads = [];
+        let currentSortField = 'date';
+        let currentSortOrder = 'desc';
+        let expandedRowId = null;
+
+        // ==========================================
+        // LOGIN LOGIC
+        // ==========================================
+        function handleLogin(event) {
+            event.preventDefault();
+            const password = document.getElementById('passwordInput').value;
+            const pat = document.getElementById('patInput').value.trim();
+            const errorEl = document.getElementById('loginError');
+
+            if (password === CONFIG.ADMIN_PASSWORD && pat.length > 10) {
+                CONFIG.GITHUB_PAT = pat;
+                sessionStorage.setItem('ridAdminPAT', pat);
+                localStorage.setItem('ridAdminAuth', 'true');
+                document.getElementById('loginContainer').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                initDashboard();
+            } else {
+                errorEl.textContent = !pat.length ? 'API key is required' : 'Invalid credentials';
+                errorEl.classList.add('show');
+                document.getElementById('passwordInput').value = '';
+            }
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('ridAdminAuth');
+            sessionStorage.removeItem('ridAdminPAT');
+            CONFIG.GITHUB_PAT = '';
+            document.getElementById('dashboard').classList.add('hidden');
+            document.getElementById('loginContainer').classList.remove('hidden');
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('patInput').value = '';
+            document.getElementById('loginError').classList.remove('show');
+        }
+
+        // ==========================================
+        // GITHUB API FUNCTIONS
+        // ==========================================
+        async function loadLeads() {
+            try {
+                const response = await fetch(
+                    `${CONFIG.GITHUB_API}/contents/${CONFIG.LEADS_PATH}`,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${CONFIG.GITHUB_PAT}`,
+                            'Accept': 'application/vnd.github.v3.raw'
+                        }
+                    }
+                );
+
+                if (response.status === 404) {
+                    return { leads: [], lastUpdated: new Date().toISOString(), sha: null };
+                }
+
+                if (!response.ok) {
+                    throw new Error(`GitHub API error: ${response.status}`);
+                }
+
+                const text = await response.text();
+                const data = JSON.parse(text);
+
+                // Get SHA for future updates
+                const metaResponse = await fetch(
+                    `${CONFIG.GITHUB_API}/contents/${CONFIG.LEADS_PATH}`,
+                    {
+                        headers: {
+                            'Authorization': `Bearer ${CONFIG.GITHUB_PAT}`,
+                            'Accept': 'application/vnd.github.v3+json'
+                        }
+                    }
+                );
+                const metaData = await metaResponse.json();
+                data.sha = metaData.sha;
+
+                return data;
+            } catch (error) {
+                console.error('Error loading leads:', error);
+                updateSyncStatus('Error loading', true);
+                return { leads: [], lastUpdated: new Date().toISOString(), sha: null };
+            }
+        }
+
+        async function saveLeads(data) {
+            try {
+                const content = btoa(JSON.stringify(data, null, 2));
+
+                const response = await fetch(
+                    `${CONFIG.GITHUB_API}/contents/${CONFIG.LEADS_PATH}`,
+                    {
+                        method: 'PUT',
+                        headers: {
+                            'Authorization': `Bearer ${CONFIG.GITHUB_PAT}`,
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            message: `Update leads - ${new Date().toISOString()}`,
+                            content: content,
+                            sha: data.sha
+                        })
+                    }
+                );
+
+                if (!response.ok) {
+                    throw new Error(`GitHub API error: ${response.status}`);
+                }
+
+                updateSyncStatus('Synced');
+                return true;
+            } catch (error) {
+                console.error('Error saving leads:', error);
+                updateSyncStatus('Error saving', true);
+                return false;
+            }
+        }
+
+        // ==========================================
+        // DASHBOARD INITIALIZATION
+        // ==========================================
+        async function initDashboard() {
+            await refreshData();
+            setInterval(refreshData, 60000); // Auto-refresh every 60 seconds
+        }
+
+        async function refreshData() {
+            updateSyncStatus('Syncing...', false, true);
+            const data = await loadLeads();
+            allLeads = data.leads || [];
+            filteredLeads = [...allLeads];
+            updateDashboard();
+            updateSyncStatus('Synced');
+        }
+
+        // ==========================================
+        // DASHBOARD UPDATES
+        // ==========================================
+        function updateDashboard() {
+            updateMetrics();
+            updateTopSources();
+            updateRecentLeads();
+            updateAllLeadsTable();
+        }
+
+        function updateMetrics() {
+            const now = new Date();
+            const today = new Date(now.getFullYear(), now.getMonth(), now.getDate());
+            const weekAgo = new Date(today.getTime() - 7 * 24 * 60 * 60 * 1000);
+            const monthAgo = new Date(today.getTime() - 30 * 24 * 60 * 60 * 1000);
+
+            const newToday = allLeads.filter(l => {
+                const leadDate = new Date(l.date);
+                return leadDate >= today;
+            }).length;
+
+            const thisWeek = allLeads.filter(l => {
+                const leadDate = new Date(l.date);
+                return leadDate >= weekAgo;
+            }).length;
+
+            const thisMonth = allLeads.filter(l => {
+                const leadDate = new Date(l.date);
+                return leadDate >= monthAgo;
+            }).length;
+
+            document.getElementById('totalLeads').textContent = allLeads.length;
+            document.getElementById('newToday').textContent = newToday;
+            document.getElementById('thisWeek').textContent = thisWeek;
+            document.getElementById('thisMonth').textContent = thisMonth;
+        }
+
+        function updateTopSources() {
+            const sourceMap = {};
+            allLeads.forEach(lead => {
+                const source = lead.source || 'Direct';
+                sourceMap[source] = (sourceMap[source] || 0) + 1;
+            });
+
+            const topSources = Object.entries(sourceMap)
+                .sort((a, b) => b[1] - a[1])
+                .slice(0, 5);
+
+            const chartDiv = document.getElementById('topSourcesChart');
+
+            if (topSources.length === 0) {
+                chartDiv.innerHTML = `
+                    <div class="empty-state">
+                        <div class="empty-state-icon">📈</div>
+                        <div class="empty-state-text">No leads yet</div>
+                    </div>
+                `;
+                return;
+            }
+
+            const maxCount = topSources[0][1];
+            chartDiv.innerHTML = topSources.map(([source, count]) => {
+                const percentage = (count / maxCount) * 100;
+                const displaySource = source.replace(/^.*\//, '').replace(/-/g, ' ').replace(/\.html?$/, '');
+                return `
+                    <div class="bar-item">
+                        <div class="bar-label">${escapeHtml(displaySource)}</div>
+                        <div class="bar-track">
+                            <div class="bar-fill" style="width: ${percentage}%">
+                                ${count > 0 ? count : ''}
+                            </div>
+                        </div>
+                        <div class="bar-count">${count}</div>
+                    </div>
+                `;
+            }).join('');
+        }
+
+        function updateRecentLeads() {
+            const recent = allLeads
+                .sort((a, b) => new Date(b.date) - new Date(a.date))
+                .slice(0, 10);
+
+            const tbody = document.getElementById('recentLeadsBody');
+
+            if (recent.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="6" class="no-data">No leads yet</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = recent.map(lead => `
+                <tr class="expandable" onclick="toggleExpandRow('${lead.id}', event)">
+                    <td>${formatDate(lead.date)}</td>
+                    <td class="table-name">${escapeHtml(lead.name)}</td>
+                    <td>${escapeHtml(lead.email)}</td>
+                    <td>${escapeHtml(lead.practiceName || '-')}</td>
+                    <td class="table-source">${escapeHtml(lead.source || 'Direct').replace(/^.*\//, '').replace(/\.html?$/, '')}</td>
+                    <td><span class="status-badge status-${lead.status}">${lead.status}</span></td>
+                </tr>
+            `).join('');
+        }
+
+        function updateAllLeadsTable() {
+            const tbody = document.getElementById('allLeadsBody');
+
+            if (filteredLeads.length === 0) {
+                tbody.innerHTML = '<tr><td colspan="7" class="no-data">No leads found</td></tr>';
+                return;
+            }
+
+            tbody.innerHTML = filteredLeads.map(lead => `
+                <tr class="expandable" onclick="toggleExpandRow('${lead.id}', event)">
+                    <td>${formatDate(lead.date)}</td>
+                    <td class="table-name">${escapeHtml(lead.name)}</td>
+                    <td>${escapeHtml(lead.email)}</td>
+                    <td>${escapeHtml(lead.practiceName || '-')}</td>
+                    <td>${escapeHtml(lead.mobile || '-')}</td>
+                    <td class="table-source">${escapeHtml(lead.source || 'Direct').replace(/^.*\//, '').replace(/\.html?$/, '')}</td>
+                    <td><span class="status-badge status-${lead.status}">${lead.status}</span></td>
+                </tr>
+                ${expandedRowId === lead.id ? getExpandedRow(lead) : ''}
+            `).join('');
+        }
+
+        function getExpandedRow(lead) {
+            return `
+                <tr class="expanded-row">
+                    <td colspan="7">
+                        <div class="expanded-content">
+                            <div class="expanded-field">
+                                <div class="expanded-label">Email</div>
+                                <div class="expanded-value">${escapeHtml(lead.email)}</div>
+                            </div>
+                            <div class="expanded-field">
+                                <div class="expanded-label">Mobile</div>
+                                <div class="expanded-value">${escapeHtml(lead.mobile || '-')}</div>
+                            </div>
+                            <div class="expanded-field">
+                                <div class="expanded-label">Practice Name</div>
+                                <div class="expanded-value">${escapeHtml(lead.practiceName || '-')}</div>
+                            </div>
+                            <div class="expanded-field">
+                                <div class="expanded-label">Source</div>
+                                <div class="expanded-value">${escapeHtml(lead.source || 'Direct')}</div>
+                            </div>
+                            <div class="expanded-field">
+                                <div class="expanded-label">Date Added</div>
+                                <div class="expanded-value">${formatDateFull(lead.date)}</div>
+                            </div>
+                            <div class="expanded-field">
+                                <div class="expanded-label">Status</div>
+                                <div class="expanded-value"><span class="status-badge status-${lead.status}">${lead.status}</span></div>
+                            </div>
+                            ${lead.pdfDownloaded ? `
+                                <div class="expanded-field">
+                                    <div class="expanded-label">PDF Downloaded</div>
+                                    <div class="expanded-value">${escapeHtml(lead.pdfDownloaded)}</div>
+                                </div>
+                            ` : ''}
+                            <div class="expanded-actions">
+                                <button class="status-button mark-contacted" onclick="markAsContacted('${lead.id}', event)">
+                                    Mark as Contacted
+                                </button>
+                                <button class="status-button mark-converted" onclick="markAsConverted('${lead.id}', event)">
+                                    Mark as Converted
+                                </button>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+            `;
+        }
+
+        // ==========================================
+        // USER INTERACTIONS
+        // ==========================================
+        function switchTab(tabName) {
+            // Update tab buttons
+            document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update tab content
+            document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
+            document.getElementById(tabName + 'Tab').classList.add('active');
+
+            // Update sidebar
+            document.querySelectorAll('.sidebar-menu-item').forEach(item => item.classList.remove('active'));
+            event.target.closest('.sidebar-menu-item')?.classList.add('active');
+
+            // Update page title
+            const titles = {
+                'overview': 'Dashboard Overview',
+                'leads': 'All Leads'
+            };
+            document.getElementById('pageTitle').textContent = titles[tabName];
+        }
+
+        function toggleExpandRow(leadId, event) {
+            event.stopPropagation();
+            if (expandedRowId === leadId) {
+                expandedRowId = null;
+            } else {
+                expandedRowId = leadId;
+            }
+            updateAllLeadsTable();
+        }
+
+        function filterLeads() {
+            const search = document.getElementById('searchInput').value.toLowerCase();
+            const status = document.getElementById('statusFilter').value;
+
+            filteredLeads = allLeads.filter(lead => {
+                const matchesSearch = !search ||
+                    lead.name.toLowerCase().includes(search) ||
+                    lead.email.toLowerCase().includes(search) ||
+                    lead.mobile?.includes(search) ||
+                    lead.practiceName?.toLowerCase().includes(search);
+
+                const matchesStatus = !status || lead.status === status;
+
+                return matchesSearch && matchesStatus;
+            });
+
+            // Reset sort
+            filteredLeads.sort((a, b) => new Date(b.date) - new Date(a.date));
+            updateAllLeadsTable();
+        }
+
+        function sortAllLeads(field) {
+            if (currentSortField === field) {
+                currentSortOrder = currentSortOrder === 'asc' ? 'desc' : 'asc';
+            } else {
+                currentSortField = field;
+                currentSortOrder = 'asc';
+            }
+
+            filteredLeads.sort((a, b) => {
+                let aVal = a[field];
+                let bVal = b[field];
+
+                if (field === 'date') {
+                    aVal = new Date(aVal);
+                    bVal = new Date(bVal);
+                } else if (typeof aVal === 'string') {
+                    aVal = aVal.toLowerCase();
+                    bVal = bVal.toLowerCase();
+                }
+
+                if (aVal < bVal) return currentSortOrder === 'asc' ? -1 : 1;
+                if (aVal > bVal) return currentSortOrder === 'asc' ? 1 : -1;
+                return 0;
+            });
+
+            updateAllLeadsTable();
+        }
+
+        async function markAsContacted(leadId, event) {
+            event.stopPropagation();
+            const lead = allLeads.find(l => l.id === leadId);
+            if (lead) {
+                lead.status = 'contacted';
+                const data = await loadLeads();
+                data.leads = allLeads;
+                data.lastUpdated = new Date().toISOString();
+                await saveLeads(data);
+                updateDashboard();
+            }
+        }
+
+        async function markAsConverted(leadId, event) {
+            event.stopPropagation();
+            const lead = allLeads.find(l => l.id === leadId);
+            if (lead) {
+                lead.status = 'converted';
+                const data = await loadLeads();
+                data.leads = allLeads;
+                data.lastUpdated = new Date().toISOString();
+                await saveLeads(data);
+                updateDashboard();
+            }
+        }
+
+        function exportToCSV() {
+            const csv = convertToCSV(filteredLeads);
+            downloadCSV(csv, 'rid-academy-leads.csv');
+        }
+
+        function convertToCSV(leads) {
+            const headers = ['Date', 'Name', 'Email', 'Practice Name', 'Mobile', 'Source', 'Status', 'PDF Downloaded'];
+            const rows = leads.map(lead => [
+                formatDate(lead.date),
+                lead.name,
+                lead.email,
+                lead.practiceName || '',
+                lead.mobile || '',
+                lead.source || 'Direct',
+                lead.status,
+                lead.pdfDownloaded || ''
+            ]);
+
+            const csvContent = [
+                headers.join(','),
+                ...rows.map(row => row.map(cell => `"${String(cell).replace(/"/g, '""')}"`).join(','))
+            ].join('\n');
+
+            return csvContent;
+        }
+
+        function downloadCSV(csv, filename) {
+            const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+            const link = document.createElement('a');
+            const url = URL.createObjectURL(blob);
+            link.setAttribute('href', url);
+            link.setAttribute('download', filename);
+            link.style.visibility = 'hidden';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+        // ==========================================
+        // UTILITIES
+        // ==========================================
+        function formatDate(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' });
+        }
+
+        function formatDateFull(dateStr) {
+            const date = new Date(dateStr);
+            return date.toLocaleDateString('en-US', {
+                month: 'short',
+                day: 'numeric',
+                year: 'numeric',
+                hour: '2-digit',
+                minute: '2-digit'
+            });
+        }
+
+        function escapeHtml(text) {
+            if (!text) return '';
+            const map = {
+                '&': '&amp;',
+                '<': '&lt;',
+                '>': '&gt;',
+                '"': '&quot;',
+                "'": '&#039;'
+            };
+            return String(text).replace(/[&<>"']/g, m => map[m]);
+        }
+
+        function updateSyncStatus(text, isError = false, isSyncing = false) {
+            document.getElementById('syncText').textContent = text;
+            const dot = document.getElementById('syncDot');
+            dot.classList.toggle('syncing', isSyncing);
+            dot.style.background = isError ? '#FF6B35' : '#00B4A6';
+        }
+
+        // ==========================================
+        // INITIALIZATION
+        // ==========================================
+        window.addEventListener('DOMContentLoaded', () => {
+            const isLoggedIn = localStorage.getItem('ridAdminAuth') === 'true';
+            const savedPAT = sessionStorage.getItem('ridAdminPAT');
+            if (isLoggedIn && savedPAT) {
+                CONFIG.GITHUB_PAT = savedPAT;
+                document.getElementById('loginContainer').classList.add('hidden');
+                document.getElementById('dashboard').classList.remove('hidden');
+                initDashboard();
+            } else {
+                // Force re-login if PAT not in session
+                localStorage.removeItem('ridAdminAuth');
+            }
+        });
+    </script>
 </body>
 </html>
