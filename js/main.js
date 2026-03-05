@@ -1,11 +1,11 @@
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-   RID ACADEMY â Main JavaScript
-   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+   RID ACADEMY Ã¢ÂÂ Main JavaScript
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 
 (function() {
   'use strict';
 
-  // ââ Nav scroll effect ââ
+  // Ã¢ÂÂÃ¢ÂÂ Nav scroll effect Ã¢ÂÂÃ¢ÂÂ
   const nav = document.querySelector('.nav');
   if (nav) {
     window.addEventListener('scroll', () => {
@@ -13,7 +13,7 @@
     }, { passive: true });
   }
 
-  // ââ Mobile nav toggle ââ
+  // Ã¢ÂÂÃ¢ÂÂ Mobile nav toggle Ã¢ÂÂÃ¢ÂÂ
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
@@ -29,7 +29,7 @@
     });
   }
 
-  // ââ Scroll animations (robust with fallback) ââ
+  // Ã¢ÂÂÃ¢ÂÂ Scroll animations (robust with fallback) Ã¢ÂÂÃ¢ÂÂ
   const animateEls = document.querySelectorAll('.animate-in');
 
   if ('IntersectionObserver' in window && animateEls.length > 0) {
@@ -57,11 +57,11 @@
       });
     }, 3000);
   } else {
-    // No IntersectionObserver support â show everything immediately
+    // No IntersectionObserver support Ã¢ÂÂ show everything immediately
     animateEls.forEach(el => el.classList.add('visible'));
   }
 
-  // ââ Counter animation ââ
+  // Ã¢ÂÂÃ¢ÂÂ Counter animation Ã¢ÂÂÃ¢ÂÂ
   function animateCounter(el, target, duration) {
     duration = duration || 1500;
     const suffix = el.dataset.suffix || '';
@@ -101,7 +101,7 @@
 
     counterEls.forEach(function(el) { counterObserver.observe(el); });
   } else {
-    // Fallback â just show the final values
+    // Fallback Ã¢ÂÂ just show the final values
     counterEls.forEach(function(el) {
       var target = parseInt(el.dataset.count, 10);
       var suffix = el.dataset.suffix || '';
@@ -112,7 +112,7 @@
     });
   }
 
-  // ââ Smooth scroll for anchor links ââ
+  // Ã¢ÂÂÃ¢ÂÂ Smooth scroll for anchor links Ã¢ÂÂÃ¢ÂÂ
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
       var href = this.getAttribute('href');
@@ -125,7 +125,7 @@
     });
   });
 
-  // ââ Share functionality ââ
+  // Ã¢ÂÂÃ¢ÂÂ Share functionality Ã¢ÂÂÃ¢ÂÂ
   window.shareOnPlatform = function(platform, url, title, text) {
     var encodedUrl = encodeURIComponent(url || window.location.href);
     var encodedTitle = encodeURIComponent(title || document.title);
@@ -143,17 +143,17 @@
     }
   };
 
-  // ââ Format currency ââ
+  // Ã¢ÂÂÃ¢ÂÂ Format currency Ã¢ÂÂÃ¢ÂÂ
   window.formatCurrency = function(num) {
     return '$' + Math.round(num).toLocaleString();
   };
 
-  // ââ Format percentage ââ
+  // Ã¢ÂÂÃ¢ÂÂ Format percentage Ã¢ÂÂÃ¢ÂÂ
   window.formatPercent = function(num) {
     return num.toFixed(1) + '%';
   };
 
-  // ââ Email signup handler ââ
+  // Ã¢ÂÂÃ¢ÂÂ Email signup handler Ã¢ÂÂÃ¢ÂÂ
   window.handleEmailSubmit = function(event) {
     event.preventDefault();
     const form = event.target;
@@ -179,7 +179,7 @@
 })();
 
 
-// ── Blog Index: Progressive Card Loading ──
+// ââ Blog Index: Progressive Card Loading ââ
 (function() {
   // Only run on blog index page
   if (!window.location.pathname.match(/\/blog\/?$/)) return;
@@ -188,7 +188,7 @@
   var sections = document.querySelectorAll('section.section');
   
   sections.forEach(function(section) {
-    var grid = section.querySelector('.grid');
+    var grid = section.querySelector('.container');
     if (!grid) return;
     var cards = Array.from(grid.children);
     if (cards.length <= BATCH) return;
