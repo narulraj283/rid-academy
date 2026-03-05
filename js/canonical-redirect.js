@@ -34,6 +34,10 @@
       return null;
     }
 
+    // Remove directory prefix (e.g., "blog/") to match mapping keys
+    const parts = slug.split('/');
+    slug = parts[parts.length - 1];
+
     // If it has a .html extension, use it as-is
     if (slug.endsWith('.html')) {
       return slug;
