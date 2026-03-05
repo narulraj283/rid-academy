@@ -1,11 +1,11 @@
-/* ═══════════════════════════════════════════════════════════
-   RID ACADEMY — Main JavaScript
-   ═══════════════════════════════════════════════════════════ */
+/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+   RID ACADEMY â Main JavaScript
+   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
 
 (function() {
   'use strict';
 
-  // ── Nav scroll effect ──
+  // ââ Nav scroll effect ââ
   const nav = document.querySelector('.nav');
   if (nav) {
     window.addEventListener('scroll', () => {
@@ -13,7 +13,7 @@
     }, { passive: true });
   }
 
-  // ── Mobile nav toggle ──
+  // ââ Mobile nav toggle ââ
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
@@ -29,7 +29,7 @@
     });
   }
 
-  // ── Scroll animations (robust with fallback) ──
+  // ââ Scroll animations (robust with fallback) ââ
   const animateEls = document.querySelectorAll('.animate-in');
 
   if ('IntersectionObserver' in window && animateEls.length > 0) {
@@ -57,11 +57,11 @@
       });
     }, 3000);
   } else {
-    // No IntersectionObserver support — show everything immediately
+    // No IntersectionObserver support â show everything immediately
     animateEls.forEach(el => el.classList.add('visible'));
   }
 
-  // ── Counter animation ──
+  // ââ Counter animation ââ
   function animateCounter(el, target, duration) {
     duration = duration || 1500;
     const suffix = el.dataset.suffix || '';
@@ -101,7 +101,7 @@
 
     counterEls.forEach(function(el) { counterObserver.observe(el); });
   } else {
-    // Fallback — just show the final values
+    // Fallback â just show the final values
     counterEls.forEach(function(el) {
       var target = parseInt(el.dataset.count, 10);
       var suffix = el.dataset.suffix || '';
@@ -112,7 +112,7 @@
     });
   }
 
-  // ── Smooth scroll for anchor links ──
+  // ââ Smooth scroll for anchor links ââ
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
       var href = this.getAttribute('href');
@@ -125,7 +125,7 @@
     });
   });
 
-  // ── Share functionality ──
+  // ââ Share functionality ââ
   window.shareOnPlatform = function(platform, url, title, text) {
     var encodedUrl = encodeURIComponent(url || window.location.href);
     var encodedTitle = encodeURIComponent(title || document.title);
@@ -143,17 +143,17 @@
     }
   };
 
-  // ── Format currency ──
+  // ââ Format currency ââ
   window.formatCurrency = function(num) {
     return '$' + Math.round(num).toLocaleString();
   };
 
-  // ── Format percentage ──
+  // ââ Format percentage ââ
   window.formatPercent = function(num) {
     return num.toFixed(1) + '%';
   };
 
-  // ── Email signup handler ──
+  // ââ Email signup handler ââ
   window.handleEmailSubmit = function(event) {
     event.preventDefault();
     const form = event.target;
@@ -176,4 +176,55 @@
     }
   };
 
+})();
+
+
+// ── Blog Index: Progressive Card Loading ──
+(function() {
+  // Only run on blog index page
+  if (!window.location.pathname.match(/\/blog\/?$/)) return;
+  
+  var BATCH = 30;
+  var sections = document.querySelectorAll('section.section');
+  
+  sections.forEach(function(section) {
+    var grid = section.querySelector('.grid');
+    if (!grid) return;
+    var cards = Array.from(grid.children);
+    if (cards.length <= BATCH) return;
+    
+    // Hide cards beyond first batch
+    var shown = BATCH;
+    cards.forEach(function(card, i) {
+      if (i >= BATCH) {
+        card.style.display = 'none';
+        card.dataset.lazyHidden = 'true';
+      }
+    });
+    
+    // Create "Show More" button
+    var btn = document.createElement('button');
+    btn.textContent = 'Show More (' + (cards.length - shown) + ' remaining)';
+    btn.style.cssText = 'display:block;margin:2rem auto;padding:0.75rem 2rem;background:#00B4A6;color:white;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s';
+    btn.addEventListener('mouseenter', function() { btn.style.background = '#009e92'; });
+    btn.addEventListener('mouseleave', function() { btn.style.background = '#00B4A6'; });
+    
+    btn.addEventListener('click', function() {
+      var count = 0;
+      for (var i = shown; i < cards.length && count < BATCH; i++) {
+        cards[i].style.display = '';
+        delete cards[i].dataset.lazyHidden;
+        count++;
+      }
+      shown += count;
+      var remaining = cards.length - shown;
+      if (remaining > 0) {
+        btn.textContent = 'Show More (' + remaining + ' remaining)';
+      } else {
+        btn.remove();
+      }
+    });
+    
+    section.appendChild(btn);
+  });
 })();
