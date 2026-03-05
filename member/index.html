@@ -1,0 +1,1100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RID.ACADEMY - Member Portal</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-YB2QDRNZ1D');
+    </script>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        /* LOGIN/REGISTER SCREEN */
+        .auth-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            padding: 20px;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+        }
+
+        .auth-card {
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.15);
+            width: 100%;
+            max-width: 420px;
+            overflow: hidden;
+        }
+
+        .auth-header {
+            padding: 40px 30px;
+            text-align: center;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            color: white;
+        }
+
+        .auth-logo {
+            font-size: 32px;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            margin-bottom: 8px;
+        }
+
+        .auth-subtitle {
+            font-size: 14px;
+            font-weight: 400;
+            opacity: 0.9;
+        }
+
+        .auth-tabs {
+            display: flex;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 0 30px;
+        }
+
+        .auth-tab {
+            flex: 1;
+            padding: 15px 0;
+            text-align: center;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            color: #999;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .auth-tab.active {
+            color: #00B4A6;
+            border-bottom-color: #00B4A6;
+        }
+
+        .auth-content {
+            padding: 30px;
+        }
+
+        .auth-form {
+            display: none;
+        }
+
+        .auth-form.active {
+            display: block;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            color: #0F2B46;
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            transition: all 0.3s ease;
+        }
+
+        .form-group input:focus {
+            outline: none;
+            border-color: #00B4A6;
+            box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
+        }
+
+        .form-group input.error {
+            border-color: #FF6B35;
+        }
+
+        .form-error {
+            color: #FF6B35;
+            font-size: 12px;
+            margin-top: 6px;
+            display: none;
+        }
+
+        .form-error.show {
+            display: block;
+        }
+
+        .btn {
+            width: 100%;
+            padding: 12px 16px;
+            border: none;
+            border-radius: 8px;
+            font-family: 'Inter', sans-serif;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px rgba(0, 180, 166, 0.3);
+        }
+
+        .btn-primary:active {
+            transform: translateY(0);
+        }
+
+        /* DASHBOARD LAYOUT */
+        .dashboard-container {
+            display: none;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .dashboard-container.active {
+            display: flex;
+        }
+
+        .dashboard-header {
+            background: white;
+            border-bottom: 1px solid #e0e0e0;
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .dashboard-logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0F2B46;
+            text-decoration: none;
+        }
+
+        .dashboard-user {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .user-name {
+            font-size: 14px;
+            font-weight: 600;
+            color: #0F2B46;
+        }
+
+        .btn-logout {
+            padding: 8px 16px;
+            background: #f0f0f0;
+            color: #0F2B46;
+            border: none;
+            border-radius: 6px;
+            font-size: 13px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-logout:hover {
+            background: #FF6B35;
+            color: white;
+        }
+
+        .dashboard-content {
+            flex: 1;
+            padding: 40px;
+            max-width: 1200px;
+            margin: 0 auto;
+            width: 100%;
+        }
+
+        .welcome-section {
+            margin-bottom: 40px;
+        }
+
+        .welcome-greeting {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 8px;
+        }
+
+        .welcome-practice {
+            font-size: 16px;
+            color: #666;
+        }
+
+        /* NAVIGATION TABS */
+        .dashboard-tabs {
+            display: flex;
+            gap: 40px;
+            margin-bottom: 40px;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .dashboard-tab {
+            padding: 12px 0;
+            cursor: pointer;
+            font-size: 15px;
+            font-weight: 600;
+            color: #999;
+            border-bottom: 3px solid transparent;
+            transition: all 0.3s ease;
+            position: relative;
+            margin-bottom: -2px;
+        }
+
+        .dashboard-tab:hover {
+            color: #0F2B46;
+        }
+
+        .dashboard-tab.active {
+            color: #00B4A6;
+            border-bottom-color: #00B4A6;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        /* RESOURCE LIBRARY */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 24px;
+            margin-top: 30px;
+        }
+
+        .resource-card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .resource-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+        }
+
+        .resource-category {
+            display: inline-block;
+            padding: 4px 12px;
+            background: #E8F7F5;
+            color: #00B4A6;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            width: fit-content;
+        }
+
+        .resource-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 12px;
+            line-height: 1.4;
+        }
+
+        .resource-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 20px;
+            flex-grow: 1;
+            line-height: 1.6;
+        }
+
+        .btn-download {
+            padding: 12px 16px;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-download:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 180, 166, 0.3);
+        }
+
+        /* ARTICLES */
+        .articles-list {
+            margin-top: 30px;
+        }
+
+        .article-item {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .article-item:hover {
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+        }
+
+        .article-title {
+            font-size: 18px;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 12px;
+        }
+
+        .article-description {
+            font-size: 14px;
+            color: #666;
+            margin-bottom: 16px;
+            line-height: 1.6;
+        }
+
+        .btn-read {
+            padding: 10px 20px;
+            background: #00B4A6;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-read:hover {
+            background: #0F2B46;
+            transform: translateY(-2px);
+        }
+
+        /* PROFILE TAB */
+        .profile-form {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            max-width: 600px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .profile-section {
+            margin-bottom: 30px;
+            padding-bottom: 30px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        .profile-section:last-child {
+            border-bottom: none;
+        }
+
+        .profile-section-title {
+            font-size: 16px;
+            font-weight: 700;
+            color: #0F2B46;
+            margin-bottom: 20px;
+        }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .form-row.full {
+            grid-template-columns: 1fr;
+        }
+
+        .btn-save {
+            padding: 12px 32px;
+            background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%);
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-save:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 16px rgba(0, 180, 166, 0.3);
+        }
+
+        .success-message {
+            background: #E8F7F5;
+            color: #00B4A6;
+            padding: 12px 16px;
+            border-radius: 8px;
+            margin-bottom: 20px;
+            display: none;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .success-message.show {
+            display: block;
+        }
+
+        /* FOOTER */
+        .dashboard-footer {
+            background: white;
+            border-top: 1px solid #e0e0e0;
+            padding: 40px;
+            text-align: center;
+            color: #999;
+            font-size: 14px;
+            margin-top: auto;
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            .dashboard-content {
+                padding: 20px;
+            }
+
+            .resources-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-tabs {
+                gap: 20px;
+            }
+
+            .dashboard-tab {
+                font-size: 13px;
+            }
+
+            .welcome-greeting {
+                font-size: 24px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+            }
+
+            .dashboard-header {
+                flex-direction: column;
+                gap: 15px;
+                padding: 15px 20px;
+            }
+
+            .dashboard-user {
+                width: 100%;
+                justify-content: space-between;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- AUTH SCREEN -->
+    <div id="authScreen" class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <div class="auth-logo">RID.ACADEMY</div>
+                <div class="auth-subtitle">Member Portal</div>
+            </div>
+
+            <div class="auth-tabs">
+                <div class="auth-tab active" onclick="switchAuthTab('login')">Login</div>
+                <div class="auth-tab" onclick="switchAuthTab('register')">Create Account</div>
+            </div>
+
+            <div class="auth-content">
+                <!-- LOGIN FORM -->
+                <form class="auth-form active" id="loginForm" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="loginEmail">Email</label>
+                        <input type="email" id="loginEmail" placeholder="you@example.com" required>
+                        <div class="form-error" id="loginEmailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="loginPassword">Password</label>
+                        <input type="password" id="loginPassword" placeholder="Enter your password" required>
+                        <div class="form-error" id="loginPasswordError"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Login</button>
+                </form>
+
+                <!-- REGISTER FORM -->
+                <form class="auth-form" id="registerForm" onsubmit="handleRegister(event)">
+                    <div class="form-group">
+                        <label for="registerName">Full Name</label>
+                        <input type="text" id="registerName" placeholder="Your full name" required>
+                        <div class="form-error" id="registerNameError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerEmail">Email</label>
+                        <input type="email" id="registerEmail" placeholder="you@example.com" required>
+                        <div class="form-error" id="registerEmailError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPractice">Practice Name</label>
+                        <input type="text" id="registerPractice" placeholder="Your practice name" required>
+                        <div class="form-error" id="registerPracticeError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerMobile">Mobile</label>
+                        <input type="tel" id="registerMobile" placeholder="(555) 000-0000" required>
+                        <div class="form-error" id="registerMobileError"></div>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="registerPassword">Password</label>
+                        <input type="password" id="registerPassword" placeholder="Create a secure password" required>
+                        <div class="form-error" id="registerPasswordError"></div>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Create Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- DASHBOARD SCREEN -->
+    <div id="dashboardScreen" class="dashboard-container">
+        <!-- HEADER -->
+        <div class="dashboard-header">
+            <div class="dashboard-logo">RID.ACADEMY</div>
+            <div class="dashboard-user">
+                <div class="user-name">Welcome, <span id="headerName"></span></div>
+                <button class="btn-logout" onclick="handleLogout()">Logout</button>
+            </div>
+        </div>
+
+        <!-- CONTENT -->
+        <div class="dashboard-content">
+            <!-- WELCOME SECTION -->
+            <div class="welcome-section">
+                <div class="welcome-greeting">Welcome back, <span id="greetingName"></span>!</div>
+                <div class="welcome-practice">Practice: <strong id="greetingPractice"></strong></div>
+            </div>
+
+            <!-- TABS -->
+            <div class="dashboard-tabs">
+                <div class="dashboard-tab active" onclick="switchDashboardTab('resources')">Resource Library</div>
+                <div class="dashboard-tab" onclick="switchDashboardTab('articles')">Pillar Articles</div>
+                <div class="dashboard-tab" onclick="switchDashboardTab('profile')">My Profile</div>
+            </div>
+
+            <!-- RESOURCE LIBRARY TAB -->
+            <div id="resourcesTab" class="tab-content active">
+                <h2 style="color: #0F2B46; margin-bottom: 8px; font-size: 24px;">Your Resources</h2>
+                <p style="color: #666; margin-bottom: 30px;">Download our premium guides to grow your practice</p>
+
+                <div class="resources-grid">
+                    <!-- Resource 1 -->
+                    <div class="resource-card">
+                        <div class="resource-category">Guides</div>
+                        <div class="resource-title">The PPO Exit Checklist</div>
+                        <div class="resource-description">A comprehensive checklist to help you successfully transition away from PPO plans and take control of your practice fees.</div>
+                        <a href="/guides/ppo-exit-checklist.pdf" class="btn-download" download>Download PDF</a>
+                    </div>
+
+                    <!-- Resource 2 -->
+                    <div class="resource-card">
+                        <div class="resource-category">Guides</div>
+                        <div class="resource-title">The FFS Practice Blueprint</div>
+                        <div class="resource-description">A detailed blueprint for building and operating a successful fee-for-service dental practice from the ground up.</div>
+                        <a href="/guides/ffs-practice-blueprint.pdf" class="btn-download" download>Download PDF</a>
+                    </div>
+
+                    <!-- Resource 3 -->
+                    <div class="resource-card">
+                        <div class="resource-category">Guides</div>
+                        <div class="resource-title">Insurance Independence Roadmap</div>
+                        <div class="resource-description">A strategic roadmap for reducing your dependence on insurance and building a more profitable, sustainable practice.</div>
+                        <a href="/guides/insurance-independence-roadmap.pdf" class="btn-download" download>Download PDF</a>
+                    </div>
+
+                    <!-- Resource 4 -->
+                    <div class="resource-card">
+                        <div class="resource-category">Guides</div>
+                        <div class="resource-title">Membership Plan Implementation Guide</div>
+                        <div class="resource-description">Everything you need to know about designing and launching a successful dental membership plan in your practice.</div>
+                        <a href="/guides/membership-plan-guide.pdf" class="btn-download" download>Download PDF</a>
+                    </div>
+
+                    <!-- Resource 5 -->
+                    <div class="resource-card">
+                        <div class="resource-category">Guides</div>
+                        <div class="resource-title">The Thriving Practice Playbook</div>
+                        <div class="resource-description">The complete playbook for building a thriving, profitable dental practice that provides exceptional patient care and owner income.</div>
+                        <a href="/guides/thriving-practice-playbook.pdf" class="btn-download" download>Download PDF</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ARTICLES TAB -->
+            <div id="articlesTab" class="tab-content">
+                <h2 style="color: #0F2B46; margin-bottom: 8px; font-size: 24px;">Pillar Articles</h2>
+                <p style="color: #666; margin-bottom: 30px;">In-depth insights on growing your independent dental practice</p>
+
+                <div class="articles-list">
+                    <!-- Article 1 -->
+                    <div class="article-item">
+                        <div class="article-title">How to Drop PPO Plans</div>
+                        <div class="article-description">Learn the strategic steps to transition away from PPO plans while maintaining patient relationships and increasing profitability. This comprehensive guide covers communication strategies, fee structures, and implementation timelines.</div>
+                        <a href="/blog/how-to-drop-ppo-plans.html" class="btn-read">Read Article</a>
+                    </div>
+
+                    <!-- Article 2 -->
+                    <div class="article-item">
+                        <div class="article-title">How to Build a Fee-for-Service Practice</div>
+                        <div class="article-description">Discover proven strategies for building a sustainable, profitable fee-for-service dental practice. From patient communication to operational systems, learn what separates thriving FFS practices from the rest.</div>
+                        <a href="/blog/how-to-build-a-fee-for-service-practice.html" class="btn-read">Read Article</a>
+                    </div>
+
+                    <!-- Article 3 -->
+                    <div class="article-item">
+                        <div class="article-title">How to Reduce Insurance Dependence</div>
+                        <div class="article-description">A strategic approach to gradually reduce your practice's dependence on insurance while building alternative revenue streams and improving patient satisfaction and owner income.</div>
+                        <a href="/blog/how-to-reduce-insurance-dependence.html" class="btn-read">Read Article</a>
+                    </div>
+
+                    <!-- Article 4 -->
+                    <div class="article-item">
+                        <div class="article-title">The Complete Guide to Dental Membership Plans</div>
+                        <div class="article-description">Everything you need to know about dental membership plans, including design, pricing, marketing, implementation, and how to use them to transform your practice economics.</div>
+                        <a href="/blog/complete-guide-dental-membership-plans.html" class="btn-read">Read Article</a>
+                    </div>
+
+                    <!-- Article 5 -->
+                    <div class="article-item">
+                        <div class="article-title">How to Build a Thriving Dental Practice</div>
+                        <div class="article-description">The comprehensive guide to building a truly thriving dental practice that provides exceptional patient care, sustainable profitability, and owner fulfillment. Learn the key systems and strategies used by top practices.</div>
+                        <a href="/blog/how-to-build-a-thriving-dental-practice.html" class="btn-read">Read Article</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PROFILE TAB -->
+            <div id="profileTab" class="tab-content">
+                <h2 style="color: #0F2B46; margin-bottom: 8px; font-size: 24px;">My Profile</h2>
+                <p style="color: #666; margin-bottom: 30px;">Manage your account information</p>
+
+                <div class="profile-form">
+                    <div class="success-message" id="profileSuccess">Changes saved successfully!</div>
+
+                    <form id="profileFormElement" onsubmit="handleProfileSave(event)">
+                        <!-- PERSONAL INFORMATION -->
+                        <div class="profile-section">
+                            <div class="profile-section-title">Personal Information</div>
+
+                            <div class="form-group">
+                                <label for="profileName">Full Name</label>
+                                <input type="text" id="profileName" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileEmail">Email</label>
+                                <input type="email" id="profileEmail" required>
+                            </div>
+                        </div>
+
+                        <!-- PRACTICE INFORMATION -->
+                        <div class="profile-section">
+                            <div class="profile-section-title">Practice Information</div>
+
+                            <div class="form-group">
+                                <label for="profilePractice">Practice Name</label>
+                                <input type="text" id="profilePractice" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="profileMobile">Mobile</label>
+                                <input type="tel" id="profileMobile" required>
+                            </div>
+                        </div>
+
+                        <!-- CHANGE PASSWORD -->
+                        <div class="profile-section">
+                            <div class="profile-section-title">Change Password</div>
+
+                            <div class="form-group">
+                                <label for="currentPassword">Current Password</label>
+                                <input type="password" id="currentPassword" placeholder="Leave blank if not changing password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="newPassword">New Password</label>
+                                <input type="password" id="newPassword" placeholder="Leave blank if not changing password">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="confirmPassword">Confirm Password</label>
+                                <input type="password" id="confirmPassword" placeholder="Confirm new password">
+                            </div>
+                        </div>
+
+                        <button type="submit" class="btn-save">Save Changes</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- FOOTER -->
+        <div class="dashboard-footer">
+            <p>&copy; 2026 RID Academy. All rights reserved. | Premium Dental Practice Education</p>
+        </div>
+    </div>
+
+    <script>
+        // ============================================
+        // UTILITY FUNCTIONS
+        // ============================================
+
+        function switchAuthTab(tab) {
+            // Update tabs
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update forms
+            document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+            if (tab === 'login') {
+                document.getElementById('loginForm').classList.add('active');
+            } else {
+                document.getElementById('registerForm').classList.add('active');
+            }
+
+            // Clear previous errors
+            document.querySelectorAll('.form-error').forEach(e => e.classList.remove('show'));
+        }
+
+        function switchDashboardTab(tab) {
+            // Update tabs
+            document.querySelectorAll('.dashboard-tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update content
+            document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+            document.getElementById(tab + 'Tab').classList.add('active');
+        }
+
+        function showError(elementId, message) {
+            const errorElement = document.getElementById(elementId);
+            if (errorElement) {
+                errorElement.textContent = message;
+                errorElement.classList.add('show');
+            }
+        }
+
+        function clearErrors() {
+            document.querySelectorAll('.form-error').forEach(e => {
+                e.classList.remove('show');
+                e.textContent = '';
+            });
+        }
+
+        function showScreen(screenId) {
+            document.getElementById('authScreen').classList.remove('active');
+            document.getElementById('dashboardScreen').classList.remove('active');
+            document.getElementById(screenId).classList.add('active');
+        }
+
+        // ============================================
+        // AUTHENTICATION FUNCTIONS
+        // ============================================
+
+        function handleLogin(event) {
+            event.preventDefault();
+            clearErrors();
+
+            const email = document.getElementById('loginEmail').value.trim();
+            const password = document.getElementById('loginPassword').value;
+
+            // Validation
+            if (!email) {
+                showError('loginEmailError', 'Email is required');
+                return;
+            }
+
+            if (!password) {
+                showError('loginPasswordError', 'Password is required');
+                return;
+            }
+
+            // Check localStorage
+            const users = JSON.parse(localStorage.getItem('ridMembers') || '{}');
+            const user = users[email];
+
+            if (!user || user.password !== password) {
+                showError('loginPasswordError', 'Invalid email or password');
+                return;
+            }
+
+            // Login successful
+            localStorage.setItem('currentUser', JSON.stringify({
+                email: email,
+                name: user.name,
+                practice: user.practice,
+                mobile: user.mobile
+            }));
+
+            // Track login event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'login', { method: 'email' });
+            }
+
+            loadDashboard();
+            showScreen('dashboardScreen');
+        }
+
+        function handleRegister(event) {
+            event.preventDefault();
+            clearErrors();
+
+            const name = document.getElementById('registerName').value.trim();
+            const email = document.getElementById('registerEmail').value.trim();
+            const practice = document.getElementById('registerPractice').value.trim();
+            const mobile = document.getElementById('registerMobile').value.trim();
+            const password = document.getElementById('registerPassword').value;
+
+            // Validation
+            if (!name) {
+                showError('registerNameError', 'Full name is required');
+                return;
+            }
+
+            if (!email) {
+                showError('registerEmailError', 'Email is required');
+                return;
+            }
+
+            if (!practice) {
+                showError('registerPracticeError', 'Practice name is required');
+                return;
+            }
+
+            if (!mobile) {
+                showError('registerMobileError', 'Mobile number is required');
+                return;
+            }
+
+            if (password.length < 6) {
+                showError('registerPasswordError', 'Password must be at least 6 characters');
+                return;
+            }
+
+            // Check if email already exists
+            const users = JSON.parse(localStorage.getItem('ridMembers') || '{}');
+            if (users[email]) {
+                showError('registerEmailError', 'This email is already registered');
+                return;
+            }
+
+            // Save user
+            users[email] = {
+                name: name,
+                email: email,
+                practice: practice,
+                mobile: mobile,
+                password: password
+            };
+
+            localStorage.setItem('ridMembers', JSON.stringify(users));
+
+            // Track signup event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'sign_up', { method: 'email' });
+            }
+
+            // Clear form
+            document.getElementById('registerForm').reset();
+
+            // Show login form
+            document.querySelectorAll('.auth-tab').forEach(t => t.classList.remove('active'));
+            document.querySelectorAll('.auth-tab')[0].classList.add('active');
+            document.querySelectorAll('.auth-form').forEach(f => f.classList.remove('active'));
+            document.getElementById('loginForm').classList.add('active');
+
+            // Auto-fill email in login form
+            document.getElementById('loginEmail').value = email;
+        }
+
+        function handleLogout() {
+            localStorage.removeItem('currentUser');
+
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'logout');
+            }
+
+            showScreen('authScreen');
+            document.getElementById('loginForm').reset();
+            document.getElementById('registerForm').reset();
+            clearErrors();
+        }
+
+        // ============================================
+        // DASHBOARD FUNCTIONS
+        // ============================================
+
+        function loadDashboard() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+            if (!currentUser) {
+                showScreen('authScreen');
+                return;
+            }
+
+            // Update user info
+            document.getElementById('headerName').textContent = currentUser.name.split(' ')[0];
+            document.getElementById('greetingName').textContent = currentUser.name.split(' ')[0];
+            document.getElementById('greetingPractice').textContent = currentUser.practice;
+
+            // Load profile data
+            loadProfileData();
+        }
+
+        function loadProfileData() {
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+
+            document.getElementById('profileName').value = currentUser.name;
+            document.getElementById('profileEmail').value = currentUser.email;
+            document.getElementById('profilePractice').value = currentUser.practice;
+            document.getElementById('profileMobile').value = currentUser.mobile;
+        }
+
+        function handleProfileSave(event) {
+            event.preventDefault();
+
+            const name = document.getElementById('profileName').value.trim();
+            const email = document.getElementById('profileEmail').value.trim();
+            const practice = document.getElementById('profilePractice').value.trim();
+            const mobile = document.getElementById('profileMobile').value.trim();
+            const currentPassword = document.getElementById('currentPassword').value;
+            const newPassword = document.getElementById('newPassword').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+
+            const currentUser = JSON.parse(localStorage.getItem('currentUser'));
+            const users = JSON.parse(localStorage.getItem('ridMembers') || '{}');
+            const user = users[currentUser.email];
+
+            // Validate password change if needed
+            if (currentPassword || newPassword || confirmPassword) {
+                if (!currentPassword) {
+                    alert('Please enter your current password to change it');
+                    return;
+                }
+
+                if (user.password !== currentPassword) {
+                    alert('Current password is incorrect');
+                    return;
+                }
+
+                if (newPassword.length < 6) {
+                    alert('New password must be at least 6 characters');
+                    return;
+                }
+
+                if (newPassword !== confirmPassword) {
+                    alert('Passwords do not match');
+                    return;
+                }
+
+                user.password = newPassword;
+            }
+
+            // Update user
+            user.name = name;
+            user.practice = practice;
+            user.mobile = mobile;
+
+            users[currentUser.email] = user;
+            localStorage.setItem('ridMembers', JSON.stringify(users));
+
+            // Update current user
+            currentUser.name = name;
+            currentUser.practice = practice;
+            currentUser.mobile = mobile;
+            localStorage.setItem('currentUser', JSON.stringify(currentUser));
+
+            // Clear form
+            document.getElementById('currentPassword').value = '';
+            document.getElementById('newPassword').value = '';
+            document.getElementById('confirmPassword').value = '';
+
+            // Show success message
+            const successMessage = document.getElementById('profileSuccess');
+            successMessage.classList.add('show');
+            setTimeout(() => {
+                successMessage.classList.remove('show');
+            }, 3000);
+
+            // Track profile update event
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'user_profile_update');
+            }
+
+            // Reload dashboard header
+            loadDashboard();
+        }
+
+        // ============================================
+        // INITIALIZATION
+        // ============================================
+
+        document.addEventListener('DOMContentLoaded', function() {
+            const currentUser = localStorage.getItem('currentUser');
+
+            if (currentUser) {
+                loadDashboard();
+                showScreen('dashboardScreen');
+            } else {
+                showScreen('authScreen');
+            }
+
+            // Track page view
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'page_view');
+            }
+        });
+    </script>
+</body>
+</html>
