@@ -1,10 +1,10 @@
-/* âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ
-   RID ACADEMY â Design System & Global Styles
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
+   RID ACADEMY Ã¢ÂÂ Design System & Global Styles
    Reducing Insurance Dependence Academy
    Version: 1.0.0 | March 2026
-   âââââââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 
-/* ââ CSS Custom Properties (Design Tokens) ââ */
+/* Ã¢ÂÂÃ¢ÂÂ CSS Custom Properties (Design Tokens) Ã¢ÂÂÃ¢ÂÂ */
 :root {
   /* Primary */
   --navy: #0F2B46;
@@ -75,7 +75,7 @@
   --nav-height: 72px;
 }
 
-/* ââ Reset ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Reset Ã¢ÂÂÃ¢ÂÂ */
 *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 html { scroll-behavior: smooth; -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
 
@@ -91,7 +91,7 @@ img, video { max-width: 100%; height: auto; display: block; }
 a { color: var(--teal-dark); text-decoration: none; transition: color var(--duration) var(--ease); }
 a:hover { color: var(--teal); }
 
-/* ââ Typography ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Typography Ã¢ÂÂÃ¢ÂÂ */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -114,7 +114,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 .text-muted { color: var(--text-muted); }
 .text-center { text-align: center; }
 
-/* ââ Layout ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Layout Ã¢ÂÂÃ¢ÂÂ */
 .container {
   width: 100%;
   max-width: var(--max-width);
@@ -156,7 +156,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 .gap-lg { gap: var(--space-lg); }
 .gap-xl { gap: var(--space-xl); }
 
-/* ââ Navigation ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Navigation Ã¢ÂÂÃ¢ÂÂ */
 .nav {
   position: fixed;
   top: 0;
@@ -262,7 +262,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
   .nav-links.open { transform: translateX(0); }
 }
 
-/* ââ Buttons ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Buttons Ã¢ÂÂÃ¢ÂÂ */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -323,7 +323,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
   border-radius: var(--radius-full);
 }
 
-/* ââ Cards ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Cards Ã¢ÂÂÃ¢ÂÂ */
 .card {
   background: var(--bg-white);
   border: 1px solid var(--border);
@@ -369,7 +369,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 .card-icon.navy { background: rgba(15, 43, 70, 0.08); color: var(--navy); }
 .card-icon.green { background: var(--green-bg); color: var(--green); }
 
-/* ââ Hero ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Hero Ã¢ÂÂÃ¢ÂÂ */
 .hero {
   padding-top: calc(var(--nav-height) + var(--space-4xl));
   padding-bottom: var(--space-4xl);
@@ -426,7 +426,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
   .hero-stats { flex-direction: column; gap: var(--space-lg); }
 }
 
-/* ââ Stats Bar ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Stats Bar Ã¢ÂÂÃ¢ÂÂ */
 .stats-bar {
   background: var(--bg-white);
   border-bottom: 1px solid var(--border);
@@ -448,7 +448,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
   margin-top: 2px;
 }
 
-/* ââ Badges ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Badges Ã¢ÂÂÃ¢ÂÂ */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -465,7 +465,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 .badge-green { background: var(--green-bg); color: var(--green); }
 .badge-amber { background: var(--amber-bg); color: var(--amber); }
 
-/* ââ Forms / Inputs ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Forms / Inputs Ã¢ÂÂÃ¢ÂÂ */
 .form-group { margin-bottom: var(--space-md); }
 
 .form-label {
@@ -504,7 +504,7 @@ select.form-input {
   padding-right: 44px;
 }
 
-/* ââ Tables ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Tables Ã¢ÂÂÃ¢ÂÂ */
 .table-wrap { overflow-x: auto; border-radius: var(--radius-md); border: 1px solid var(--border); }
 
 table {
@@ -534,7 +534,7 @@ tr:nth-child(even) td { background: var(--bg-subtle); }
 tr:last-child td { border-bottom: none; }
 tr:hover td { background: var(--teal-bg); }
 
-/* ââ Calculator / Tool Styles ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Calculator / Tool Styles Ã¢ÂÂÃ¢ÂÂ */
 .tool-container {
   max-width: 800px;
   margin: 0 auto;
@@ -606,7 +606,7 @@ tr:hover td { background: var(--teal-bg); }
   box-shadow: var(--shadow-md);
 }
 
-/* ââ Scorecard / Progress ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Scorecard / Progress Ã¢ÂÂÃ¢ÂÂ */
 .progress-ring {
   width: 120px;
   height: 120px;
@@ -646,7 +646,7 @@ tr:hover td { background: var(--teal-bg); }
   transition: width 600ms var(--ease);
 }
 
-/* ââ Tags / Chips ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Tags / Chips Ã¢ÂÂÃ¢ÂÂ */
 .tag {
   display: inline-block;
   padding: 6px 14px;
@@ -660,7 +660,7 @@ tr:hover td { background: var(--teal-bg); }
 
 .tag:hover { background: var(--teal-bg); color: var(--teal-dark); border-color: var(--teal); }
 
-/* ââ Testimonial ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Testimonial Ã¢ÂÂÃ¢ÂÂ */
 .testimonial {
   position: relative;
   padding: var(--space-xl);
@@ -684,7 +684,7 @@ tr:hover td { background: var(--teal-bg); }
   font-size: 0.9rem;
 }
 
-/* ââ Footer ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Footer Ã¢ÂÂÃ¢ÂÂ */
 .footer {
   background: var(--navy);
   color: rgba(255, 255, 255, 0.7);
@@ -710,7 +710,7 @@ tr:hover td { background: var(--teal-bg); }
   .footer-bottom { flex-direction: column; gap: var(--space-md); text-align: center; }
 }
 
-/* ââ Blog / Article ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Blog / Article Ã¢ÂÂÃ¢ÂÂ */
 .article-card {
   display: flex;
   flex-direction: column;
@@ -736,7 +736,7 @@ tr:hover td { background: var(--teal-bg); }
 .article-card-body p { font-size: 0.9rem; flex: 1; }
 .article-card-meta { font-size: 0.8rem; color: var(--text-muted); margin-top: var(--space-md); }
 
-/* ââ Filter Buttons ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Filter Buttons Ã¢ÂÂÃ¢ÂÂ */
 .filter-btn {
   display: inline-flex;
   align-items: center;
@@ -772,7 +772,7 @@ tr:hover td { background: var(--teal-bg); }
   border-color: var(--teal-dark);
 }
 
-/* ââ Glossary ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Glossary Ã¢ÂÂÃ¢ÂÂ */
 .glossary-letter {
   font-size: 2rem;
   font-weight: 800;
@@ -785,7 +785,7 @@ tr:hover td { background: var(--teal-bg); }
 .glossary-term { font-weight: 700; color: var(--navy); font-size: 1.05rem; }
 .glossary-def { color: var(--text-secondary); margin-top: var(--space-xs); margin-bottom: var(--space-lg); }
 
-/* ââ Animations ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Animations Ã¢ÂÂÃ¢ÂÂ */
 @keyframes fadeInUp {
   from { opacity: 0; transform: translateY(24px); }
   to { opacity: 1; transform: translateY(0); }
@@ -825,7 +825,7 @@ tr:hover td { background: var(--teal-bg); }
   .animate-in { opacity: 1; transform: none; transition: none; }
 }
 
-/* ââ Tool Cards ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Tool Cards Ã¢ÂÂÃ¢ÂÂ */
 .tool-card {
   display: flex;
   flex-direction: column;
@@ -857,7 +857,7 @@ tr:hover td { background: var(--teal-bg); }
   margin: var(--space-lg) 0;
 }
 
-/* ââ Share Buttons ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Share Buttons Ã¢ÂÂÃ¢ÂÂ */
 .share-bar {
   display: flex;
   gap: var(--space-sm);
@@ -881,7 +881,7 @@ tr:hover td { background: var(--teal-bg); }
 
 .share-btn:hover { background: var(--teal); color: white; border-color: var(--teal); }
 
-/* ââ Utility Classes ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Utility Classes Ã¢ÂÂÃ¢ÂÂ */
 .mt-sm { margin-top: var(--space-sm); }
 .mt-md { margin-top: var(--space-md); }
 .mt-lg { margin-top: var(--space-lg); }
@@ -898,7 +898,7 @@ tr:hover td { background: var(--teal-bg); }
   margin: -1px; overflow: hidden; clip: rect(0,0,0,0); border: 0;
 }
 
-/* ââ Mobile Refinements ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Mobile Refinements Ã¢ÂÂÃ¢ÂÂ */
 @media (max-width: 480px) {
   .container { padding: 0 var(--space-md); }
   .section { padding: var(--space-3xl) 0; }
@@ -923,9 +923,9 @@ tr:hover td { background: var(--teal-bg); }
   .article-card-img { height: 140px; }
 }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    RESOURCES PAGE
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .resources-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light, #1a3a5c) 50%, var(--teal) 100%);
   padding: calc(var(--nav-height) + var(--space-3xl)) 0 var(--space-3xl);
@@ -1010,9 +1010,9 @@ tr:hover td { background: var(--teal-bg); }
 }
 .btn-download:hover { background: var(--teal); }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    NAV LINK (was missing)
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .nav-link {
   color: var(--text-secondary);
   text-decoration: none;
@@ -1024,9 +1024,9 @@ tr:hover td { background: var(--teal-bg); }
   color: var(--navy);
 }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    ARTICLE / BLOG POST PAGES
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .article { max-width: 800px; margin: 0 auto; padding: var(--space-xl) var(--space-lg); }
 .article-header { margin-bottom: var(--space-xl); }
 .article-meta {
@@ -1075,9 +1075,9 @@ tr:hover td { background: var(--teal-bg); }
 .toc a { color: var(--navy); text-decoration: none; font-size: 0.9rem; }
 .toc a:hover { color: var(--teal); }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    FAQ SECTIONS
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .faq-section { margin: var(--space-xl) 0; }
 .faq-section h2 { text-align: center; margin-bottom: var(--space-lg); }
 .faq { max-width: 800px; margin: 0 auto; }
@@ -1119,9 +1119,9 @@ tr:hover td { background: var(--teal-bg); }
 }
 .faq-item.open .faq-answer { display: block; }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    TOOL INTERACTIVE ELEMENTS
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .input-section { margin-bottom: var(--space-lg); }
 .input-group { margin-bottom: var(--space-md); }
 .input-label {
@@ -1287,9 +1287,9 @@ tr:hover td { background: var(--teal-bg); }
 .metric-card .metric-value { font-size: 1.5rem; font-weight: 800; color: var(--navy); }
 .metric-card .metric-label { font-size: 0.8rem; color: var(--text-muted); }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    GLOSSARY PAGE
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .glossary-hero {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   color: white;
@@ -1369,9 +1369,9 @@ tr:hover td { background: var(--teal-bg); }
 }
 .related-terms a:hover { text-decoration: underline; }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    RESOURCES CTA
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .resources-cta {
   background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 100%);
   border-radius: var(--radius-lg);
@@ -1384,9 +1384,9 @@ tr:hover td { background: var(--teal-bg); }
 .resources-cta h2 { color: white; margin-bottom: var(--space-md); }
 .resources-cta p { color: rgba(255,255,255,0.8); margin-bottom: var(--space-lg); max-width: 600px; margin-left: auto; margin-right: auto; }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    FOCUS STATES FOR INTERACTIVE ELEMENTS
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 .filter-btn:focus-visible,
 .alphabet-link:focus-visible,
 .btn-download:focus-visible,
@@ -1397,9 +1397,9 @@ tr:hover td { background: var(--teal-bg); }
   outline-offset: 2px;
 }
 
-/* ââââââââââââââââââââââââââââââââââââââââââââââââââââââ
+/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
    RESPONSIVE FIXES FOR NEW COMPONENTS
-   ââââââââââââââââââââââââââââââââââââââââââââââââââââââ */
+   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
 @media (max-width: 768px) {
   .resources-grid { grid-template-columns: 1fr; }
   .filter-bar { gap: 6px; }
@@ -1422,7 +1422,7 @@ tr:hover td { background: var(--teal-bg); }
   .resource-card { padding: var(--space-md); }
 }
 
-/* ââ Print ââ */
+/* Ã¢ÂÂÃ¢ÂÂ Print Ã¢ÂÂÃ¢ÂÂ */
 @media print {
   .nav, .footer, .share-bar, .btn-cta { display: none; }
   body { font-size: 12pt; color: black; }
@@ -1440,3 +1440,54 @@ tr:hover td { background: var(--teal-bg); }
 .article-hero .category-badge { color: white; }
 .article-hero .article-meta { color: rgba(255,255,255,0.85); }
 .article-content h2 { color: var(--navy); }
+
+
+/* Mobile Fix for Inline-Styled Article Navs */
+@media (max-width: 768px) {
+  body > nav:not(.nav) {
+    flex-wrap: wrap !important;
+    padding: 0.75rem 1rem !important;
+    gap: 0.5rem !important;
+  }
+  body > nav:not(.nav) > a:first-child {
+    font-size: 1rem !important;
+  }
+  body > nav:not(.nav) > div {
+    width: 100% !important;
+    justify-content: center !important;
+    gap: 0.5rem 0.75rem !important;
+    font-size: 0.8rem !important;
+    border-top: 1px solid rgba(255,255,255,0.15);
+    padding-top: 0.5rem;
+  }
+  body > nav:not(.nav) > div > a {
+    font-size: 0.8rem !important;
+    padding: 0.2rem 0 !important;
+  }
+  body > nav:not(.nav) > div > a:last-child {
+    font-size: 0.75rem !important;
+    padding: 0.3rem 0.75rem !important;
+  }
+  .article-hero, section.article-hero {
+    padding: 2rem 1rem 1.5rem !important;
+  }
+  .article-hero h1, section.article-hero h1 {
+    font-size: 1.5rem !important;
+  }
+  .article-content, article.article-content {
+    padding: 0 1rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  body > nav:not(.nav) > div {
+    gap: 0.4rem 0.6rem !important;
+    font-size: 0.75rem !important;
+  }
+  body > nav:not(.nav) > div > a {
+    font-size: 0.75rem !important;
+  }
+  .article-hero h1, section.article-hero h1 {
+    font-size: 1.3rem !important;
+  }
+}
