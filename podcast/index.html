@@ -1,0 +1,429 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://rid.academy/podcast/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <title>Less Insurance Dependence Podcast — RID Academy</title>
+  <meta name="description" content="Listen to the Less Insurance Dependence Podcast. Expert interviews and practical strategies for dental practice owners reducing PPO dependence.">
+  <meta name="keywords" content="dental podcast, insurance dependence, fee for service dentistry, practice management, PPO plans">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Less Insurance Dependence Podcast">
+  <meta property="og:description" content="Expert interviews and strategies for dental practices dropping PPO plans. Listen on Apple Podcasts, Spotify, Google Podcasts, and more.">
+  <meta property="og:url" content="https://rid.academy/podcast/">
+  <meta property="og:image" content="https://rid.academy/images/og-podcast.png">
+  <meta property="og:site_name" content="RID Academy">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Less Insurance Dependence Podcast">
+  <meta name="twitter:description" content="Expert interviews and strategies for dental practices dropping PPO plans.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data - PodcastSeries -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "PodcastSeries",
+    "name": "Less Insurance Dependence Podcast",
+    "description": "Expert interviews and practical strategies for dental practice owners reducing dependence on PPO insurance plans.",
+    "url": "https://rid.academy/podcast/",
+    "image": "https://rid.academy/images/og-podcast.png",
+    "publisher": {
+      "@type": "Organization",
+      "name": "RID Academy",
+      "url": "https://rid.academy"
+    },
+    "author": {
+      "@type": "Person",
+      "name": "Naren Arulrajah"
+    },
+    "webFeed": "https://feeds.buzzsprout.com/...",
+    "potentialAction": {
+      "@type": "SubscribeAction",
+      "target": "https://rid.academy/podcast/"
+    }
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rid.academy/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Podcast",
+        "item": "https://rid.academy/podcast/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .podcast-hero {
+      padding-top: calc(var(--nav-height) + var(--space-3xl));
+      padding-bottom: var(--space-3xl);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--teal-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .podcast-hero h1 {
+      color: white;
+      max-width: 700px;
+    }
+
+    .podcast-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      font-size: 1.125rem;
+    }
+
+    .podcast-platforms {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    .platform-card {
+      background: white;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-xl);
+      text-align: center;
+      transition: all var(--duration) var(--ease);
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: var(--space-md);
+    }
+
+    .platform-card:hover {
+      border-color: var(--teal);
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-4px);
+    }
+
+    .platform-icon {
+      font-size: 2.5rem;
+      width: 60px;
+      height: 60px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--teal-bg);
+      border-radius: var(--radius-md);
+      color: var(--teal);
+    }
+
+    .platform-card h3 {
+      font-size: 1.1rem;
+      margin: 0;
+      color: var(--navy);
+    }
+
+    .platform-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0;
+    }
+
+    .subscribe-btn {
+      background: var(--coral);
+      color: white;
+      border: none;
+      padding: 10px 18px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: auto;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .subscribe-btn:hover {
+      background: var(--coral-dark);
+    }
+
+    .highlights-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-2xl);
+    }
+
+    .highlight-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: all var(--duration) var(--ease);
+    }
+
+    .highlight-card:hover {
+      box-shadow: var(--shadow-lg);
+      transform: translateY(-2px);
+    }
+
+    .highlight-card h4 {
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: var(--space-sm);
+      font-size: 1rem;
+    }
+
+    .highlight-card p {
+      font-size: 0.9rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .highlight-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal);
+      font-weight: 600;
+      font-size: 0.9rem;
+    }
+
+    .highlight-link:hover {
+      color: var(--teal-dark);
+    }
+
+    .mt-md { margin-top: var(--space-md); }
+    .mt-lg { margin-top: var(--space-lg); }
+    .mt-xl { margin-top: var(--space-xl); }
+    .mt-2xl { margin-top: var(--space-2xl); }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/podcast/" class="nav-link">Podcast</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ PODCAST HERO ═══ -->
+  <section class="podcast-hero">
+    <div class="container">
+      <span class="badge badge-teal" style="margin-bottom: 16px;">Listen Every Week</span>
+      <h1>Less Insurance Dependence Podcast</h1>
+      <p>Expert interviews and practical strategies for dental practice owners dropping PPO plans. Join thousands of dentists learning how to reclaim control of their practice, their schedule, and their revenue.</p>
+      <p style="color: rgba(255, 255, 255, 0.75); font-size: 0.95rem; margin-top: 24px;">Hosted by Naren Arulrajah | New episodes every Tuesday</p>
+    </div>
+  </section>
+
+  <!-- ═══ SUBSCRIBE PLATFORMS ═══ -->
+  <section class="section" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <h2>Listen & Subscribe</h2>
+        <p style="max-width: 600px; margin: var(--space-md) auto 0;">Find us on your favorite podcast platform. New episodes drop every Tuesday with actionable insights from the world's leading dental practice strategists.</p>
+      </div>
+
+      <div class="podcast-platforms">
+        <a href="https://podcasts.apple.com/" class="platform-card">
+          <div class="platform-icon">🎙️</div>
+          <h3>Apple Podcasts</h3>
+          <p>Listen on iOS & Mac</p>
+          <button class="subscribe-btn">Subscribe</button>
+        </a>
+
+        <a href="https://open.spotify.com/" class="platform-card">
+          <div class="platform-icon">🎵</div>
+          <h3>Spotify</h3>
+          <p>Stream on any device</p>
+          <button class="subscribe-btn">Subscribe</button>
+        </a>
+
+        <a href="https://podcasts.google.com/" class="platform-card">
+          <div class="platform-icon">🔍</div>
+          <h3>Google Podcasts</h3>
+          <p>Built into Google Play</p>
+          <button class="subscribe-btn">Subscribe</button>
+        </a>
+
+        <a href="https://music.amazon.com/podcasts" class="platform-card">
+          <div class="platform-icon">📻</div>
+          <h3>Amazon Music</h3>
+          <p>Stream for free</p>
+          <button class="subscribe-btn">Subscribe</button>
+        </a>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">Also available on: Stitcher, iHeartRadio, Overcast, Castro, Castbox, and all major podcast apps</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EPISODE HIGHLIGHTS ═══ -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <h2>Featured Episode Topics</h2>
+        <p style="max-width: 700px; margin: var(--space-md) auto 0;">Explore episodes on strategies for dropping PPO plans, building sustainable practices, and transforming your business model.</p>
+      </div>
+
+      <div class="highlights-grid">
+        <div class="highlight-card">
+          <h4>The 4-Step Framework to Drop PPO Plans</h4>
+          <p>Learn the proven methodology dentists use to successfully transition from PPO-dependent practices. We break down each stage and what to expect.</p>
+          <a href="/blog/4-things-you-must-know-to-successfully-drop-ppo-plans.html" class="highlight-link">Read article →</a>
+        </div>
+
+        <div class="highlight-card">
+          <h4>Case Acceptance & Case Presentation Mastery</h4>
+          <p>When you remove insurance, case acceptance becomes critical. We explore the psychology of case acceptance and proven techniques to increase acceptance rates.</p>
+          <a href="/blog/" class="highlight-link">Explore more →</a>
+        </div>
+
+        <div class="highlight-card">
+          <h4>Building a Thriving Membership Plan</h4>
+          <p>Membership plans are a pillar of insurance independence. Discover how to design, launch, and optimize membership programs for your unique practice.</p>
+          <a href="/guides/membership-plan-guide.pdf" class="highlight-link">Download guide →</a>
+        </div>
+
+        <div class="highlight-card">
+          <h4>Fee Setting for Maximum Revenue</h4>
+          <p>Setting the right fees is essential. We discuss market research, competitive positioning, and psychological pricing strategies that work.</p>
+          <a href="/guides/dental-fee-setting-guide.pdf" class="highlight-link">Download guide →</a>
+        </div>
+
+        <div class="highlight-card">
+          <h4>Insurance Contract Negotiation Secrets</h4>
+          <p>Before you drop a plan, master the art of negotiation. Learn what top practices use to secure better contracts or plan strategic exits.</p>
+          <a href="/guides/insurance-contract-guide.pdf" class="highlight-link">Download guide →</a>
+        </div>
+
+        <div class="highlight-card">
+          <h4>Patient Retention in Challenging Times</h4>
+          <p>Transitioning requires keeping existing patients engaged and excited. Discover the communication and relationship-building strategies that work.</p>
+          <a href="/blog/" class="highlight-link">Explore more →</a>
+        </div>
+      </div>
+
+      <div style="text-align: center; margin-top: var(--space-2xl);">
+        <p style="color: var(--text-muted); font-size: 0.95rem;">Browse our full library of <a href="/blog/" style="color: var(--teal); font-weight: 600;">350+ articles and guides</a> covering every aspect of practice transformation.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA SECTION ═══ -->
+  <section class="section" style="background: var(--bg-subtle);">
+    <div class="container" style="text-align: center; max-width: 700px;">
+      <h2>Ready to Transform Your Practice?</h2>
+      <p>Join thousands of dental professionals who are building thriving practices without insurance dependence. Get free access to our tools, courses, and community.</p>
+      <div class="flex gap-md flex-wrap" style="justify-content: center; margin-top: var(--space-xl);">
+        <a href="/tools/ppo-calculator.html" class="btn btn-cta btn-lg">Get Free Analysis →</a>
+        <a href="/pages/community.html" class="btn btn-secondary btn-lg">Join Community</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer style="background: var(--navy); color: white; padding: var(--space-2xl) 0; margin-top: var(--space-4xl); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-2xl);">
+        <div>
+          <h4 style="color: white; margin-top: 0;">Podcast</h4>
+          <ul style="list-style: none;">
+            <li><a href="/podcast/" style="color: rgba(255, 255, 255, 0.7);">Browse Episodes</a></li>
+            <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Subscribe</a></li>
+            <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Guest Inquiries</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; margin-top: 0;">Resources</h4>
+          <ul style="list-style: none;">
+            <li><a href="/tools/" style="color: rgba(255, 255, 255, 0.7);">Free Tools</a></li>
+            <li><a href="/blog/" style="color: rgba(255, 255, 255, 0.7);">Articles</a></li>
+            <li><a href="/resources/" style="color: rgba(255, 255, 255, 0.7);">Guides</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; margin-top: 0;">Company</h4>
+          <ul style="list-style: none;">
+            <li><a href="/pages/about.html" style="color: rgba(255, 255, 255, 0.7);">About</a></li>
+            <li><a href="/contact/" style="color: rgba(255, 255, 255, 0.7);">Contact</a></li>
+            <li><a href="/press/" style="color: rgba(255, 255, 255, 0.7);">Press</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: var(--space-xl); text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem;">
+        <p style="margin: 0;">© 2026 RID Academy. All rights reserved. | <a href="/privacy/" style="color: rgba(255, 255, 255, 0.7);">Privacy</a> | <a href="/terms/" style="color: rgba(255, 255, 255, 0.7);">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const nav = document.querySelector('.nav');
+
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
+        });
+      }
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      // Close mobile menu when a link is clicked
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

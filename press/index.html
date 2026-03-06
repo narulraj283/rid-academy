@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://rid.academy/press/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <title>Press & Media — RID Academy</title>
+  <meta name="description" content="Press resources and media inquiries for RID Academy. Features Naren Arulrajah, author and dental practice expert.">
+  <meta name="keywords" content="press, media, dental expert, Naren Arulrajah, interview, featured">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Press & Media — RID Academy">
+  <meta property="og:description" content="Contact RID Academy for interviews, expert commentary, and media inquiries.">
+  <meta property="og:url" content="https://rid.academy/press/">
+  <meta property="og:image" content="https://rid.academy/images/og-press.png">
+  <meta property="og:site_name" content="RID Academy">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Press & Media — RID Academy">
+  <meta name="twitter:description" content="Contact us for expert commentary on dental practice management and insurance independence.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data - Organization -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "RID Academy",
+    "url": "https://rid.academy",
+    "description": "Educational organization for dental practice owners reducing insurance dependence.",
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Press",
+      "email": "info@rid.academy"
+    },
+    "founder": [
+      {
+        "@type": "Person",
+        "name": "Naren Arulrajah",
+        "jobTitle": "Co-Founder & CEO"
+      },
+      {
+        "@type": "Person",
+        "name": "Gary Takacs",
+        "jobTitle": "Co-Founder"
+      }
+    ]
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rid.academy/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Press",
+        "item": "https://rid.academy/press/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .press-hero {
+      padding-top: calc(var(--nav-height) + var(--space-3xl));
+      padding-bottom: var(--space-3xl);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--teal-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .press-hero h1 {
+      color: white;
+      max-width: 700px;
+    }
+
+    .press-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      font-size: 1.125rem;
+    }
+
+    .expert-profile {
+      background: white;
+      border-radius: var(--radius-lg);
+      overflow: hidden;
+      box-shadow: var(--shadow-md);
+      margin-bottom: var(--space-3xl);
+    }
+
+    .expert-profile-content {
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: var(--space-2xl);
+      align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .expert-profile-content {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .expert-profile-image {
+      background: var(--bg-subtle);
+      padding: var(--space-2xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 350px;
+    }
+
+    .expert-profile-image img {
+      width: 100%;
+      max-width: 300px;
+      border-radius: var(--radius-lg);
+    }
+
+    .expert-profile-info {
+      padding: var(--space-2xl);
+    }
+
+    .expert-profile-info h2 {
+      color: var(--navy);
+      margin-bottom: var(--space-md);
+    }
+
+    .credentials {
+      background: var(--teal-bg);
+      border-left: 4px solid var(--teal);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      margin: var(--space-lg) 0;
+    }
+
+    .credentials h4 {
+      color: var(--navy);
+      margin-top: 0;
+      font-size: 0.95rem;
+    }
+
+    .credentials ul {
+      margin: var(--space-md) 0 0 0;
+      padding-left: var(--space-lg);
+    }
+
+    .credentials li {
+      color: var(--text-secondary);
+      font-size: 0.9rem;
+      margin-bottom: var(--space-sm);
+    }
+
+    .publications {
+      margin-top: var(--space-2xl);
+    }
+
+    .publications h4 {
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: var(--space-md);
+    }
+
+    .publication-item {
+      background: var(--bg-subtle);
+      border-left: 4px solid var(--coral);
+      padding: var(--space-lg);
+      border-radius: var(--radius-md);
+      margin-bottom: var(--space-md);
+    }
+
+    .publication-item h5 {
+      color: var(--navy);
+      margin: 0 0 var(--space-sm) 0;
+      font-size: 1rem;
+    }
+
+    .publication-item p {
+      margin: 0;
+      font-size: 0.9rem;
+      color: var(--text-secondary);
+    }
+
+    .contact-section {
+      background: var(--bg-white);
+      border: 2px solid var(--teal);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl);
+      margin-top: var(--space-2xl);
+    }
+
+    .contact-section h4 {
+      color: var(--navy);
+      margin-top: 0;
+      margin-bottom: var(--space-md);
+    }
+
+    .contact-info {
+      display: flex;
+      align-items: center;
+      gap: var(--space-md);
+      margin-bottom: var(--space-md);
+    }
+
+    .contact-info strong {
+      color: var(--navy);
+      min-width: 100px;
+    }
+
+    .press-kit-section {
+      background: var(--bg-subtle);
+      border-radius: var(--radius-lg);
+      padding: var(--space-2xl);
+      margin-top: var(--space-2xl);
+    }
+
+    .press-kit-section h3 {
+      color: var(--navy);
+      margin-top: 0;
+    }
+
+    .press-kit-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: var(--space-lg);
+      margin-top: var(--space-lg);
+    }
+
+    .press-kit-item {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-md);
+      padding: var(--space-lg);
+      text-align: center;
+      transition: all var(--duration) var(--ease);
+    }
+
+    .press-kit-item:hover {
+      box-shadow: var(--shadow-md);
+      border-color: var(--teal);
+    }
+
+    .press-kit-item h4 {
+      color: var(--navy);
+      margin: 0 0 var(--space-sm) 0;
+    }
+
+    .press-kit-item p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0 0 var(--space-md) 0;
+    }
+
+    .media-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--teal);
+      font-weight: 600;
+      text-decoration: none;
+      font-size: 0.9rem;
+    }
+
+    .media-link:hover {
+      color: var(--teal-dark);
+    }
+
+    .mt-2xl { margin-top: var(--space-2xl); }
+  </style>
+</head>
+<body>
+
+  <!-- ═══ NAVIGATION ═══ -->
+  <nav class="nav" role="navigation" aria-label="Main navigation">
+    <div class="nav-inner">
+      <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
+      <ul class="nav-links">
+        <li><a href="/tools/" class="nav-link">Tools</a></li>
+        <li><a href="/blog/" class="nav-link">Learn</a></li>
+        <li><a href="/podcast/" class="nav-link">Podcast</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
+        <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
+        <li><a href="/pages/community.html" class="nav-link">Community</a></li>
+        <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
+        <li><a href="/pages/about.html" class="nav-link">About</a></li>
+        <li><a href="#join" class="btn btn-primary btn-sm">Join Free</a></li>
+      </ul>
+      <button class="nav-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══ PRESS HERO ═══ -->
+  <section class="press-hero">
+    <div class="container">
+      <span class="badge badge-teal" style="margin-bottom: 16px;">Media & Press</span>
+      <h1>Press Resources & Media Inquiries</h1>
+      <p>Contact RID Academy for expert commentary, interviews, and media partnerships. We're available for podcasts, publications, and broadcast media.</p>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERT PROFILE ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="expert-profile">
+        <div class="expert-profile-content">
+          <div class="expert-profile-image">
+            <div style="text-align: center;">
+              <div style="font-size: 5rem; margin-bottom: var(--space-lg);">👨‍💼</div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin: 0;">Headshot available upon request</p>
+            </div>
+          </div>
+          <div class="expert-profile-info">
+            <h2>Naren Arulrajah</h2>
+            <p style="font-size: 1.05rem; color: var(--navy); font-weight: 600; margin-bottom: var(--space-lg);">Co-Founder & CEO, RID Academy</p>
+            
+            <p>Naren Arulrajah is a leading authority on dental practice economics and insurance independence strategy. Since founding RID Academy, he has guided thousands of dental practice owners through the transition from PPO-dependent practices to thriving, independent businesses.</p>
+
+            <div class="credentials">
+              <h4>Key Credentials</h4>
+              <ul>
+                <li>Co-Founder & CEO of RID Academy (2020-Present)</li>
+                <li>Contributor, Dentistry IQ</li>
+                <li>Member, American Dental Management Association (ADMA)</li>
+                <li>Expert in dental practice economics and business strategy</li>
+                <li>Podcast Host, Less Insurance Dependence Podcast</li>
+                <li>Advisor to 10,000+ dental professionals globally</li>
+              </ul>
+            </div>
+
+            <div class="publications">
+              <h4>Published Works</h4>
+              
+              <div class="publication-item">
+                <h5>8 Steps Every Dentist Should Take to Dominate Their Market Online</h5>
+                <p>A comprehensive guide to digital marketing and practice visibility for independent dental practices.</p>
+              </div>
+
+              <div class="publication-item">
+                <h5>Game Over: A Dentist's Guide to Google Domination</h5>
+                <p>Strategic insights into local SEO and online visibility for dental practices competing in their markets.</p>
+              </div>
+            </div>
+
+            <div class="contact-section">
+              <h4>Media Contact</h4>
+              <div class="contact-info">
+                <strong>Email:</strong>
+                <a href="mailto:info@rid.academy">info@rid.academy</a>
+              </div>
+              <p style="font-size: 0.9rem; color: var(--text-muted); margin: var(--space-md) 0 0 0;">For press inquiries, interviews, and partnership opportunities, please reach out directly. We typically respond within 24 hours.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ PRESS KIT ═══ -->
+  <section class="section" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <h2>Press Kit</h2>
+        <p style="max-width: 600px; margin: var(--space-md) auto 0;">Everything you need for media coverage, interviews, and publications.</p>
+      </div>
+
+      <div class="press-kit-section">
+        <h3>About RID Academy</h3>
+        <p style="font-size: 0.95rem;">RID Academy is the #1 resource for dental practice owners reducing dependence on PPO insurance plans. Since 2020, we've guided over 10,000 dental professionals through the transition from insurance-dependent practices to thriving, independent businesses. Our mission is to empower dentists to practice on their own terms with proven strategies, education, and community support.</p>
+        
+        <p style="font-size: 0.95rem; margin-top: var(--space-lg);"><strong>Key Statistics:</strong></p>
+        <ul style="font-size: 0.9rem;">
+          <li>10,000+ dental professionals in our community</li>
+          <li>350+ expert articles and guides on dental practice management</li>
+          <li>30 comprehensive PDF guides covering all aspects of insurance independence</li>
+          <li>Weekly podcast with industry experts and successful practice owners</li>
+          <li>Free tools including PPO Write-Off Calculator and Readiness Scorecard</li>
+        </ul>
+      </div>
+
+      <div class="press-kit-grid">
+        <div class="press-kit-item">
+          <h4>Company Overview</h4>
+          <p>2-paragraph company summary for media use</p>
+          <a href="#" class="media-link">Download PDF →</a>
+        </div>
+
+        <div class="press-kit-item">
+          <h4>Expert Bios</h4>
+          <p>Detailed bios of Naren Arulrajah and team</p>
+          <a href="#" class="media-link">Download PDF →</a>
+        </div>
+
+        <div class="press-kit-item">
+          <h4>Images & Media</h4>
+          <p>High-resolution photos and logos</p>
+          <a href="#" class="media-link">Request Access →</a>
+        </div>
+
+        <div class="press-kit-item">
+          <h4>Fact Sheet</h4>
+          <p>Key facts and statistics for reference</p>
+          <a href="#" class="media-link">Download PDF →</a>
+        </div>
+
+        <div class="press-kit-item">
+          <h4>Market Research</h4>
+          <p>Dental insurance trends and analysis</p>
+          <a href="#" class="media-link">Download PDF →</a>
+        </div>
+
+        <div class="press-kit-item">
+          <h4>Recent News</h4>
+          <p>Latest announcements and updates</p>
+          <a href="#" class="media-link">View All →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ EXPERTISE AREAS ═══ -->
+  <section class="section">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <h2>Expert Commentary Topics</h2>
+        <p style="max-width: 700px; margin: var(--space-md) auto 0;">Naren is available for interviews and commentary on:</p>
+      </div>
+
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: var(--space-lg);">
+        <div class="card-flat">
+          <h4 style="margin-top: 0; color: var(--navy);">Dental Insurance Economics</h4>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">PPO write-offs, insurance dependence trends, and the business case for fee-for-service dentistry.</p>
+        </div>
+
+        <div class="card-flat">
+          <h4 style="margin-top: 0; color: var(--navy);">Practice Transformation</h4>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Strategies for transitioning from insurance-dependent to independent practice models.</p>
+        </div>
+
+        <div class="card-flat">
+          <h4 style="margin-top: 0; color: var(--navy);">Dental Industry Trends</h4>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Future of dentistry, practice consolidation, and emerging business models.</p>
+        </div>
+
+        <div class="card-flat">
+          <h4 style="margin-top: 0; color: var(--navy);">Practice Revenue Optimization</h4>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Fee setting, case acceptance, membership plans, and revenue diversification.</p>
+        </div>
+
+        <div class="card-flat">
+          <h4 style="margin-top: 0; color: var(--navy);">Entrepreneur Mindset</h4>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Building independent, profitable practices and achieving financial freedom.</p>
+        </div>
+
+        <div class="card-flat">
+          <h4 style="margin-top: 0; color: var(--navy);">Community Building</h4>
+          <p style="margin-bottom: 0; font-size: 0.9rem;">Creating supportive communities and peer-driven learning for professionals.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ MEDIA FEATURES ═══ -->
+  <section class="section" style="background: var(--bg-subtle);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: var(--space-2xl);">
+        <h2>Featured In</h2>
+        <p>RID Academy and Naren Arulrajah have been featured alongside leaders in dental and business media</p>
+      </div>
+
+      <div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: var(--space-2xl); opacity: 0.6;">
+        <div style="font-weight: 600; color: var(--text-secondary);">Dentistry IQ</div>
+        <div>·</div>
+        <div style="font-weight: 600; color: var(--text-secondary);">Thriving Dentist</div>
+        <div>·</div>
+        <div style="font-weight: 600; color: var(--text-secondary);">ADMA</div>
+        <div>·</div>
+        <div style="font-weight: 600; color: var(--text-secondary);">Dental Podcast Network</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA SECTION ═══ -->
+  <section class="section">
+    <div class="container" style="text-align: center; max-width: 700px;">
+      <h2>Request an Interview</h2>
+      <p>Interested in featuring Naren on your podcast, publication, or broadcast? We'd love to discuss how RID Academy is transforming dental practices and share insights that benefit your audience.</p>
+      <div class="flex gap-md flex-wrap" style="justify-content: center; margin-top: var(--space-xl);">
+        <a href="mailto:info@rid.academy" class="btn btn-primary btn-lg">Send Press Inquiry →</a>
+        <a href="/contact/" class="btn btn-secondary btn-lg">Contact Form</a>
+      </div>
+      <p style="font-size: 0.9rem; color: var(--text-muted); margin-top: var(--space-xl);">Email: <strong>info@rid.academy</strong> | Response time: 24 hours</p>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer style="background: var(--navy); color: white; padding: var(--space-2xl) 0; margin-top: var(--space-4xl); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-2xl);">
+        <div>
+          <h4 style="color: white; margin-top: 0;">Resources</h4>
+          <ul style="list-style: none;">
+            <li><a href="/resources/" style="color: rgba(255, 255, 255, 0.7);">Guides</a></li>
+            <li><a href="/blog/" style="color: rgba(255, 255, 255, 0.7);">Articles</a></li>
+            <li><a href="/tools/" style="color: rgba(255, 255, 255, 0.7);">Tools</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; margin-top: 0;">Company</h4>
+          <ul style="list-style: none;">
+            <li><a href="/pages/about.html" style="color: rgba(255, 255, 255, 0.7);">About</a></li>
+            <li><a href="/contact/" style="color: rgba(255, 255, 255, 0.7);">Contact</a></li>
+            <li><a href="/press/" style="color: rgba(255, 255, 255, 0.7);">Press</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 style="color: white; margin-top: 0;">Connect</h4>
+          <ul style="list-style: none;">
+            <li><a href="/podcast/" style="color: rgba(255, 255, 255, 0.7);">Podcast</a></li>
+            <li><a href="/pages/community.html" style="color: rgba(255, 255, 255, 0.7);">Community</a></li>
+            <li><a href="mailto:info@rid.academy" style="color: rgba(255, 255, 255, 0.7);">Email</a></li>
+          </ul>
+        </div>
+      </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: var(--space-xl); text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem;">
+        <p style="margin: 0;">© 2026 RID Academy. All rights reserved. | <a href="/privacy/" style="color: rgba(255, 255, 255, 0.7);">Privacy</a> | <a href="/terms/" style="color: rgba(255, 255, 255, 0.7);">Terms</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const nav = document.querySelector('.nav');
+
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
+        });
+      }
+
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('open');
+        });
+      });
+    });
+  </script>
+</body>
+</html>

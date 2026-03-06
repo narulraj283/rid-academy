@@ -1,57 +1,210 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link rel="canonical" href="https://rid.academy/resources/">
-<link rel="icon" type="image/svg+xml" href="/favicon.svg">
-    <meta name="description" content="Download free templates, scripts, checklists, and guides to support your journey to dental practice independence and success.">
-    <meta name="keywords" content="dental templates, practice resources, PPO termination, membership plan, dental scripts, checklists, guides">
-    <meta name="author" content="RID Academy">
-    <meta property="og:title" content="Resources | RID Academy">
-    <meta property="og:description" content="Templates, guides, scripts, and downloads to support every stage of your journey">
-    <meta property="og:type" content="website">
-    <meta property="og:image" content="https://rid.academy/images/resources-og.jpg">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Resources | RID Academy">
-    <meta name="twitter:description" content="Templates, guides, scripts, and downloads to support every stage of your journey">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="canonical" href="https://rid.academy/resources/">
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+  <link rel="icon" type="image/x-icon" href="/favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+  
+  <title>Free Dental Practice Resources & Guides — RID Academy</title>
+  <meta name="description" content="Download 30+ free PDF guides covering PPO exit strategies, fee-for-service dentistry, practice management, and building insurance independence.">
+  <meta name="keywords" content="dental guides, PPO strategy, practice management, fee for service, dental resources, dentist downloads">
 
-    <title>Resources | RID Academy</title>
-    <link rel="stylesheet" href="/css/styles.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <script type="application/ld+json">
-    {
-        "@context": "https://schema.org",
-        "@type": "CollectionPage",
-        "name": "RID Academy Resources",
-        "description": "Templates, guides, scripts, checklists, and spreadsheets for dental practice management",
-        "url": "https://rid.academy/resources/"
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Free Dental Practice Resources & Guides">
+  <meta property="og:description" content="Download 30+ comprehensive guides covering every aspect of reducing PPO dependence and building thriving dental practices.">
+  <meta property="og:url" content="https://rid.academy/resources/">
+  <meta property="og:image" content="https://rid.academy/images/og-resources.png">
+  <meta property="og:site_name" content="RID Academy">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Free Dental Practice Resources & Guides">
+  <meta name="twitter:description" content="30+ guides for dental professionals dropping PPO plans and building insurance-independent practices.">
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/css/styles.css">
+
+  <!-- Structured Data - CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Free Dental Practice Resources & Guides",
+    "description": "A comprehensive collection of 30+ PDF guides covering PPO exit strategies, practice management, and insurance independence for dentists.",
+    "url": "https://rid.academy/resources/",
+    "publisher": {
+      "@type": "Organization",
+      "name": "RID Academy",
+      "url": "https://rid.academy"
     }
-    </script>
-<!-- Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-YB2QDRNZ1D');
-</script>
+  }
+  </script>
+
+  <!-- BreadcrumbList Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://rid.academy/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Resources",
+        "item": "https://rid.academy/resources/"
+      }
+    ]
+  }
+  </script>
+
+  <style>
+    .resources-hero {
+      padding-top: calc(var(--nav-height) + var(--space-3xl));
+      padding-bottom: var(--space-3xl);
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-light) 50%, var(--teal-dark) 100%);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resources-hero h1 {
+      color: white;
+      max-width: 700px;
+    }
+
+    .resources-hero p {
+      color: rgba(255, 255, 255, 0.85);
+      max-width: 600px;
+      font-size: 1.125rem;
+    }
+
+    .resource-category {
+      margin-bottom: var(--space-3xl);
+    }
+
+    .resource-category h3 {
+      color: var(--navy);
+      font-size: 1.4rem;
+      margin-bottom: var(--space-lg);
+      padding-bottom: var(--space-md);
+      border-bottom: 3px solid var(--teal);
+      display: inline-block;
+    }
+
+    .guide-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: var(--space-lg);
+      margin-bottom: var(--space-2xl);
+    }
+
+    .guide-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: var(--space-lg);
+      transition: all var(--duration) var(--ease);
+      display: flex;
+      flex-direction: column;
+      text-decoration: none;
+    }
+
+    .guide-card:hover {
+      box-shadow: var(--shadow-lg);
+      border-color: var(--teal);
+      transform: translateY(-4px);
+    }
+
+    .guide-icon {
+      font-size: 2.5rem;
+      margin-bottom: var(--space-md);
+    }
+
+    .guide-card h4 {
+      color: var(--navy);
+      font-size: 1.05rem;
+      margin: 0 0 var(--space-sm) 0;
+      line-height: 1.4;
+    }
+
+    .guide-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      margin: 0 0 var(--space-md) 0;
+      flex-grow: 1;
+    }
+
+    .download-btn {
+      background: var(--coral);
+      color: white;
+      border: none;
+      padding: 10px 16px;
+      border-radius: var(--radius-md);
+      font-size: 0.85rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all var(--duration) var(--ease);
+      align-self: flex-start;
+    }
+
+    .download-btn:hover {
+      background: var(--coral-dark);
+    }
+
+    .mt-2xl { margin-top: var(--space-2xl); }
+    .mt-3xl { margin-top: var(--space-3xl); }
+
+    .search-box {
+      margin-bottom: var(--space-2xl);
+    }
+
+    .search-input {
+      width: 100%;
+      max-width: 500px;
+      padding: 12px 16px;
+      font-size: 1rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius-md);
+      font-family: var(--font-sans);
+    }
+
+    .search-input:focus {
+      outline: none;
+      border-color: var(--teal);
+      box-shadow: 0 0 0 3px rgba(0, 180, 166, 0.1);
+    }
+  </style>
 </head>
 <body>
+
+  <!-- ═══ NAVIGATION ═══ -->
   <nav class="nav" role="navigation" aria-label="Main navigation">
     <div class="nav-inner">
       <a href="/" class="nav-logo" aria-label="RID Academy home">RID<span>.academy</span></a>
       <ul class="nav-links">
         <li><a href="/tools/" class="nav-link">Tools</a></li>
         <li><a href="/blog/" class="nav-link">Learn</a></li>
-        <li><a href="/resources/" class="nav-link active">Resources</a></li>
+        <li><a href="/podcast/" class="nav-link">Podcast</a></li>
+        <li><a href="/resources/" class="nav-link">Resources</a></li>
         <li><a href="/pages/summit.html" class="nav-link">Summit</a></li>
         <li><a href="/pages/community.html" class="nav-link">Community</a></li>
         <li><a href="/pages/glossary.html" class="nav-link">Glossary</a></li>
         <li><a href="/pages/about.html" class="nav-link">About</a></li>
-        <li><a href="/#join" class="btn btn-primary btn-sm">Join Free</a></li>
+        <li><a href="#join" class="btn btn-primary btn-sm">Join Free</a></li>
       </ul>
       <button class="nav-toggle" aria-label="Toggle menu">
         <span></span><span></span><span></span>
@@ -59,317 +212,361 @@
     </div>
   </nav>
 
-    <section class="resources-hero">
-        <div class="hero-content">
-            <h1>Resources</h1>
-            <p>Templates, guides, scripts, and downloads to support every stage of your journey</p>
-        </div>
-    </section>
-
-    <div class="resources-container">
-        <div class="filter-bar">
-            <button class="filter-btn active" data-filter="all">All</button>
-            <button class="filter-btn" data-filter="template">Templates</button>
-            <button class="filter-btn" data-filter="script">Scripts</button>
-            <button class="filter-btn" data-filter="checklist">Checklists</button>
-            <button class="filter-btn" data-filter="guide">Guides</button>
-            <button class="filter-btn" data-filter="spreadsheet">Spreadsheets</button>
-        </div>
-
-        <div class="resources-grid">
-            <!-- Resource 1 -->
-            <div class="resource-card" data-category="template">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4H32C33.1046 4 34 4.89543 34 6V34C34 35.1046 33.1046 36 32 36H8C6.89543 36 6 35.1046 6 34V6C6 4.89543 6.89543 4 8 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 10H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 18H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 26H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Template</div>
-                <h3>Patient Notification Letter Template</h3>
-                <p>Customizable letter to inform patients about insurance network changes</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 2 -->
-            <div class="resource-card" data-category="template">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 4H32C33.1046 4 34 4.89543 34 6V34C34 35.1046 33.1046 36 32 36H8C6.89543 36 6 35.1046 6 34V6C6 4.89543 6.89543 4 8 4Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 10H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 18H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 26H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Template</div>
-                <h3>PPO Termination Letter Template</h3>
-                <p>Professional letter to terminate your contract with a PPO carrier</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 3 -->
-            <div class="resource-card" data-category="script">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 8H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 16H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 32H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Script</div>
-                <h3>Front Desk Phone Script: Insurance Questions</h3>
-                <p>Word-for-word scripts for handling patient insurance inquiries</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 4 -->
-            <div class="resource-card" data-category="script">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 8H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 16H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 24H32" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M8 32H24" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Script</div>
-                <h3>Fee-for-Service Conversation Guide</h3>
-                <p>How to discuss fees confidently with patients</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 5 -->
-            <div class="resource-card" data-category="checklist">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="6" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 20L16 26L30 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Checklist</div>
-                <h3>PPO Transition Checklist</h3>
-                <p>Step-by-step checklist for dropping a PPO plan</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 6 -->
-            <div class="resource-card" data-category="checklist">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="6" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 20L16 26L30 12" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Checklist</div>
-                <h3>Membership Plan Launch Checklist</h3>
-                <p>Everything you need to launch your in-house plan</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 7 -->
-            <div class="resource-card" data-category="guide">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 6H32C33.1046 6 34 6.89543 34 8V32C34 33.1046 33.1046 34 32 34H8C6.89543 34 6 33.1046 6 32V8C6 6.89543 6.89543 6 8 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 12H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 20H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 28H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Guide</div>
-                <h3>The Complete Guide to Dropping PPOs</h3>
-                <p>Comprehensive pillar guide covering strategy, execution, and messaging</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 8 -->
-            <div class="resource-card" data-category="guide">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 6H32C33.1046 6 34 6.89543 34 8V32C34 33.1046 33.1046 34 32 34H8C6.89543 34 6 33.1046 6 32V8C6 6.89543 6.89543 6 8 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 12H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 20H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 28H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Guide</div>
-                <h3>Building a Membership Plan from Scratch</h3>
-                <p>End-to-end membership plan guide with pricing strategies and implementation steps</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 9 -->
-            <div class="resource-card" data-category="spreadsheet">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="6" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <line x1="14" y1="6" x2="14" y2="34" stroke="currentColor" stroke-width="2"/>
-                        <line x1="22" y1="6" x2="22" y2="34" stroke="currentColor" stroke-width="2"/>
-                        <line x1="30" y1="6" x2="30" y2="34" stroke="currentColor" stroke-width="2"/>
-                        <line x1="6" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="2"/>
-                        <line x1="6" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Spreadsheet</div>
-                <h3>PPO Write-Off Tracking Spreadsheet</h3>
-                <p>Track write-offs by plan, procedure, and month to visualize practice impact</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 10 -->
-            <div class="resource-card" data-category="spreadsheet">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <rect x="6" y="6" width="28" height="28" rx="2" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <line x1="14" y1="6" x2="14" y2="34" stroke="currentColor" stroke-width="2"/>
-                        <line x1="22" y1="6" x2="22" y2="34" stroke="currentColor" stroke-width="2"/>
-                        <line x1="30" y1="6" x2="30" y2="34" stroke="currentColor" stroke-width="2"/>
-                        <line x1="6" y1="14" x2="34" y2="14" stroke="currentColor" stroke-width="2"/>
-                        <line x1="6" y1="22" x2="34" y2="22" stroke="currentColor" stroke-width="2"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Spreadsheet</div>
-                <h3>Revenue Transition Tracker</h3>
-                <p>Monitor revenue changes during PPO transition to measure practice impact</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 11 -->
-            <div class="resource-card" data-category="guide">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 6H32C33.1046 6 34 6.89543 34 8V32C34 33.1046 33.1046 34 32 34H8C6.89543 34 6 33.1046 6 32V8C6 6.89543 6.89543 6 8 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 12H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 20H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 28H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Guide</div>
-                <h3>Team Training Presentation Deck</h3>
-                <p>Present the case for reducing insurance dependence to your team</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-
-            <!-- Resource 12 -->
-            <div class="resource-card" data-category="guide">
-                <div class="resource-icon">
-                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M8 6H32C33.1046 6 34 6.89543 34 8V32C34 33.1046 33.1046 34 32 34H8C6.89543 34 6 33.1046 6 32V8C6 6.89543 6.89543 6 8 6Z" stroke="currentColor" stroke-width="2" fill="none"/>
-                        <path d="M10 12H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 20H30" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                        <path d="M10 28H20" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
-                    </svg>
-                </div>
-                <div class="resource-type">Guide</div>
-                <h3>New Patient Marketing Playbook</h3>
-                <p>Attract fee-for-service patients after dropping PPOs</p>
-                <div class="resource-note">Free membership required</div>
-                <button class="btn-download">Download</button>
-            </div>
-        </div>
-    </div>
-
-    <section class="resources-cta">
-        <h2>Want to unlock all resources?</h2>
-        <p>Join RID Academy for free membership to access all templates, guides, and spreadsheets</p>
-        <button class="btn-primary">Sign Up Free</button>
-    </section>
-
-  <footer class="footer">
+  <!-- ═══ RESOURCES HERO ═══ -->
+  <section class="resources-hero">
     <div class="container">
-      <div class="grid grid-4" style="gap: 48px;">
-        <div>
-          <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
-          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
+      <span class="badge badge-teal" style="margin-bottom: 16px;">Free Downloads</span>
+      <h1>Dental Practice Resources Library</h1>
+      <p>Access 30+ comprehensive guides covering every aspect of reducing PPO dependence and building thriving dental practices. All free, all actionable.</p>
+    </div>
+  </section>
+
+  <!-- ═══ SEARCH ═══ -->
+  <section class="section" style="padding-top: var(--space-2xl); padding-bottom: var(--space-lg);">
+    <div class="container">
+      <div class="search-box">
+        <input type="text" class="search-input" id="searchInput" placeholder="Search guides..." />
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ INSURANCE STRATEGY ═══ -->
+  <section class="section">
+    <div class="container">
+      <div class="resource-category">
+        <h3>Insurance Strategy & PPO Exits</h3>
+        <div class="guide-grid">
+          <a href="/guides/insurance-contract-guide.pdf" class="guide-card">
+            <div class="guide-icon">📋</div>
+            <h4>Insurance Contract Negotiation Guide</h4>
+            <p>Master the art of negotiating better contracts or planning strategic exits with expert tactics.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/insurance-decision-framework.pdf" class="guide-card">
+            <div class="guide-icon">🎯</div>
+            <h4>Insurance Decision Framework</h4>
+            <p>A step-by-step framework to evaluate your insurance relationships and make data-driven decisions.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/ppo-exit-checklist.pdf" class="guide-card">
+            <div class="guide-icon">✓</div>
+            <h4>PPO Exit Checklist</h4>
+            <p>Everything you need to know before and after dropping PPO plans. Don't miss a single step.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/ppo-to-ffs-playbook.pdf" class="guide-card">
+            <div class="guide-icon">🔄</div>
+            <h4>PPO to FFS Conversion Playbook</h4>
+            <p>Complete roadmap for transitioning from PPO-dependent to fee-for-service practice models.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/delta-dental-exit-strategy.pdf" class="guide-card">
+            <div class="guide-icon">📊</div>
+            <h4>Delta Dental & Major Plans Exit Strategy</h4>
+            <p>Specific strategies for navigating exit from your largest and most profitable insurance relationships.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/insurance-cost-analysis.pdf" class="guide-card">
+            <div class="guide-icon">💰</div>
+            <h4>Insurance Cost Analysis Workbook</h4>
+            <p>Calculate the true cost of participation including write-offs, overhead, and administrative burden.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/insurance-independence-roadmap.pdf" class="guide-card">
+            <div class="guide-icon">🛣️</div>
+            <h4>Insurance Independence Roadmap</h4>
+            <p>A comprehensive 12-month roadmap to systematically reduce insurance dependence month by month.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/insurance-trends-monitor.pdf" class="guide-card">
+            <div class="guide-icon">📈</div>
+            <h4>Insurance Trends Monitoring System</h4>
+            <p>Stay ahead of insurance industry changes with this tracking and analysis system.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
         </div>
+      </div>
+
+      <!-- ═══ FEE-FOR-SERVICE ═══ -->
+      <div class="resource-category">
+        <h3>Fee-For-Service & Pricing</h3>
+        <div class="guide-grid">
+          <a href="/guides/dental-fee-setting-guide.pdf" class="guide-card">
+            <div class="guide-icon">💵</div>
+            <h4>Dental Fee Setting Guide</h4>
+            <p>Research-backed methodology for setting fees that maximize revenue without losing patients.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/ffs-practice-blueprint.pdf" class="guide-card">
+            <div class="guide-icon">🏗️</div>
+            <h4>Fee-For-Service Practice Blueprint</h4>
+            <p>Complete blueprint for structuring and operating a successful FFS dental practice.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/ffs-marketing-playbook.pdf" class="guide-card">
+            <div class="guide-icon">📣</div>
+            <h4>FFS Marketing Playbook</h4>
+            <p>Proven marketing strategies specifically for fee-for-service practices to attract ideal patients.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/membership-plan-guide.pdf" class="guide-card">
+            <div class="guide-icon">👥</div>
+            <h4>Membership Plan Design & Launch Guide</h4>
+            <p>Step-by-step guide to designing, pricing, and launching membership plans for your practice.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/patient-financing-guide.pdf" class="guide-card">
+            <div class="guide-icon">💳</div>
+            <h4>Patient Financing Options Guide</h4>
+            <p>Comprehensive guide to financing solutions that help patients afford care and boost your revenue.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- ═══ PATIENT EXPERIENCE ═══ -->
+      <div class="resource-category">
+        <h3>Patient Experience & Retention</h3>
+        <div class="guide-grid">
+          <a href="/guides/patient-attraction-blueprint.pdf" class="guide-card">
+            <div class="guide-icon">🎣</div>
+            <h4>Patient Attraction Blueprint</h4>
+            <p>Data-driven strategies to attract high-value patients who appreciate quality dentistry.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/patient-retention-playbook.pdf" class="guide-card">
+            <div class="guide-icon">🔄</div>
+            <h4>Patient Retention Playbook</h4>
+            <p>Proven systems to keep existing patients engaged and turning them into loyal advocates.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/patient-experience-playbook.pdf" class="guide-card">
+            <div class="guide-icon">😊</div>
+            <h4>Patient Experience Optimization Playbook</h4>
+            <p>Transform every touchpoint to create exceptional experiences that drive referrals and loyalty.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/case-acceptance-mastery.pdf" class="guide-card">
+            <div class="guide-icon">✨</div>
+            <h4>Case Acceptance Mastery Guide</h4>
+            <p>Advanced techniques for presenting cases and increasing patient acceptance rates dramatically.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/patient-objection-guide.pdf" class="guide-card">
+            <div class="guide-icon">🛡️</div>
+            <h4>Patient Objection Handling Guide</h4>
+            <p>Scripts and strategies for overcoming the top 20 patient objections, especially around costs.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/referral-system-guide.pdf" class="guide-card">
+            <div class="guide-icon">🤝</div>
+            <h4>Referral System Building Guide</h4>
+            <p>Create systems that turn your satisfied patients into a steady source of new patient referrals.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/referral-system-playbook.pdf" class="guide-card">
+            <div class="guide-icon">📞</div>
+            <h4>Referral System Playbook</h4>
+            <p>Advanced playbook for systematizing and scaling your referral generation efforts.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- ═══ PRACTICE GROWTH & OPERATIONS ═══ -->
+      <div class="resource-category">
+        <h3>Practice Growth & Operations</h3>
+        <div class="guide-grid">
+          <a href="/guides/production-optimization-guide.pdf" class="guide-card">
+            <div class="guide-icon">⚡</div>
+            <h4>Production Optimization Guide</h4>
+            <p>Maximize your production without adding hours through scheduling and workflow optimization.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/overhead-reduction-guide.pdf" class="guide-card">
+            <div class="guide-icon">💡</div>
+            <h4>Overhead Reduction Guide</h4>
+            <p>Identify and eliminate unnecessary expenses without sacrificing quality or team satisfaction.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/team-building-culture-guide.pdf" class="guide-card">
+            <div class="guide-icon">👨‍💼</div>
+            <h4>Team Building & Culture Guide</h4>
+            <p>Create a team culture that attracts top talent and keeps everyone aligned with your vision.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/morning-huddle-playbook.pdf" class="guide-card">
+            <div class="guide-icon">📅</div>
+            <h4>Morning Huddle Playbook</h4>
+            <p>Daily huddle templates and scripts to align your team and boost communication and performance.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/dental-brand-building-guide.pdf" class="guide-card">
+            <div class="guide-icon">🎨</div>
+            <h4>Dental Brand Building Guide</h4>
+            <p>Build a strong practice brand that attracts ideal patients and commands premium fees.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/financial-freedom-blueprint.pdf" class="guide-card">
+            <div class="guide-icon">🏆</div>
+            <h4>Financial Freedom Blueprint</h4>
+            <p>Strategic planning for achieving true financial independence through your dental practice.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/thriving-practice-playbook.pdf" class="guide-card">
+            <div class="guide-icon">🚀</div>
+            <h4>Thriving Practice Playbook</h4>
+            <p>Comprehensive system for building a practice that thrives with or without insurance.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+        </div>
+      </div>
+
+      <!-- ═══ MINDSET & STRATEGY ═══ -->
+      <div class="resource-category">
+        <h3>Mindset, Strategy & Future Planning</h3>
+        <div class="guide-grid">
+          <a href="/guides/thriving-mindset-guide.pdf" class="guide-card">
+            <div class="guide-icon">🧠</div>
+            <h4>Thriving Mindset Guide</h4>
+            <p>Develop the entrepreneurial mindset required to build a thriving, independent practice.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/recession-proof-guide.pdf" class="guide-card">
+            <div class="guide-icon">📉</div>
+            <h4>Recession-Proof Practice Guide</h4>
+            <p>Strategies to keep your practice resilient and profitable regardless of economic conditions.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+
+          <a href="/guides/future-of-dentistry.pdf" class="guide-card">
+            <div class="guide-icon">🔮</div>
+            <h4>Future of Dentistry Report</h4>
+            <p>Industry insights and trends shaping the future of dental practice and business models.</p>
+            <button class="download-btn">Download PDF →</button>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ CTA SECTION ═══ -->
+  <section class="section" style="background: var(--bg-subtle);">
+    <div class="container" style="text-align: center; max-width: 700px;">
+      <h2>Want Personal Guidance?</h2>
+      <p>These resources are powerful on their own, but combining them with our community and expert support accelerates your results exponentially.</p>
+      <div class="flex gap-md flex-wrap" style="justify-content: center; margin-top: var(--space-xl);">
+        <a href="/pages/community.html" class="btn btn-primary btn-lg">Join Our Community</a>
+        <a href="/contact/" class="btn btn-secondary btn-lg">Get in Touch</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══ FOOTER ═══ -->
+  <footer style="background: var(--navy); color: white; padding: var(--space-2xl) 0; margin-top: var(--space-4xl); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+    <div class="container">
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-2xl);">
         <div>
-          <h4>Tools</h4>
-          <ul class="footer-links">
-            <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
-            <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
-            <li><a href="/tools/revenue-simulator.html">Revenue Simulator</a></li>
-            <li><a href="/tools/membership-calculator.html">Membership Pricing</a></li>
+          <h4 style="color: white; margin-top: 0;">Resources</h4>
+          <ul style="list-style: none;">
+            <li><a href="/resources/" style="color: rgba(255, 255, 255, 0.7);">All Guides</a></li>
+            <li><a href="/blog/" style="color: rgba(255, 255, 255, 0.7);">Articles</a></li>
+            <li><a href="/tools/" style="color: rgba(255, 255, 255, 0.7);">Tools</a></li>
           </ul>
         </div>
         <div>
-          <h4>Learn</h4>
-          <ul class="footer-links">
-            <li><a href="/blog/">Articles &amp; Guides</a></li>
-            <li><a href="/pages/summit.html">Annual Summit</a></li>
-            <li><a href="/resources/">Resources</a></li>
-            <li><a href="/pages/glossary.html">Glossary</a></li>
+          <h4 style="color: white; margin-top: 0;">Learning</h4>
+          <ul style="list-style: none;">
+            <li><a href="/podcast/" style="color: rgba(255, 255, 255, 0.7);">Podcast</a></li>
+            <li><a href="/pages/summit.html" style="color: rgba(255, 255, 255, 0.7);">Summit</a></li>
+            <li><a href="/pages/community.html" style="color: rgba(255, 255, 255, 0.7);">Community</a></li>
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
-          <ul class="footer-links">
-            <li><a href="/pages/about.html">About RID Academy</a></li>
-            <li><a href="/pages/community.html">Community</a></li>
-            <li><a href="https://www.lessinsurancedependence.com/" target="_blank" rel="noopener">Podcast</a></li>
-            <li><a href="mailto:info@rid.academy">Contact</a></li>
+          <h4 style="color: white; margin-top: 0;">Company</h4>
+          <ul style="list-style: none;">
+            <li><a href="/pages/about.html" style="color: rgba(255, 255, 255, 0.7);">About</a></li>
+            <li><a href="/contact/" style="color: rgba(255, 255, 255, 0.7);">Contact</a></li>
+            <li><a href="/press/" style="color: rgba(255, 255, 255, 0.7);">Press</a></li>
           </ul>
         </div>
       </div>
-      <div class="footer-bottom">
-        <span>&copy; 2026 RID Academy. All rights reserved.</span>
-        <div class="flex gap-md">
-          <a href="/pages/privacy.html">Privacy Policy</a>
-          <a href="/pages/terms.html">Terms of Use</a>
-          <a href="/pages/disclaimer.html">Disclaimer</a>
-        </div>
+      <div style="border-top: 1px solid rgba(255, 255, 255, 0.1); padding-top: var(--space-xl); text-align: center; color: rgba(255, 255, 255, 0.6); font-size: 0.85rem;">
+        <p style="margin: 0;">© 2026 RID Academy. All rights reserved. | <a href="/privacy/" style="color: rgba(255, 255, 255, 0.7);">Privacy</a> | <a href="/terms/" style="color: rgba(255, 255, 255, 0.7);">Terms</a></p>
       </div>
     </div>
   </footer>
 
-    <script src="/js/main.js"></script>
-    <script>
-        // Resources filtering functionality
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const resourceCards = document.querySelectorAll('.resource-card');
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const navToggle = document.querySelector('.nav-toggle');
+      const navLinks = document.querySelector('.nav-links');
+      const nav = document.querySelector('.nav');
+      const searchInput = document.getElementById('searchInput');
 
-        filterBtns.forEach(btn => {
-            btn.addEventListener('click', function() {
-                // Remove active class from all buttons
-                filterBtns.forEach(b => b.classList.remove('active'));
-                // Add active class to clicked button
-                this.classList.add('active');
-
-                const filter = this.dataset.filter;
-
-                // Show/hide resource cards based on filter
-                resourceCards.forEach(card => {
-                    if (filter === 'all') {
-                        card.style.display = 'block';
-                    } else {
-                        const category = card.dataset.category;
-                        card.style.display = category === filter ? 'block' : 'none';
-                    }
-                });
-            });
+      if (navToggle) {
+        navToggle.addEventListener('click', function() {
+          navLinks.classList.toggle('open');
         });
+      }
 
-        // Download button functionality
-        const downloadBtns = document.querySelectorAll('.btn-download');
-        downloadBtns.forEach(btn => {
-            btn.addEventListener('click', function(e) {
-                e.preventDefault();
-                alert('Free membership required to download. Please sign up to access all resources.');
-            });
+      window.addEventListener('scroll', function() {
+        if (window.scrollY > 10) {
+          nav.classList.add('scrolled');
+        } else {
+          nav.classList.remove('scrolled');
+        }
+      });
+
+      document.querySelectorAll('.nav-links a').forEach(link => {
+        link.addEventListener('click', function() {
+          navLinks.classList.remove('open');
         });
-    </script>
+      });
+
+      // Search functionality
+      if (searchInput) {
+        searchInput.addEventListener('input', function() {
+          const searchTerm = this.value.toLowerCase();
+          const guideCards = document.querySelectorAll('.guide-card');
+          
+          guideCards.forEach(card => {
+            const title = card.querySelector('h4').textContent.toLowerCase();
+            const description = card.querySelector('p').textContent.toLowerCase();
+            
+            if (title.includes(searchTerm) || description.includes(searchTerm)) {
+              card.style.display = '';
+            } else {
+              card.style.display = 'none';
+            }
+          });
+        });
+      }
+    });
+  </script>
 </body>
 </html>
