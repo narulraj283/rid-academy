@@ -3,4 +3,4 @@ Allow: /
 Disallow: /admin/
 Disallow: /data/
 
-Sitemap: https://rida.narenlife.com/sitemap.xml
+Sitemap: https://rid.academy/sitemap.xml

@@ -2,8 +2,8 @@
 
 The #1 resource for dental practice owners reducing dependence on PPO insurance plans.
 
-**Live at:** [rida.narenlife.com](https://rida.narenlife.com)
-**Production target:** [rida.narenlife.com](https://rida.narenlife.com) → [rid.academy](https://rid.academy)
+**Live at:** [rid.academy](https://rid.academy)
+**Production target:** [rid.academy](https://rid.academy) → [rid.academy](https://rid.academy)
 
 ---
 
@@ -76,8 +76,8 @@ rida/
 ### GitHub Pages
 1. Push to `main` branch
 2. Go to repo Settings → Pages → Source: Deploy from branch → `main` / `/ (root)` or `/site`
-3. Set custom domain: `rida.narenlife.com`
-4. Add CNAME record: `rida.narenlife.com` → `narulraj283.github.io`
+3. Set custom domain: `rid.academy`
+4. Add CNAME record: `rid.academy` → `narulraj283.github.io`
 
 ### Alternative: Netlify / Vercel / Cloudflare Pages
 1. Connect GitHub repo
@@ -87,7 +87,7 @@ rida/
 ## Next Steps (from Growth Strategy)
 
 ### Phase 1 (Now → 60 days)
-- [ ] Deploy to rida.narenlife.com
+- [ ] Deploy to rid.academy
 - [ ] Begin transcribing 349+ podcast episodes
 - [ ] Publish first 30–50 SEO articles from transcriptions
 - [ ] Set up email capture (ConvertKit, Mailchimp, or similar)
