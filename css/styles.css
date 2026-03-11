@@ -1448,3 +1448,446 @@ tr:hover td { background: var(--teal-bg); }
     font-size: 1.3rem !important;
   }
 }
+
+/* ============================================
+   FIXES - March 2026 Update
+   Issues: #11, #2, #7, #13, #12
+   ============================================ */
+
+/* --- #11: Fix Mobile Navigation Transparent Background --- */
+@media (max-width: 768px) {
+  .nav-links {
+    background: var(--bg-white) !important;
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    box-shadow: var(--shadow-xl);
+    border-top: 1px solid var(--border);
+  }
+  
+  .nav-links.open {
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  /* Ensure article inline-nav is also opaque on mobile */
+  body > nav:not(.nav) {
+    background: #0F2B46 !important;
+    opacity: 1 !important;
+  }
+}
+
+/* --- #2: Fix CTA Button Text Contrast --- 
+   Ensure all buttons on dark backgrounds have white text */
+.hero .btn-cta,
+.hero .btn-primary,
+[style*="background:#0F2B46"] .btn,
+[style*="background:linear-gradient"] .btn,
+.bottom-cta a,
+.cta-section .cta-button {
+  color: white !important;
+}
+
+/* Fix specific CTA button patterns in articles */
+.article-content .btn-cta,
+.article-content [style*="background:#FF6B"],
+.article-content [style*="background:white"] {
+  font-weight: 600;
+}
+
+/* Ensure "Get Started Free" buttons on dark gradient backgrounds are visible */
+[style*="background:linear-gradient"] a[style*="background:white"] {
+  color: #0F2B46 !important;
+  font-weight: 700 !important;
+}
+
+/* Fix buttons that may inherit dark text on dark bg */
+.btn-cta {
+  color: white;
+}
+
+.btn-cta:hover {
+  color: white;
+}
+
+/* Fix any submit buttons on dark backgrounds */
+[style*="background:#0F2B46"] button,
+[style*="background:linear-gradient(135deg, #0F2B46"] button,
+.cta-box button,
+.cta-form button {
+  color: white !important;
+}
+
+/* --- #7: Fix Footer Logo Contrast/Visibility --- */
+.footer .nav-logo {
+  color: white !important;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+}
+
+.footer .nav-logo span {
+  color: var(--teal-light) !important;
+}
+
+/* Article page inline footer logo fix */
+footer[style*="background:#0F2B46"] {
+  color: rgba(255, 255, 255, 0.85);
+}
+
+footer[style*="background:#0F2B46"] a {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+footer[style*="background:#0F2B46"] a:hover {
+  color: var(--teal-light);
+}
+
+/* --- #13: Accessibility Improvements --- */
+
+/* Better focus states for ALL interactive elements */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+[role="button"]:focus-visible {
+  outline: 3px solid var(--teal);
+  outline-offset: 2px;
+  box-shadow: 0 0 0 6px rgba(0, 180, 166, 0.15);
+}
+
+/* Skip-to-content link (added via JS) */
+.skip-to-content {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--teal);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 0 0 var(--radius-md) var(--radius-md);
+  font-weight: 600;
+  z-index: 10000;
+  transition: top 200ms ease;
+  text-decoration: none;
+}
+
+.skip-to-content:focus {
+  top: 0;
+  outline: 3px solid white;
+  outline-offset: 2px;
+}
+
+/* Improved hover states for cards */
+.card:hover,
+.article-card:hover,
+.resource-card:hover,
+.tool-card:hover {
+  outline: 2px solid var(--teal);
+  outline-offset: -2px;
+}
+
+/* Better color contrast for muted text */
+.article-card-meta {
+  color: var(--text-secondary); /* upgrade from --text-muted for better contrast */
+}
+
+/* Improve link underlines for better visibility */
+.article-body a,
+.prose a,
+.glossary-term a,
+.related-terms a {
+  text-decoration: underline;
+  text-decoration-color: var(--teal);
+  text-underline-offset: 2px;
+}
+
+.article-body a:hover,
+.prose a:hover {
+  text-decoration-color: var(--teal-dark);
+  color: var(--teal-dark);
+}
+
+/* ARIA: Ensure sufficient touch target sizes on mobile */
+@media (max-width: 768px) {
+  .nav-links a,
+  .footer-links a,
+  .alphabet-link,
+  .filter-btn {
+    min-height: 44px;
+    display: inline-flex;
+    align-items: center;
+  }
+}
+
+/* Better contrast for placeholder text */
+::placeholder {
+  color: #6b7280;
+  opacity: 1;
+}
+
+/* Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+  
+  .card:hover,
+  .article-card:hover,
+  .btn:hover {
+    transform: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  :root {
+    --text-muted: #4a5568;
+    --border: #a0aec0;
+  }
+  
+  .btn-primary,
+  .btn-cta {
+    border: 2px solid white;
+  }
+}
+
+/* --- #12: Centralized styles for inline patterns --- */
+
+/* Stat card pattern (used on homepage problem section) */
+.stat-highlight {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: var(--coral);
+  font-family: var(--font-mono);
+}
+
+.stat-description {
+  font-size: 0.9rem;
+  margin-top: 8px;
+}
+
+.stat-source {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+/* Step number pattern (how-it-works) */
+.step-number {
+  min-width: 56px;
+  height: 56px;
+  background: var(--teal);
+  color: white;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.step-number.accent {
+  background: var(--coral);
+}
+
+/* Callout box pattern */
+.callout-box {
+  background: #f8f9fa;
+  border-left: 4px solid var(--teal);
+  padding: 1.5rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 2rem;
+}
+
+/* Dark CTA box pattern */
+.dark-cta {
+  padding: 2rem;
+  background: linear-gradient(135deg, #0F2B46, #00B4A6);
+  border-radius: 12px;
+  color: white;
+  text-align: center;
+}
+
+.dark-cta h3 {
+  color: white;
+  margin-bottom: 0.5rem;
+}
+
+.dark-cta p {
+  margin-bottom: 1rem;
+  opacity: 0.9;
+  color: white;
+}
+
+.dark-cta a {
+  display: inline-block;
+  background: white;
+  color: #0F2B46;
+  padding: 0.75rem 2rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.dark-cta a:hover {
+  background: var(--teal-bg);
+  color: var(--navy);
+}
+
+/* Reviewed-by author box pattern */
+.reviewed-by-box {
+  margin: 40px auto;
+  max-width: 800px;
+  padding: 30px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-left: 4px solid var(--teal);
+  border-radius: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.reviewed-by-box img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.reviewed-by-label {
+  margin: 0 0 5px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #666;
+}
+
+.reviewed-by-name {
+  margin: 0 0 8px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
+.reviewed-by-title {
+  margin: 0 0 5px 0;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--teal);
+}
+
+.reviewed-by-bio {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.6;
+  color: #444;
+}
+
+/* Inline article nav pattern (centralized from 400+ articles) */
+.article-nav {
+  background: #0F2B46;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.article-nav .logo {
+  color: white;
+  font-weight: 800;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.article-nav .logo span {
+  color: #00B4A6;
+}
+
+.article-nav-links {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.article-nav-links a {
+  color: rgba(255, 255, 255, 0.85);
+  text-decoration: none;
+  font-size: 0.9rem;
+}
+
+.article-nav-links a:hover {
+  color: white;
+}
+
+.article-nav-links .join-btn {
+  background: #00B4A6;
+  color: white;
+  padding: 0.4rem 1rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.article-nav-links .join-btn:hover {
+  background: var(--teal-dark);
+}
+
+/* Scroll margin for anchor targets (applies to glossary + all ID targets) */
+[id] {
+  scroll-margin-top: calc(var(--nav-height) + 16px);
+}
+
+/* Blog category filter chips */
+.category-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  margin-bottom: var(--space-xl);
+  justify-content: center;
+}
+
+.category-filter {
+  display: inline-flex;
+  align-items: center;
+  padding: 8px 18px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 600;
+  border: 2px solid var(--border);
+  border-radius: var(--radius-full);
+  background: var(--bg-white);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--duration) var(--ease);
+  text-decoration: none;
+}
+
+.category-filter:hover {
+  border-color: var(--teal);
+  color: var(--teal);
+  background: var(--teal-bg);
+}
+
+.category-filter.active {
+  background: var(--teal);
+  color: white;
+  border-color: var(--teal);
+}
+
+/* Active alphabet link in glossary */
+.alphabet-link.active {
+  background: var(--teal);
+  color: white;
+}

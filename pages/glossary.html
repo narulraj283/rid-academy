@@ -2,6 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+  <meta name="robots" content="noindex, nofollow">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <link rel="canonical" href="https://rid.academy/pages/glossary.html">
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
@@ -742,7 +743,26 @@
                 const letter = this.dataset.letter;
                 const section = document.querySelector(`[data-letter="${letter}"]`);
                 if (section) {
-                    section.scrollIntoView({ behavior: 'smooth' });
+                    const navHeight = 80;
+                    const y = section.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
+                    // Update active state
+                    alphabetLinks.forEach(l => l.classList.remove('active'));
+                    this.classList.add('active');
+                }
+            });
+        });
+        
+        // Also handle direct hash links (from related terms)
+        document.querySelectorAll('.related-terms a').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                const target = document.getElementById(targetId);
+                if (target) {
+                    const navHeight = 80;
+                    const y = target.getBoundingClientRect().top + window.pageYOffset - navHeight;
+                    window.scrollTo({ top: y, behavior: 'smooth' });
                 }
             });
         });

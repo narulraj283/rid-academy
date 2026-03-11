@@ -1,11 +1,24 @@
-/* Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ
-   RID ACADEMY Ã¢ÂÂ Main JavaScript
-   Ã¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂÃ¢ÂÂ */
+/* ================================================
+   RID ACADEMY - Main JavaScript
+   ================================================ */
 
 (function() {
   'use strict';
 
-  // Ã¢ÂÂÃ¢ÂÂ Nav scroll effect Ã¢ÂÂÃ¢ÂÂ
+  // -- Skip to content (accessibility) --
+  var skipLink = document.createElement('a');
+  skipLink.href = '#main-content';
+  skipLink.className = 'skip-to-content';
+  skipLink.textContent = 'Skip to main content';
+  document.body.insertBefore(skipLink, document.body.firstChild);
+
+  // Add main-content ID to first main/article/section after nav
+  var mainContent = document.querySelector('main') || document.querySelector('.hero') || document.querySelector('article') || document.querySelector('section:nth-of-type(2)');
+  if (mainContent && !document.getElementById('main-content')) {
+    mainContent.id = 'main-content';
+  }
+
+  // -- Nav scroll effect --
   const nav = document.querySelector('.nav');
   if (nav) {
     window.addEventListener('scroll', () => {
@@ -13,23 +26,43 @@
     }, { passive: true });
   }
 
-  // Ã¢ÂÂÃ¢ÂÂ Mobile nav toggle Ã¢ÂÂÃ¢ÂÂ
+  // -- Mobile nav toggle --
   const navToggle = document.querySelector('.nav-toggle');
   const navLinks = document.querySelector('.nav-links');
   if (navToggle && navLinks) {
     navToggle.addEventListener('click', () => {
-      navLinks.classList.toggle('open');
+      const isOpen = navLinks.classList.toggle('open');
       navToggle.classList.toggle('active');
+      // ARIA accessibility
+      navToggle.setAttribute('aria-expanded', isOpen);
+      navLinks.setAttribute('aria-hidden', !isOpen);
     });
+    // Set initial ARIA state
+    navToggle.setAttribute('aria-expanded', 'false');
+    navLinks.setAttribute('aria-hidden', 'true');
+    
     navLinks.querySelectorAll('a').forEach(link => {
       link.addEventListener('click', () => {
         navLinks.classList.remove('open');
         navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.setAttribute('aria-hidden', 'true');
       });
+    });
+
+    // Close mobile nav on Escape key
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        navToggle.classList.remove('active');
+        navToggle.setAttribute('aria-expanded', 'false');
+        navLinks.setAttribute('aria-hidden', 'true');
+        navToggle.focus();
+      }
     });
   }
 
-  // Ã¢ÂÂÃ¢ÂÂ Scroll animations (robust with fallback) Ã¢ÂÂÃ¢ÂÂ
+  // -- Scroll animations (robust with fallback) --
   const animateEls = document.querySelectorAll('.animate-in');
 
   if ('IntersectionObserver' in window && animateEls.length > 0) {
@@ -47,8 +80,7 @@
 
     animateEls.forEach(el => observer.observe(el));
 
-    // Safety fallback: if any elements are STILL hidden after 3 seconds,
-    // force them visible (handles edge cases, bot crawlers, weird viewports)
+    // Safety fallback: force visible after 3 seconds
     setTimeout(() => {
       animateEls.forEach(el => {
         if (!el.classList.contains('visible')) {
@@ -57,11 +89,10 @@
       });
     }, 3000);
   } else {
-    // No IntersectionObserver support Ã¢ÂÂ show everything immediately
     animateEls.forEach(el => el.classList.add('visible'));
   }
 
-  // Ã¢ÂÂÃ¢ÂÂ Counter animation Ã¢ÂÂÃ¢ÂÂ
+  // -- Counter animation --
   function animateCounter(el, target, duration) {
     duration = duration || 1500;
     const suffix = el.dataset.suffix || '';
@@ -79,7 +110,6 @@
       }
     }
 
-    // Set initial value to 0 with proper formatting before animation starts
     el.textContent = prefix + '0' + suffix;
     requestAnimationFrame(update);
   }
@@ -101,7 +131,6 @@
 
     counterEls.forEach(function(el) { counterObserver.observe(el); });
   } else {
-    // Fallback Ã¢ÂÂ just show the final values
     counterEls.forEach(function(el) {
       var target = parseInt(el.dataset.count, 10);
       var suffix = el.dataset.suffix || '';
@@ -112,20 +141,25 @@
     });
   }
 
-  // Ã¢ÂÂÃ¢ÂÂ Smooth scroll for anchor links Ã¢ÂÂÃ¢ÂÂ
+  // -- Smooth scroll for anchor links with nav offset --
   document.querySelectorAll('a[href^="#"]').forEach(function(anchor) {
     anchor.addEventListener('click', function(e) {
       var href = this.getAttribute('href');
-      if (href === '#') return; // skip bare '#' links
+      if (href === '#') return;
       var targetEl = document.querySelector(href);
       if (targetEl) {
         e.preventDefault();
-        targetEl.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        var navHeight = nav ? nav.offsetHeight : 72;
+        var y = targetEl.getBoundingClientRect().top + window.pageYOffset - navHeight - 16;
+        window.scrollTo({ top: y, behavior: 'smooth' });
+        // Set focus for accessibility
+        targetEl.setAttribute('tabindex', '-1');
+        targetEl.focus({ preventScroll: true });
       }
     });
   });
 
-  // Ã¢ÂÂÃ¢ÂÂ Share functionality Ã¢ÂÂÃ¢ÂÂ
+  // -- Share functionality --
   window.shareOnPlatform = function(platform, url, title, text) {
     var encodedUrl = encodeURIComponent(url || window.location.href);
     var encodedTitle = encodeURIComponent(title || document.title);
@@ -143,17 +177,17 @@
     }
   };
 
-  // Ã¢ÂÂÃ¢ÂÂ Format currency Ã¢ÂÂÃ¢ÂÂ
+  // -- Format currency --
   window.formatCurrency = function(num) {
     return '$' + Math.round(num).toLocaleString();
   };
 
-  // Ã¢ÂÂÃ¢ÂÂ Format percentage Ã¢ÂÂÃ¢ÂÂ
+  // -- Format percentage --
   window.formatPercent = function(num) {
     return num.toFixed(1) + '%';
   };
 
-  // Ã¢ÂÂÃ¢ÂÂ Email signup handler Ã¢ÂÂÃ¢ÂÂ
+  // -- Email signup handler --
   window.handleEmailSubmit = function(event) {
     event.preventDefault();
     const form = event.target;
@@ -166,7 +200,6 @@
       button.disabled = true;
       button.style.opacity = '0.6';
 
-      // Reset after 3 seconds
       setTimeout(() => {
         button.textContent = originalText;
         button.disabled = false;
@@ -176,12 +209,23 @@
     }
   };
 
+  // -- Add ARIA labels to images without alt text --
+  document.querySelectorAll('img:not([alt])').forEach(function(img) {
+    img.setAttribute('alt', '');
+    img.setAttribute('role', 'presentation');
+  });
+
+  // -- Add role="main" to main content areas --
+  var mainEl = document.querySelector('main');
+  if (mainEl && !mainEl.getAttribute('role')) {
+    mainEl.setAttribute('role', 'main');
+  }
+
 })();
 
 
-// ââ Blog Index: Progressive Card Loading ââ
+// -- Blog Index: Progressive Card Loading --
 (function() {
-  // Only run on blog index page
   if (!window.location.pathname.match(/\/blog\/?$/)) return;
   
   var BATCH = 30;
@@ -193,7 +237,6 @@
     var cards = Array.from(grid.children);
     if (cards.length <= BATCH) return;
     
-    // Hide cards beyond first batch
     var shown = BATCH;
     cards.forEach(function(card, i) {
       if (i >= BATCH) {
@@ -202,12 +245,11 @@
       }
     });
     
-    // Create "Show More" button
     var btn = document.createElement('button');
     btn.textContent = 'Show More (' + (cards.length - shown) + ' remaining)';
-    btn.style.cssText = 'display:block;margin:2rem auto;padding:0.75rem 2rem;background:#00B4A6;color:white;border:none;border-radius:8px;font-size:1rem;font-weight:600;cursor:pointer;transition:background 0.2s';
-    btn.addEventListener('mouseenter', function() { btn.style.background = '#009e92'; });
-    btn.addEventListener('mouseleave', function() { btn.style.background = '#00B4A6'; });
+    btn.className = 'btn btn-primary';
+    btn.style.cssText = 'display:block;margin:2rem auto';
+    btn.setAttribute('aria-label', 'Load more articles');
     
     btn.addEventListener('click', function() {
       var count = 0;

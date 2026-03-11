@@ -2,6 +2,7 @@
 <html lang="en">
  <head>
   <meta charset="utf-8"/>
+  <meta name="robots" content="noindex, nofollow">
   <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
   <link href="https://rid.academy/blog/" rel="canonical"/>
   <link href="/favicon.svg" rel="icon" type="image/svg+xml"/>
@@ -181,6 +182,12 @@
       </button>
       <button class="filter-btn" data-filter="marketing">
        Marketing
+      </button>
+      <button class="filter-btn" data-filter="practice-management">
+       Practice Management
+      </button>
+      <button class="filter-btn" data-filter="legal">
+       Legal &amp; Compliance
       </button>
      </div>
     </div>
@@ -10386,6 +10393,95 @@
    </div>
   </footer>
   <script src="/js/main.js">
+  </script>
+  <!-- Blog Category Filter -->
+  <script>
+  (function() {
+    var filterBtns = document.querySelectorAll('.filter-btn[data-filter]');
+    if (!filterBtns.length) return;
+
+    // Collect all sections and their article cards
+    var allSections = document.querySelectorAll('section.section');
+    var pillarSection = allSections[0]; // First section is Pillar Guides
+    var articleCards = document.querySelectorAll('.article-card[data-category]');
+    var sectionHeaders = {}; // Track section containers
+
+    // Map categories to filter values
+    var categoryMap = {
+      'all': null,
+      'pillar': 'pillar',
+      'ppo-strategy': 'ppo-strategy',
+      'patient-communication': 'patient-communication',
+      'membership': 'membership-plans',
+      'financial': 'financial-planning',
+      'team': 'team-training',
+      'marketing': 'marketing',
+      'practice-management': 'practice-management',
+      'legal': 'legal-compliance'
+    };
+
+    filterBtns.forEach(function(btn) {
+      btn.addEventListener('click', function() {
+        // Update active state
+        filterBtns.forEach(function(b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+
+        var filter = btn.dataset.filter;
+
+        if (filter === 'all') {
+          // Show everything
+          allSections.forEach(function(s) { s.style.display = ''; });
+          articleCards.forEach(function(card) { card.style.display = ''; });
+          // Re-trigger lazy loading
+          var showMoreBtns = document.querySelectorAll('section.section button[aria-label="Load more articles"]');
+          showMoreBtns.forEach(function(b) { b.style.display = ''; });
+          return;
+        }
+
+        var mappedCategory = categoryMap[filter] || filter;
+
+        if (filter === 'pillar') {
+          // Show only pillar section
+          allSections.forEach(function(s, i) {
+            s.style.display = (i === 0) ? '' : 'none';
+          });
+          return;
+        }
+
+        // For category filters, show all sections but filter cards
+        allSections.forEach(function(s) { s.style.display = ''; });
+        if (pillarSection) pillarSection.style.display = 'none';
+
+        var visibleCount = 0;
+        articleCards.forEach(function(card) {
+          var cardCategory = card.dataset.category;
+          if (cardCategory === mappedCategory) {
+            card.style.display = '';
+            visibleCount++;
+          } else {
+            card.style.display = 'none';
+          }
+        });
+
+        // Hide "Show More" buttons during filtering
+        var showMoreBtns = document.querySelectorAll('section.section button[aria-label="Load more articles"]');
+        showMoreBtns.forEach(function(b) { b.style.display = 'none'; });
+
+        // Update count display
+        var badge = document.querySelector('.hero .badge');
+        if (badge && filter !== 'all') {
+          badge.textContent = visibleCount + ' Articles in ' + btn.textContent.trim();
+        }
+      });
+    });
+
+    // Also support URL hash filtering (e.g., /blog/#ppo-strategy)
+    var hash = window.location.hash.substring(1);
+    if (hash && categoryMap[hash]) {
+      var targetBtn = document.querySelector('.filter-btn[data-filter="' + hash + '"]');
+      if (targetBtn) targetBtn.click();
+    }
+  })();
   </script>
  
 <div style="margin: 40px auto; max-width: 800px; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #00B4A6; border-radius: 8px; display: flex; align-items: flex-start; gap: 20px;">
