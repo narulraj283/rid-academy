@@ -1,11 +1,6 @@
 User-agent: *
-Disallow: /
-
-# Staging site - do not index
-# Remove Disallow: / and uncomment below when launching rid.academy
-# User-agent: *
-# Allow: /
-# Disallow: /admin/
-# Disallow: /data/
+Allow: /
+Disallow: /admin/
+Disallow: /data/
 
 Sitemap: https://rid.academy/sitemap.xml
