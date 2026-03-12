@@ -1891,3 +1891,42 @@ textarea:focus-visible,
   background: var(--teal);
   color: white;
 }
+
+/* ============================================
+   TABLET RESPONSIVE - 769px to 1024px
+   ============================================ */
+@media (min-width: 769px) and (max-width: 1024px) {
+  /* Reduce nav font size on tablet */
+  .nav-links a { font-size: 0.85rem; }
+  .nav-links { gap: var(--space-sm); }
+
+  /* Adjust hero text */
+  .hero h1 { font-size: 2.2rem; }
+  .hero .large { font-size: 1rem; }
+
+  /* Stack stat cards to 2 columns */
+  .stats-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Testimonials 2-col */
+  .testimonials-grid { grid-template-columns: repeat(2, 1fr); }
+
+  /* Reduce section padding */
+  .section { padding: 3rem 0; }
+  .container { padding: 0 1.5rem; }
+}
+
+/* ============================================
+   MOBILE RESPONSIVE - 480px and below
+   ============================================ */
+@media (max-width: 480px) {
+  /* Ensure hero buttons stack */
+  .hero .flex { flex-direction: column; align-items: stretch; }
+  .hero .btn { width: 100%; text-align: center; }
+
+  /* Reduce h1/h2 sizes further */
+  h1 { font-size: 1.6rem; }
+  h2 { font-size: 1.3rem; }
+
+  /* Full-width cards */
+  .card, .tool-card { margin: 0 -0.5rem; }
+}
