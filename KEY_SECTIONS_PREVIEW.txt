@@ -1,0 +1,184 @@
+========================================
+KEY ARTICLE SECTIONS PREVIEW
+========================================
+
+ARTICLE TITLE:
+"How to Set Dental Fees: The Science Behind Profitable Fee Schedules"
+
+AUTHOR: Naren Arulrajah, CEO of Ekwa Marketing
+
+OPENING HOOK:
+"You've invested hundreds of thousands of dollars in your dental practice. Your team is skilled, your equipment is state-of-the-art, and your patients love you. Yet somehow, your profit margins feel razor-thin. You're working harder than ever, but taking home less than you should.
+
+The culprit? Dental fees that were set years ago and never properly adjusted."
+
+========================================
+MAJOR SECTIONS INCLUDED:
+========================================
+
+1. INTRODUCTION: The Fee-Setting Crisis
+   - Problem statement (70% of practices haven't updated fees in 18+ months)
+   - Impact data ($50,000-$150,000 annual profit increase potential)
+   - RID Academy positioning on fee independence
+
+2. WHY FEES MATTER
+   - 2024 industry data on fee impact
+   - Connection between fees and PPO dependence
+   - Freedom = fee strategy
+
+3. THE FOUR PILLARS OF DENTAL FEE-SETTING
+   - UCR Data (with 5 sources)
+   - True Cost of Service (TCOS)
+   - Desired Profit Margin (25-35% target)
+   - Market Positioning (premium/value/budget)
+
+4. STEP-BY-STEP PROCESS (7 STEPS)
+   - Step 1: Calculate Overhead Rate
+   - Step 2: Determine Profit Margin
+   - Step 3: Map Top 20 Procedures
+   - Step 4: Research Market UCR
+   - Step 5: Calculate Time/Resource Costs
+   - Step 6: Set Fee Targets
+   - Step 7: Validate Against Market
+
+5. PRACTICAL EXAMPLES & DATA TABLE
+   - Real ADA procedure codes (D1110, D0120, D2740, D2750, D6010)
+   - Sample calculations with full breakdown
+   - Overhead allocation examples
+   - Recommended vs. UCR comparison
+
+6. PPO WRITE-OFF STRATEGY
+   - Why lower fees = deeper discounts
+   - The write-off misconception
+   - Strategic fee positioning
+   - Revenue impact data
+
+7. IMPLEMENTATION STRATEGIES
+   - Gradual increase approach (12-24 months, 3-5% increments)
+   - One-time reset approach (8-12% immediate)
+   - Pros/cons of each
+   - Real-world recommendations
+
+8. PATIENT COMMUNICATION
+   - "Sticker Shock" conversation framework
+   - Confidence-building language
+   - What NOT to do (5 mistakes to avoid)
+   - Pre-emptive value positioning
+
+9. DIAGNOSTIC CHECKLIST
+   - 7 questions to assess if fees are too low
+   - Benchmarks for profitability
+   - Red flags for underpricing
+
+10. COMMON MISTAKES
+    - Setting fees based only on competitors
+    - Frequent fee changes
+    - Across-the-board percentages
+    - Ignoring material cost inflation
+    - No overhead understanding
+
+11. SPECIAL SITUATIONS
+    - Cosmetic-heavy practices
+    - High-volume practices
+    - Boutique/premium practices
+    - Rural practices
+    - Multi-doctor practices
+
+12. IMPLEMENTATION ROADMAP
+    - Month 1: Preparation & Communication
+    - Month 2-3: Patient Communication Launch
+    - Month 4+: Ongoing Management
+
+13. FAQ SECTION (9 QUESTIONS)
+    - Handling significantly underpriced fees
+    - Different fees for different plans
+    - Fee adjustment frequency
+    - Patient attrition risks
+    - High overhead handling
+    - Payment plans vs. discounts
+    - Existing patient transitions
+    - Economic downturn strategy
+    - Market achievability testing
+
+14. BONUS: Key Takeaways & CTA
+    - 8-point summary
+    - Call to action to RID Academy
+    - Author bio
+
+========================================
+KEY FORMULAS & NUMBERS:
+========================================
+
+CORE FORMULA:
+(Overhead Cost + Material Cost) ÷ (1 - Desired Profit Margin %) = Target Fee
+
+EXAMPLE CALCULATION:
+Crown with $600 overhead allocation + $120 materials
+Targeting 30% profit
+= ($720) ÷ (1 - 0.30)
+= $720 ÷ 0.70
+= $1,029 minimum fee
+
+SAMPLE PROCEDURE FEES:
+- D1110 (Prophy): $130 (75th percentile)
+- D0120 (X-rays): $90 (75th percentile)
+- D2740 (Crown PFM): $1,200 (75th percentile)
+- D2750 (Crown Ceramic): $1,100 (75th percentile)
+- D6010 (Implant): $2,100 (75th percentile)
+
+FEE INCREASE IMPACT:
+5-8% increase = $50,000-$150,000 additional annual profit
+
+TARGET BENCHMARKS:
+- Overhead: 60% (typical range: 50-70%)
+- Net Profit Margin: 25-35%
+- Fee Positioning: 75-85th percentile of UCR
+
+========================================
+TONE CHARACTERISTICS:
+========================================
+
+✓ Removes anxiety ("Fee-setting is not an art form. It's a science.")
+✓ Empowering ("You cannot reduce PPO dependence without addressing fees first")
+✓ Technical yet accessible (explains complex concepts clearly)
+✓ Confident and non-apologetic (higher fees are justified)
+✓ Action-oriented (every section ends with what to do)
+✓ Data-backed (uses real industry statistics)
+✓ Practice-owner focused (written for their specific needs)
+
+========================================
+INTERACTIVE ELEMENTS:
+========================================
+
+✓ Floating share bar (LinkedIn, Twitter, Email, Copy Link)
+✓ Responsive data table with hover effects
+✓ Styled callout boxes (info and warning variations)
+✓ Step-by-step boxes with visual hierarchy
+✓ FAQ accordion-ready structure
+✓ Mobile-responsive design
+✓ Print-friendly formatting
+✓ Accessibility-compliant (ARIA labels, semantic HTML)
+
+========================================
+SEO OPTIMIZATION:
+========================================
+
+✓ Primary keyword: "dental fee schedule" (15+ natural uses)
+✓ Secondary keywords: naturally integrated throughout
+✓ Meta description: optimized for CTR
+✓ H1/H2/H3 hierarchy: proper structure
+✓ Google Analytics: integrated
+✓ OpenGraph tags: complete
+✓ Canonical URL: set correctly
+✓ Mobile-friendly: responsive design
+✓ Fast loading: Google Fonts preload
+
+========================================
+FILE LOCATION:
+========================================
+
+/tmp/rid-qa/blog/how-to-set-dental-fees-profitable-fee-schedule.html
+
+File size: 54KB
+Content: 4,565 words
+Status: PUBLICATION READY
