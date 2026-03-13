@@ -578,6 +578,27 @@
   <style>img{max-width:100%;height:auto}</style>
   </head>
 <body>
+<!-- Floating Share Bar -->
+<div id="shareBar" style="position:fixed;left:0;top:50%;transform:translateY(-50%);display:flex;flex-direction:column;gap:8px;padding:8px;z-index:50;background:rgba(255,255,255,0.95);border-radius:0 8px 8px 0;box-shadow:2px 2px 10px rgba(0,0,0,0.1)">
+<a id="sh-x" style="width:40px;height:40px;border-radius:50%;background:#1a1a2e;display:flex;align-items:center;justify-content:center;text-decoration:none;color:white;font-size:16px" title="Share on X">𝕏</a>
+<a id="sh-li" style="width:40px;height:40px;border-radius:50%;background:#0077b5;display:flex;align-items:center;justify-content:center;text-decoration:none;color:white;font-weight:700;font-size:14px" title="Share on LinkedIn">in</a>
+<a id="sh-fb" style="width:40px;height:40px;border-radius:50%;background:#1877f2;display:flex;align-items:center;justify-content:center;text-decoration:none;color:white;font-weight:700;font-size:16px" title="Share on Facebook">f</a>
+<a id="sh-em" style="width:40px;height:40px;border-radius:50%;background:#555;display:flex;align-items:center;justify-content:center;text-decoration:none;color:white;font-size:18px" title="Share via Email">✉</a>
+<button id="sh-cp" onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='✓';setTimeout(()=>this.textContent='🔗',2000)})" style="width:40px;height:40px;border-radius:50%;background:#00B4A6;border:none;cursor:pointer;color:white;font-size:16px;display:flex;align-items:center;justify-content:center" title="Copy link">🔗</button>
+</div>
+<script>
+(function(){var u=encodeURIComponent(window.location.href),t=encodeURIComponent(document.title);
+document.getElementById('sh-x').href='https://x.com/intent/tweet?url='+u+'&text='+t;
+document.getElementById('sh-li').href='https://www.linkedin.com/sharing/share-offsite/?url='+u;
+document.getElementById('sh-fb').href='https://www.facebook.com/sharer/sharer.php?u='+u;
+document.getElementById('sh-em').href='mailto:?subject='+t+'&body=Check%20this%20out:%20'+u;
+})();
+</script>
+<style>
+@media(max-width:768px){#shareBar{top:auto!important;bottom:0!important;left:0!important;right:0!important;transform:none!important;flex-direction:row!important;justify-content:center!important;border-radius:8px 8px 0 0!important;padding:8px 16px!important}}
+</style>
+
+
     <div class="progress-bar" id="progressBar"></div>
 
     <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
@@ -686,7 +707,8 @@
 
                     <p>Consider this scenario: You're at 23% Delta revenue (both Premier and PPO combined). Let's break it down:</p>
 
-                    <table class="financial-table">
+                    <style>table{width:100%;border-collapse:collapse}@media(max-width:768px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}</style>
+<table class="financial-table">
                         <tr>
                             <th>Network</th>
                             <th>% of Revenue</th>

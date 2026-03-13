@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preload" href="/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
 
   <script type="application/ld+json">
   {
@@ -134,22 +135,22 @@
         <!-- RESULTS (hidden initially) -->
         <div id="results" style="display: none;">
           <div class="tool-result">
-            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em;">You're Losing Approximately</div>
+            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em;">You're Losing Approximately</div>
             <div id="result-total" class="tool-result-value" style="margin-top: 8px;">$0</div>
             <div class="tool-result-label">per year to PPO write-offs</div>
 
             <div class="tool-result-sub">
               <div>
                 <div id="result-monthly" style="font-size: 1.5rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Per Month</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px;">Per Month</div>
               </div>
               <div>
                 <div id="result-daily" style="font-size: 1.5rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Per Working Day</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px;">Per Working Day</div>
               </div>
               <div>
                 <div id="result-5year" style="font-size: 1.5rem; font-weight: 700; color: var(--coral-light); font-family: var(--font-mono);">$0</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Over 5 Years</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px;">Over 5 Years</div>
               </div>
             </div>
           </div>
@@ -158,7 +159,8 @@
           <div class="mt-xl">
             <h2>Your Breakdown</h2>
             <div class="table-wrap mt-md">
-              <table>
+              <style>table{width:100%;border-collapse:collapse}@media(max-width:768px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}</style>
+<table>
                 <thead>
                   <tr>
                     <th>Metric</th>
@@ -255,7 +257,7 @@
       <div class="grid grid-4" style="gap: 48px;">
         <div>
           <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
-          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Empowering dental practice owners to achieve financial independence.</p>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
           <h2>Tools</h2>

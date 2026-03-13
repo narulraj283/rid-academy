@@ -391,7 +391,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 }
 
 .hero h1 { color: white; max-width: 700px; }
-.hero p { color: rgba(255, 255, 255, 0.8); max-width: 600px; font-size: 1.125rem; }
+.hero p { color: rgba(255, 255, 255, 0.95); max-width: 600px; font-size: 1.125rem; }
 
 .hero-stats {
   display: flex;
@@ -411,7 +411,7 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 
 .hero-stat-label {
   font-size: 0.85rem;
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(255, 255, 255, 0.85);
   margin-top: var(--space-xs);
 }
 
@@ -553,7 +553,7 @@ tr:hover td { background: var(--teal-bg); }
 
 .tool-result-label {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   margin-top: var(--space-sm);
 }
 
@@ -672,12 +672,12 @@ tr:hover td { background: var(--teal-bg); }
 
 .footer {
   background: var(--navy);
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
   padding: var(--space-4xl) 0 var(--space-xl);
 }
 
 .footer h4 { color: white; margin-bottom: var(--space-md); font-size: 0.95rem; }
-.footer a { color: rgba(255, 255, 255, 0.6); font-size: 0.9rem; }
+.footer a { color: rgba(255, 255, 255, 0.85); font-size: 0.9rem; }
 .footer a:hover { color: var(--teal-light); }
 .footer-links { list-style: none; display: flex; flex-direction: column; gap: var(--space-sm); }
 
@@ -1536,7 +1536,7 @@ footer[style*="background:#0F2B46"] {
 }
 
 footer[style*="background:#0F2B46"] a {
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(255, 255, 255, 0.9);
 }
 
 footer[style*="background:#0F2B46"] a:hover {

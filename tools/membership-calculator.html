@@ -21,7 +21,8 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="preload" href="/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
 
   <script type="application/ld+json">
   {
@@ -255,22 +256,22 @@
 
           <!-- Main Result -->
           <div class="tool-result">
-            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.6); text-transform: uppercase; letter-spacing: 0.08em;">Recommended Monthly Price</div>
+            <div style="font-size: 0.9rem; color: rgba(255,255,255,0.85); text-transform: uppercase; letter-spacing: 0.08em;">Recommended Monthly Price</div>
             <div id="result-monthly" class="tool-result-value" style="margin-top: 8px;">$0</div>
             <div class="tool-result-label">with annual option at <span id="result-annual" style="font-weight: 700;">$0</span></div>
 
             <div class="tool-result-sub">
               <div>
                 <div id="result-monthly-low" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Conservative</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px;">Conservative</div>
               </div>
               <div>
                 <div id="result-monthly-mid" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Recommended</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px;">Recommended</div>
               </div>
               <div>
                 <div id="result-monthly-high" style="font-size: 1.25rem; font-weight: 700; color: var(--teal-light); font-family: var(--font-mono);">$0</div>
-                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.5); margin-top: 4px;">Premium</div>
+                <div style="font-size: 0.8rem; color: rgba(255,255,255,0.85); margin-top: 4px;">Premium</div>
               </div>
             </div>
           </div>
@@ -294,7 +295,8 @@
           <div class="mt-xl">
             <h3>Financial Metrics</h3>
             <div class="table-wrap mt-md">
-              <table>
+              <style>table{width:100%;border-collapse:collapse}@media(max-width:768px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}</style>
+<table>
                 <thead>
                   <tr>
                     <th>Metric</th>
@@ -451,7 +453,7 @@
       <div class="grid grid-4" style="gap: 48px;">
         <div>
           <div class="nav-logo" style="margin-bottom: 16px;">RID<span>.academy</span></div>
-          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
+          <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
           <h3>Tools</h3>

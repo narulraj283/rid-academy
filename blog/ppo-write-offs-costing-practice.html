@@ -29,7 +29,8 @@
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" onload="this.onload=null;this.rel='stylesheet'">
 <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap"></noscript>
   <!-- Styles -->
-  <link href="/css/styles.css" rel="stylesheet"/>
+  <link rel="preload" href="/css/styles.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <noscript><link rel="stylesheet" href="/css/styles.css"></noscript>
   <!-- Article Schema.org Structured Data -->
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "PPO Write-Offs Are Costing Your Practice More Than You Think", "description": "Discover the true cost of PPO write-offs on your dental practice. Real data shows dentists lose 35-45% of their potential revenue to write-offs.", "image": "https://rid.academy/images/og-ppo-writeoffs.png", "datePublished": "2026-03-04T00:00:00Z", "author": {"@type": "Organization", "name": "RID Academy Team", "url": "https://rid.academy"}, "publisher": {"@type": "Organization", "name": "RID Academy", "logo": {"@type": "ImageObject", "url": "https://rid.academy/images/logo.png"}}, "reviewedBy": {"@type": "Person", "name": "Naren Arulrajah", "jobTitle": "CEO & Founder", "worksFor": {"@type": "Organization", "name": "Ekwa Marketing"}}}</script>
   <!-- FAQ Schema.org Structured Data -->
@@ -336,7 +337,8 @@
       <h2 style="color: white; margin-top: 0;">
        Sample Practice Financial Impact
       </h2>
-      <table style="width: 100%; color: white; border-collapse: collapse; font-size: 0.95rem;">
+      <style>table{width:100%;border-collapse:collapse}@media(max-width:768px){table{display:block;overflow-x:auto;-webkit-overflow-scrolling:touch}}</style>
+<table style="width: 100%; color: white; border-collapse: collapse; font-size: 0.95rem;">
        <tbody>
         <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);">
          <td style="padding: 12px 0;">
@@ -1122,7 +1124,7 @@
         .academy
        </span>
       </div>
-      <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">
+      <p style="font-size: 0.85rem; color: rgba(255,255,255,0.85);">
        The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.
       </p>
      </div>
