@@ -38,7 +38,8 @@
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
     <!-- Main stylesheet -->
     <link rel="stylesheet" href="/css/styles.css">
@@ -742,20 +743,20 @@
   </head>
 <body>
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -766,6 +767,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Share Sidebar -->
     <div class="share-sidebar">
@@ -805,7 +807,7 @@
 
             <!-- CTA Box - Lead Capture -->
             <div class="cta-box">
-                <h3>Get the Free PPO Resignation Checklist</h3>
+                <h2>Get the Free PPO Resignation Checklist</h2>
                 <p>A step-by-step checklist covering all 7 steps in this guide—use it to track your progress and ensure nothing falls through the cracks.</p>
                 <form id="ctaForm" class="cta-form">
                     <input type="text" id="ctaName" placeholder="Your Name" required>
@@ -815,7 +817,7 @@
                     <button type="submit">Download Free Checklist</button>
                 </form>
                 <div class="cta-success" id="ctaSuccess">
-                    <h4>✓ Check your email!</h4>
+                    <h2>✓ Check your email!</h2>
                     <p>Your PPO Resignation Checklist is on its way. You can also <a href="#" id="pdfLink">download it here</a>.</p>
                 </div>
             </div>
@@ -858,7 +860,7 @@
 
             <p>Dropping PPO plans isn't about quitting cold turkey. That's how you lose patients and panic. The best approach is methodical, strategic, and patient-focused. Here are the seven steps that actually work:</p>
 
-            <h3>Step 1: Run Your Numbers (Weeks 1-2)</h3>
+            <h2>Step 1: Run Your Numbers (Weeks 1-2)</h2>
 
             <p>You can't make a smart business decision without data. Before you resign from a single PPO plan, you need to know exactly what each plan is costing you.</p>
 
@@ -876,7 +878,7 @@
 
             <p><strong>Pro tip:</strong> Use your practice management software's reporting to pull this data. Most systems can generate patient ledgers by insurance plan. If you're struggling to extract this data, hire a practice consultant for a few hours to set up the right reports. It's $500-1,000 well spent.</p>
 
-            <h3>Step 2: Identify Which PPOs to Drop First (Weeks 2-3)</h3>
+            <h2>Step 2: Identify Which PPOs to Drop First (Weeks 2-3)</h2>
 
             <p>Not all PPO plans are created equal. Some are part of your patient base and worth fighting for. Others are anchor-weights holding back your practice.</p>
 
@@ -900,7 +902,7 @@
 
             <p>Don't touch major regional plans yet. Those come later, after you've built out your fee-for-service infrastructure and patient acceptance is higher.</p>
 
-            <h3>Step 3: Build Your Membership Plan Before You Resign (Weeks 4-8)</h3>
+            <h2>Step 3: Build Your Membership Plan Before You Resign (Weeks 4-8)</h2>
 
             <p>This is critical: <em>Never resign from a PPO without having a replacement offering ready for your patients.</em></p>
 
@@ -927,7 +929,7 @@
 
             <p>Build it into your practice management software. Train your team on how to present it. Test it with new patients before you announce it to existing patients.</p>
 
-            <h3>Step 4: Train Your Team (Weeks 8-10)</h3>
+            <h2>Step 4: Train Your Team (Weeks 8-10)</h2>
 
             <p>This is where most practices fail. You have a brilliant plan, but your team doesn't know how to talk about it, so patients see it as a threat rather than an opportunity.</p>
 
@@ -935,7 +937,7 @@
 
             <p>Then give your team the scripts they need. Role-play. Practice. Because if your front desk staff sounds uncertain when they present this to a patient, the patient will sense doubt and resist.</p>
 
-            <h3>Step 5: Send Patient Notification Letters (Weeks 10-12)</h3>
+            <h2>Step 5: Send Patient Notification Letters (Weeks 10-12)</h2>
 
             <p>Timing matters. You need to give patients 90 days' notice before you stop accepting their insurance plan. This gives them time to understand their options, ask questions, and make decisions without feeling rushed.</p>
 
@@ -953,7 +955,7 @@
 
             <p>Send these letters via email and mail. Give patients your office manager's direct phone number. Expect calls. Be ready for them.</p>
 
-            <h3>Step 6: Submit Resignation Letters to Insurance Companies (Week 12)</h3>
+            <h2>Step 6: Submit Resignation Letters to Insurance Companies (Week 12)</h2>
 
             <p>Once patients have been notified, submit your official resignation to the insurance company. Check each plan's contract for the specific process and required notice period (it's usually 30-90 days).</p>
 
@@ -970,7 +972,7 @@
 
             <p>Keep copies. Document the date sent. Follow up in writing if you don't get confirmation within two weeks.</p>
 
-            <h3>Step 7: Track and Adjust (Ongoing)</h3>
+            <h2>Step 7: Track and Adjust (Ongoing)</h2>
 
             <p>After you drop a PPO plan, monitor these metrics weekly:</p>
 
@@ -988,7 +990,7 @@
 
             <p>This is the make-or-break element. Your team's words will either ease patients' transition or trigger resistance. Here are scripts that work:</p>
 
-            <h3>Initial Conversation (Patient Calls About Coverage)</h3>
+            <h2>Initial Conversation (Patient Calls About Coverage)</h2>
 
             <div class="script-box">
                 <p><strong class="speaker">Patient:</strong> "Do you take my insurance? I have [Insurance Plan]."</p>
@@ -998,7 +1000,7 @@
                 <p><strong class="speaker">Front Desk:</strong> "That's totally fair. Most patients tell us that when they add up their insurance premiums, deductibles, and co-pays, our membership plan actually costs them less—and they get better care. Would you like to schedule a quick chat with our team? No pressure. We can walk through your specific situation."</p>
             </div>
 
-            <h3>Explaining the Membership Plan</h3>
+            <h2>Explaining the Membership Plan</h2>
 
             <div class="script-box">
                 <p><strong class="speaker">Office Manager:</strong> "Here's why we're doing this. Under insurance, we're incentivized to see as many patients as possible in the shortest amount of time. Under our membership plan, we're incentivized to keep you healthy and build a long-term relationship with you."</p>
@@ -1006,7 +1008,7 @@
                 <p><strong class="speaker">Office Manager:</strong> "Over a year, that's $1,188. Compare that to your insurance premiums plus deductibles plus copays, and you're usually coming out ahead. But more importantly, you get better care."</p>
             </div>
 
-            <h3>Addressing Pushback</h3>
+            <h2>Addressing Pushback</h2>
 
             <div class="script-box">
                 <p><strong class="speaker">Patient:</strong> "This sounds expensive. Can't I just use another dentist?"</p>
@@ -1018,31 +1020,31 @@
             <!-- Common Mistakes -->
             <h2>Common Mistakes Practices Make (And How to Avoid Them)</h2>
 
-            <h3>Mistake #1: Dropping All PPOs at Once</h3>
+            <h2>Mistake #1: Dropping All PPOs at Once</h2>
 
             <p><strong>What happens:</strong> You resign from five plans in one month. Your team is overwhelmed explaining the change to every patient. Patient retention tanks. You panic and reinstate your contracts.</p>
 
             <p><strong>The fix:</strong> Stagger resignations. Drop one plan every 4-6 weeks. This gives your team time to build confidence, your systems time to stabilize, and you time to monitor results. If something isn't working, you can adjust before moving to the next plan.</p>
 
-            <h3>Mistake #2: Not Having a Membership Plan Ready</h3>
+            <h2>Mistake #2: Not Having a Membership Plan Ready</h2>
 
             <p><strong>What happens:</strong> You resign from a PPO. Patients ask "what do I do now?" You have no answer except "we can bill you at our full fee." Patient leaves.</p>
 
             <p><strong>The fix:</strong> Build and test your membership plan before you resign from the first PPO. Make sure your team knows how to present it. Make sure your practice management software can process it. Get it right before you go public.</p>
 
-            <h3>Mistake #3: Surprising Your Team</h3>
+            <h2>Mistake #3: Surprising Your Team</h2>
 
             <p><strong>What happens:</strong> You announce the PPO resignation in a 5-minute staff meeting. Your front desk staff sound uncertain when they explain it to patients. Patients sense doubt and resist.</p>
 
             <p><strong>The fix:</strong> Involve your team from the beginning. Explain the numbers (they're usually shocked by how much PPO write-offs cost). Let them help design the membership plan. Role-play conversations. Give them 3-4 weeks to get comfortable before the first patient conversation.</p>
 
-            <h3>Mistake #4: Weak Patient Communication</h3>
+            <h2>Mistake #4: Weak Patient Communication</h2>
 
             <p><strong>What happens:</strong> You send a vague email saying "we're making changes." Patients get confused. They assume you're raising prices or cutting quality. They call and complain or just leave.</p>
 
             <p><strong>The fix:</strong> Over-communicate. Send multiple letters (email, mail, and a call from the office manager). Post it on your website. Have your dentist explain it during patient visits. Frame it positively: "We're investing in better care for you."</p>
 
-            <h3>Mistake #5: Not Managing Patient Expectations on Revenue</h3>
+            <h2>Mistake #5: Not Managing Patient Expectations on Revenue</h2>
 
             <p><strong>What happens:</strong> You're excited because you resigned from the $150K/year write-off plan. Then patient retention is lower than expected and revenue actually dips. You regret the decision.</p>
 
@@ -1155,18 +1157,18 @@
 
             <!-- Related Articles -->
             <div class="related-articles">
-                <h3>Related Articles</h3>
+                <h2>Related Articles</h2>
                 <div class="related-grid">
                     <a href="/pillar-membership-plans.html" class="related-card">
-                        <h4>How to Build a Profitable Membership Plan</h4>
+                        <h2>How to Build a Profitable Membership Plan</h2>
                         <p>The complete guide to designing, pricing, and marketing a membership plan that attracts patients and generates recurring revenue.</p>
                     </a>
                     <a href="/pillar-fee-for-service.html" class="related-card">
-                        <h4>Transitioning to 100% Fee-for-Service</h4>
+                        <h2>Transitioning to 100% Fee-for-Service</h2>
                         <p>Why fee-for-service isn't for every practice—and how to know if it's right for yours. Strategic considerations and implementation steps.</p>
                     </a>
                     <a href="/pillar-insurance-contracts.html" class="related-card">
-                        <h4>Renegotiating Insurance Contracts: A Dentist's Guide</h4>
+                        <h2>Renegotiating Insurance Contracts: A Dentist's Guide</h2>
                         <p>Before you drop a PPO plan, learn what negotiating leverage you actually have and how to improve reimbursement rates.</p>
                     </a>
                 </div>
@@ -1174,7 +1176,7 @@
 
             <!-- Bottom CTA -->
             <div class="bottom-cta">
-                <h3>Ready to Take Control of Your Practice?</h3>
+                <h2>Ready to Take Control of Your Practice?</h2>
                 <p>Drop PPO plans strategically, build recurring revenue with membership, and reclaim the practice you imagined.</p>
                 <a href="https://rid.academy/schedule-call">Schedule a Free Strategy Call</a>
             </div>
@@ -1193,11 +1195,12 @@
 </article>
 
     <!-- Footer -->
-    <footer class="footer">
+    </main>
+<footer class="footer">
         <div class="footer-inner">
             <div class="footer-grid">
                 <div class="footer-col">
-                    <h4>Tools</h4>
+                    <h2>Tools</h2>
                     <ul>
                         <li><a href="/tools/revenue-calculator">Revenue Calculator</a></li>
                         <li><a href="/tools/fee-schedule">Fee Schedule Builder</a></li>
@@ -1206,7 +1209,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Learn</h4>
+                    <h2>Learn</h2>
                     <ul>
                         <li><a href="/blog/">Blog</a></li>
                         <li><a href="/resources/">Resources</a></li>
@@ -1215,7 +1218,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Community</h4>
+                    <h2>Community</h2>
                     <ul>
                         <li><a href="/pages/community.html">Join Free</a></li>
                         <li><a href="/pages/summit.html">Annual Summit</a></li>
@@ -1224,7 +1227,7 @@
                     </ul>
                 </div>
                 <div class="footer-col">
-                    <h4>Company</h4>
+                    <h2>Company</h2>
                     <ul>
                         <li><a href="/pages/about.html">About RID</a></li>
                         <li><a href="/pages/privacy.html">Privacy Policy</a></li>

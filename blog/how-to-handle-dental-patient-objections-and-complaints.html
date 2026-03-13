@@ -34,7 +34,8 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 
     <title>How to Handle Dental Patient Objections and Complaints</title>
 
@@ -644,20 +645,20 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -709,18 +710,18 @@
                 <h3>The Four Root Causes of Patient Objections</h3>
                 <p>Research in patient communication and behavioral economics reveals that most objections fall into four categories:</p>
 
-                <h4>1. Fear and Anxiety</h4>
+                <h3>1. Fear and Anxiety</h3>
                 <p>When a patient says, "I need to think about it," they might really be saying, "I'm nervous about treatment." Fear of pain, fear of the unknown, fear of sitting in the chair—these manifest as hesitation and delay tactics. A patient who says they need time to consult their spouse often means they're anxious and want emotional support for a scary decision.</p>
                 <p>Your response should acknowledge the fear, normalize it, and provide reassurance: "A lot of our patients feel nervous about this procedure, which is completely normal. Let me tell you what to expect so there are no surprises."</p>
 
-                <h4>2. Lack of Trust (In You or the Treatment)</h4>
+                <h3>2. Lack of Trust (In You or the Treatment)</h3>
                 <p>Some objections really mean "I don't believe this is necessary" or "I don't trust that you know what you're doing." When a patient insists on basic treatment only, they might be questioning whether the comprehensive plan is really required or if you're just trying to upsell them.</p>
                 <p>This requires patient education, evidence-based explanations, and sometimes intra-oral cameras or radiographs to show them what you see. Trust is built through clarity and respect for their intelligence.</p>
 
-                <h4>3. Financial Constraints or Perceived High Cost</h4>
+                <h3>3. Financial Constraints or Perceived High Cost</h3>
                 <p>This is the most obvious one, but it's not always what it seems. "That's too expensive" sometimes means "I can't afford it," but it can also mean "I don't see the value," or "I need to know my options." The solution varies dramatically depending on which meaning applies.</p>
 
-                <h4>4. Time and Inconvenience</h4>
+                <h3>4. Time and Inconvenience</h3>
                 <p>Patients live busy lives. "I don't have time for this right now" is a real objection that deserves respect. Flexible scheduling, efficient treatment plans, and showing them how investing time now prevents bigger problems later can address this concern.</p>
 
                 <div class="callout">
@@ -1286,7 +1287,7 @@
                 <div class="article-card">
                     <div class="article-card-image">Fee Setting Strategies</div>
                     <div class="article-card-content">
-                        <h4>How to Set Competitive Fees Without Competing on Price</h4>
+                        <h3>How to Set Competitive Fees Without Competing on Price</h3>
                         <p>Learn a systematic approach to determining your fees based on overhead, experience, and value—not competitor pricing.</p>
                         <a href="https://rid.academy/fee-setting-strategies" class="article-card-link">Read Article →</a>
                     </div>
@@ -1294,7 +1295,7 @@
                 <div class="article-card">
                     <div class="article-card-image">Patient Retention</div>
                     <div class="article-card-content">
-                        <h4>Building a Patient Retention System That Keeps Patients for Life</h4>
+                        <h3>Building a Patient Retention System That Keeps Patients for Life</h3>
                         <p>Create systems for patient follow-up, proactive communication, and lifetime value maximization.</p>
                         <a href="https://rid.academy/patient-retention-system" class="article-card-link">Read Article →</a>
                     </div>
@@ -1302,7 +1303,7 @@
                 <div class="article-card">
                     <div class="article-card-image">Treatment Planning</div>
                     <div class="article-card-content">
-                        <h4>The Art of Comprehensive Treatment Planning and Case Acceptance</h4>
+                        <h3>The Art of Comprehensive Treatment Planning and Case Acceptance</h3>
                         <p>Master the skills to diagnose, plan, and present comprehensive treatment with high acceptance rates.</p>
                         <a href="https://rid.academy/comprehensive-treatment-planning" class="article-card-link">Read Article →</a>
                     </div>
@@ -1315,11 +1316,11 @@
     <footer>
         <div class="footer-grid">
             <div class="footer-section">
-                <h4>About RID Academy</h4>
+                <h3>About RID Academy</h3>
                 <p>RID Academy provides evidence-based dental education for practice owners and team members who want to grow their practices, improve patient outcomes, and enjoy the business side of dentistry.</p>
             </div>
             <div class="footer-section">
-                <h4>Courses</h4>
+                <h3>Courses</h3>
                 <ul>
                     <li><a href="https://rid.academy/courses/patient-communication">Patient Communication Mastery</a></li>
                     <li><a href="https://rid.academy/courses/treatment-planning">Treatment Planning Pro</a></li>
@@ -1328,7 +1329,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h3>Resources</h3>
                 <ul>
                     <li><a href="https://rid.academy/articles">Blog & Articles</a></li>
                     <li><a href="https://rid.academy/templates">Free Templates</a></li>
@@ -1337,7 +1338,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h3>Connect</h3>
                 <ul>
                     <li><a href="https://facebook.com/ridacademy">Facebook</a></li>
                     <li><a href="https://instagram.com/ridacademy">Instagram</a></li>

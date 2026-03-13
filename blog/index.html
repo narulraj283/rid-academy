@@ -24,7 +24,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap"></noscript>
   <!-- Styles -->
   <link href="/css/styles.css" rel="stylesheet"/>
   <!-- Structured Data -->
@@ -93,7 +94,7 @@
       </a>
      </li>
      <li>
-      <a class="nav-link" href="/podcast/" target="_blank">
+      <a class="nav-link" href="/podcast/" target="_blank" rel="noopener noreferrer">
        Podcast
       </a>
      </li>
@@ -138,6 +139,7 @@
     </button>
    </div>
   </nav>
+<main>
   <!-- === HERO === -->
   <section class="hero">
    <div class="hero-bg">
@@ -10126,9 +10128,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          Pillar Guides
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Comprehensive foundational content
         </p>
@@ -10141,9 +10143,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          PPO Strategy (13 articles)
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Dropping, negotiating, and managing PPO relationships
         </p>
@@ -10156,9 +10158,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          Patient Communication (4 articles)
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Scripts, templates, and messaging strategies
         </p>
@@ -10171,9 +10173,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          Membership Plans (0 articles)
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Design, pricing, and program management
         </p>
@@ -10186,9 +10188,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          Financial Planning (4 articles)
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Revenue analysis, profitability, and modeling
         </p>
@@ -10201,9 +10203,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          Team Training (2 articles)
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Alignment, role training, and change management
         </p>
@@ -10216,9 +10218,9 @@
      <div class="topic-card animate-in" style="padding: 20px 24px; border: 2px solid var(--border); border-radius: var(--radius-md); text-decoration: none; transition: all var(--duration) var(--ease); display: block;">
       <div style="display: flex; justify-content: space-between; align-items: center;">
        <div>
-        <h4 style="color: var(--navy); margin: 0 0 4px 0;">
+        <h3 style="color: var(--navy); margin: 0 0 4px 0;">
          Marketing (3 articles)
-        </h4>
+        </h3>
         <p style="color: var(--text-secondary); font-size: 0.85rem; margin: 0;">
          Growing your fee-for-service patient base
         </p>
@@ -10278,7 +10280,8 @@
    </div>
   </section>
   <!-- === FOOTER === -->
-  <footer class="footer">
+  </main>
+<footer class="footer">
    <div class="container">
     <div class="grid grid-4" style="gap: 48px;">
      <div>
@@ -10293,9 +10296,9 @@
       </p>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h3 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Tools
-      </h4>
+      </h3>
       <ul class="footer-links">
        <li>
         <a href="/tools/ppo-calculator.html">
@@ -10320,9 +10323,9 @@
       </ul>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h3 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Learn
-      </h4>
+      </h3>
       <ul class="footer-links">
        <li>
         <a href="/blog/">
@@ -10347,9 +10350,9 @@
       </ul>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h3 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Company
-      </h4>
+      </h3>
       <ul class="footer-links">
        <li>
         <a href="/pages/about.html">

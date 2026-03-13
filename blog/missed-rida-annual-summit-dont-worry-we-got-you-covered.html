@@ -17,7 +17,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "RIDA Summit Highlights: How to Build a Practice Free From PPO Dependence", "description": "Key lessons from the 2024 RIDA Annual Summit on systems, membership plans, and marketing.", "datePublished": "2024-11-15", "dateModified": "2026-03-05", "author": {"@type": "Organization", "name": "RID Academy"}, "publisher": {"@type": "Organization", "name": "RID Academy"}, "reviewedBy": {"@type": "Person", "name": "Naren Arulrajah", "jobTitle": "CEO & Founder", "worksFor": {"@type": "Organization", "name": "Ekwa Marketing"}}}</script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,7 +27,7 @@ nav { background: #0F2B46; padding: 1rem 2rem; display: flex; align-items: cente
 nav a { color: white; font-weight: 800; font-size: 1.1rem; text-decoration: none; }
 nav a span { color: #00B4A6; }
 nav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; }
+nav-links a { color:#ffffff; text-decoration: none; font-size: 0.9rem; }
 .hero { background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%); color: white; padding: 5rem 2rem 4rem; }
 .hero-content { max-width: 900px; margin: 0 auto; }
 .badge { display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.2rem; }
@@ -123,20 +124,20 @@ gtag('config', 'G-YB2QDRNZ1D');
 }
 </style>
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -147,6 +148,7 @@ gtag('config', 'G-YB2QDRNZ1D');
       }
     </style>
   </nav>
+<main>
 
 <section class="hero">
   <div class="hero-content">
@@ -171,7 +173,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <p>The practitioners who succeed are not guessing. They're not making decisions based on Facebook threads or emotional frustration with insurance companies. They're following systems, tracking numbers, and making calculated moves.</p>
 
 <div class="highlight-box">
-<h4>Key Summit Principle</h4>
+<h3>Key Summit Principle</h3>
 <p>"Reducing insurance dependence is 100% possible when you follow a system. Not when you guess. Not when you panic-drop a plan."</p>
 </div>
 
@@ -194,7 +196,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <h2>Membership Plans: The Buffer Strategy</h2>
 
 <div class="speaker-card">
-<h4>Insights on Membership Plans</h4>
+<h3>Insights on Membership Plans</h3>
 <p><span class="speaker-name">Jordan Comstock</span> presented one of the most talked-about sessions of the summit, focusing on membership plans as the strategic foundation for reducing PPO dependence.</p>
 </div>
 
@@ -203,7 +205,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <p>The elegance of membership plans becomes clear in the numbers: patients who invest in plans use more of the benefits. They stay loyal longer. They buy additional services beyond the plan. A patient who's already paying for unlimited whitening or perio maintenance is more likely to accept a comprehensive restorative case because they're mentally invested in the practice.</p>
 
 <div class="highlight-box">
-<h4>Creative Membership Structures</h4>
+<h3>Creative Membership Structures</h3>
 <p>The summit revealed that membership plans extend far beyond simple preventive plans:</p>
 <ul>
 <li>Unlimited whitening plans (cosmetic retention)</li>
@@ -219,7 +221,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <h2>The Five Mistakes That Hold Practices Back</h2>
 
 <div class="speaker-card">
-<h4>Gary Takacs' Five Critical Mistakes</h4>
+<h3>Gary Takacs' Five Critical Mistakes</h3>
 <p><span class="speaker-name">Gary Takacs</span>, who has coached over 400 practices through PPO resignation, presented the most common mistakes he observes.</p>
 </div>
 
@@ -292,7 +294,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <h2>Patient Communication: Guiding With Confidence</h2>
 
 <div class="speaker-card">
-<h4>The Patient Mindset Shift</h4>
+<h3>The Patient Mindset Shift</h3>
 <p><span class="speaker-name">Sina</span> addressed one of the most important aspects of PPO reduction: teaching patients that insurance doesn't determine care quality.</p>
 </div>
 
@@ -321,7 +323,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <h2>The Bottom Line: Three Core Truths</h2>
 
 <div class="highlight-box">
-<h4>What the 2024 Summit Taught Us</h4>
+<h3>What the 2024 Summit Taught Us</h3>
 <p><strong>1. PPO dependency is not your destiny.</strong> Write-offs are not just math—they are missed opportunities. You can change this.</p>
 <p><strong>2. The transition is systematic, not risky.</strong> When you follow the system, you see predictable results. You don't have to guess or gamble.</p>
 <p><strong>3. You don't do this alone.</strong> The practices that succeed have coaching, mentorship, accountability, and community support. You don't have to figure this out in isolation.</p>
@@ -368,17 +370,17 @@ gtag('config', 'G-YB2QDRNZ1D');
 <h3>Related Articles From Summit Topics</h3>
 <div class="related-grid">
 <div class="related-card">
-<h4>How to Build a High-Performing Membership Plan</h4>
+<h3>How to Build a High-Performing Membership Plan</h3>
 <p>Implement the membership structures featured at the summit: unlimited whitening, perio plans, Botox memberships, and more.</p>
 <a href="/articles/membership-plan-strategy">Read More →</a>
 </div>
 <div class="related-card">
-<h4>The 30-Day PPO Data Audit</h4>
+<h3>The 30-Day PPO Data Audit</h3>
 <p>Calculate your actual write-offs, worst-performing plans, and true cost of insurance dependence using summit methodologies.</p>
 <a href="/articles/ppo-data-audit">Read More →</a>
 </div>
 <div class="related-card">
-<h4>Team Communication During Insurance Transitions</h4>
+<h3>Team Communication During Insurance Transitions</h3>
 <p>Use the communication strategies from the summit's operations panel to build team confidence and patient trust.</p>
 <a href="/articles/team-communication-insurance">Read More →</a>
 </div>
@@ -386,7 +388,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 </div>
 
 <div class="source-note">
-<p>This article summarizes key insights from the 2024 RIDA Annual Summit. For the full discussion, listen to Episode 372 of the <a href="/podcast/" target="_blank">Less Insurance Dependence Podcast</a>, which provides a comprehensive recap of all speakers and sessions.</p>
+<p>This article summarizes key insights from the 2024 RIDA Annual Summit. For the full discussion, listen to Episode 372 of the <a href="/podcast/" target="_blank" rel="noopener noreferrer">Less Insurance Dependence Podcast</a>, which provides a comprehensive recap of all speakers and sessions.</p>
 </div>
 
 
@@ -406,5 +408,6 @@ gtag('config', 'G-YB2QDRNZ1D');
 <a href="/blog/" class="back-link">← Back to All Articles</a>
 </div>
 
+</main>
 </body>
 </html>

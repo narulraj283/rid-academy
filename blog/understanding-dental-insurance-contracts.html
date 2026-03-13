@@ -37,7 +37,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 
     <title>Understanding Dental Insurance Contracts: What Every Dentist...</title>
 
@@ -578,20 +579,20 @@
     <div class="reading-progress"></div>
 
     <!-- Navigation Bar -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -602,6 +603,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -627,7 +629,7 @@
         <div class="article-wrapper">
             <!-- Table of Contents -->
             <div class="toc-sidebar">
-                <h3>Table of Contents</h3>
+                <h2>Table of Contents</h2>
                 <ul>
                     <li><a href="#intro">Introduction</a></li>
                     <li><a href="#anatomy">Anatomy of a PPO Contract</a></li>
@@ -662,7 +664,7 @@
 
                     <p>A dental PPO (Preferred Provider Organization) contract is fundamentally a price-fixing agreement between you and an insurance company. You agree to charge specific amounts for specific services, and in exchange, you get access to the insurer's patient population. Let's dissect the critical components.</p>
 
-                    <h3>Fee Schedules: The Foundation of Your Relationship</h3>
+                    <h2>Fee Schedules: The Foundation of Your Relationship</h2>
 
                     <p>The fee schedule is the beating heart of your contract. It lists every service code (using ADA CDT codes) and the maximum amount the insurance company will reimburse for that service. But here's what confuses most dentists: this is NOT the amount you must charge patients.</p>
 
@@ -672,13 +674,13 @@
                         <strong>Key Principle:</strong> Fee schedules cap insurance reimbursement, not your ability to charge. However, billing above the allowance creates patient relations problems and leaves money on the table through improper claim management.
                     </div>
 
-                    <h3>Terms and Duration</h3>
+                    <h2>Terms and Duration</h2>
 
                     <p>Most PPO contracts are 1-3 year agreements with automatic renewal clauses. This is dangerous. An automatic renewal means you've agreed to participate next year unless you provide written notice—often 30-90 days before renewal. Miss that window, and you're locked in for another year.</p>
 
                     <p>The term typically includes language like "at the same fee schedule" or "with annual adjustments of no more than X%." That second part matters. If a contract allows annual fee reductions of up to 2%, that's $3,600 less per year on a $180,000 annual allowance (assuming average collections remain constant).</p>
 
-                    <h3>Obligations and Restrictions</h3>
+                    <h2>Obligations and Restrictions</h2>
 
                     <p>PPO contracts contain explicit and implicit obligations:</p>
 
@@ -690,7 +692,7 @@
                         <li><strong>Credentialing and Compliance:</strong> You must maintain active licenses, malpractice insurance, CE requirements, and comply with anti-fraud regulations</li>
                     </ul>
 
-                    <h3>Non-Compete and Exclusivity Clauses</h3>
+                    <h2>Non-Compete and Exclusivity Clauses</h2>
 
                     <p>Some contracts include "exclusive provider" language that prohibits you from participating in competing networks in the same geographic area. While outright exclusive contracts are rare in dental (they're more common in medical), some plans use "competitive exclusion" language that penalizes participation in lower-fee networks.</p>
 
@@ -702,7 +704,7 @@
 
                     <p>The in-network/out-of-network distinction creates the fundamental tension in PPO economics. Most dentists understand this at a surface level, but the implications run deeper than most realize.</p>
 
-                    <h3>In-Network: The Trade-Off</h3>
+                    <h2>In-Network: The Trade-Off</h2>
 
                     <p>When you're in-network, you agree to accept the insurance company's fee schedule as payment in full (with patient coinsurance). You cannot balance bill the patient for the difference between your actual fee and the insurance allowance.</p>
 
@@ -710,7 +712,7 @@
 
                     <p>The trade-off? You get consistent patient volume and faster claim processing. The insurer handles patient education about what's covered. This is valuable—having 500 predictable patients in-network is worth more than chasing 500 potential out-of-network patients.</p>
 
-                    <h3>Out-of-Network: Freedom with Friction</h3>
+                    <h2>Out-of-Network: Freedom with Friction</h2>
 
                     <p>When you're out-of-network, you can charge whatever you want. The insurance company pays their percentage (often lower than in-network) based on their "usual, customary, reasonable" determination (more on this later). The patient owes their percentage plus any difference between your fee and the insurance allowance.</p>
 
@@ -737,7 +739,7 @@
 
                     <p>This means your OON patients actually have insurance coverage. The problem isn't lack of coverage—it's patient perception. Patients see their in-network benefits and assume OON means "no coverage." Your job is to educate them otherwise.</p>
 
-                    <h3>The OON Education Opportunity</h3>
+                    <h2>The OON Education Opportunity</h2>
 
                     <p>When a new patient asks if you're in their network and you're not, don't just say "no." Instead, explain: "We're not contracted with that plan, which means your benefits work differently with us than they would with a network dentist. However, you still have coverage. You'll likely have a higher out-of-pocket cost because the insurance company pays less to providers they don't have a contract with. Here's what your benefits cover and what you'll be responsible for."</p>
 
@@ -753,7 +755,7 @@
 
                     <p>Yet many contracts include language like "Provider agrees to offer covered and non-covered services at contracted rates" or "Provider's fee schedule applies to all services rendered to plan members." This is overreach. Such clauses are often unenforceable.</p>
 
-                    <h3>The Practical Reality</h3>
+                    <h2>The Practical Reality</h2>
 
                     <p>In practice, you have leverage here. If you want to charge $5,000 for an implant and the contract says you must charge the contracted rate of $4,000, you can challenge that. However, most insurance companies know this and rarely fight it—because the fight would cost more than the difference.</p>
 
@@ -773,7 +775,7 @@
 
                     <p>Example: You sign with "SmilePro Network," which then sells your participation to 15 different insurance companies. You're now in-network with all 15 plans, but your contract is only with SmilePro, not the individual insurers.</p>
 
-                    <h3>Why This Is Dangerous</h3>
+                    <h2>Why This Is Dangerous</h2>
 
                     <p>Lease networks extract an additional layer of profit. SmilePro negotiates lower fees from you than the insurance companies would pay to remain in the network, then pockets the difference. Your negotiating power is eliminated because you're dealing with an intermediary, not the actual insurer.</p>
 
@@ -787,7 +789,7 @@
                         <li>Auditing rights that go beyond what individual insurance companies would have</li>
                     </ul>
 
-                    <h3>When Lease Networks Make Sense</h3>
+                    <h2>When Lease Networks Make Sense</h2>
 
                     <p>Despite the downsides, lease networks aren't all bad. They can make sense if:</p>
 
@@ -806,11 +808,11 @@
 
                     <p>Your fee schedule is a legal document. Every number matters. Yet most dentists have never carefully analyzed theirs. Let's fix that.</p>
 
-                    <h3>Step 1: Organize by Service Category</h3>
+                    <h2>Step 1: Organize by Service Category</h2>
 
                     <p>Pull your fee schedule and organize it into categories: preventive (D1000 series), basic restorative (D2000 series), major restorative (D2600-2700 series), periodontal (D4000 series), orthodontic (D8000 series), etc.</p>
 
-                    <h3>Step 2: Calculate Your Actual Reimbursement Rate</h3>
+                    <h2>Step 2: Calculate Your Actual Reimbursement Rate</h2>
 
                     <p>For each category, calculate your average reimbursement as a percentage of your usual fee. If you usually charge $250 for a crown and the allowance is $180, your reimbursement rate is 72%.</p>
 
@@ -824,7 +826,7 @@
 
                     <p>Deviations from typical patterns reveal negotiating opportunities. If this plan covers major at 35% when the industry standard is 50%, you're undercutting your own fees.</p>
 
-                    <h3>Step 3: Calculate Annual Financial Impact</h3>
+                    <h2>Step 3: Calculate Annual Financial Impact</h2>
 
                     <p>Here's the number that matters most: How much money are you leaving on the table with this plan?</p>
 
@@ -848,7 +850,7 @@
 
                     <p>Yes—but not always, and rarely as much as you'd hope. Here's the honest picture.</p>
 
-                    <h3>Your Negotiating Leverage</h3>
+                    <h2>Your Negotiating Leverage</h2>
 
                     <p>Insurance companies decide participation based on network adequacy (do they have enough dentists in your area?) and patient satisfaction (do patients like your practice?). Your leverage depends on both factors:</p>
 
@@ -856,7 +858,7 @@
 
                     <p><strong>Low Leverage:</strong> You're one of 50 dentists in a saturated market. You have average patient ratings. You have a history of claim denials or audit issues.</p>
 
-                    <h3>The Negotiation Strategy</h3>
+                    <h2>The Negotiation Strategy</h2>
 
                     <p>Step 1: Request a meeting with the plan's contracting representative. Email is fine: "We'd like to discuss our contract terms in advance of our upcoming renewal."</p>
 
@@ -873,7 +875,7 @@
 
                     <p>Step 4: Be prepared to walk away. The strongest negotiating position is willingness to exit. If you say, "If we can't reach an agreement, we'll need to terminate," the insurer takes you seriously.</p>
 
-                    <h3>What to Expect</h3>
+                    <h2>What to Expect</h2>
 
                     <p>Most insurance companies will offer 1-3% increases, rarely more. Their position: "We'd love to pay more, but we're constrained by member premiums and profitability." This is partially true.</p>
 
@@ -887,7 +889,7 @@
 
                     <p>Terminating a PPO contract requires strategy. You want to exit without damaging patient relationships or facing legal complications.</p>
 
-                    <h3>Step 1: Understand Your Exit Options</h3>
+                    <h2>Step 1: Understand Your Exit Options</h2>
 
                     <p>Most contracts allow termination with written notice. Typical notice periods:</p>
 
@@ -899,7 +901,7 @@
 
                     <p>Check your contract's termination section. If you can't find it, contact the insurer's contracting department and ask: "What is the termination notice period for our contract?"</p>
 
-                    <h3>Step 2: Develop a Patient Transition Plan</h3>
+                    <h2>Step 2: Develop a Patient Transition Plan</h2>
 
                     <p>You have 30-90 days before termination. Use this time to:</p>
 
@@ -910,11 +912,11 @@
                         <li><strong>Prepare staff.</strong> Your front desk will field questions. Train them on: "We're leaving this plan to better serve our patients. Here's what your benefits are as an out-of-network patient."</li>
                     </ul>
 
-                    <h3>Step 3: Watch for Grandfather Patient Issues</h3>
+                    <h2>Step 3: Watch for Grandfather Patient Issues</h2>
 
                     <p>Some contracts require you to continue seeing patients who were under treatment for 60-90 days after termination, even if the plan is no longer active on your contract. Check your termination section for "run-out" or "transition" language.</p>
 
-                    <h3>Step 4: Final Claims and Audit Protection</h3>
+                    <h2>Step 4: Final Claims and Audit Protection</h2>
 
                     <p>After termination, the insurer has a limited period (usually 12-24 months) to request records and conduct claims audits. Don't assume the relationship is over. Maintain records and be prepared to respond to audit requests for 3+ years after termination.</p>
                 </section>
@@ -924,29 +926,29 @@
 
                     <p>After years of contract negotiations, several uncomfortable truths emerge about how dental insurance companies operate.</p>
 
-                    <h3>1. Fee Schedules Are Arbitrary, Not Scientific</h3>
+                    <h2>1. Fee Schedules Are Arbitrary, Not Scientific</h2>
 
                     <p>Insurance companies determine fee schedules based on survey data, competitive positioning, and profit targets—not clinical value. They survey dentists in your area, take the median fee, apply a discount factor (70-80% is typical), and publish that as the "allowed amount."</p>
 
                     <p>This means if dentists in your area start charging more, the allowed amounts creep up. If they charge less, allowed amounts drop. Your actual clinical skills, outcomes, and patient satisfaction are irrelevant to the formula.</p>
 
-                    <h3>2. "Usual, Customary, Reasonable" Is Controlled By Them</h3>
+                    <h2>2. "Usual, Customary, Reasonable" Is Controlled By Them</h2>
 
                     <p>Insurance companies use proprietary databases to calculate your UCR (we'll discuss this more later). You don't have access to their methodology. They can tell you your allowed amount is $180 for a crown, and you have no way to independently verify their logic. This is by design.</p>
 
-                    <h3>3. They Expect Audit Findings and Budget For Them</h3>
+                    <h2>3. They Expect Audit Findings and Budget For Them</h2>
 
                     <p>Insurance companies audit PPO providers regularly. They find "overpayment" errors (usually billing mistakes on their end that they attribute to you) and demand refunds. These audits are revenue positive for them—they discover more refunds than they pay out in dispute resolution.</p>
 
                     <p>This means they budget for challenging your payments. When you argue about an audit finding, you're not dealing with a well-meaning mistake; you're negotiating against their finance projections. Stand firm on legitimate disagreements.</p>
 
-                    <h3>4. Termination Penalties Are Designed To Lock You In</h3>
+                    <h2>4. Termination Penalties Are Designed To Lock You In</h2>
 
                     <p>Some contracts include financial penalties for early termination. "If Provider terminates before contract end date, Provider agrees to reimburse the Company for all credentialing and marketing costs." In some cases, this can be $5,000-$15,000.</p>
 
                     <p>These clauses are often unenforceable (the insurance company can't prove you harmed them by leaving), but they're designed to make you think twice about termination. Know whether your contract has this clause before you resign.</p>
 
-                    <h3>5. They Count on Administrator Turnover</h3>
+                    <h2>5. They Count on Administrator Turnover</h2>
 
                     <p>Contract terms are sticky because the office manager who signed them left three years ago. The current manager doesn't even know what's in the agreement. Insurance companies count on this. They quietly make contract changes, and busy practices don't notice because no one is tracking their contracts.</p>
 
@@ -958,7 +960,7 @@
 
                     <p>UCR is the algorithm that determines out-of-network benefits. Understanding it is critical because millions of dollars turn on these calculations.</p>
 
-                    <h3>How UCR Works</h3>
+                    <h2>How UCR Works</h2>
 
                     <p>When you submit an out-of-network claim, the insurance company compares your submitted fee to a database of fees paid for the same service in your geographic area. They calculate percentiles—typically the 50th (median), 75th, or 90th percentile—and that becomes the "allowed amount" for UCR purposes.</p>
 
@@ -966,7 +968,7 @@
 
                     <p>For OON claims, the insurance company pays their percentage of the UCR amount, not the fee schedule amount (which only applies to in-network claims).</p>
 
-                    <h3>How to Maximize Your UCR Rates</h3>
+                    <h2>How to Maximize Your UCR Rates</h2>
 
                     <p>Insurance companies use proprietary databases (sometimes from dental claim clearinghouses, sometimes from their own claims history). You can't access these databases directly, but you can influence them:</p>
 
@@ -976,7 +978,7 @@
                         <li><strong>Keep current with fee increases.</strong> Raise your fees annually to keep pace with inflation. Stagnant fees appear outdated in the UCR database.</li>
                     </ul>
 
-                    <h3>The Dark Side of UCR</h3>
+                    <h2>The Dark Side of UCR</h2>
 
                     <p>Some insurance companies use aggressive UCR calculations that underestimate market rates. A dental claim analytics firm might charge less for data than a premium provider's actual rates. The insurance company picks the cheaper database and calls it "market data."</p>
 
@@ -990,7 +992,7 @@
 
                     <p>Dental insurance is regulated at both the federal and state levels, and state variations create important protection (or loopholes) in your contracts.</p>
 
-                    <h3>Key State-Level Variations</h3>
+                    <h2>Key State-Level Variations</h2>
 
                     <p><strong>Balance Billing Restrictions:</strong> Some states (California, New York) restrict balance billing for out-of-network care. Others allow it freely. Know your state's rules before committing to OON care.</p>
 
@@ -1002,7 +1004,7 @@
 
                     <p><strong>Assignment of Benefits:</strong> State law determines whether patients can assign benefits to you (transfer payment directly to the practice). Some states make this mandatory; others don't require it.</p>
 
-                    <h3>How to Research Your State's Rules</h3>
+                    <h2>How to Research Your State's Rules</h2>
 
                     <p>Contact your state dental board or state insurance commissioner's office. They publish guidance on provider contracts. You can also contact your state dental association—they often have a contract resource center.</p>
                 </section>
@@ -1012,19 +1014,19 @@
 
                     <p>The dental insurance landscape is evolving. Understanding where it's headed helps you position your practice strategically.</p>
 
-                    <h3>Trend 1: Direct Contracting</h3>
+                    <h2>Trend 1: Direct Contracting</h2>
 
                     <p>Large employers and health plans are increasingly bypassing traditional insurance middlemen to contract directly with dental practices and DSOs. This trend concentrates negotiating power but also removes administrative friction. If you're a solo practitioner, this trend makes you more vulnerable to larger competitors.</p>
 
-                    <h3>Trend 2: Value-Based Models</h3>
+                    <h2>Trend 2: Value-Based Models</h2>
 
                     <p>Some insurance companies are moving from fee-for-service to capitation (prepaid plans) or outcome-based models. Instead of paying per claim, they pay a fixed monthly amount per patient. This shifts risk to dentists but creates upside opportunity if you manage costs efficiently.</p>
 
-                    <h3>Trend 3: Transparency Requirements</h3>
+                    <h2>Trend 3: Transparency Requirements</h2>
 
                     <p>Regulatory pressure is increasing transparency. Some states now require insurance companies to publish fee schedules publicly and to provide patients with accurate cost estimates before treatment. This helps patients make informed decisions and levels the playing field between in-network and OON providers.</p>
 
-                    <h3>Trend 4: Higher Deductibles and Coinsurance</h3>
+                    <h2>Trend 4: Higher Deductibles and Coinsurance</h2>
 
                     <p>Insurance plans are shifting costs to patients. Average deductibles have increased 40% in the last five years. Average coinsurance has increased 10-15%. This means patients are paying more out-of-pocket, which makes your patient experience and communication around costs more critical than ever.</p>
                 </section>
@@ -1034,37 +1036,37 @@
 
                     <p>Here are the most dangerous clauses dentists miss when signing contracts.</p>
 
-                    <h3>Trap 1: The Retroactive Adjustment Clause</h3>
+                    <h2>Trap 1: The Retroactive Adjustment Clause</h2>
 
                     <p>Language: "Provider agrees to adjust claims and billing statements retroactively if the Company determines overpayment occurred."</p>
 
                     <p>This allows the insurance company to demand repayment for claims from months or even years ago. If they find a billing error, they can retroactively reduce their payment and demand you refund the patient's portion. Negotiate a 90-day lookback limit instead.</p>
 
-                    <h3>Trap 2: The Unilateral Modification Clause</h3>
+                    <h2>Trap 2: The Unilateral Modification Clause</h2>
 
                     <p>Language: "The Company reserves the right to modify fee schedules, coverage policies, and contract terms with 30 days' notice."</p>
 
                     <p>This is one-sided. You should have the right to terminate if modifications are unfavorable. Modify this to: "Either party may terminate this agreement for material adverse changes with 60 days' notice."</p>
 
-                    <h3>Trap 3: The Unlimited Audit Clause</h3>
+                    <h2>Trap 3: The Unlimited Audit Clause</h2>
 
                     <p>Language: "The Company may audit any claims submitted by Provider at any time and for any reason."</p>
 
                     <p>This creates perpetual liability. Negotiate a statute of limitations: "The Company may audit claims submitted within the past 24 months only."</p>
 
-                    <h3>Trap 4: The Restrictive Non-Compete</h3>
+                    <h2>Trap 4: The Restrictive Non-Compete</h2>
 
                     <p>Language: "Provider agrees not to participate in competing dental networks in Provider's service area for 12 months after contract termination."</p>
 
                     <p>This locks you out of alternatives after you exit. Strike this entirely, or limit it to 30 days (time for the insurer to transition patients).</p>
 
-                    <h3>Trap 5: The Assumption of Liability</h3>
+                    <h2>Trap 5: The Assumption of Liability</h2>
 
                     <p>Language: "Provider assumes full liability for coverage denials and patient disputes related to coverage determination."</p>
 
                     <p>This is the insurance company's job, not yours. Don't accept liability for their decisions. Modify to: "Provider assumes liability for billing accuracy. Company assumes liability for coverage determination."</p>
 
-                    <h3>Action Steps for Contract Review</h3>
+                    <h2>Action Steps for Contract Review</h2>
 
                     <p>Before signing any contract:</p>
 
@@ -1104,7 +1106,7 @@
             <!-- Right Sidebar -->
             <div class="sidebar-right">
                 <div class="sidebar-widget lead-form-section" id="lead-form">
-                    <h3 style="color: white;">Free Contract Analysis Guide</h3>
+                    <h2 style="color: white;">Free Contract Analysis Guide</h2>
                     <p style="font-size: 0.95rem; margin-bottom: 1.5rem;">Download our PDF guide with contract templates, fee schedule analysis worksheets, and negotiation scripts.</p>
 
                     <form onsubmit="handleFormSubmit(event)">
@@ -1131,7 +1133,7 @@
                 </div>
 
                 <div class="sidebar-widget">
-                    <h4>Related Articles</h4>
+                    <h2>Related Articles</h2>
                     <ul class="related-articles">
                         <li><a href="#">Maximizing Insurance Collections: The Complete Workflow Guide</a></li>
                         <li><a href="#">Dental Coding & Billing Audits: Uncovering Hidden Revenue</a></li>
@@ -1142,7 +1144,7 @@
                 </div>
 
                 <div class="sidebar-widget">
-                    <h4>Quick Resources</h4>
+                    <h2>Quick Resources</h2>
                     <ul class="related-articles">
                         <li><a href="#">ADA CDT Code Reference</a></li>
                         <li><a href="#">State Insurance Commissioner Contacts</a></li>
@@ -1155,15 +1157,16 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    </main>
+<footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About RID Academy</h4>
+                <h2>About RID Academy</h2>
                 <p style="margin-bottom: 1rem; font-size: 0.95rem;">RID Academy provides continuing education and business coaching for dental professionals. Our mission is to help dentists practice smarter, earn more, and maintain clinical excellence.</p>
                 <p style="font-size: 0.9rem; color: rgba(255, 255, 255, 0.7);">Publisher: RID Academy | Authors: Naren Arulrajah & Gary Takacs</p>
             </div>
             <div class="footer-section">
-                <h4>Learning Resources</h4>
+                <h2>Learning Resources</h2>
                 <ul>
                     <li><a href="#">Insurance Knowledge</a></li>
                     <li><a href="#">Business Systems</a></li>
@@ -1173,7 +1176,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h2>Connect</h2>
                 <ul>
                     <li><a href="#">Website: rid.academy</a></li>
                     <li><a href="#">Email: info@rid.academy</a></li>

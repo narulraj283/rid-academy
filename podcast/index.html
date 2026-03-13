@@ -29,7 +29,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -97,7 +98,7 @@
     }
 
     .podcast-hero p {
-      color: rgba(255, 255, 255, 0.85);
+      color: #ffffff;
       max-width: 600px;
       font-size: 1.125rem;
     }
@@ -251,6 +252,7 @@
       </button>
     </div>
   </nav>
+<main>
 
   <!-- ═══ PODCAST HERO ═══ -->
   <section class="podcast-hero">
@@ -316,37 +318,37 @@
 
       <div class="highlights-grid">
         <div class="highlight-card">
-          <h4>The 4-Step Framework to Drop PPO Plans</h4>
+          <h3>The 4-Step Framework to Drop PPO Plans</h3>
           <p>Learn the proven methodology dentists use to successfully transition from PPO-dependent practices. We break down each stage and what to expect.</p>
           <a href="/blog/4-things-you-must-know-to-successfully-drop-ppo-plans.html" class="highlight-link">Read article →</a>
         </div>
 
         <div class="highlight-card">
-          <h4>Case Acceptance & Case Presentation Mastery</h4>
+          <h3>Case Acceptance & Case Presentation Mastery</h3>
           <p>When you remove insurance, case acceptance becomes critical. We explore the psychology of case acceptance and proven techniques to increase acceptance rates.</p>
           <a href="/blog/" class="highlight-link">Explore more →</a>
         </div>
 
         <div class="highlight-card">
-          <h4>Building a Thriving Membership Plan</h4>
+          <h3>Building a Thriving Membership Plan</h3>
           <p>Membership plans are a pillar of insurance independence. Discover how to design, launch, and optimize membership programs for your unique practice.</p>
           <a href="/guides/membership-plan-guide.pdf" class="highlight-link">Download guide →</a>
         </div>
 
         <div class="highlight-card">
-          <h4>Fee Setting for Maximum Revenue</h4>
+          <h3>Fee Setting for Maximum Revenue</h3>
           <p>Setting the right fees is essential. We discuss market research, competitive positioning, and psychological pricing strategies that work.</p>
           <a href="/guides/dental-fee-setting-guide.pdf" class="highlight-link">Download guide →</a>
         </div>
 
         <div class="highlight-card">
-          <h4>Insurance Contract Negotiation Secrets</h4>
+          <h3>Insurance Contract Negotiation Secrets</h3>
           <p>Before you drop a plan, master the art of negotiation. Learn what top practices use to secure better contracts or plan strategic exits.</p>
           <a href="/guides/insurance-contract-guide.pdf" class="highlight-link">Download guide →</a>
         </div>
 
         <div class="highlight-card">
-          <h4>Patient Retention in Challenging Times</h4>
+          <h3>Patient Retention in Challenging Times</h3>
           <p>Transitioning requires keeping existing patients engaged and excited. Discover the communication and relationship-building strategies that work.</p>
           <a href="/blog/" class="highlight-link">Explore more →</a>
         </div>
@@ -371,11 +373,12 @@
   </section>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer style="background: var(--navy); color: white; padding: var(--space-2xl) 0; margin-top: var(--space-4xl); border-top: 1px solid rgba(255, 255, 255, 0.1);">
+  </main>
+<footer style="background: var(--navy); color: white; padding: var(--space-2xl) 0; margin-top: var(--space-4xl); border-top: 1px solid rgba(255, 255, 255, 0.1);">
     <div class="container">
       <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: var(--space-xl); margin-bottom: var(--space-2xl);">
         <div>
-          <h4 style="color: white; margin-top: 0;">Podcast</h4>
+          <h3 style="color: white; margin-top: 0;">Podcast</h3>
           <ul style="list-style: none;">
             <li><a href="/podcast/" style="color: rgba(255, 255, 255, 0.7);">Browse Episodes</a></li>
             <li><a href="#" style="color: rgba(255, 255, 255, 0.7);">Subscribe</a></li>
@@ -383,7 +386,7 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: white; margin-top: 0;">Resources</h4>
+          <h3 style="color: white; margin-top: 0;">Resources</h3>
           <ul style="list-style: none;">
             <li><a href="/tools/" style="color: rgba(255, 255, 255, 0.7);">Free Tools</a></li>
             <li><a href="/blog/" style="color: rgba(255, 255, 255, 0.7);">Articles</a></li>
@@ -391,7 +394,7 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: white; margin-top: 0;">Company</h4>
+          <h3 style="color: white; margin-top: 0;">Company</h3>
           <ul style="list-style: none;">
             <li><a href="/pages/about.html" style="color: rgba(255, 255, 255, 0.7);">About</a></li>
             <li><a href="/contact/" style="color: rgba(255, 255, 255, 0.7);">Contact</a></li>

@@ -17,7 +17,8 @@
   <meta name="twitter:card" content="summary_large_image">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
   <script>window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-YB2QDRNZ1D');</script>
   <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The 7 Principles of Influence in Dentistry: A Complete Guide to Ethical Persuasion", "description": "Master Cialdini's influence principles for dental practice to increase case acceptance and build stronger patient relationships.", "datePublished": "2025-03-05", "author": [{"@type": "Person", "name": "Naren Arulrajah"}, {"@type": "Person", "name": "Gary Takacs"}], "publisher": {"@type": "Organization", "name": "RID Academy"}, "reviewedBy": {"@type": "Person", "name": "Naren Arulrajah", "jobTitle": "CEO & Founder", "worksFor": {"@type": "Organization", "name": "Ekwa Marketing"}}}</script>
@@ -28,7 +29,7 @@
     nav a { color: white; text-decoration: none; font-weight: 800; font-size: 1.1rem; }
     nav span { color: #00B4A6; }
     nav div { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-    nav div a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 400; }
+    nav div a { color:#ffffff; font-size: 0.9rem; font-weight: 400; }
     nav div a:hover { color: #00B4A6; }
     .join-btn { background: #00B4A6; color: white; padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
     .article-hero { background: linear-gradient(135deg, #0F2B46 0%, #0F2B46 100%); color: white; padding: 5rem 2rem 4rem; }
@@ -109,20 +110,20 @@
 }
 </style>
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -133,6 +134,7 @@
       }
     </style>
   </nav>
+<main>
 
 <section class="article-hero">
   <div class="container">
@@ -164,7 +166,7 @@
   <p>People trust and follow experts. Establishing yourself as an authority in your field increases patient confidence in your recommendations.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Authority in Your Practice:</h4>
+    <h3>How to Apply Authority in Your Practice:</h3>
     <ul>
       <li><strong>Display credentials:</strong> Visibly showcase your education, certifications, and professional affiliations</li>
       <li><strong>Share expertise:</strong> Write articles, create videos, and speak about dental topics to establish thought leadership</li>
@@ -179,7 +181,7 @@
   <p>People are influenced by those they like and feel connected to. Building genuine relationships with patients increases influence and loyalty.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Liking in Your Practice:</h4>
+    <h3>How to Apply Liking in Your Practice:</h3>
     <ul>
       <li><strong>Find commonalities:</strong> Discover shared interests, backgrounds, or values with patients</li>
       <li><strong>Give genuine compliments:</strong> Notice and acknowledge positive qualities in patients</li>
@@ -194,7 +196,7 @@
   <p>People feel obligated to return favors and value provided without expectation of immediate return. Small gifts and genuine service create reciprocal feelings.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Reciprocity in Your Practice:</h4>
+    <h3>How to Apply Reciprocity in Your Practice:</h3>
     <ul>
       <li><strong>Provide education without selling:</strong> Share valuable information about oral health freely</li>
       <li><strong>Offer unexpected gestures:</strong> Small gifts, complimentary treatments, or helpful services build goodwill</li>
@@ -209,7 +211,7 @@
   <p>People value things more highly when they're rare or becoming unavailable. Creating appropriate scarcity increases perceived value.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Scarcity in Your Practice:</h4>
+    <h3>How to Apply Scarcity in Your Practice:</h3>
     <ul>
       <li><strong>Limited appointment slots:</strong> When your practice is full or scheduling is limited, create a waitlist</li>
       <li><strong>Specialty treatment limits:</strong> If you offer limited advanced procedures, patients understand their value</li>
@@ -224,7 +226,7 @@
   <p>People look to others' actions to determine their own. Testimonials, reviews, and evidence of other patients' satisfaction influences new patients.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Social Proof in Your Practice:</h4>
+    <h3>How to Apply Social Proof in Your Practice:</h3>
     <ul>
       <li><strong>Collect reviews and testimonials:</strong> Ask satisfied patients to share their experiences online</li>
       <li><strong>Display patient testimonials:</strong> Share real stories (with permission) of successful treatment outcomes</li>
@@ -239,7 +241,7 @@
   <p>People are influenced by those they perceive as similar or part of their "in-group." Creating unity strengthens relationships and influence.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Unity in Your Practice:</h4>
+    <h3>How to Apply Unity in Your Practice:</h3>
     <ul>
       <li><strong>Identify shared backgrounds:</strong> Connect over shared hometown, education, family situation</li>
       <li><strong>Create practice community:</strong> Host patient events and create a sense of belonging</li>
@@ -254,7 +256,7 @@
   <p>Once people commit to something—even publicly and in small ways—they're more likely to follow through. Consistency is a powerful motivator.</p>
 
   <div class="principle-card">
-    <h4>How to Apply Commitment and Consistency in Your Practice:</h4>
+    <h3>How to Apply Commitment and Consistency in Your Practice:</h3>
     <ul>
       <li><strong>Written treatment plans:</strong> When patients see their commitment in writing, they're more likely to follow through</li>
       <li><strong>Small agreements build larger ones:</strong> Start with small commitments (coming to appointments) before larger ones (accepting major treatment)</li>
@@ -346,6 +348,7 @@
   <a href="/blog/" class="back-link">&larr; Back to All Articles</a>
 </div>
 
+</main>
 <footer>
   <p>&copy; 2025 RID Academy. Educational content for dental professionals.</p>
   <div>

@@ -32,7 +32,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
     <!-- Schema.org Organization Markup for RID Academy -->
     <script type="application/ld+json">
@@ -194,7 +195,7 @@
         }
 
         .nav-link {
-            color: rgba(255, 255, 255, 0.85);
+            color: #ffffff;
             text-decoration: none;
             font-weight: 500;
             font-size: 0.95rem;
@@ -733,20 +734,20 @@
     <!-- ═════════════════════════════════════════════════════════════
          NAVIGATION BAR
          ═════════════════════════════════════════════════════════════ -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -836,27 +837,27 @@
             <h2>Areas of Expertise</h2>
             <div class="highlights">
                 <div class="highlight-card">
-                    <h4>Digital Marketing Strategy</h4>
+                    <h3>Digital Marketing Strategy</h3>
                     <p>Expert-level knowledge of SEO, paid advertising, content marketing, and digital patient acquisition strategies proven to scale dental practices.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Reputation Management</h4>
+                    <h3>Reputation Management</h3>
                     <p>Mastery of online reputation, review management, and brand building to help practices attract ideal patients and build authority in their markets.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Insurance Independence Strategy</h4>
+                    <h3>Insurance Independence Strategy</h3>
                     <p>Deep understanding of the challenges practices face reducing PPO dependence and proven frameworks for building sustainable fee-for-service practices.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Practice Growth Consulting</h4>
+                    <h3>Practice Growth Consulting</h3>
                     <p>Strategic guidance on scaling patient acquisition, improving practice operations, and building high-performing teams.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Dental Practice Education</h4>
+                    <h3>Dental Practice Education</h3>
                     <p>Author, speaker, and podcast host dedicated to educating practice owners on digital strategy, marketing best practices, and business growth.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Leadership & Thought Leadership</h4>
+                    <h3>Leadership & Thought Leadership</h3>
                     <p>Regular contributor to Dentistry IQ, co-host of industry podcasts, and a respected voice in the dental business community.</p>
                 </div>
             </div>
@@ -890,27 +891,27 @@
             <h2>What Sets Naren Apart</h2>
             <div class="highlights">
                 <div class="highlight-card">
-                    <h4>Real-World Results</h4>
+                    <h3>Real-World Results</h3>
                     <p>19 years of hands-on experience helping hundreds of practices succeed. Every strategy taught is battle-tested in real dental practices.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Dual Expertise</h4>
+                    <h3>Dual Expertise</h3>
                     <p>Unique combination of digital marketing mastery and deep understanding of practice management and insurance dynamics.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Educator at Heart</h4>
+                    <h3>Educator at Heart</h3>
                     <p>Published author, podcast host, and thought leader committed to lifting up the entire dental industry through education and transparency.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Community Focused</h4>
+                    <h3>Community Focused</h3>
                     <p>Dedicated to building a supportive community of practice owners pursuing insurance independence and shared success.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Proven Scaling</h4>
+                    <h3>Proven Scaling</h3>
                     <p>Built Ekwa Marketing from startup to 300-person agency — demonstrating ability to scale and systematize success.</p>
                 </div>
                 <div class="highlight-card">
-                    <h4>Industry Recognition</h4>
+                    <h3>Industry Recognition</h3>
                     <p>Respected voice and thought leader in dental business, recognized by peers and industry publications.</p>
                 </div>
             </div>
@@ -930,21 +931,21 @@
     <footer>
         <div class="footer-inner">
             <div class="footer-section">
-                <h4>RID Academy</h4>
+                <h3>RID Academy</h3>
                 <a href="/">Home</a>
                 <a href="/blog/">Blog</a>
                 <a href="/about/">About</a>
                 <a href="/contact/">Contact</a>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h3>Resources</h3>
                 <a href="/tools/">Tools</a>
                 <a href="/resources/">Resources</a>
                 <a href="/guides/">Guides</a>
                 <a href="/pages/glossary.html">Glossary</a>
             </div>
             <div class="footer-section">
-                <h4>Legal</h4>
+                <h3>Legal</h3>
                 <a href="/privacy/">Privacy Policy</a>
                 <a href="/terms/">Terms of Service</a>
                 <a href="/contact/">Contact</a>

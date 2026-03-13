@@ -26,7 +26,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap"></noscript>
   <!-- Styles -->
   <link href="/css/styles.css" rel="stylesheet"/>
   <!-- Article Schema.org Structured Data -->
@@ -130,20 +131,20 @@
 </style>
 
   <!-- ═══ NAVIGATION ═══ -->
-  <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+  <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -185,10 +186,10 @@
   <main class="container" style="max-width: 720px; margin: 0 auto;">
    <article style="line-height: 1.8;">
     <!-- TABLE OF CONTENTS -->
-    <nav class="toc" style="background: var(--bg-subtle); padding: 24px; border-radius: var(--radius-md); margin: 48px 0; border-left: 4px solid var(--teal);">
-     <h3 style="margin-top: 0; color: var(--navy); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
+    <nav aria-label="Main navigation" class="toc" style="background: var(--bg-subtle); padding: 24px; border-radius: var(--radius-md); margin: 48px 0; border-left: 4px solid var(--teal);">
+     <h2 style="margin-top: 0; color: var(--navy); font-size: 0.95rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px;">
       In this article:
-     </h3>
+     </h2>
      <ul style="list-style: none; padding: 0; margin: 0;">
       <li style="margin: 8px 0;">
        <a href="#what-are-ppo-writeoffs" style="color: var(--teal); text-decoration: none;">
@@ -332,9 +333,9 @@
       Let's run the numbers on a realistic example: a $1 million annual gross revenue dental practice with 60% PPO patients.
      </p>
      <div style="background: linear-gradient(135deg, #FF6B35, #FF8A5C); padding: 32px; border-radius: var(--radius-md); color: white; margin: 32px 0;">
-      <h3 style="color: white; margin-top: 0;">
+      <h2 style="color: white; margin-top: 0;">
        Sample Practice Financial Impact
-      </h3>
+      </h2>
       <table style="width: 100%; color: white; border-collapse: collapse; font-size: 0.95rem;">
        <tbody>
         <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);">
@@ -457,9 +458,9 @@
      <p>
       The direct write-off amount isn't the complete picture. There are significant hidden costs that multiply the impact of PPO dependence.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Administrative and Staffing Overhead
-     </h3>
+     </h2>
      <p>
       Every PPO contract requires resources to manage. Your staff must:
      </p>
@@ -500,9 +501,9 @@
      <p>
       Going back to our $600,000 PPO revenue example: 18% of that is $108,000 annually, or about 45% of your direct write-off loss.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Opportunity Cost and Practice Growth Limitations
-     </h3>
+     </h2>
      <p>
       When you're heavily dependent on PPO revenue, you can't grow your practice profitably. Here's why:
      </p>
@@ -515,9 +516,9 @@
      <p>
       The lost opportunity to transition 15-20 PPO patients to your own membership plan (or fee-for-service model) could mean $150,000-$300,000 in additional annual revenue at much higher margins.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Provider Stress, Burnout, and Turnover
-     </h3>
+     </h2>
      <p>
       The stress of PPO dependence shouldn't be underestimated. Dentists in high-PPO practices report:
      </p>
@@ -541,9 +542,9 @@
      <p>
       This stress leads to higher staff turnover, lower quality of care, and burnout. The cost of replacing a team member is typically 50-100% of their annual salary (recruitment, training, lost productivity). A practice with high turnover due to low profitability can spend $50,000+ annually just on replacement costs.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Patient Quality and Compliance Issues
-     </h3>
+     </h2>
      <p>
       PPO patients tend to be more price-sensitive and less loyal. They may:
      </p>
@@ -648,9 +649,9 @@
      <p>
       Let's do a realistic financial comparison for our $1 million practice with 60% PPO dependence.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Scenario 1: Staying with PPOs (Status Quo)
-     </h3>
+     </h2>
      <p>
       <strong>
        Year 1-3 average:
@@ -690,9 +691,9 @@
       </strong>
       PPO allowed amounts drop another 2.5% annually. Write-offs grow to 45%. Your net revenue becomes $1,036,000 despite same production. Profitability erodes to 26-30%.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Scenario 2: Dropping PPOs (Transition)
-     </h3>
+     </h2>
      <p>
       <strong>
        Transition process (6-12 months):
@@ -787,13 +788,13 @@
        Profitability: 38-42%
       </li>
      </ul>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       The 5-Year Comparison
-     </h3>
+     </h2>
      <div style="background: linear-gradient(135deg, #00B4A6, #33C3B8); padding: 32px; border-radius: var(--radius-md); color: white; margin: 32px 0;">
-      <h3 style="color: white; margin-top: 0;">
+      <h2 style="color: white; margin-top: 0;">
        5-Year Cumulative Impact
-      </h3>
+      </h2>
       <table style="width: 100%; color: white; border-collapse: collapse; font-size: 0.95rem;">
        <tbody>
         <tr style="border-bottom: 1px solid rgba(255,255,255,0.2);">
@@ -868,9 +869,9 @@
      <p>
       Understanding the problem is the first step. Here are your realistic options, from most to least impactful:
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Option 1: Complete PPO Transition (Highest Impact)
-     </h3>
+     </h2>
      <p>
       <strong>
        Outcome: +$300,000-$400,000 in annual profit within 24 months
@@ -905,9 +906,9 @@
      <p>
       Timeline: 6-12 months to execute; 12-24 months to see full financial benefit.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Option 2: Strategic PPO Reduction (Medium Impact)
-     </h3>
+     </h2>
      <p>
       <strong>
        Outcome: +$80,000-$150,000 in annual profit
@@ -919,9 +920,9 @@
      <p>
       This is a middle-ground approach that reduces complexity and write-off percentage while maintaining some PPO revenue.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Option 3: PPO Fee Negotiation (Lower Impact)
-     </h3>
+     </h2>
      <p>
       <strong>
        Outcome: +$20,000-$60,000 in annual profit
@@ -933,9 +934,9 @@
      <p>
       Realistically, you'll improve your rate by 5-15%, which means your write-off percentage drops from 40% to 35-38%. It's helpful, but it doesn't solve the fundamental problem of declining reimbursement rates year-over-year.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Option 4: Build a Hybrid Model (Moderate Impact)
-     </h3>
+     </h2>
      <p>
       <strong>
        Outcome: +$150,000-$250,000 in annual profit
@@ -947,9 +948,9 @@
      <p>
       Over 3-5 years, you transition your practice composition without a dramatic short-term revenue hit. This requires patience but can work well for practices unwilling to go all-in on fee-for-service immediately.
      </p>
-     <h3 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
+     <h2 style="color: var(--navy); font-size: 1.2rem; margin-top: 32px;">
       Start with Assessment
-     </h3>
+     </h2>
      <p>
       Before choosing your path, you need clear numbers on your current situation. Analyze:
      </p>
@@ -993,9 +994,9 @@
       Frequently Asked Questions
      </h2>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        What if I can't afford to drop PPOs? I need the patient base.
-      </h3>
+      </h2>
       <p>
        This is the most common concern, and it's based on a misunderstanding. The patient base isn't the PPO's patient base—it's your patient base. Your relationship is with the patient, not the insurance company. When you notify patients of your transition, research shows 75-85% stay with your practice.
       </p>
@@ -1004,17 +1005,17 @@
       </p>
      </div>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        Won't my patients just go to another PPO dentist?
-      </h3>
+      </h2>
       <p>
        Some will. But research shows the percentage is lower than most dentists fear—typically 10-20%. The other 80-90% prefer their established relationship with your practice and don't want to start over elsewhere. Additionally, fee-for-service practices often report higher patient loyalty and better treatment acceptance because patients are more invested in their own care.
       </p>
      </div>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        What about patients who can't afford fee-for-service?
-      </h3>
+      </h2>
       <p>
        This is why in-house membership plans are so valuable. You offer an affordable care plan (typically $50-150/month) that provides basic preventive care and cosmetic services. Patients get a discount compared to full fee-for-service, and you improve your profitability. Everyone wins.
       </p>
@@ -1023,9 +1024,9 @@
       </p>
      </div>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        What's the realistic timeline for recovery after dropping PPOs?
-      </h3>
+      </h2>
       <p>
        Most practices see stabilized revenue within 6-12 months and revenue growth beyond the original level within 12-24 months. The exact timeline depends on how well you execute the transition, your patient communication, and your new patient acquisition efforts.
       </p>
@@ -1034,25 +1035,25 @@
       </p>
      </div>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        Do I need to increase my fees that much to make up for the PPO revenue?
-      </h3>
+      </h2>
       <p>
        You don't need to increase fees as much as you might think because you eliminate the write-offs and reduce administrative overhead. If you're currently at a 40% write-off rate on PPO procedures, you only need a 25-30% fee increase to make up for the lost PPO revenue. And that's before accounting for the reduced administrative costs.
       </p>
      </div>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        Is dropping PPOs realistic for a small practice?
-      </h3>
+      </h2>
       <p>
        Yes. In fact, small practices often have an easier transition than large ones because they have fewer complex systems to change. Solo practices and small group practices have successfully transitioned to fee-for-service models. The key is proper planning and execution, which has nothing to do with practice size.
       </p>
      </div>
      <div style="margin: 48px 0;">
-      <h3 style="color: var(--navy); font-size: 1.1rem;">
+      <h2 style="color: var(--navy); font-size: 1.1rem;">
        What if I only drop one or two PPO plans?
-      </h3>
+      </h2>
       <p>
        This can work as a first step. You maintain some stability while testing the fee-for-service model. However, recognize that the remaining PPO contracts still subject you to declining reimbursement rates. Most successful practices eventually transition completely or to a hybrid model with significantly reduced PPO dependence.
       </p>
@@ -1126,9 +1127,9 @@
       </p>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Tools
-      </h4>
+      </h2>
       <ul class="footer-links">
        <li>
         <a href="/tools/ppo-calculator.html">
@@ -1153,9 +1154,9 @@
       </ul>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Learn
-      </h4>
+      </h2>
       <ul class="footer-links">
        <li>
         <a href="/blog/">
@@ -1180,9 +1181,9 @@
       </ul>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Company
-      </h4>
+      </h2>
       <ul class="footer-links">
        <li>
         <a href="/pages/about.html">

@@ -40,7 +40,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
     <style>
         * {
@@ -582,20 +583,20 @@
     <div class="reading-progress"></div>
 
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -606,6 +607,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -699,7 +701,7 @@
             </ul>
 
             <div class="action-steps">
-                <h4>Action Steps for Education Phase:</h4>
+                <h3>Action Steps for Education Phase:</h3>
                 <ol>
                     <li>Create a one-page comparison: "Insurance-Based Care vs. Membership Care"</li>
                     <li>Develop a simple fee sheet with 3-4 membership tiers</li>
@@ -792,7 +794,7 @@
             <h3>Team Training Checklist</h3>
 
             <div class="action-steps">
-                <h4>Prepare Your Team for Transition Calls:</h4>
+                <h3>Prepare Your Team for Transition Calls:</h3>
                 <ol>
                     <li>Role-play 10 common objections until responses are natural</li>
                     <li>Create a "script card" for each common question (laminated at front desk)</li>
@@ -939,7 +941,7 @@
             <h2>Your 90-Day Action Checklist</h2>
 
             <div class="action-steps">
-                <h4>Week 1-2: Announcement Phase</h4>
+                <h3>Week 1-2: Announcement Phase</h3>
                 <ol>
                     <li>Draft and send personalized announcement letter from practice owner</li>
                     <li>Create video message (2 minutes) explaining the transition</li>
@@ -949,7 +951,7 @@
             </div>
 
             <div class="action-steps">
-                <h4>Week 3-6: Education Phase</h4>
+                <h3>Week 3-6: Education Phase</h3>
                 <ol>
                     <li>Create membership tier options (3-4 tiers maximum)</li>
                     <li>Develop one-page "Membership FAQ" document</li>
@@ -960,7 +962,7 @@
             </div>
 
             <div class="action-steps">
-                <h4>Week 7-10: Relationship Phase</h4>
+                <h3>Week 7-10: Relationship Phase</h3>
                 <ol>
                     <li>Personally contact your top 50 patients (you or office manager)</li>
                     <li>Offer founding member incentive (15% off, special benefit)</li>
@@ -970,7 +972,7 @@
             </div>
 
             <div class="action-steps">
-                <h4>Week 11-13: Confirmation Phase</h4>
+                <h3>Week 11-13: Confirmation Phase</h3>
                 <ol>
                     <li>Send final confirmation letter with effective date</li>
                     <li>Schedule orientation calls for membership patients</li>
@@ -1029,22 +1031,22 @@
                 <h2>Related Articles</h2>
                 <div class="article-grid">
                     <div class="article-card">
-                        <h4>Building a Membership-Based Dental Practice Model</h4>
+                        <h3>Building a Membership-Based Dental Practice Model</h3>
                         <p>Everything you need to know about transitioning from insurance-dependent to membership-based revenue, including financial models and patient communication strategies.</p>
                         <a href="#membership-model">Read Article →</a>
                     </div>
                     <div class="article-card">
-                        <h4>The Complete Guide to Dental Practice Profitability</h4>
+                        <h3>The Complete Guide to Dental Practice Profitability</h3>
                         <p>Learn how top practices optimize operations, increase case acceptance, and build sustainable profit margins without compromising patient care.</p>
                         <a href="#profitability">Read Article →</a>
                     </div>
                     <div class="article-card">
-                        <h4>Hiring and Training Exceptional Dental Team Members</h4>
+                        <h3>Hiring and Training Exceptional Dental Team Members</h3>
                         <p>Build a team that genuinely understands your practice vision and communicates value to patients. Includes hiring frameworks and onboarding systems.</p>
                         <a href="#team-training">Read Article →</a>
                     </div>
                     <div class="article-card">
-                        <h4>Patient Experience: The Modern Dental Practice</h4>
+                        <h3>Patient Experience: The Modern Dental Practice</h3>
                         <p>Master the systems and scripts that create exceptional patient experiences—the foundation for word-of-mouth growth and retention.</p>
                         <a href="#patient-experience">Read Article →</a>
                     </div>
@@ -1083,11 +1085,12 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    </main>
+<footer>
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>About RID Academy</h4>
+                    <h3>About RID Academy</h3>
                     <ul>
                         <li><a href="#about">About Us</a></li>
                         <li><a href="#mission">Our Mission</a></li>
@@ -1096,7 +1099,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h3>Resources</h3>
                     <ul>
                         <li><a href="#guides">Practice Guides</a></li>
                         <li><a href="#case-studies">Case Studies</a></li>
@@ -1105,7 +1108,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Learning</h4>
+                    <h3>Learning</h3>
                     <ul>
                         <li><a href="#articles">All Articles</a></li>
                         <li><a href="#webinars">Webinars</a></li>

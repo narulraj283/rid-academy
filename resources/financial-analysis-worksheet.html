@@ -22,7 +22,8 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
     <script type="application/ld+json">
     {
@@ -612,7 +613,7 @@
     <main class="worksheet-container" style="padding: var(--space-2xl) var(--space-lg);">
 
         <div class="worksheet-info">
-            <h4>How This Worksheet Works</h4>
+            <h2>How This Worksheet Works</h2>
             <p>Enter your practice data below to see real-time calculations of your PPO costs, write-offs, and revenue opportunities. All calculations happen instantly on your device — your data is never stored or shared.</p>
         </div>
 
@@ -717,12 +718,12 @@
 
             <div class="dashboard" style="margin-top: var(--space-lg);">
                 <div class="metric-card">
-                    <h4>Annual Insurance Admin Cost</h4>
+                    <h2>Annual Insurance Admin Cost</h2>
                     <div class="metric-value" id="annualAdminCost">$71,904</div>
                     <div class="metric-change neutral" style="font-size: 0.8rem;">Staff salary + claim follow-up time</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Percentage of Collections</h4>
+                    <h2>Percentage of Collections</h2>
                     <div class="metric-value" id="adminCostPercent">14.4%</div>
                     <div class="metric-change neutral" style="font-size: 0.8rem;">Of total annual revenue</div>
                 </div>
@@ -738,28 +739,28 @@
 
             <div class="dashboard">
                 <div class="metric-card">
-                    <h4>Revenue Lost to Write-Offs</h4>
+                    <h2>Revenue Lost to Write-Offs</h2>
                     <div class="metric-value" id="revenueWriteoffs">$49,000</div>
                     <div class="metric-change negative">
                         <span class="status-indicator red"></span>Direct financial loss
                     </div>
                 </div>
                 <div class="metric-card">
-                    <h4>Admin Cost of PPO Processing</h4>
+                    <h2>Admin Cost of PPO Processing</h2>
                     <div class="metric-value" id="ppoAdminCost">$25,167</div>
                     <div class="metric-change negative">
                         <span class="status-indicator red"></span>Based on PPO revenue %
                     </div>
                 </div>
                 <div class="metric-card">
-                    <h4>Total Hidden Cost</h4>
+                    <h2>Total Hidden Cost</h2>
                     <div class="metric-value" id="totalHiddenCost">$74,167</div>
                     <div class="metric-change negative" style="font-weight: 600;">
                         <span class="status-indicator red"></span>Annual PPO cost
                     </div>
                 </div>
                 <div class="metric-card">
-                    <h4>Revenue Per Patient</h4>
+                    <h2>Revenue Per Patient</h2>
                     <div style="font-size: 1.25rem; margin: var(--space-sm) 0; font-weight: 600;">
                         <span id="ppoRevPerPatient">$1,167</span> <span style="font-size: 0.9rem; color: var(--text-muted);">PPO</span>
                     </div>
@@ -785,7 +786,7 @@
             </h2>
 
             <div class="worksheet-info" style="margin-bottom: var(--space-lg);">
-                <h4>What if you transitioned away from PPO?</h4>
+                <h2>What if you transitioned away from PPO?</h2>
                 <p>See projected revenue changes based on patient retention and membership plan enrollment</p>
             </div>
 
@@ -832,22 +833,22 @@
 
             <div class="dashboard" style="margin-top: var(--space-xl);">
                 <div class="metric-card">
-                    <h4>Retained PPO Patients</h4>
+                    <h2>Retained PPO Patients</h2>
                     <div class="metric-value" id="retainedPatients">128</div>
                     <div class="metric-change neutral">Of current PPO patient base</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Membership Plan Members</h4>
+                    <h2>Membership Plan Members</h2>
                     <div class="metric-value" id="membershipMembers">57</div>
                     <div class="metric-change positive">At $600/year avg</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Membership Revenue (Year 1)</h4>
+                    <h2>Membership Revenue (Year 1)</h2>
                     <div class="metric-value" id="membershipRevenue">$34,200</div>
                     <div class="metric-change positive">From active members</div>
                 </div>
                 <div class="metric-card">
-                    <h4>Net Revenue Change (Year 1)</h4>
+                    <h2>Net Revenue Change (Year 1)</h2>
                     <div class="metric-value" id="netRevenueChange">+$33,200</div>
                     <div class="metric-change positive" id="changeType">
                         <span class="status-indicator green"></span>Projected increase
@@ -947,15 +948,15 @@
 
             <div class="related-links">
                 <a href="/tools/ppo-calculator.html" class="related-card">
-                    <h4>PPO Write-Off Calculator</h4>
+                    <h2>PPO Write-Off Calculator</h2>
                     <p>Calculate exact write-offs by procedure and plan</p>
                 </a>
                 <a href="/tools/membership-calculator.html" class="related-card">
-                    <h4>Membership Pricing Tool</h4>
+                    <h2>Membership Pricing Tool</h2>
                     <p>Determine optimal membership plan pricing</p>
                 </a>
                 <a href="/tools/revenue-simulator.html" class="related-card">
-                    <h4>Revenue Simulator</h4>
+                    <h2>Revenue Simulator</h2>
                     <p>Model different practice transition scenarios</p>
                 </a>
             </div>
@@ -974,7 +975,7 @@
                     <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
                 </div>
                 <div>
-                    <h4>Tools</h4>
+                    <h3>Tools</h3>
                     <ul class="footer-links">
                         <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
                         <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
@@ -983,7 +984,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4>Learn</h4>
+                    <h3>Learn</h3>
                     <ul class="footer-links">
                         <li><a href="/blog/">Articles &amp; Guides</a></li>
                         <li><a href="/pages/summit.html">Annual Summit</a></li>
@@ -992,7 +993,7 @@
                     </ul>
                 </div>
                 <div>
-                    <h4>Company</h4>
+                    <h3>Company</h3>
                     <ul class="footer-links">
                         <li><a href="/pages/about.html">About RID Academy</a></li>
                         <li><a href="/pages/community.html">Community</a></li>

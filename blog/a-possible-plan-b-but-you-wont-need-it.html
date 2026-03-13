@@ -17,7 +17,8 @@
 <link rel="icon" type="image/svg+xml" href="/favicon.svg">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -65,7 +66,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans
 .article-footer { max-width: 800px; margin: 2rem auto 4rem; padding: 0 1rem; }
 .back-link { color: #0F2B46; text-decoration: none; font-weight: 500; }
 nav { background: #0F2B46; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; flex-wrap: wrap; }
-nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; transition: color .2s; }
+nav a { color:#ffffff; text-decoration: none; font-size: 0.9rem; transition: color .2s; }
 nav a:hover { color: #fff; }
 nav .logo { color: white; font-weight: 800; font-size: 1.1rem; text-decoration: none; }
 nav .logo .accent { color: #00B4A6; }
@@ -121,20 +122,20 @@ nav .logo .accent { color: #00B4A6; }
 }
 </style>
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -145,6 +146,7 @@ nav .logo .accent { color: #00B4A6; }
       }
     </style>
   </nav>
+<main>
 
 <section class="article-hero">
   <div class="container">
@@ -313,17 +315,17 @@ nav .logo .accent { color: #00B4A6; }
 <h3>Related Articles</h3>
 <div class="article-grid">
 <div class="article-card">
-<h4>The Tangled Web of Umbrella Plans: Understanding Network Complexity</h4>
+<h3>The Tangled Web of Umbrella Plans: Understanding Network Complexity</h3>
 <p>Learn how umbrella PPO plans work and why resigning from insurance is more complicated than it appears.</p>
 <a href="/blog/the-tangled-web-of-umbrella-plans.html">Read More →</a>
 </div>
 <div class="article-card">
-<h4>Americans Spend $6 Trillion on Discretionary Spending—Your Practice Should Capture That Market</h4>
+<h3>Americans Spend $6 Trillion on Discretionary Spending—Your Practice Should Capture That Market</h3>
 <p>Discover why high-value dental services capture discretionary spending and how to market to patients who value wellness.</p>
 <a href="/blog/americans-spend-6-trillion-dollars-annually-on-discretionary-spending.html">Read More →</a>
 </div>
 <div class="article-card">
-<h4>The Psychology of Patient Acceptance: Moving Beyond Insurance-Dependent Thinking</h4>
+<h3>The Psychology of Patient Acceptance: Moving Beyond Insurance-Dependent Thinking</h3>
 <p>Explore how insurance conditioning affects patient behavior and how to reframe the conversation around value-based care.</p>
 <a href="/blog/">View All Articles →</a>
 </div>
@@ -337,7 +339,7 @@ nav .logo .accent { color: #00B4A6; }
 </div>
 
 <div class="source-note">
-<p>This article draws from principles discussed by Gary Takacs, dental practice management coach with over 41 years of experience transforming 2,200+ practices away from insurance dependence. Learn more about the Less Insurance Dependence methodology at <a href="https://www.lessinsurancedependence.com" target="_blank">lessinsurancedependence.com</a></p>
+<p>This article draws from principles discussed by Gary Takacs, dental practice management coach with over 41 years of experience transforming 2,200+ practices away from insurance dependence. Learn more about the Less Insurance Dependence methodology at <a href="https://www.lessinsurancedependence.com" target="_blank" rel="noopener noreferrer">lessinsurancedependence.com</a></p>
 </div>
 
 
@@ -357,5 +359,6 @@ nav .logo .accent { color: #00B4A6; }
 <a href="/blog/" class="back-link">← Back to All Articles</a>
 </div>
 
+</main>
 </body>
 </html>

@@ -17,7 +17,8 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 <script type="application/ld+json">{"@context": "https://schema.org", "@type": "Article", "headline": "The Mouthguard Project: A Marketing Grand Slam for Dental Practices", "description": "Discover how the NFL-quality mouthguard project has transformed dental practices into community leaders.", "datePublished": "2025-07-01", "dateModified": "2026-03-05", "author": [{"@type": "Person", "name": "Gary Takacs"}, {"@type": "Person", "name": "Naren Arulrajah"}], "publisher": {"@type": "Organization", "name": "RID Academy"}, "reviewedBy": {"@type": "Person", "name": "Naren Arulrajah", "jobTitle": "CEO & Founder", "worksFor": {"@type": "Organization", "name": "Ekwa Marketing"}}}</script>
 <style>
 * { margin: 0; padding: 0; box-sizing: border-box; }
@@ -26,7 +27,7 @@ nav { background: #0F2B46; padding: 1rem 2rem; display: flex; align-items: cente
 nav a { color: white; font-weight: 800; font-size: 1.1rem; text-decoration: none; }
 nav a span { color: #00B4A6; }
 nav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-nav-links a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; }
+nav-links a { color:#ffffff; text-decoration: none; font-size: 0.9rem; }
 .hero { background: linear-gradient(135deg, #00B4A6 0%, #0F2B46 100%); color: white; padding: 5rem 2rem 4rem; }
 .hero-content { max-width: 900px; margin: 0 auto; }
 .badge { display: inline-block; background: rgba(255,255,255,0.15); color: white; padding: 0.35rem 1rem; border-radius: 20px; font-size: 0.8rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 1.2rem; }
@@ -121,20 +122,20 @@ gtag('config', 'G-YB2QDRNZ1D');
 }
 </style>
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -145,6 +146,7 @@ gtag('config', 'G-YB2QDRNZ1D');
       }
     </style>
   </nav>
+<main>
 
 <section class="hero">
   <div class="hero-content">
@@ -185,7 +187,7 @@ gtag('config', 'G-YB2QDRNZ1D');
 <h2>How to Implement the Mouthguard Project: A Step-by-Step Process</h2>
 
 <div class="process-box">
-<h4>Phase One: Building the Relationship</h4>
+<h3>Phase One: Building the Relationship</h3>
 <div class="process-step">
 <strong>Step 1 - Identify the Right Team</strong>
 Contact your local high school football program during summer (May-June, before fall season preparation begins). Football works best because of the community involvement, but the project can adapt to any contact sport: wrestling, hockey, lacrosse, or soccer.
@@ -201,7 +203,7 @@ Coordinate with the coach to divide the team into two groups (typically 32 playe
 </div>
 
 <div class="process-box">
-<h4>Phase Two: Impression Collection</h4>
+<h3>Phase Two: Impression Collection</h3>
 <div class="process-step">
 <strong>Step 4 - Extended Office Hours</strong>
 Host extended hours for one of the impression sessions (typically Tuesday evening, 5-7 PM). Players can arrive anytime during this window—no appointments needed. This casual structure makes participation easy.
@@ -221,7 +223,7 @@ Stay in the office until all 32 stone models are poured. This ensures the projec
 </div>
 
 <div class="process-box">
-<h4>Phase Three: Fabrication and Delivery</h4>
+<h3>Phase Three: Fabrication and Delivery</h3>
 <div class="process-step">
 <strong>Step 8 - Custom Mouthguard Fabrication</strong>
 Fabricate each mouthguard using professional-grade materials (typically heat-formed thermoplastic over custom stone casts). The investment per mouthguard is typically $30-50 in materials—negligible compared to the marketing value.
@@ -333,17 +335,17 @@ Throughout the season, when the team wears your mouthguards during games, you're
 <h3>Related Articles</h3>
 <div class="related-grid">
 <div class="related-card">
-<h4>Community Marketing That Actually Works</h4>
+<h3>Community Marketing That Actually Works</h3>
 <p>Go beyond traditional advertising. Build a practice known for genuine community investment.</p>
 <a href="/articles/community-marketing">Read More →</a>
 </div>
 <div class="related-card">
-<h4>Patient Acquisition Without PPO Dependence</h4>
+<h3>Patient Acquisition Without PPO Dependence</h3>
 <p>Learn how strategic projects and community positioning reduce reliance on insurance networks.</p>
 <a href="/articles/patient-acquisition-no-ppo">Read More →</a>
 </div>
 <div class="related-card">
-<h4>Building Team Engagement Through Meaningful Work</h4>
+<h3>Building Team Engagement Through Meaningful Work</h3>
 <p>Discover how community projects improve employee retention and practice culture.</p>
 <a href="/articles/team-engagement-dentistry">Read More →</a>
 </div>
@@ -351,7 +353,7 @@ Throughout the season, when the team wears your mouthguards during games, you're
 </div>
 
 <div class="source-note">
-<p>This article is based on the mouthguard project framework developed by Gary Takacs and shared with thousands of dental practice owners. For more details, listen to Episode 142 of the <a href="/podcast/" target="_blank">Less Insurance Dependence Podcast</a>.</p>
+<p>This article is based on the mouthguard project framework developed by Gary Takacs and shared with thousands of dental practice owners. For more details, listen to Episode 142 of the <a href="/podcast/" target="_blank" rel="noopener noreferrer">Less Insurance Dependence Podcast</a>.</p>
 </div>
 
 
@@ -371,5 +373,6 @@ Throughout the season, when the team wears your mouthguards during games, you're
 <a href="/blog/" class="back-link">← Back to All Articles</a>
 </div>
 
+</main>
 </body>
 </html>

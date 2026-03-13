@@ -606,20 +606,20 @@
     <div class="reading-progress"></div>
 
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -646,9 +646,9 @@
 
     <!-- Social Sharing Sidebar -->
     <div class="share-sidebar">
-        <a href="https://facebook.com/sharer/sharer.php?u=https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom" class="share-btn share-facebook" target="_blank" title="Share on Facebook">f</a>
-        <a href="https://twitter.com/intent/tweet?url=https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom&text=The%20Dental%20Practice%20Owner's%20Guide%20to%20Financial%20Freedom" class="share-btn share-twitter" target="_blank" title="Share on Twitter">𝕏</a>
-        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom" class="share-btn share-linkedin" target="_blank" title="Share on LinkedIn">in</a>
+        <a href="https://facebook.com/sharer/sharer.php?u=https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom" class="share-btn share-facebook" target="_blank" title="Share on Facebook" rel="noopener noreferrer">f</a>
+        <a href="https://twitter.com/intent/tweet?url=https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom&text=The%20Dental%20Practice%20Owner's%20Guide%20to%20Financial%20Freedom" class="share-btn share-twitter" target="_blank" title="Share on Twitter" rel="noopener noreferrer">𝕏</a>
+        <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom" class="share-btn share-linkedin" target="_blank" title="Share on LinkedIn" rel="noopener noreferrer">in</a>
         <a href="mailto:?subject=The%20Dental%20Practice%20Owner's%20Guide%20to%20Financial%20Freedom&body=Check%20this%20out:%20https://rid.academy/the-dental-practice-owners-guide-to-financial-freedom" class="share-btn share-email" title="Share via Email">✉</a>
     </div>
 
@@ -826,12 +826,12 @@
 
                 <h3>Ownership Structure Options</h3>
 
-                <h4>Solo Practice (Sole Proprietorship)</h4>
+                <h3>Solo Practice (Sole Proprietorship)</h3>
                 <p>
                     If you're operating as a sole proprietor, you're paying self-employment tax on 92.35% of your net income. For a dentist earning $180K after expenses, that's approximately $25,500 in additional self-employment tax—money that could be invested.
                 </p>
 
-                <h4>S-Corporation Election (Recommended for Most)</h4>
+                <h3>S-Corporation Election (Recommended for Most)</h3>
                 <p>
                     By electing S-Corp status (while maintaining your LLC for liability purposes), you split income into two categories:
                 </p>
@@ -845,7 +845,7 @@
                     On $180K net income, an S-Corp election saves $15,000-$22,000 annually in self-employment taxes. Over 20 years, that's $300,000-$440,000 in additional wealth.
                 </p>
 
-                <h4>C-Corporation (For Multi-Practice Owners)</h4>
+                <h3>C-Corporation (For Multi-Practice Owners)</h3>
                 <p>
                     Only recommended if you own multiple practices or have significant non-practice income. C-Corps can be valuable for retained earnings and flexibility, but require meticulous accounting.
                 </p>
@@ -856,7 +856,7 @@
                     Beyond entity selection, implement these annual strategies:
                 </p>
 
-                <h4>1. Maximize Retirement Contributions ($68,500+ annually)</h4>
+                <h3>1. Maximize Retirement Contributions ($68,500+ annually)</h3>
 
                 <ul>
                     <li><strong>Solo 401(k):</strong> Contribute up to $23,500 (employee) + 25% of net profit (employer) = $68,500 maximum</li>
@@ -864,7 +864,7 @@
                     <li><strong>Defined Benefit Plan:</strong> If you're over 50 and high-income, can contribute $70,000-$250,000 annually (requires actuarial valuation)</li>
                 </ul>
 
-                <h4>2. Depreciate Equipment Aggressively ($15,000-$40,000 annually)</h4>
+                <h3>2. Depreciate Equipment Aggressively ($15,000-$40,000 annually)</h3>
 
                 <ul>
                     <li>Digital scanner, CBCT, intraoral camera: Bonus depreciation under Section 179</li>
@@ -872,13 +872,13 @@
                     <li>Leasehold improvements to your office space</li>
                 </ul>
 
-                <h4>3. Establish a Dental SEP or Solo 401(k) for Spouse</h4>
+                <h3>3. Establish a Dental SEP or Solo 401(k) for Spouse</h3>
 
                 <p>
                     If your spouse works in the practice (even part-time administrative duties), establish a separate retirement account with additional contribution limits. Additional $23,500 annually in tax savings.
                 </p>
 
-                <h4>4. Health Insurance Deduction (Self-Employed Health Insurance Act)</h4>
+                <h3>4. Health Insurance Deduction (Self-Employed Health Insurance Act)</h3>
 
                 <p>
                     Deduct 100% of your health insurance premiums (family plan) as a business expense before calculating self-employment tax. Typically $12,000-$18,000 annual deduction.
@@ -899,7 +899,7 @@
 
                 <h3>Three Revenue Streams Every Practice Should Develop</h3>
 
-                <h4>1. Membership/Subscription Plans (5-12% Revenue Growth)</h4>
+                <h3>1. Membership/Subscription Plans (5-12% Revenue Growth)</h3>
 
                 <p>
                     A membership model creates predictable, high-margin revenue:
@@ -916,7 +916,7 @@
                     This alone represents $480K annual revenue with 85% gross margin = $408K profit before paying associated staff.
                 </p>
 
-                <h4>2. Cosmetic/Aesthetic Services (15-25% Revenue Growth)</h4>
+                <h3>2. Cosmetic/Aesthetic Services (15-25% Revenue Growth)</h3>
 
                 <p>
                     Cosmetic dentistry is the highest-margin segment of dentistry:
@@ -963,7 +963,7 @@
                     Train a dental hygienist or associate to provide whitening and Botox/fillers. These require minimal chairtime investment and massive margins. One hygienist doing whitening 4-8 hours weekly = $30K-$60K additional annual revenue.
                 </p>
 
-                <h4>3. Specialty Services (Implants, Ortho, Endo)</h4>
+                <h3>3. Specialty Services (Implants, Ortho, Endo)</h3>
 
                 <p>
                     You don't need to become a specialist, but partnering with specialists or developing proficiency in one area creates value:
@@ -990,7 +990,7 @@
 
                 <h3>Student Loan Strategy</h3>
 
-                <h4>Income-Driven Repayment vs. Standard 10-Year Plans</h4>
+                <h3>Income-Driven Repayment vs. Standard 10-Year Plans</h3>
 
                 <p>
                     Your student loan strategy depends on your practice structure and tax situation. This is where working with a CPA (not just a tax preparer) matters:
@@ -1017,7 +1017,7 @@
                     This is where the real wealth is built. If you acquired your practice with an SBA loan ($400K-$800K), your strategy is different:
                 </p>
 
-                <h4>Accelerated Principal Reduction Plan</h4>
+                <h3>Accelerated Principal Reduction Plan</h3>
 
                 <p>
                     Years 1-3: Make standard monthly payments only. Focus on growing production and reducing overhead. Establish stability.
@@ -1091,14 +1091,14 @@
 
                 <h3>Your Investment Vehicle Hierarchy</h3>
 
-                <h4>Tier 1: Tax-Deferred Retirement (Automate First)</h4>
+                <h3>Tier 1: Tax-Deferred Retirement (Automate First)</h3>
                 <ul>
                     <li>Solo 401(k): $68,500 annually (no-brainer for solo/small practices)</li>
                     <li>SEP IRA: 20% of net profit, up to $69,000 annually</li>
                     <li>Defined Benefit Plan: $200K-$300K annually (if over 50, high income)</li>
                 </ul>
 
-                <h4>Tier 2: Taxable Brokerage Accounts (Index Funds)</h4>
+                <h3>Tier 2: Taxable Brokerage Accounts (Index Funds)</h3>
                 <ul>
                     <li>VTI (Total US Stock Market): 70% allocation</li>
                     <li>VXUS (Total International): 20% allocation</li>
@@ -1109,7 +1109,7 @@
                     Dollar-cost averaging $500-$1,500/month into these three funds requires zero decision-making and historically returns 9-10% annually.
                 </p>
 
-                <h4>Tier 3: Real Estate (After $250K Net Worth)</h4>
+                <h3>Tier 3: Real Estate (After $250K Net Worth)</h3>
                 <ul>
                     <li>Residential rental properties: 1031 exchanges create tax efficiency</li>
                     <li>Commercial real estate: Medical office buildings; often better returns than single-family</li>
@@ -1215,21 +1215,21 @@
 
                 <h3>How to Transition Your Practice (3-Year Plan)</h3>
 
-                <h4>Year 1: Positioning & Patient Experience</h4>
+                <h3>Year 1: Positioning & Patient Experience</h3>
                 <ul>
                     <li>Audit your current patient base: identify 30% of highest-value patients (longest relationships, highest case acceptance)</li>
                     <li>Implement premium experience protocols (private consultation rooms, take-home whitening complimentary, flexible payment plans)</li>
                     <li>Begin case presentation training with consultations focused on health outcomes, not insurance)</li>
                 </ul>
 
-                <h4>Year 2: Selective Payer Reduction</h4>
+                <h3>Year 2: Selective Payer Reduction</h3>
                 <ul>
                     <li>Discontinue participation with lowest-paying PPO plans (bottom 30% of your insurance contracts)</li>
                     <li>For 50% of new patients, don't accept their insurance; instead, offer in-network negotiated rates with financing</li>
                     <li>Implement membership model for 20% of patient base (creates fee-for-service revenue floor)</li>
                 </ul>
 
-                <h4>Year 3: Full Transition</h4>
+                <h3>Year 3: Full Transition</h3>
                 <ul>
                     <li>50-60% of revenue from fee-for-service / membership</li>
                     <li>Insurance represents 40-50% of revenue</li>
@@ -1251,7 +1251,7 @@
 
                 <h3>The Layered Retirement Savings Approach</h3>
 
-                <h4>Layer 1: Solo 401(k) ($68,500 annually)</h4>
+                <h3>Layer 1: Solo 401(k) ($68,500 annually)</h3>
                 <ul>
                     <li>Employee deferral: $23,500</li>
                     <li>Employer contribution: 25% of net profit (up to $45,000)</li>
@@ -1259,14 +1259,14 @@
                     <li>Total maximum: $68,500 (or $76,000 if 50+)</li>
                 </ul>
 
-                <h4>Layer 2: SEP IRA ($69,000 annually)</h4>
+                <h3>Layer 2: SEP IRA ($69,000 annually)</h3>
                 <ul>
                     <li>Simpler than 401(k), contributions are 20% of net profit</li>
                     <li>Only worthwhile if your net profit is $345K+ (to hit $69K limit)</li>
                     <li>For most solo practitioners, stick with 401(k)</li>
                 </ul>
 
-                <h4>Layer 3: Defined Benefit Plan ($230,000+ annually)</h4>
+                <h3>Layer 3: Defined Benefit Plan ($230,000+ annually)</h3>
                 <p>
                     If you're 45-55 with high income ($250K+), a defined benefit plan is a game-changer:
                 </p>
@@ -1282,7 +1282,7 @@
                     This strategy is powerful: you deduct $250K from current income (saving ~$75K in taxes), which gets invested tax-free and compounds for 15 years until retirement. The tax savings alone ($75K annually) can be invested elsewhere, creating dual wealth accumulation.
                 </p>
 
-                <h4>Layer 4: Roth Conversion Strategy ($20K-$50K annually)</h4>
+                <h3>Layer 4: Roth Conversion Strategy ($20K-$50K annually)</h3>
                 <p>
                     If your practice has minimal income some years or you're between ownership transitions:
                 </p>
@@ -1318,14 +1318,14 @@
 
                 <h3>The Delegation Framework</h3>
 
-                <h4>Phase 1: Document Everything (Months 1-3)</h4>
+                <h3>Phase 1: Document Everything (Months 1-3)</h3>
                 <ul>
                     <li>Clinical protocols: How do you diagnose? Treat? Present cases?</li>
                     <li>Business operations: Scheduling, billing, insurance, patient communication</li>
                     <li>Quality standards: What does good look like?</li>
                 </ul>
 
-                <h4>Phase 2: Hire and Train an Associate (Months 4-8)</h4>
+                <h3>Phase 2: Hire and Train an Associate (Months 4-8)</h3>
                 <ul>
                     <li>Hire someone 3-5 years out of school (cheaper, trainable)</li>
                     <li>Assign them 40% of your schedule; supervise closely for 3 months</li>
@@ -1333,14 +1333,14 @@
                     <li>Your productivity: remains 100%, clinical time drops to 50%</li>
                 </ul>
 
-                <h4>Phase 3: Hire an Office Manager (Months 6-12)</h4>
+                <h3>Phase 3: Hire an Office Manager (Months 6-12)</h3>
                 <ul>
                     <li>Hire experienced dental office manager; invest in their training</li>
                     <li>Transfer all business operations: scheduling, billing, insurance, HR</li>
                     <li>Your role: dentistry + high-level strategy only</li>
                 </ul>
 
-                <h4>Phase 4: Scale the Model (Years 2-3)</h4>
+                <h3>Phase 4: Scale the Model (Years 2-3)</h3>
                 <ul>
                     <li>Add second operatory; hire second associate</li>
                     <li>Hire second hygienist if needed</li>
@@ -1374,7 +1374,7 @@
 
                 <h3>How Dental Practices Are Valued</h3>
 
-                <h4>Multiple of EBITDA (Most Common)</h4>
+                <h3>Multiple of EBITDA (Most Common)</h3>
                 <p>
                     Dental practices typically sell for 65-75% of annual EBITDA (Earnings Before Interest, Taxes, Depreciation, Amortization). If your practice has $250K annual EBITDA:
                 </p>
@@ -1385,7 +1385,7 @@
                     <li><strong>Total sales price:</strong> $280K-$350K</li>
                 </ul>
 
-                <h4>Revenue-Based Multiples</h4>
+                <h3>Revenue-Based Multiples</h3>
                 <p>
                     Some practices sell on revenue multiples (0.5-0.75× revenue). This varies widely based on:
                 </p>
@@ -1403,7 +1403,7 @@
                     If you plan to sell in 3-5 years, focus on these metrics:
                 </p>
 
-                <h4>1. Increase EBITDA (Not Revenue)</h4>
+                <h3>1. Increase EBITDA (Not Revenue)</h3>
                 <p>
                     Buyers pay for profit, not production. A practice with $800K revenue and $250K profit sells for more than a $1M revenue practice with $200K profit.
                 </p>
@@ -1419,7 +1419,7 @@
                     <li>Build membership revenue (recurring = higher valuation)</li>
                 </ul>
 
-                <h4>2. Reduce Owner Dependency</h4>
+                <h3>2. Reduce Owner Dependency</h3>
                 <p>
                     Practices that require the owner's clinical time are worth 20-30% less than delegated practices. In your final 2-3 years:
                 </p>
@@ -1430,14 +1430,14 @@
                     <li>Ensure office manager can run business without you</li>
                 </ul>
 
-                <h4>3. Build 18-24 Month Trailing Financials</h4>
+                <h3>3. Build 18-24 Month Trailing Financials</h3>
                 <p>
                     Buyers want to see growing practice (or at minimum stable) financials for the past 1.5-2 years. If you had a down year, work backward from there.
                 </p>
 
                 <h3>Succession Planning Alternatives</h3>
 
-                <h4>Sell to Associate (Buy-In Model)</h4>
+                <h3>Sell to Associate (Buy-In Model)</h3>
                 <ul>
                     <li>Associate buys 25-50% over 3-5 years</li>
                     <li>You retain ownership, gradually transition out</li>
@@ -1445,14 +1445,14 @@
                     <li>Disadvantages: Ongoing involvement, shared decision-making</li>
                 </ul>
 
-                <h4>Sell to Dental Support Organization (DSO)</h4>
+                <h3>Sell to Dental Support Organization (DSO)</h3>
                 <ul>
                     <li>DSO purchases practice; you become owner-dentist</li>
                     <li>Advantages: Quick transaction, no buyer search, ongoing income stream</li>
                     <li>Disadvantages: Less control, lower autonomy, ongoing employment</li>
                 </ul>
 
-                <h4>Sell to Private Equity (Larger Practices)</h4>
+                <h3>Sell to Private Equity (Larger Practices)</h3>
                 <ul>
                     <li>If you have multiple locations or $1M+ production, private equity is option</li>
                     <li>Advantages: Higher valuations, growth capital, continued upside</li>
@@ -1470,7 +1470,7 @@
 
                 <h3>Real Estate: Your Second Wealth Engine</h3>
 
-                <h4>Strategy 1: Own Your Office Building</h4>
+                <h3>Strategy 1: Own Your Office Building</h3>
                 <ul>
                     <li>Separate entity (LLC) purchases office building</li>
                     <li>Lease space to your dental practice at fair market rate</li>
@@ -1478,7 +1478,7 @@
                     <li>Example: $600K building purchase; $4K/month rent to practice; 8% annual appreciation = $48K annual equity build + depreciation deductions</li>
                 </ul>
 
-                <h4>Strategy 2: Residential Rental Properties</h4>
+                <h3>Strategy 2: Residential Rental Properties</h3>
                 <ul>
                     <li>Once you have $200K-$300K in liquid assets, purchase 1-2 rental homes</li>
                     <li>Target: $200K properties with 20% down = $40K initial investment</li>
@@ -1487,7 +1487,7 @@
                     <li>Long-term: In 30 years, paid-off homes worth $600K+ generate $1,000+/month pure income</li>
                 </ul>
 
-                <h4>Strategy 3: 1031 Exchanges for Tax Deferral</h4>
+                <h3>Strategy 3: 1031 Exchanges for Tax Deferral</h3>
                 <p>
                     If you eventually sell your office building or rental property:
                 </p>
@@ -1500,7 +1500,7 @@
 
                 <h3>Non-Clinical Income Streams</h3>
 
-                <h4>Dental Consulting/Coaching</h4>
+                <h3>Dental Consulting/Coaching</h3>
                 <ul>
                     <li>Once your practice is systematized and profitable, offer consulting to other dentists</li>
                     <li>Typical rate: $150-$300/hour or $5,000-$15,000/month retainer</li>
@@ -1508,14 +1508,14 @@
                     <li>Time: 4-8 hours/month for an additional $60K-$120K annually</li>
                 </ul>
 
-                <h4>Dental Education Products</h4>
+                <h3>Dental Education Products</h3>
                 <ul>
                     <li>Create online courses on practice management, case presentation, financial planning</li>
                     <li>Typical: $97-$297 course price; 10-20 sales/month = $10K-$60K annually with zero marginal cost</li>
                     <li>Example: "The FFS Transition Blueprint" for dentists interested in reducing insurance dependence</li>
                 </ul>
 
-                <h4>Practice Brokerage / Partnership Facilitation</h4>
+                <h3>Practice Brokerage / Partnership Facilitation</h3>
                 <ul>
                     <li>Help other dentists sell their practices; earn 1-2% broker commission</li>
                     <li>Facilitate buy-in arrangements; earn small percentage of deal value</li>
@@ -1527,7 +1527,7 @@
             <div class="article-section" id="section-13">
                 <h2>Common Financial Mistakes Dentists Make (And How to Avoid Them)</h2>
 
-                <h4>Mistake #1: Over-Investing in the Practice</h4>
+                <h3>Mistake #1: Over-Investing in the Practice</h3>
                 <p>
                     Most dentists spend 70-80% of profits reinvesting in their practice. While some reinvestment is good, after year 5, additional equipment and technology produce diminishing returns. A $60K CBCT and $80K intraoral scanning system might increase production 5-8%, but the ROI is weak compared to other investments.
                 </p>
@@ -1536,7 +1536,7 @@
                     <strong>Fix:</strong> After year 3, cap practice reinvestment at 40-50% of profit. Invest 50-60% elsewhere.
                 </p>
 
-                <h4>Mistake #2: Ignoring Business Operations</h4>
+                <h3>Mistake #2: Ignoring Business Operations</h3>
                 <p>
                     Many dentists focus on clinical excellence and neglect business. Result: great clinician, mediocre business. Collections leak due to poor scheduling, broken follow-ups, terrible insurance management.
                 </p>
@@ -1545,7 +1545,7 @@
                     <strong>Fix:</strong> Hire an experienced office manager ($55K-$75K salary) in Year 2. They'll fix scheduling, insurance, and cash flow issues that prevent you from scaling.
                 </p>
 
-                <h4>Mistake #3: Delaying Associate/Delegation</h4>
+                <h3>Mistake #3: Delaying Associate/Delegation</h3>
                 <p>
                     Dentists wait until they're "too busy" to delegate. By then, you're burned out, associates are hard to find, and your practice doesn't have systems for training.
                 </p>
@@ -1554,7 +1554,7 @@
                     <strong>Fix:</strong> Hire your first associate when you're at 70% capacity. You'll hit 100% capacity with their help, and the early training investment pays off.
                 </p>
 
-                <h4>Mistake #4: Accepting Low Insurance Reimbursements</h4>
+                <h3>Mistake #4: Accepting Low Insurance Reimbursements</h3>
                 <p>
                     Many dentists stay in low-paying PPO networks because "it's what I've always done." Leaving one network costs you 2-5% of patients but improves profitability 15-20%.
                 </p>
@@ -1563,7 +1563,7 @@
                     <strong>Fix:</strong> Audit your insurance contracts annually. If reimbursement is below 80% of your UCR (Usual, Customary, Reasonable), and you have patient volume, consider discontinuing participation.
                 </p>
 
-                <h4>Mistake #5: Not Separating Personal and Business Finances</h4>
+                <h3>Mistake #5: Not Separating Personal and Business Finances</h3>
                 <p>
                     Mixing personal and business expenses obscures profitability and creates tax problems. You can't see which parts of your practice are profitable if you're paying personal bills from business account.
                 </p>
@@ -1572,7 +1572,7 @@
                     <strong>Fix:</strong> Use the Profit First system. Separate accounts force clarity and accountability.
                 </p>
 
-                <h4>Mistake #6: Inadequate Retirement Planning</h4>
+                <h3>Mistake #6: Inadequate Retirement Planning</h3>
                 <p>
                     Dentists assume their practice sale will fund retirement. If your practice sells for $300K and you spent $250K on equipment, you've made zero wealth outside the practice for 15 years of work.
                 </p>
@@ -1581,7 +1581,7 @@
                     <strong>Fix:</strong> Start investing in retirement and outside accounts immediately. Your practice is bonus; your investments are mandatory.
                 </p>
 
-                <h4>Mistake #7: Poor Tax Strategy</h4>
+                <h3>Mistake #7: Poor Tax Strategy</h3>
                 <p>
                     Sole proprietors pay 30-35% effective tax rate. S-Corp election cuts this to 20-25%. Over 20 years, that's $200K-$400K difference.
                 </p>
@@ -1601,7 +1601,7 @@
 
                 <h3>Months 1-3: Foundation Building</h3>
 
-                <h4>Week 1-2: Audit</h4>
+                <h3>Week 1-2: Audit</h3>
                 <ul>
                     <li>Calculate your current overhead percentage</li>
                     <li>Identify your insurance reimbursement rates</li>
@@ -1609,21 +1609,21 @@
                     <li>Assess your personal financial status (net worth, investments, retirement savings)</li>
                 </ul>
 
-                <h4>Week 3-4: Entity & Tax Planning</h4>
+                <h3>Week 3-4: Entity & Tax Planning</h3>
                 <ul>
                     <li>Consult with CPA about S-Corp election (savings: $15K-$25K annually)</li>
                     <li>Set up Solo 401(k) if you don't have one (max $68.5K contribution immediately)</li>
                     <li>Review 2025 tax return with CPA for optimization opportunities</li>
                 </ul>
 
-                <h4>Week 5-8: Profit First Implementation</h4>
+                <h3>Week 5-8: Profit First Implementation</h3>
                 <ul>
                     <li>Open five business bank accounts</li>
                     <li>Set up automatic transfers (1st and 15th of month)</li>
                     <li>Track weekly operating account utilization</li>
                 </ul>
 
-                <h4>Week 9-12: Revenue Optimization</h4>
+                <h3>Week 9-12: Revenue Optimization</h3>
                 <ul>
                     <li>Launch membership plan (target: 50 members by end of 90 days)</li>
                     <li>Implement patient financing options (Care Credit, Klarna)</li>
@@ -1679,19 +1679,19 @@
 
                 <div class="article-grid">
                     <a href="#" class="article-card">
-                        <h4>The Ultimate Guide to Dental Practice Valuation</h4>
+                        <h3>The Ultimate Guide to Dental Practice Valuation</h3>
                         <p>Learn how practices are valued and the 7 key metrics that impact your exit price.</p>
                         <div class="article-card-meta">5 min read • Financial Freedom</div>
                     </a>
 
                     <a href="#" class="article-card">
-                        <h4>Reducing Insurance Dependence: The FFS Transition Framework</h4>
+                        <h3>Reducing Insurance Dependence: The FFS Transition Framework</h3>
                         <p>Step-by-step guide to shifting from insurance-dependent to fee-for-service positioning.</p>
                         <div class="article-card-meta">8 min read • Practice Strategy</div>
                     </a>
 
                     <a href="#" class="article-card">
-                        <h4>Real Estate Wealth for Dentists: Owning Your Office Building</h4>
+                        <h3>Real Estate Wealth for Dentists: Owning Your Office Building</h3>
                         <p>How to structure office ownership for maximum tax benefits and long-term wealth.</p>
                         <div class="article-card-meta">7 min read • Wealth Building</div>
                     </a>
@@ -1737,13 +1737,13 @@
         <div class="container">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>RID Academy</h4>
+                    <h3>RID Academy</h3>
                     <p>Dental education and business resources for practice owners and clinicians.</p>
                     <a href="https://rid.academy">Visit Website</a>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h3>Resources</h3>
                     <a href="#">Practice Management</a>
                     <a href="#">Financial Planning</a>
                     <a href="#">Clinical Courses</a>
@@ -1751,14 +1751,14 @@
                 </div>
 
                 <div class="footer-section">
-                    <h4>About Authors</h4>
+                    <h3>About Authors</h3>
                     <a href="#">Naren Arulrajah</a>
                     <a href="#">Gary Takacs</a>
                     <a href="#">Speaking Inquiries</a>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h3>Connect</h3>
                     <a href="https://facebook.com/ridentist">Facebook</a>
                     <a href="https://linkedin.com/company/rid-academy">LinkedIn</a>
                     <a href="https://instagram.com/ridentist">Instagram</a>

@@ -20,7 +20,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -57,7 +58,7 @@
     }
 
     nav a {
-      color: rgba(255, 255, 255, 0.85);
+      color: #ffffff;
       text-decoration: none;
       font-size: 0.9rem;
       transition: color 0.2s;
@@ -505,20 +506,20 @@
 }
 </style>
 
-  <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+  <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -529,6 +530,7 @@
       }
     </style>
   </nav>
+<main>
 
   <section class="article-hero">
     <span class="category-badge">Practice Management</span>
@@ -630,12 +632,12 @@
       </p>
 
       <div class="highlight-box">
-        <h4>Scenario A: PPO-Dependent Practice</h4>
+        <h3>Scenario A: PPO-Dependent Practice</h3>
         <p>Annual PPO write-offs: $400,000 (45-50% of revenue) | Patient source: Patients on insurance plans | Patient expectations: Insurance coverage, lower fees, limited treatment options | Practice relationship: Dependent on insurance networks</p>
       </div>
 
       <div class="highlight-box">
-        <h4>Scenario B: Digital Marketing Focus</h4>
+        <h3>Scenario B: Digital Marketing Focus</h3>
         <p>Annual digital marketing investment: $48,000 (1.2% of revenue) | Patient source: Organic search, Google reviews, social proof | Patient expectations: Value your practice provides, quality outcomes | Practice relationship: Direct patient relationships, full fee control</p>
       </div>
 
@@ -679,7 +681,7 @@
         To build a digital marketing system that replaces PPO revenue, focus on these four Google-approved fundamentals:
       </p>
 
-      <h4>1. Google Reviews: Your Digital Reputation System</h4>
+      <h3>1. Google Reviews: Your Digital Reputation System</h3>
 
       <p>
         Google measures three dimensions of reviews in its ranking algorithm:
@@ -695,7 +697,7 @@
         The strategic implication: implementing a review collection system (consistent requests for reviews, optimized timing, multiple touchpoints) directly improves your Google rankings and increases patient acquisition from organic search.
       </p>
 
-      <h4>2. NAP Management: Consistent Online Identity</h4>
+      <h3>2. NAP Management: Consistent Online Identity</h3>
 
       <p>
         NAP stands for Name, Address, Phone—and it refers to how your practice is represented across the hundreds of online directories, business listings, and websites that Google consults when evaluating your authority.
@@ -709,7 +711,7 @@
         The fix: conduct a comprehensive audit of all online directories where your practice appears, then standardize every instance of your name, address, and phone number to match exactly. This consolidation signals to Google that you're a single, unified business authority—not multiple weak listings.
       </p>
 
-      <h4>3. Original Content: Avoid the Duplicate Content Penalty</h4>
+      <h3>3. Original Content: Avoid the Duplicate Content Penalty</h3>
 
       <p>
         This is where many dental websites fail silently. Google explicitly penalizes duplicate content. If your website contains content that appears elsewhere online—whether on other dental websites, competitors' sites, or content farms—Google will not rank you on page one.
@@ -728,7 +730,7 @@
         The solution: every piece of content on your website must be original. This is non-negotiable for Google ranking success.
       </p>
 
-      <h4>4. Search Engine Optimization (SEO): Keyword and Phrase Ranking</h4>
+      <h3>4. Search Engine Optimization (SEO): Keyword and Phrase Ranking</h3>
 
       <p>
         The ultimate metric of digital marketing success is simple: how many relevant keywords and phrases does your practice rank on page one for in your local Google search results?
@@ -768,7 +770,7 @@
       </p>
 
       <div class="highlight-box">
-        <h4>The Statistical Reality of Google Rankings</h4>
+        <h3>The Statistical Reality of Google Rankings</h3>
         <p>Google analyzes over 200 ranking factors and updates its algorithm thousands of times annually. Here's the crucial insight: reviews account for approximately 10% of Google's ranking algorithm—a significant portion. More importantly, 90% of all web pages receive zero traffic from Google. The top 4% of pages capture over 90% of all Google traffic. If you can implement these four fundamentals consistently, you position your practice in that elite 4%.</p>
       </div>
 
@@ -937,19 +939,19 @@
         <h3>Related Articles & Resources</h3>
         <div class="related-grid">
           <a href="/blog/mastering-digital-marketing-part-1" class="related-card">
-            <h4>Mastering Digital Marketing for Dentists: Part 1</h4>
+            <h3>Mastering Digital Marketing for Dentists: Part 1</h3>
             <p>Deep dive into Google rankings, review algorithms, and the four fundamentals of digital patient acquisition.</p>
           </a>
           <a href="/blog/mastering-digital-marketing-part-2" class="related-card">
-            <h4>Mastering Digital Marketing for Dentists: Part 2</h4>
+            <h3>Mastering Digital Marketing for Dentists: Part 2</h3>
             <p>Advanced strategies for content development, competitive positioning, and scaling your organic patient acquisition.</p>
           </a>
           <a href="/blog/how-to-implement-review-collection" class="related-card">
-            <h4>Building a Review Collection System That Actually Works</h4>
+            <h3>Building a Review Collection System That Actually Works</h3>
             <p>Practical systems for consistently generating Google reviews and leveraging them for patient acquisition.</p>
           </a>
           <a href="/tools/insurance-writeoff-calculator" class="related-card">
-            <h4>Insurance Write-Off Calculator</h4>
+            <h3>Insurance Write-Off Calculator</h3>
             <p>Calculate your exact annual PPO adjustment and understand the true cost of your insurance participation.</p>
           </a>
         </div>
@@ -959,7 +961,7 @@
         <p><strong>About the Authors:</strong></p>
         <p><strong>Gary Takacs</strong> is a dental practice management coach with over 41 years of experience transforming insurance-dependent practices into thriving, profitable businesses. He's personally transformed his practice, LifeSmiles, from 80% overhead and heavy PPO dependence to one of the top-performing practices in the US. He's coached over 2,200 dental practices worldwide.</p>
         <p><strong>Naren Arulrajah</strong> is CEO of Ekwa Marketing, a digital marketing agency specializing in dental practices. With over a decade of experience helping practices reduce insurance dependence through strategic digital marketing, he focuses on helping dentists attract ideal patients through Google search, reviews, and digital authority building.</p>
-        <p>This article is adapted from Episode 177 of the Less Insurance Dependence Podcast. For the complete discussion and additional resources, <a href="/podcast/" target="_blank">visit the podcast library</a>.</p>
+        <p>This article is adapted from Episode 177 of the Less Insurance Dependence Podcast. For the complete discussion and additional resources, <a href="/podcast/" target="_blank" rel="noopener noreferrer">visit the podcast library</a>.</p>
       </div>
     
 <div style="margin: 40px auto; max-width: 800px; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #00B4A6; border-radius: 8px; display: flex; align-items: flex-start; gap: 20px;">
@@ -979,7 +981,8 @@
     <a href="/blog/" class="back-link">← Back to All Articles</a>
   </div>
 
-  <footer style="background: #0F2B46; color: white; padding: 3rem 2rem; text-align: center; margin-top: 4rem;">
+  </main>
+<footer style="background: #0F2B46; color: white; padding: 3rem 2rem; text-align: center; margin-top: 4rem;">
     <p style="margin: 0; opacity: 0.8;">© 2026 RID Academy. All rights reserved. | Committed to helping dentists reduce insurance dependence and build thriving practices.</p>
   </footer>
 </body>

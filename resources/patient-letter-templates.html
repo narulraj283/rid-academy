@@ -25,7 +25,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -378,6 +379,7 @@
       <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+<main>
 
   <!-- ═══ PAGE HEADER ═══ -->
   <section class="hero" style="padding-top: calc(var(--nav-height) + var(--space-3xl)); padding-bottom: var(--space-3xl);">
@@ -385,7 +387,7 @@
     <div class="container" style="max-width: 900px; position: relative; z-index: 2;">
       <span class="badge badge-coral" style="margin-bottom: 16px;">Free Resource</span>
       <h1 style="color: white; font-size: 2.5rem;">Patient Communication Templates</h1>
-      <p class="large" style="color: rgba(255,255,255,0.85); max-width: 600px;">Professional, ready-to-use letters, emails, scripts, and social media posts for announcing your insurance changes to patients with confidence and clarity.</p>
+      <p class="large" style="color:#ffffff; max-width: 600px;">Professional, ready-to-use letters, emails, scripts, and social media posts for announcing your insurance changes to patients with confidence and clarity.</p>
     </div>
   </section>
 
@@ -401,27 +403,27 @@
 
         <div class="best-practices">
           <div class="practice-item">
-            <h4>Timing is Everything</h4>
+            <h3>Timing is Everything</h3>
             <p>Announce changes 4-6 weeks before implementation. This gives patients time to ask questions and make decisions without feeling rushed.</p>
           </div>
           <div class="practice-item">
-            <h4>Be Transparent</h4>
+            <h3>Be Transparent</h3>
             <p>Clearly explain what's changing, why it's changing, and what it means for them. Avoid industry jargon. Patients want to understand, not be confused.</p>
           </div>
           <div class="practice-item">
-            <h4>Offer Solutions</h4>
+            <h3>Offer Solutions</h3>
             <p>Don't just announce the change—offer alternatives. Explain your membership plan, financing options, or how they can continue care without insurance.</p>
           </div>
           <div class="practice-item">
-            <h4>Use Multiple Channels</h4>
+            <h3>Use Multiple Channels</h3>
             <p>Send letters to all patients, email to those who opted in, call your high-value patients personally, and post on social media. Redundancy is your friend here.</p>
           </div>
           <div class="practice-item">
-            <h4>Address Objections Early</h4>
+            <h3>Address Objections Early</h3>
             <p>Anticipate the most common questions ("Will my costs go up?" "Can I still see you?") and address them proactively in your communication.</p>
           </div>
           <div class="practice-item">
-            <h4>Make It Easy to Respond</h4>
+            <h3>Make It Easy to Respond</h3>
             <p>Include clear contact information, a phone number to call, and a way to schedule. The easier you make it, the more people will engage.</p>
           </div>
         </div>
@@ -490,7 +492,7 @@ Warmly,
 [PRACTICE NAME]
 
         <div class="template-notes">
-          <h4>Key Tips for Success</h4>
+          <h3>Key Tips for Success</h3>
           <ul>
             <li>Personalize with handwritten signature on printed letters</li>
             <li>Include a photo of the doctor for personal connection</li>
@@ -551,7 +553,7 @@ Looking forward to continuing your care,
 P.S. You can read our full announcement letter at [LINK] or pick one up at your next visit.
 
         <div class="template-notes">
-          <h4>Key Tips for Success</h4>
+          <h3>Key Tips for Success</h3>
           <ul>
             <li>Shorter and punchier than the formal letter – people skim emails</li>
             <li>Use subject line that gets opened: "Important Update About Your Care"</li>
@@ -627,7 +629,7 @@ Warmly,
 [PRACTICE NAME]
 
         <div class="template-notes">
-          <h4>Key Tips for Success</h4>
+          <h3>Key Tips for Success</h3>
           <ul>
             <li>Use a warmer, more personal tone than the first letter</li>
             <li>Address the most common objections and fears</li>
@@ -692,7 +694,7 @@ PHRASES TO AVOID:
 ✗ "You have to decide now" (creates pressure)
 
         <div class="template-notes">
-          <h4>Key Tips for Success</h4>
+          <h3>Key Tips for Success</h3>
           <ul>
             <li>Role-play these conversations with your team before the change goes live</li>
             <li>Train all staff, not just front desk – anyone might pick up a call</li>
@@ -783,7 +785,7 @@ ENGAGEMENT TIPS:
 • Encourage shares with "Know someone who's our patient? Share this!"
 
         <div class="template-notes">
-          <h4>Key Tips for Success</h4>
+          <h3>Key Tips for Success</h3>
           <ul>
             <li>Post both versions – use short version on Instagram, long on Facebook</li>
             <li>Use high-quality images of your practice or team</li>
@@ -892,7 +894,8 @@ ENGAGEMENT TIPS:
   </section>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
+  </main>
+<footer class="footer">
     <div class="container">
       <div class="grid grid-4" style="gap: 48px;">
         <div>
@@ -900,7 +903,7 @@ ENGAGEMENT TIPS:
           <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
-          <h4>Tools</h4>
+          <h3>Tools</h3>
           <ul class="footer-links">
             <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
             <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
@@ -909,7 +912,7 @@ ENGAGEMENT TIPS:
           </ul>
         </div>
         <div>
-          <h4>Learn</h4>
+          <h3>Learn</h3>
           <ul class="footer-links">
             <li><a href="/blog/">Articles & Guides</a></li>
             <li><a href="/pages/summit.html">Annual Summit</a></li>
@@ -918,7 +921,7 @@ ENGAGEMENT TIPS:
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h3>Company</h3>
           <ul class="footer-links">
             <li><a href="/pages/about.html">About RID Academy</a></li>
             <li><a href="/pages/community.html">Community</a></li>

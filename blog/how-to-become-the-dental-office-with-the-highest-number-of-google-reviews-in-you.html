@@ -20,7 +20,8 @@
 <title>How to Become the Dental Office with the Highest Number of...</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 <style>
 * {
   margin: 0;
@@ -51,7 +52,7 @@ nav {
 
 nav a {
   text-decoration: none;
-  color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
   font-size: 0.9rem;
   transition: color 0.3s ease;
 }
@@ -393,20 +394,20 @@ footer p {
 </style>
 
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -417,6 +418,7 @@ footer p {
       }
     </style>
   </nav>
+<main>
 
 <section class="article-hero">
   <div class="article-container">
@@ -458,27 +460,27 @@ footer p {
 <p>This proven process takes just minutes each day and costs nothing. Implement it during your morning huddle to build reviews systematically and predictably.</p>
 
 <div class="step-box">
-  <h4><span class="step-number">1</span>Gather Today's Patient Email List</h4>
+  <h3><span class="step-number">1</span>Gather Today's Patient Email List</h3>
   <p>Start your morning huddle by having one team member pull a list of all patient email addresses for everyone you're seeing that day. Your practice management software likely has a report function that can generate this instantly. You might see 20-30 patients that day—that's 20-30 potential reviewers.</p>
 </div>
 
 <div class="step-box">
-  <h4><span class="step-number">2</span>Identify Patients with Gmail Addresses</h4>
+  <h3><span class="step-number">2</span>Identify Patients with Gmail Addresses</h3>
   <p>To write a Google review, patients must have a Gmail account (or a Google account). While it's free to create one, asking patients to set up a new email account creates friction and dramatically reduces the likelihood they'll follow through. Instead, highlight only patients who already have Gmail addresses. From your 20-30 patients, you might identify 4-5 with Gmail addresses. You're looking for "low fruit on the tree."</p>
 </div>
 
 <div class="step-box">
-  <h4><span class="step-number">3</span>Select Patients Who Will Leave 5-Star Reviews</h4>
+  <h3><span class="step-number">3</span>Select Patients Who Will Leave 5-Star Reviews</h3>
   <p>As a team, review the highlighted names and identify which patients genuinely love your practice and would enthusiastically write a five-star review. This is critical: <strong>only ask patients who you're confident would write glowing reviews.</strong> Don't ask patients who might give you three or four stars. Think of it like hosting a dinner party—you only invite guests you know will have a great time and contribute positively to the evening. Statistics show that if you have five enthusiastic patients, you'll likely get four solid reviews.</p>
 </div>
 
 <div class="step-box">
-  <h4><span class="step-number">4</span>Assign the Review Request to the Right Team Member</h4>
+  <h3><span class="step-number">4</span>Assign the Review Request to the Right Team Member</h3>
   <p>Decide as a team who will ask each patient for a review. Often this happens organically during your huddle—a team member might say, "I see Linda in my yoga class; I'll ask her." This natural connection makes the request feel genuine rather than scripted. If no one volunteers, designate the team member who's most naturally outgoing and positive—the one who makes everyone feel like an instant friend. This personality type is best suited for the ask.</p>
 </div>
 
 <div class="step-box">
-  <h4><span class="step-number">5</span>Provide a Simple Written Guide</h4>
+  <h3><span class="step-number">5</span>Provide a Simple Written Guide</h3>
   <p>Print a small card (3x5 or 5x7 inches) with step-by-step instructions for writing a Google review. Make it simple and visual so patients can follow along at home. Hand this to the patient along with your verbal request. The written guide removes barriers and dramatically increases the likelihood they'll complete the review.</p>
 </div>
 
@@ -592,17 +594,17 @@ footer p {
     <h3>Related Resources</h3>
     <div class="related-articles">
       <a href="/blog/morning-huddle-dental-practice.html" class="article-card">
-        <h4>The Power of the Morning Huddle in Dental Practices</h4>
+        <h3>The Power of the Morning Huddle in Dental Practices</h3>
         <p>Learn how a five-minute daily huddle can transform team alignment, patient outcomes, and practice culture.</p>
         <span class="read-more">Read Article →</span>
       </a>
       <a href="/blog/reducing-insurance-dependence.html" class="article-card">
-        <h4>The Complete Guide to Reducing Insurance Dependence</h4>
+        <h3>The Complete Guide to Reducing Insurance Dependence</h3>
         <p>Strategic steps to transition your practice away from insurance and build a thriving, predictable business.</p>
         <span class="read-more">Read Article →</span>
       </a>
       <a href="/blog/patient-acquisition-strategy.html" class="article-card">
-        <h4>Patient Acquisition Without Insurance: Modern Dental Marketing</h4>
+        <h3>Patient Acquisition Without Insurance: Modern Dental Marketing</h3>
         <p>Proven marketing channels and strategies for building a sustainable patient pipeline outside of PPO networks.</p>
         <span class="read-more">Read Article →</span>
       </a>
@@ -610,6 +612,7 @@ footer p {
   </div>
 </section>
 
+</main>
 <footer>
   <div class="article-container" style="max-width: 100%;">
     <p>Published by <strong>RID Academy</strong> | <a href="https://rid.academy" style="color: #00B4A6; text-decoration: none;">rid.academy</a></p>

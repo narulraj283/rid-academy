@@ -36,7 +36,8 @@
 
     <title>How to Increase Dental Practice Production: Efficiency,...</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
     <style>
         * {
@@ -488,7 +489,7 @@
 
         .form-note {
             font-size: 0.85rem;
-            color: rgba(255, 255, 255, 0.85);
+            color: #ffffff;
             margin-top: 1rem;
         }
 
@@ -638,20 +639,20 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- NAVIGATION -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -662,6 +663,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- HERO SECTION -->
     <section class="hero">
@@ -679,7 +681,7 @@
     <div class="article-wrapper">
         <!-- LEFT SIDEBAR: TABLE OF CONTENTS -->
         <aside class="toc-sidebar">
-            <h3>Contents</h3>
+            <h2>Contents</h2>
             <ul>
                 <li><a href="#section1">Production vs. Collection</a></li>
                 <li><a href="#section2">The FFS Advantage</a></li>
@@ -708,7 +710,7 @@
 
             <p>Before we dive into strategies, we need to establish clarity on three critical financial metrics that many practice owners confuse with one another. These terms sound similar, but they represent fundamentally different financial realities.</p>
 
-            <h3>Production: What It Really Means</h3>
+            <h2>Production: What It Really Means</h2>
 
             <p><strong>Production</strong> is the total value of all dental services provided during a specific period, regardless of whether payment has been collected. If a patient completes a $3,500 crown on Monday and doesn't pay until three months later, that's still $3,500 of production on Monday.</p>
 
@@ -718,13 +720,13 @@
 
             <p>Production appears on your ledger as accounts receivable until payment arrives. For insurance cases, production is often "credited" when the service is delivered, even though the insurance company might process the claim weeks later.</p>
 
-            <h3>Collection: When Money Actually Arrives</h3>
+            <h2>Collection: When Money Actually Arrives</h2>
 
             <p><strong>Collection</strong> is actual money received—from patients, from insurance, from any source. A practice might have $400,000 in production but only $320,000 in collections if patients haven't paid or insurance claim resolution is slow.</p>
 
             <p>This gap creates a critical cash flow problem that trips up practices. You're doing the work (production), but the cash flow (collection) lags behind by 30-90 days depending on your payer mix.</p>
 
-            <h3>Understanding Overhead Percentage</h3>
+            <h2>Understanding Overhead Percentage</h2>
 
             <p><strong>Overhead percentage</strong> is your total operating expenses divided by your total production. If you have $150,000 in monthly expenses and $300,000 in monthly production, your overhead is 50%.</p>
 
@@ -742,7 +744,7 @@
 
             <p>This section might be controversial, but the data is clear: Fee-for-Service dentistry produces significantly higher per-patient value than PPO-based dentistry.</p>
 
-            <h3>The Per-Patient Economics</h3>
+            <h2>The Per-Patient Economics</h2>
 
             <p>Consider a typical patient scenario:</p>
 
@@ -758,7 +760,7 @@
 
             <p>You don't need three times as many FFS patients to achieve three times the production. You need the same number of FFS patients and a better clinical system for presenting comprehensive treatment.</p>
 
-            <h3>Why FFS Works at Scale</h3>
+            <h2>Why FFS Works at Scale</h2>
 
             <p>The FFS advantage compounds when you:</p>
 
@@ -771,7 +773,7 @@
 
             <p>Even practices that maintain a mixed payer model (both PPO and FFS) should systematically build their FFS patient base. Every FFS patient you acquire is a higher-value patient with fewer reimbursement limitations and less administrative burden.</p>
 
-            <h3>The Transition Strategy</h3>
+            <h2>The Transition Strategy</h2>
 
             <p>You don't need to abandon all PPO relationships overnight. The most successful practices gradually:</p>
 
@@ -793,7 +795,7 @@
 
             <p>Your schedule is your production ceiling. You cannot produce more than your schedule allows, no matter how skilled your team is. But most practices leave enormous production on the table through poor scheduling design.</p>
 
-            <h3>Block Scheduling: The Foundation</h3>
+            <h2>Block Scheduling: The Foundation</h2>
 
             <p>Block scheduling dedicates specific time blocks to specific treatment types. Instead of randomly mixing hygiene, exams, fillings, and complex restorative work throughout the day, you create predictable, efficient patterns.</p>
 
@@ -811,12 +813,12 @@
 
             <p>Block scheduling reduces mental switching costs, allows team members to prepare operatories efficiently, and creates predictable workflow patterns that naturally increase production per hour.</p>
 
-            <h3>The Ideal Day Template</h3>
+            <h2>The Ideal Day Template</h2>
 
             <p>Elite practices design "ideal day" templates that maximize both revenue and team happiness. Here's what high-producing practices typically look like:</p>
 
             <div class="action-steps">
-                <h4>Components of an Ideal Production Day</h4>
+                <h2>Components of an Ideal Production Day</h2>
                 <ol>
                     <li><strong>One complex case</strong> (120-180 minutes): Complex restoration, implant treatment, or major case generating $2,500-5,000 production</li>
                     <li><strong>Two to three standard restorative cases</strong> (60-90 minutes each): Routine crowns, fillings, or veneers generating $500-1,500 each</li>
@@ -828,7 +830,7 @@
 
             <p>This ideal day structure with one doctor and two hygienists typically produces $6,000-$9,000 in daily production, depending on case mix and complexity. Your ideal day will vary based on clinical focus, but the principle remains: design your schedule around high-production activities.</p>
 
-            <h3>Appointment Length Alignment</h3>
+            <h2>Appointment Length Alignment</h2>
 
             <p>Most practices underestimate the time needed for comprehensive care. A 30-minute filling appointment might seem "efficient," but it often means inadequate treatment, rushed diagnosis, or poor patient communication.</p>
 
@@ -851,7 +853,7 @@
 
             <p>No-shows are a hidden production killer. A single no-show for a $2,500 crown appointment represents not just lost production—it's lost time that could have generated production elsewhere.</p>
 
-            <h3>The Real Cost of a No-Show</h3>
+            <h2>The Real Cost of a No-Show</h2>
 
             <p>Most practices calculate no-show cost as simply the treatment value. But the true economic impact is larger:</p>
 
@@ -863,7 +865,7 @@
 
             <p>If your practice has a 10% no-show rate and average case value of $1,500, and your production per hour is $600, every percentage point of no-shows costs approximately $8,000-$10,000 per month in lost production capacity.</p>
 
-            <h3>No-Show Prevention Strategies</h3>
+            <h2>No-Show Prevention Strategies</h2>
 
             <p>The most effective practices reduce no-shows below 2% through these systematic approaches:</p>
 
@@ -883,7 +885,7 @@
 
             <p>This is perhaps the most underutilized lever for production growth. Instead of focusing entirely on more patients, focus on extracting more value from each patient interaction.</p>
 
-            <h3>The Comprehensive Diagnostic Approach</h3>
+            <h2>The Comprehensive Diagnostic Approach</h2>
 
             <p>Elite practices use a consistent diagnostic protocol that identifies all treatment needs, not just the obvious ones:</p>
 
@@ -898,12 +900,12 @@
 
             <p>This diagnostic depth typically adds $300-$800 to the perceived value of an initial exam and reveals treatment opportunities worth $2,000-$10,000 per patient.</p>
 
-            <h3>Strategic Case Acceptance Enhancement</h3>
+            <h2>Strategic Case Acceptance Enhancement</h2>
 
             <p>Diagnosing treatment isn't the same as the patient accepting treatment. Your communication system dramatically affects production:</p>
 
             <div class="action-steps">
-                <h4>Case Acceptance Enhancement Process</h4>
+                <h2>Case Acceptance Enhancement Process</h2>
                 <ol>
                     <li>Present all findings with high-quality visual documentation (intraoral photos, digital scans)</li>
                     <li>Explain the consequence of not treating (disease progression, eventual complications)</li>
@@ -926,7 +928,7 @@
 
             <p>Comprehensive treatment planning—identifying all necessary treatment at the initial exam rather than piece-meal treatment over years—is the single most powerful production lever available to most practices.</p>
 
-            <h3>Why Piecemeal Treatment Planning Kills Production</h3>
+            <h2>Why Piecemeal Treatment Planning Kills Production</h2>
 
             <p>Many practices identify and treat one problem at a time: fill the obvious cavity, then 6 months later address the chipped tooth, then a year later finally do the crown. This approach:</p>
 
@@ -938,12 +940,12 @@
                 <li>Results in lower patient satisfaction because treatment feels never-ending</li>
             </ul>
 
-            <h3>The Comprehensive Planning Framework</h3>
+            <h2>The Comprehensive Planning Framework</h2>
 
             <p>At the initial exam, identify all treatment in these categories:</p>
 
             <div class="action-steps">
-                <h4>Comprehensive Treatment Categories</h4>
+                <h2>Comprehensive Treatment Categories</h2>
                 <ol>
                     <li><strong>Phase 1 (Urgent):</strong> Pain, infection, acute problems—typically 0-4 weeks</li>
                     <li><strong>Phase 2 (Foundation):</strong> Periodontal therapy, caries treatment, edentulous space planning—typically 2-8 weeks</li>
@@ -954,7 +956,7 @@
 
             <p>This framework communicates urgency while managing expectations. Phase 1 and 2 generate immediate production ($2,000-$5,000), while Phases 3 and 4 create a 6-12 month treatment pipeline worth $5,000-$20,000+.</p>
 
-            <h3>Production Impact of Comprehensive Planning</h3>
+            <h2>Production Impact of Comprehensive Planning</h2>
 
             <p>A practice that shifts from piecemeal to comprehensive planning typically experiences:</p>
 
@@ -970,7 +972,7 @@
 
             <p>In many practices, hygiene is treated as a loss leader—a necessary service that subsidizes doctor production. Elite practices treat hygiene as a major profit center.</p>
 
-            <h3>The Misconception About Hygiene Production</h3>
+            <h2>The Misconception About Hygiene Production</h2>
 
             <p>Most practices limit hygiene appointments to prophys and periodic maintenance at insurance-reimbursed rates. But hygiene can be a high-production department when you expand the scope:</p>
 
@@ -991,7 +993,7 @@
                 Optimized: 4 patients × $300 × 250 days = $300,000 annual
             </div>
 
-            <h3>Creating a Hygiene-Focused Practice Culture</h3>
+            <h2>Creating a Hygiene-Focused Practice Culture</h2>
 
             <p>Doubling hygiene production requires changing how the practice values and implements hygiene:</p>
 
@@ -1008,7 +1010,7 @@
 
             <p>This is the leverage point that separates merely profitable practices from truly lucrative ones. Many practices focus entirely on production growth but ignore overhead management.</p>
 
-            <h3>The Overhead Efficiency Paradox</h3>
+            <h2>The Overhead Efficiency Paradox</h2>
 
             <p>Counterintuitively, increasing production often allows you to reduce overhead percentage:</p>
 
@@ -1021,7 +1023,7 @@
 
             <p>A practice with $20,000 in monthly fixed overhead is at 50% overhead with $40,000 in production, but only 33% overhead with $60,000 in production—all without reducing expenses.</p>
 
-            <h3>Overhead Categories to Monitor</h3>
+            <h2>Overhead Categories to Monitor</h2>
 
             <p>Elite practices obsessively track and optimize these overhead categories:</p>
 
@@ -1043,7 +1045,7 @@
 
             <p>What gets measured gets managed. Most practices track production, but sophisticated practices track the component metrics that actually drive production.</p>
 
-            <h3>The Essential KPI Dashboard</h3>
+            <h2>The Essential KPI Dashboard</h2>
 
             <p><strong>Production per Operatory Hour:</strong> Total monthly production divided by total monthly operatory hours (all chairs, all providers). This reveals schedule efficiency and case mix optimization.</p>
 
@@ -1062,7 +1064,7 @@
             <p><strong>Collection Percentage:</strong> Cash received divided by production billed. This reveals insurance claim issues and payment delays.</p>
 
             <div class="action-steps">
-                <h4>Monthly KPI Review Protocol</h4>
+                <h2>Monthly KPI Review Protocol</h2>
                 <ol>
                     <li>Calculate key metrics by the 5th of each month</li>
                     <li>Compare to previous month and same month previous year</li>
@@ -1078,7 +1080,7 @@
 
             <p>Not all technology investments are equal. The best technology investments directly increase production or reduce costs substantially.</p>
 
-            <h3>High-ROI Technology Categories</h3>
+            <h2>High-ROI Technology Categories</h2>
 
             <p><strong>Digital Scanning (TRIOS, Primescan, etc.):</strong> Intraoral scanning enables chair-side treatment planning, digital case presentations, and milled restorations. Investment: $12,000-18,000. ROI: Increased case acceptance (10-15% improvement) + reduced remakes = 6-9 month payback.</p>
 
@@ -1099,7 +1101,7 @@
 
             <p>Production doesn't increase by accident. It increases through systematic goal-setting, tracking, and accountability.</p>
 
-            <h3>Establishing Baseline and Target</h3>
+            <h2>Establishing Baseline and Target</h2>
 
             <p>Before setting goals, calculate your current state:</p>
 
@@ -1112,7 +1114,7 @@
 
             <p>A practice with $50,000 monthly production and 20 working days is averaging $2,500 daily production or about $312 per operatory hour (if running 4 operatories 8 hours/day = 32 hours).</p>
 
-            <h3>Goal-Setting Framework</h3>
+            <h2>Goal-Setting Framework</h2>
 
             <p><strong>Conservative Growth Target:</strong> 15-20% annual increase (1.25-1.67% monthly). This is achievable through operational improvements without adding significant team capacity.</p>
 
@@ -1121,7 +1123,7 @@
             <p><strong>Breakthrough Growth Target:</strong> 50%+ annual increase (3.4%+ monthly). This requires fundamental practice restructuring, major technology investment, or significant market expansion.</p>
 
             <div class="action-steps">
-                <h4>Daily Production Tracking System</h4>
+                <h2>Daily Production Tracking System</h2>
                 <ol>
                     <li><strong>Morning standup:</strong> Team identifies daily production target (based on scheduled cases)</li>
                     <li><strong>Mid-day check:</strong> Confirm on track or identify gaps</li>
@@ -1133,7 +1135,7 @@
 
             <p>Daily tracking creates visibility and accountability. Teams that track daily production dramatically outperform teams that only review monthly numbers.</p>
 
-            <h3>The 12-Month Production Plan</h3>
+            <h2>The 12-Month Production Plan</h2>
 
             <p>Elite practices build a detailed 12-month production roadmap that identifies exactly how growth will occur:</p>
 
@@ -1170,7 +1172,7 @@
 
             <!-- CTA SECTION -->
             <section class="cta-section">
-                <h3>Download Your Production Optimization Guide</h3>
+                <h2>Download Your Production Optimization Guide</h2>
                 <p>Get the complete framework for analyzing your practice's production potential, including templates for ideal day design, KPI tracking, and 12-month roadmapping.</p>
 
                 <form onsubmit="handleFormSubmit(event)">
@@ -1197,20 +1199,20 @@
 
             <!-- RELATED ARTICLES -->
             <section class="related-articles">
-                <h3>Related Articles</h3>
+                <h2>Related Articles</h2>
                 <div class="related-grid">
                     <div class="related-card">
-                        <h4>The FFS Transition Playbook</h4>
+                        <h2>The FFS Transition Playbook</h2>
                         <p>Step-by-step guide for transitioning from PPO-dependent to FFS-focused dentistry while maintaining patient relationships.</p>
                         <a href="/articles/ffs-transition">Read Article →</a>
                     </div>
                     <div class="related-card">
-                        <h4>Comprehensive Treatment Planning</h4>
+                        <h2>Comprehensive Treatment Planning</h2>
                         <p>How to identify all restorative and cosmetic needs at the initial exam and present them in a way patients accept.</p>
                         <a href="/articles/comprehensive-planning">Read Article →</a>
                     </div>
                     <div class="related-card">
-                        <h4>Scaling Hygiene to $300K+ Production</h4>
+                        <h2>Scaling Hygiene to $300K+ Production</h2>
                         <p>Advanced strategies for transforming hygiene from a cost center to a major profit center in your practice.</p>
                         <a href="/articles/hygiene-scaling">Read Article →</a>
                     </div>
@@ -1239,14 +1241,15 @@
     </div>
 
     <!-- FOOTER -->
-    <footer>
+    </main>
+<footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About RID Academy</h4>
+                <h2>About RID Academy</h2>
                 <p>RID Academy is a dental education platform dedicated to helping practice owners scale revenue and build sustainable, profitable dental businesses.</p>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h2>Resources</h2>
                 <ul>
                     <li><a href="/articles">All Articles</a></li>
                     <li><a href="/guides">Free Guides</a></li>
@@ -1255,7 +1258,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Popular Topics</h4>
+                <h2>Popular Topics</h2>
                 <ul>
                     <li><a href="/practice-growth">Practice Growth</a></li>
                     <li><a href="/ffs-dentistry">FFS Dentistry</a></li>
@@ -1264,7 +1267,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Contact</h4>
+                <h2>Contact</h2>
                 <ul>
                     <li><a href="mailto:info@rid.academy">info@rid.academy</a></li>
                     <li><a href="tel:+18005551234">(800) 555-1234</a></li>

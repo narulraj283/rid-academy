@@ -18,7 +18,8 @@
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
   <script>
@@ -58,7 +59,7 @@
     }
 
     nav a {
-      color: rgba(255, 255, 255, 0.85);
+      color: #ffffff;
       text-decoration: none;
       font-size: 0.9rem;
       transition: color 0.3s;
@@ -589,20 +590,20 @@
 }
 </style>
 
-  <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+  <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -613,6 +614,7 @@
       }
     </style>
   </nav>
+<main>
 
   <section class="article-hero">
     <div class="container">
@@ -672,20 +674,20 @@
     <p>Here's the financial framework that defines a profitable hygiene department:</p>
 
     <div class="profit-model">
-      <h4>The Hygiene Profitability Model</h4>
+      <h3>The Hygiene Profitability Model</h3>
       <div class="profit-thirds">
         <div class="third">
-          <h5>Third 1</h5>
+          <h3>Third 1</h3>
           <p>Hygienist Salary</p>
           <div class="description">What you pay your hygienist as a producing team member</div>
         </div>
         <div class="third">
-          <h5>Third 2</h5>
+          <h3>Third 2</h3>
           <p>Related Overhead</p>
           <div class="description">Room supplies, equipment, scheduling coordinator salary, benefits</div>
         </div>
         <div class="third">
-          <h5>Third 3</h5>
+          <h3>Third 3</h3>
           <p>Pure Profit</p>
           <div class="description">Your profit from operating the hygiene segment</div>
         </div>
@@ -869,7 +871,7 @@
       <h3>Build Your Hygiene-Driven Practice</h3>
       <p>Discover the complete framework for transforming hygiene into your most profitable practice segment.</p>
       <div class="lead-form">
-        <h4>Get the Hygiene Profitability Calculator</h4>
+        <h3>Get the Hygiene Profitability Calculator</h3>
         <form method="POST" action="https://formspree.io/f/xdovpqja">
           <div class="form-group">
             <label for="name">Your Name</label>
@@ -892,24 +894,24 @@
       <h3>Related Articles</h3>
       <div class="articles-grid">
         <a href="/blog/scripts-versus-talking-points.html" class="article-card">
-          <h4>Scripts vs. Talking Points</h4>
+          <h3>Scripts vs. Talking Points</h3>
           <p>Master the communication strategies for discussing your practice transition with patients.</p>
           <span class="read-more">Read Article →</span>
         </a>
         <a href="/blog/associate-hiring-ppo-strategy.html" class="article-card">
-          <h4>Timing Associate Hire with PPO Drop</h4>
+          <h3>Timing Associate Hire with PPO Drop</h3>
           <p>Learn how to coordinate hiring and insurance independence for maximum impact.</p>
           <span class="read-more">Read Article →</span>
         </a>
         <a href="/resources/six-steps-ppo-elimination.html" class="article-card">
-          <h4>Six Steps to Successfully Drop PPO Plans</h4>
+          <h3>Six Steps to Successfully Drop PPO Plans</h3>
           <p>Complete framework for transitioning your practice to fee-for-service profitability.</p>
           <span class="read-more">Read Article →</span>
         </a>
       </div>
     </section>
 
-    <p class="source-note">This article is based on expert insights from Gary Takacs and Naren Arulrajah, dental practice transformation leaders at RID Academy. Learn more at the <a href="/podcast/" target="_blank">Less Insurance Dependence Podcast</a>.</p>
+    <p class="source-note">This article is based on expert insights from Gary Takacs and Naren Arulrajah, dental practice transformation leaders at RID Academy. Learn more at the <a href="/podcast/" target="_blank" rel="noopener noreferrer">Less Insurance Dependence Podcast</a>.</p>
   
 <div style="margin: 40px auto; max-width: 800px; padding: 30px; background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); border-left: 4px solid #00B4A6; border-radius: 8px; display: flex; align-items: flex-start; gap: 20px;">
   <img src="/images/naren-arulrajah.png" alt="Naren Arulrajah" style="width: 80px; height: 80px; border-radius: 50%; object-fit: cover; flex-shrink: 0;">
@@ -926,5 +928,6 @@
   <div class="article-footer">
     <a href="/blog/" class="back-link">← Back to All Articles</a>
   </div>
+</main>
 </body>
 </html>

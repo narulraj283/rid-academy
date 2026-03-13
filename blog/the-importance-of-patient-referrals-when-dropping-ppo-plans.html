@@ -26,7 +26,8 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 
   <style>
     * {
@@ -55,7 +56,7 @@
     }
 
     nav a {
-      color: rgba(255, 255, 255, 0.85);
+      color: #ffffff;
       text-decoration: none;
       font-size: 0.9rem;
       transition: color 0.3s;
@@ -460,20 +461,20 @@
 }
 </style>
 
-  <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+  <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -484,6 +485,7 @@
       }
     </style>
   </nav>
+<main>
 
   <section class="hero">
     <div class="hero-content">
@@ -589,7 +591,7 @@
     <p>Here's the strategic value: if that patient is demographically similar to you—same age, gender, ethnicity, profession—their friends and followers subconsciously think, "If someone like me loves this dentist, I probably will too."</p>
 
     <div class="system-box">
-      <h4>The Digital Signboard Strategy</h4>
+      <h3>The Digital Signboard Strategy</h3>
       <p>At the moment you've just created a positive emotional peak (after completing treatment, after excellent clinical outcome), ask the patient if they'd be willing to take a quick picture holding a positive sign like "I Love My Dentist" or "No Cavities, Please!" Have a team member pose in the photo as well. Post the photo on your practice social media, tag the patient, and ask permission to use it.</p>
       <p>This gives the patient credit, creates a modern referral endorsement, and provides social proof to their network that the practice delivers exceptional care.</p>
     </div>
@@ -627,18 +629,18 @@
 
     <h2>Related Resources</h2>
     <div class="related-articles">
-      <h4>Continue Your Education</h4>
+      <h3>Continue Your Education</h3>
       <div class="article-grid">
         <a href="/blog/relationship-driven-practice.html" class="article-card">
-          <h5>Building a Relationship-Driven Practice</h5>
+          <h4>Building a Relationship-Driven Practice</h4>
           <p>Create the foundation that makes referrals natural and automatic.</p>
         </a>
         <a href="/blog/ppo-resignation-steps.html" class="article-card">
-          <h5>The 6-Step PPO Resignation Process</h5>
+          <h4>The 6-Step PPO Resignation Process</h4>
           <p>Strategic steps to systematically leave insurance networks.</p>
         </a>
         <a href="/blog/digital-marketing-essentials.html" class="article-card">
-          <h5>Digital Marketing Fundamentals for Dental Practices</h5>
+          <h4>Digital Marketing Fundamentals for Dental Practices</h4>
           <p>Supplement referral flow with strategic digital patient acquisition.</p>
         </a>
       </div>
@@ -673,5 +675,6 @@
       }
     });
   </script>
+</main>
 </body>
 </html>

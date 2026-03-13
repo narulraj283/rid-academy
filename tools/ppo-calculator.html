@@ -19,7 +19,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
   <link rel="stylesheet" href="/css/styles.css">
 
   <script type="application/ld+json">
@@ -50,7 +51,7 @@
 <body>
 
   <!-- NAV -->
-  <nav class="nav">
+  <nav aria-label="Main navigation" class="nav">
     <div class="nav-inner">
       <a href="/" class="nav-logo">RID<span>.academy</span></a>
       <ul class="nav-links">
@@ -67,6 +68,7 @@
       <button class="nav-toggle" aria-label="Toggle menu"><span></span><span></span><span></span></button>
     </div>
   </nav>
+<main>
 
   <!-- HERO -->
   <section class="hero" style="padding-bottom: 48px;">
@@ -154,7 +156,7 @@
 
           <!-- Breakdown -->
           <div class="mt-xl">
-            <h3>Your Breakdown</h3>
+            <h2>Your Breakdown</h2>
             <div class="table-wrap mt-md">
               <table>
                 <thead>
@@ -178,22 +180,22 @@
 
           <!-- Context -->
           <div class="card-flat mt-xl" style="border-left: 4px solid var(--teal);">
-            <h4>What This Means for Your Practice</h4>
+            <h2>What This Means for Your Practice</h2>
             <p id="context-text" style="margin-top: 8px;"></p>
           </div>
 
           <!-- Next Steps -->
           <div class="mt-xl">
-            <h3>Recommended Next Steps</h3>
+            <h2>Recommended Next Steps</h2>
             <div class="grid grid-2 mt-md" style="gap: 16px;">
               <a href="/tools/readiness-scorecard.html" class="card" style="text-decoration: none;">
                 <div class="card-icon">✓</div>
-                <h4 style="font-size: 1rem;">Take the Readiness Scorecard</h4>
+                <h2 style="font-size: 1rem;">Take the Readiness Scorecard</h2>
                 <p style="font-size: 0.85rem;">Find out if your practice is ready to start dropping PPO plans.</p>
               </a>
               <a href="/tools/revenue-simulator.html" class="card" style="text-decoration: none;">
                 <div class="card-icon navy">⟳</div>
-                <h4 style="font-size: 1rem;">Simulate Revenue Impact</h4>
+                <h2 style="font-size: 1rem;">Simulate Revenue Impact</h2>
                 <p style="font-size: 0.85rem;">Model what happens when you drop your lowest-performing PPO plan.</p>
               </a>
             </div>
@@ -247,7 +249,8 @@
   </section>
 
   <!-- FOOTER -->
-  <footer class="footer">
+  </main>
+<footer class="footer">
     <div class="container">
       <div class="grid grid-4" style="gap: 48px;">
         <div>
@@ -255,7 +258,7 @@
           <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
-          <h4>Tools</h4>
+          <h2>Tools</h2>
           <ul class="footer-links">
             <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
             <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
@@ -264,7 +267,7 @@
           </ul>
         </div>
         <div>
-          <h4>Learn</h4>
+          <h2>Learn</h2>
           <ul class="footer-links">
             <li><a href="/blog/">Articles & Guides</a></li>
             <li><a href="/pages/summit.html">Annual Summit</a></li>
@@ -273,7 +276,7 @@
           </ul>
         </div>
         <div>
-          <h4>Company</h4>
+          <h2>Company</h2>
           <ul class="footer-links">
             <li><a href="/pages/about.html">About</a></li>
             <li><a href="/pages/community.html">Community</a></li>

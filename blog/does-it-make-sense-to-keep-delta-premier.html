@@ -11,7 +11,8 @@
   <meta property="og:url" content="https://rid.academy/blog/does-it-make-sense-to-keep-delta-premier.html">
   <link rel="canonical" href="https://rid.academy/blog/does-it-make-sense-to-keep-delta-premier.html">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <link rel="stylesheet" href="/css/styles.css">
 <script src="/js/canonical-redirect.js" defer></script>
     <script src="/js/redirect-thin.js"></script>
@@ -68,20 +69,20 @@
 }
 </style>
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -92,12 +93,13 @@
       }
     </style>
   </nav>
+<main>
 
 <section class="article-hero" style="background:linear-gradient(135deg, #0F2B46 0%, #2c3e50 100%);padding:4rem 2rem 3rem;color:white">
   <div style="max-width:800px;margin:0 auto">
     <span class="category-badge" style="background:rgba(255,255,255,0.2);padding:0.3rem 0.8rem;border-radius:20px;font-size:0.75rem;font-weight:600;letter-spacing:0.05em">PRACTICE MANAGEMENT</span>
     <h1 style="font-size:2.2rem;margin:1rem 0 0.5rem;line-height:1.2;color:white">Does It Make Sense to Keep Delta Premier?</h1>
-    <div class="article-meta" style="color:rgba(255,255,255,0.85);font-size:0.9rem">
+    <div class="article-meta" style="color:#ffffff;font-size:0.9rem">
       <span>3 min read</span>
     </div>
   </div>
@@ -139,6 +141,7 @@
   <a href="/blog/" style="color:#00B4A6;text-decoration:none;font-weight:500">&larr; Back to All Articles</a>
 </div>
 
+</main>
 <footer style="background:#0F2B46;color:rgba(255,255,255,0.7);padding:2rem;text-align:center;font-size:0.85rem">
   <p>&copy; 2025 RID Academy. Educational content for dental professionals.</p>
   <div style="margin-top:0.5rem">

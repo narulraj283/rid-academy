@@ -15,7 +15,8 @@
   <meta name="author" content="Naren Arulrajah & Gary Takacs">
   <link rel="canonical" href="https://rid.academy/blog/patient-retention-oon.html">
   <link rel="icon" type="image/svg+xml" href="/favicon.svg">
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -32,7 +33,7 @@
     .navbar .logo { font-size: 1.1rem; }
     .navbar .logo span { color: #00B4A6; }
     .nav-links { display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap; }
-    .nav-links a { color: rgba(255,255,255,0.85); font-size: 0.9rem; font-weight: 400; }
+    .nav-links a { color:#ffffff; font-size: 0.9rem; font-weight: 400; }
     .nav-links a:hover { color: #00B4A6; }
     .cta-button { background: #00B4A6; color: white; padding: 0.4rem 1rem; border-radius: 6px; font-size: 0.85rem; font-weight: 600; }
     .article-hero { background: linear-gradient(135deg, #0F2B46 0%, #00B4A6 100%); color: white; padding: 5rem 2rem 4rem; text-align: center; }
@@ -115,20 +116,20 @@
 </style>
 
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -139,6 +140,7 @@
       }
     </style>
   </nav>
+<main>
 
 <section class="article-hero">
   <div class="container">
@@ -205,17 +207,17 @@
     <p>How you communicate the change is critical. Here are proven scripts:</p>
 
     <div class="script-box">
-      <h4>Script 1: The Value-First Approach (For Established Patients)</h4>
+      <h3>Script 1: The Value-First Approach (For Established Patients)</h3>
       <p>"Over the years, I've focused on providing you with the best clinical care and outcomes. To continue delivering that level of care without compromises, I'm making some changes to how we work with insurance. Starting [date], we're no longer participating with [insurance plan]. Here's what this means for you: You'll still receive the same exceptional care, and we have flexible payment options to help manage costs. I value our relationship and want to ensure you can continue receiving care here."</p>
     </div>
 
     <div class="script-box">
-      <h4>Script 2: The Opportunity Approach (For Younger/Newer Patients)</h4>
+      <h3>Script 2: The Opportunity Approach (For Younger/Newer Patients)</h3>
       <p>"I want to discuss changes to how we're managing insurance. We're transitioning to a fee-for-service model that lets us focus entirely on your needs rather than insurance limitations. This means better treatment options, longer appointment times, and care decisions based on what's best for you, not what insurance covers. We have financing options available, and I'd love to discuss how this transition benefits you."</p>
     </div>
 
     <div class="script-box">
-      <h4>Script 3: The Risk-Acknowledgment Approach (For High-Value Patients)</h4>
+      <h3>Script 3: The Risk-Acknowledgment Approach (For High-Value Patients)</h3>
       <p>"I'm making a significant practice change that affects patients on [insurance plan]. I want you to hear it from me directly: we're going out of network with your insurance. This change allows us to provide better care without insurance restrictions. I know this might seem concerning, but I want to talk with you about what this means, answer any questions, and ensure you feel confident continuing care here. Can we schedule a brief conversation to discuss this?"</p>
     </div>
 
@@ -315,17 +317,17 @@
       <h3>Related Articles in This Pillar</h3>
       <div class="related-grid">
         <div class="related-card">
-          <h4>Assessing Risk When Resigning From PPO Plans</h4>
+          <h3>Assessing Risk When Resigning From PPO Plans</h3>
           <p>Understand the real financial risks and how to mitigate them.</p>
           <a href="/blog/">Read Article →</a>
         </div>
         <div class="related-card">
-          <h4>Using Demand as a Strategy When Resigning</h4>
+          <h3>Using Demand as a Strategy When Resigning</h3>
           <p>Identify your highest-value patients and prioritize retention.</p>
           <a href="/blog/">Read Article →</a>
         </div>
         <div class="related-card">
-          <h4>Successfully Resigning From PPO Plans</h4>
+          <h3>Successfully Resigning From PPO Plans</h3>
           <p>The complete guide to dropping insurance plans successfully.</p>
           <a href="/blog/">Read Article →</a>
         </div>
@@ -353,6 +355,7 @@
   <a href="/blog/" class="back-link">← Back to All Articles</a>
 </div>
 
+</main>
 <footer>
   <p>&copy; 2025 RID Academy. Educational content for dental professionals.</p>
   <div>

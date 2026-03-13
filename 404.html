@@ -20,7 +20,8 @@
     <link rel="stylesheet" href="/css/styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Inter:wght@400;500;600;700&display=swap"></noscript>
 <!-- Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
 <script>
@@ -51,6 +52,7 @@
       </button>
     </div>
   </nav>
+<main>
 
   <!-- ═══ 404 ERROR SECTION ═══ -->
   <section style="padding-top: calc(var(--nav-height) + var(--space-4xl)); padding-bottom: var(--space-4xl); text-align: center;">
@@ -66,7 +68,7 @@
       </div>
 
       <div style="background: var(--bg-subtle); border-radius: var(--radius-lg); padding: var(--space-2xl); margin-top: var(--space-2xl);">
-        <h3 style="color: var(--navy); margin-bottom: var(--space-lg);">Still need help?</h3>
+        <h2 style="color: var(--navy); margin-bottom: var(--space-lg);">Still need help?</h2>
         <p style="color: var(--text-secondary); margin-bottom: var(--space-lg);">Try these popular pages:</p>
         <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: var(--space-md);">
           <li><a href="/pages/glossary.html" style="color: var(--teal-dark); font-weight: 500;">Dental Insurance Glossary</a></li>
@@ -78,7 +80,8 @@
   </section>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
+  </main>
+<footer class="footer">
     <div class="container">
       <div class="grid grid-4" style="gap: 48px;">
         <div>
@@ -86,7 +89,7 @@
           <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Tools</h4>
+          <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Tools</h2>
           <ul class="footer-links">
             <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
             <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
@@ -95,7 +98,7 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Learn</h4>
+          <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Learn</h2>
           <ul class="footer-links">
             <li><a href="/blog/">Articles & Guides</a></li>
             <li><a href="/pages/summit.html">Annual Summit</a></li>
@@ -104,7 +107,7 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Company</h4>
+          <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Company</h2>
           <ul class="footer-links">
             <li><a href="/pages/about.html">About RID Academy</a></li>
             <li><a href="/pages/community.html">Community</a></li>

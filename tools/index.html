@@ -25,7 +25,8 @@
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=DM+Mono:wght@400;500&display=swap"></noscript>
 
   <!-- Styles -->
   <link rel="stylesheet" href="/css/styles.css">
@@ -81,6 +82,7 @@
       </button>
     </div>
   </nav>
+<main>
 
   <!-- ═══ HERO ═══ -->
   <section class="hero">
@@ -106,7 +108,7 @@
             <div class="card-icon coral">$</div>
             <span class="badge badge-coral">Most Popular</span>
           </div>
-          <h3>PPO Write-Off Calculator</h3>
+          <h2>PPO Write-Off Calculator</h2>
           <p>Discover exactly how much you're losing annually to PPO write-offs. Used by thousands of practices to identify hidden revenue losses.</p>
           <div class="tool-card-features">
             <ul style="list-style: none; padding: 0; margin: 0;">
@@ -136,7 +138,7 @@
             <div class="card-icon teal">✓</div>
             <span class="badge badge-teal">Assessment</span>
           </div>
-          <h3>Insurance Independence Scorecard</h3>
+          <h2>Insurance Independence Scorecard</h2>
           <p>Answer 15 targeted questions and get a personalized readiness score plus custom transition roadmap for your practice.</p>
           <div class="tool-card-features">
             <ul style="list-style: none; padding: 0; margin: 0;">
@@ -166,7 +168,7 @@
             <div class="card-icon navy">⟳</div>
             <span class="badge badge-navy">Simulator</span>
           </div>
-          <h3>Revenue Impact Simulator</h3>
+          <h2>Revenue Impact Simulator</h2>
           <p>Model your exact revenue scenarios when dropping specific PPO plans. Test different retention rates and fee strategies.</p>
           <div class="tool-card-features">
             <ul style="list-style: none; padding: 0; margin: 0;">
@@ -196,7 +198,7 @@
             <div class="card-icon green">♦</div>
             <span class="badge badge-green">Calculator</span>
           </div>
-          <h3>Membership Plan Pricing Calculator</h3>
+          <h2>Membership Plan Pricing Calculator</h2>
           <p>Find your optimal membership pricing that keeps patients happy while maximizing practice profitability and revenue stability.</p>
           <div class="tool-card-features">
             <ul style="list-style: none; padding: 0; margin: 0;">
@@ -239,7 +241,7 @@
           </div>
           <div class="article-card-body">
             <span class="badge badge-coral mb-sm">Pillar Guide</span>
-            <h3>The Complete Guide to Dropping PPO Plans</h3>
+            <h2>The Complete Guide to Dropping PPO Plans</h2>
             <p>Everything you need to know, from first analysis to last termination letter. Step-by-step approach used by 1,000+ practices.</p>
             <div class="article-card-meta">25 min read</div>
           </div>
@@ -250,7 +252,7 @@
           </div>
           <div class="article-card-body">
             <span class="badge badge-teal mb-sm">Pillar Guide</span>
-            <h3>Building a Dental Membership Plan from Scratch</h3>
+            <h2>Building a Dental Membership Plan from Scratch</h2>
             <p>Design, price, launch, and grow your in-house membership program. Complete framework from start to profitability.</p>
             <div class="article-card-meta">20 min read</div>
           </div>
@@ -261,7 +263,7 @@
           </div>
           <div class="article-card-body">
             <span class="badge badge-navy mb-sm">Pillar Guide</span>
-            <h3>Team Training for the Fee-for-Service Transition</h3>
+            <h2>Team Training for the Fee-for-Service Transition</h2>
             <p>Get your entire team aligned and confident about the transition. Training modules and communication templates included.</p>
             <div class="article-card-meta">18 min read</div>
           </div>
@@ -287,7 +289,8 @@
   </section>
 
   <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
+  </main>
+<footer class="footer">
     <div class="container">
       <div class="grid grid-4" style="gap: 48px;">
         <div>
@@ -295,7 +298,7 @@
           <p style="font-size: 0.85rem; color: rgba(255,255,255,0.5);">The Reducing Insurance Dependence Academy. Empowering dental practice owners to achieve financial independence.</p>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Tools</h4>
+          <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Tools</h2>
           <ul class="footer-links">
             <li><a href="/tools/ppo-calculator.html">PPO Write-Off Calculator</a></li>
             <li><a href="/tools/readiness-scorecard.html">Readiness Scorecard</a></li>
@@ -304,7 +307,7 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Learn</h4>
+          <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Learn</h2>
           <ul class="footer-links">
             <li><a href="/blog/">Articles & Guides</a></li>
             <li><a href="/pages/summit.html">Annual Summit</a></li>
@@ -313,7 +316,7 @@
           </ul>
         </div>
         <div>
-          <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Company</h4>
+          <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">Company</h2>
           <ul class="footer-links">
             <li><a href="/pages/about.html">About RID Academy</a></li>
             <li><a href="/pages/community.html">Community</a></li>

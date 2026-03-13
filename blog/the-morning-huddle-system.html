@@ -35,7 +35,8 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 
     <title>The Morning Huddle System: Daily Alignment for Team Success</title>
 
@@ -724,20 +725,20 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -748,6 +749,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -819,7 +821,7 @@
 
             <h3>The Four Core Components</h3>
 
-            <h4>1. Schedule Review (3 minutes)</h4>
+            <h3>1. Schedule Review (3 minutes)</h3>
             <p>
                 Walk through today's schedule. The front desk or treatment coordinator presents an overview:
             </p>
@@ -835,7 +837,7 @@
                 This takes less than 3 minutes and immediately tells your team what kind of day you're facing.
             </p>
 
-            <h4>2. Production Goals & Targets (2 minutes)</h4>
+            <h3>2. Production Goals & Targets (2 minutes)</h3>
             <p>
                 State the day's production goal. This should be based on your monthly target divided by the number of open days. Everyone should know the number.
             </p>
@@ -849,7 +851,7 @@
                 Make it real. When the team knows the target, they become production managers, not just team members. They identify opportunities and communicate them up the chain.
             </p>
 
-            <h4>3. Opportunities & Game Plan (3 minutes)</h4>
+            <h3>3. Opportunities & Game Plan (3 minutes)</h3>
             <p>
                 This is where the real magic happens. The treatment coordinator or clinical director reviews potential same-day treatment opportunities:
             </p>
@@ -865,7 +867,7 @@
                 For each opportunity, identify: (1) the patient, (2) the treatment, (3) who owns the conversation (usually doctor or hygienist), and (4) the next step (consult, X-ray, discussion with patient).
             </p>
 
-            <h4>4. Team Roles & Accountability (2 minutes)</h4>
+            <h3>4. Team Roles & Accountability (2 minutes)</h3>
             <p>
                 Make sure everyone knows their specific role for the day:
             </p>
@@ -922,7 +924,7 @@
             </p>
 
             <div class="highlight-box">
-                <h4>Types of Opportunities to Flag</h4>
+                <h3>Types of Opportunities to Flag</h3>
                 <ul>
                     <li><strong>Patients with pending treatment plans</strong> - Someone recommended treatment but it wasn't scheduled. Today's the day to present or begin it.</li>
                     <li><strong>Overdue procedures</strong> - Patients who haven't had X-rays in 3+ years, haven't been in for recall in 18+ months, or have any overdue perio work.</li>
@@ -1055,7 +1057,7 @@
             </p>
 
             <div class="highlight-box warning">
-                <h4>The Cancellation Protocol</h4>
+                <h3>The Cancellation Protocol</h3>
                 <ol>
                     <li><strong>Immediate notification</strong> - When a cancellation comes in after hours, the person who takes the call documents it and notifies the team before the huddle.</li>
                     <li><strong>Gap analysis</strong> - In the huddle, the treatment coordinator immediately flags the time as available and assesses whether it can be filled.</li>
@@ -1165,7 +1167,7 @@
             </ul>
 
             <div class="highlight-box">
-                <h4>Insurance Transition Huddle Additions</h4>
+                <h3>Insurance Transition Huddle Additions</h3>
                 <ul>
                     <li>Flag patients whose current insurance is changing</li>
                     <li>List upcoming coverage effective dates</li>
@@ -1391,7 +1393,7 @@
             <h2>Key Takeaways: Your Huddle Implementation Path</h2>
 
             <div class="highlight-box">
-                <h4>Start Here (This Week)</h4>
+                <h3>Start Here (This Week)</h3>
                 <ul>
                     <li>Schedule your first huddle for tomorrow morning, 15 minutes before your first patient</li>
                     <li>Print or create a simple huddle template/agenda</li>
@@ -1402,7 +1404,7 @@
             </div>
 
             <div class="highlight-box">
-                <h4>Next 30 Days</h4>
+                <h3>Next 30 Days</h3>
                 <ul>
                     <li>Hold daily huddles at the same time every day</li>
                     <li>Track opportunities identified vs. converted</li>
@@ -1413,7 +1415,7 @@
             </div>
 
             <div class="highlight-box">
-                <h4>Days 30-90</h4>
+                <h3>Days 30-90</h3>
                 <ul>
                     <li>Implement end-of-day huddles (5 minutes)</li>
                     <li>Refine your opportunity-flagging process</li>
@@ -1520,10 +1522,11 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    </main>
+<footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>RID Academy</h4>
+                <h3>RID Academy</h3>
                 <ul>
                     <li><a href="https://rid.academy">Home</a></li>
                     <li><a href="https://rid.academy/articles">Articles</a></li>
@@ -1532,7 +1535,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h3>Resources</h3>
                 <ul>
                     <li><a href="https://rid.academy/templates">Templates</a></li>
                     <li><a href="https://rid.academy/guides">Implementation Guides</a></li>
@@ -1541,7 +1544,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Popular Topics</h4>
+                <h3>Popular Topics</h3>
                 <ul>
                     <li><a href="https://rid.academy/production">Production Systems</a></li>
                     <li><a href="https://rid.academy/team-management">Team Management</a></li>
@@ -1550,7 +1553,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Legal</h4>
+                <h3>Legal</h3>
                 <ul>
                     <li><a href="https://rid.academy/privacy">Privacy Policy</a></li>
                     <li><a href="https://rid.academy/terms">Terms of Service</a></li>

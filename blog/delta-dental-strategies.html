@@ -11,7 +11,8 @@
   <meta property="og:site_name" content="RID Academy">
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
   <script>window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag('js', new Date());gtag('config', 'G-YB2QDRNZ1D');</script>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
   <style>
     * {margin: 0; padding: 0; box-sizing: border-box;}
     body {font-family: 'Inter', sans-serif; color: #333; line-height: 1.6;}
@@ -19,7 +20,7 @@
     nav a:first-child {color: white; font-weight: 800; font-size: 1.1rem; text-decoration: none;}
     nav a span {color: #00B4A6;}
     nav div {display: flex; gap: 1.5rem; align-items: center; flex-wrap: wrap;}
-    nav a {color: rgba(255, 255, 255, 0.85); text-decoration: none; font-size: 0.9rem;}
+    nav a {color: #ffffff; text-decoration: none; font-size: 0.9rem;}
     nav a.cta {background: #00B4A6; color: white; padding: 0.4rem 1rem; border-radius: 6px; font-weight: 600;}
     .article-hero {background: linear-gradient(135deg, #0F2B46 0%, #1a5f7a 100%); color: white; padding: 5rem 2rem 4rem;}
     .article-hero .container {max-width: 800px; margin: 0 auto;}
@@ -94,20 +95,20 @@
 }
 </style>
 
-  <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+  <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -118,12 +119,13 @@
       }
     </style>
   </nav>
+<main>
 
   <section class="article-hero">
     <div class="container">
       <span class="category-badge">Delta Dental Guide</span>
       <h1>Delta Dental Deep Dive: PPO vs Premier, Negotiations, and Exit Strategies</h1>
-      <div style="color: rgba(255, 255, 255, 0.85); font-size: 0.9rem; margin-top: 1rem;">Comprehensive strategies for handling the "5,000-pound gorilla" of dental insurance</div>
+      <div style="color: #ffffff; font-size: 0.9rem; margin-top: 1rem;">Comprehensive strategies for handling the "5,000-pound gorilla" of dental insurance</div>
     </div>
   </section>
 
@@ -293,7 +295,8 @@
     <a href="/" style="color: #0F2B46; text-decoration: none; font-weight: 500;">&larr; Back to RID Academy</a>
   </div>
 
-  <footer>
+  </main>
+<footer>
     <p>&copy; 2025 RID Academy. Created by Naren Arulrajah.</p>
   </footer>
 </body>

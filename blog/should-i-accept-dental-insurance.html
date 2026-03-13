@@ -37,7 +37,8 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"></noscript>
 
     <title>Should I Accept Dental Insurance? | RID Academy</title>
 
@@ -599,20 +600,20 @@
     <div class="progress-bar"></div>
 
     <!-- Navigation Bar -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -623,6 +624,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -649,7 +651,7 @@
     <div class="content-wrapper">
         <!-- Table of Contents Sidebar -->
         <aside class="toc-sidebar">
-            <h3>Table of Contents</h3>
+            <h2>Table of Contents</h2>
             <ul>
                 <li><a href="#the-question">The Fundamental Question</a></li>
                 <li><a href="#ppo-economics">PPO Economics</a></li>
@@ -696,7 +698,7 @@
             <p>Let's quantify this with a concrete example. Suppose your standard fee for a root canal is $1,200. A PPO contract reimburses you $800. You immediately see the 33% reduction. But this isn't your true cost.</p>
 
             <div class="callout highlight">
-                <h4>Critical Distinction</h4>
+                <h2>Critical Distinction</h2>
                 <p>The contracted fee ($800) is what you receive from the insurance company. The write-off ($400) is what you never see—the difference between your standard fee and what you contractually accept as payment in full. This is a business loss.</p>
             </div>
 
@@ -720,7 +722,7 @@
             <p>The write-off calculator is your primary tool for understanding whether a specific plan makes economic sense. Here's how to build one for your practice:</p>
 
             <div class="calculator">
-                <h4>Write-Off Calculator Formula</h4>
+                <h2>Write-Off Calculator Formula</h2>
                 <div class="calc-formula">
 Step 1: Identify your standard fees for your 10 most common procedures
 Step 2: Find the contracted PPO fee for each procedure from the plan's fee schedule
@@ -731,7 +733,7 @@ Step 6: Subtract insurance reimbursement value
 Step 7: Calculate net impact
                 </div>
 
-                <h4>Practical Example</h4>
+                <h2>Practical Example</h2>
                 <div class="calc-example">
 Practice: 2-doctor, mid-market urban practice
 
@@ -767,7 +769,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>Insurance acceptance has legitimate strategic uses. The question is whether your situation justifies the cost.</p>
 
-            <h3>New Practice Launch Phase (Year 1-3)</h3>
+            <h2>New Practice Launch Phase (Year 1-3)</h2>
 
             <p>When you're building a practice from zero patients, insurance acceptance can provide:</p>
 
@@ -779,11 +781,11 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>However, even here, selectivity matters. Accept 2-3 major plans in your market. Skip regional and niche plans. Your goal is patient acquisition, not universal coverage.</p>
 
-            <h3>High Outstanding Debt</h3>
+            <h2>High Outstanding Debt</h2>
 
             <p>If you're carrying $500K in student loans with aggressive payoff timelines, the insurance math shifts. A predictable $150K/year in insurance reimbursement, even with a 12% write-off cost, provides debt service certainty. The strategic value of predictable cash flow can exceed the pure economic cost.</p>
 
-            <h3>Specific Situations Where Insurance Makes Clear Sense</h3>
+            <h2>Specific Situations Where Insurance Makes Clear Sense</h2>
 
             <ul>
                 <li><strong>Rural/small-town practice:</strong> If your market is genuinely constrained (300 people in town, 70% have insurance), FFS-only might eliminate 70% of potential patients. Here, insurance acceptance is market dictation, not choice.</li>
@@ -844,7 +846,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>The most sophisticated practices don't view this as binary. They employ a hybrid strategy: carefully selected insurance participation for volume foundation, with aggressive FFS promotion for comprehensive and elective care.</p>
 
-            <h3>The Hybrid Model</h3>
+            <h2>The Hybrid Model</h2>
 
             <ul>
                 <li><strong>Maintain 2-3 major plans:</strong> Typically one dominant commercial plan and one PPO—usually the plans where 60%+ of your patients already have coverage. These provide patient foundation.</li>
@@ -855,7 +857,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
             </ul>
 
             <div class="callout">
-                <h4>Hybrid Economics Example</h4>
+                <h2>Hybrid Economics Example</h2>
                 <p>A practice with $1.2M annual production might structure it as: $500K from 2-3 maintained insurance plans (accepting a 12% write-off cost = $60K loss) and $700K from FFS patients (zero write-offs). The $60K cost for the insurance write-off buys them the patient foundation and market positioning benefits of insurance acceptance without the full cost burden.</p>
             </div>
 
@@ -863,7 +865,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>If you've decided to reduce insurance significantly, the implementation strategy matters enormously.</p>
 
-            <h3>The "All at Once" Approach</h3>
+            <h2>The "All at Once" Approach</h2>
 
             <p><strong>Pros:</strong></p>
             <ul>
@@ -881,7 +883,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 <li>Requires significant marketing budget and execution capability to backfill patients</li>
             </ul>
 
-            <h3>The Gradual Phase-Out Approach</h3>
+            <h2>The Gradual Phase-Out Approach</h2>
 
             <p><strong>Pros:</strong></p>
             <ul>
@@ -900,7 +902,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 <li>Extended period of "worst of both worlds"</li>
             </ul>
 
-            <h3>Recommended Approach: Phased by Plan, Not by Time</h3>
+            <h2>Recommended Approach: Phased by Plan, Not by Time</h2>
 
             <p>The most effective practices use a hybrid implementation: maintain major plans indefinitely (or for a defined period), while immediately dropping niche and low-value plans. This gives you:</p>
 
@@ -915,7 +917,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>Your evaluation matrix for each insurance plan should include:</p>
 
-            <h3>Quantitative Factors (Weight: 60%)</h3>
+            <h2>Quantitative Factors (Weight: 60%)</h2>
 
             <ul>
                 <li><strong>Patient volume from plan:</strong> Number of covered patients currently in your practice, monthly new patients from this plan</li>
@@ -926,7 +928,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 <li><strong>Administrative cost allocation:</strong> How much of your claims processing overhead goes to this plan?</li>
             </ul>
 
-            <h3>Qualitative Factors (Weight: 40%)</h3>
+            <h2>Qualitative Factors (Weight: 40%)</h2>
 
             <ul>
                 <li><strong>Market presence:</strong> Do 40%+ of your target patients have this plan? If yes, keep it for market access.</li>
@@ -937,7 +939,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
             </ul>
 
             <div class="callout highlight">
-                <h4>The First Plans to Drop</h4>
+                <h2>The First Plans to Drop</h2>
                 <p>Start by eliminating plans meeting these criteria: fewer than 30 covered patients, write-off percentage over 25%, payment timeline over 60 days, and administrative burden described as "significant" by your team. These plans typically generate 2-5% of revenue while consuming 10-15% of administrative overhead. They are your quickest wins.</p>
             </div>
 
@@ -972,7 +974,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>The optimal strategy varies dramatically by practice age:</p>
 
-            <h3>Years 1-3: New Practice</h3>
+            <h2>Years 1-3: New Practice</h2>
 
             <p><strong>Strategy: Selective acceptance</strong></p>
 
@@ -984,7 +986,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 <li>Build patient data infrastructure from day one (understanding insurance prevalence in your book)</li>
             </ul>
 
-            <h3>Years 4-7: Growth Phase</h3>
+            <h2>Years 4-7: Growth Phase</h2>
 
             <p><strong>Strategy: Selective consolidation</strong></p>
 
@@ -996,7 +998,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 <li>Test premium positioning and pricing on elective/cosmetic cases</li>
             </ul>
 
-            <h3>Years 8+: Established Practice</h3>
+            <h2>Years 8+: Established Practice</h2>
 
             <p><strong>Strategy: Hybrid optimization or full FFS</strong></p>
 
@@ -1030,23 +1032,23 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p>When discussing this decision with advisors, watch for these common analytical errors:</p>
 
-            <h3>Mistake #1: Focusing Only on Percentage Write-Offs</h3>
+            <h2>Mistake #1: Focusing Only on Percentage Write-Offs</h2>
 
             <p>An advisor says: "Your PPO write-offs are 15%, so keep the plans." This ignores the absolute dollar cost ($180K annually in lost revenue) and administrative overhead.</p>
 
-            <h3>Mistake #2: Ignoring Patient Lifetime Value</h3>
+            <h2>Mistake #2: Ignoring Patient Lifetime Value</h2>
 
             <p>They calculate: "This plan drives 100 patients/year." But they don't ask: are these 1-visit patients or 10-year relationships? A 1-visit insurance patient has near-zero lifetime value. A comprehensive 10-year patient has enormous value. The calculus is completely different.</p>
 
-            <h3>Mistake #3: Assuming "Volume Compensates"</h3>
+            <h2>Mistake #3: Assuming "Volume Compensates"</h2>
 
             <p>The idea that lower fees + higher volume = better economics is true only if volume actually materializes. Many practices maintain insurance for "volume" but don't actually see higher production. They just see lower fees.</p>
 
-            <h3>Mistake #4: Not Accounting for Capital Efficiency</h3>
+            <h2>Mistake #4: Not Accounting for Capital Efficiency</h2>
 
             <p>Insurance creates a 45-60 day cash gap. Your FFS practice needs less working capital. In high-interest environments, this matters. If you're managing accounts receivable, you need more staff. Advisors often skip this in their analysis.</p>
 
-            <h3>Mistake #5: Treating All Insurance Equally</h3>
+            <h2>Mistake #5: Treating All Insurance Equally</h2>
 
             <p>They say "drop all insurance" or "keep all insurance" without distinguishing between major plans (40% of your patients) and niche plans (3% of your patients). The optimal path is usually not an extreme position.</p>
 
@@ -1120,7 +1122,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <h2 id="real-scenarios">Real Scenarios With Recommended Paths</h2>
 
-            <h3>Scenario 1: New Associateship Transitioning to Ownership</h3>
+            <h2>Scenario 1: New Associateship Transitioning to Ownership</h2>
 
             <p><strong>Profile:</strong> 3-year-old practice, 1 doctor, $450K production, $220K student debt, urban market, 65% of patients have insurance coverage</p>
 
@@ -1128,7 +1130,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p><strong>Recommended approach:</strong> Accept 3 major plans (covering 70% of patients), drop niche plans. Simultaneously begin FFS positioning for cosmetics and implants. Set a target: at $700K production (3-4 years), reevaluate whether to reduce plans. Use this period to build brand and patient mix toward FFS-friendly patients.</p>
 
-            <h3>Scenario 2: Solo Practice in Rural Market</h3>
+            <h2>Scenario 2: Solo Practice in Rural Market</h2>
 
             <p><strong>Profile:</strong> 8-year solo practice, $620K production, $40K remaining debt, rural area (400 people radius), 80% of patients have insurance, only other dentist in town</p>
 
@@ -1136,7 +1138,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p><strong>Recommended approach:</strong> Accept insurance (you have market power to command good rates). Negotiate aggressively for rate increases every 2 years. Position premium cosmetic work as FFS-only. Consider developing referral relationships with specialists 30+ miles away—this creates new patient types less dependent on local insurance. Plan trajectory: maintain insurance indefinitely, but maximize FFS component.</p>
 
-            <h3>Scenario 3: Established Multi-Doctor Group</h3>
+            <h2>Scenario 3: Established Multi-Doctor Group</h2>
 
             <p><strong>Profile:</strong> 12-year practice, 3 doctors, $2.1M production, minimal debt, suburban affluent market, 45% of patients have insurance coverage</p>
 
@@ -1144,7 +1146,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
 
             <p><strong>Recommended approach:</strong> Maintain only the 2 highest-volume insurance plans (covering your market's 70% insured). Drop all others immediately. Actively position premium care (implants, cosmetics, complex reconstruction) as FFS. Increase marketing budget to 2.5% of production. Project: reduce insurance to 30-35% of production within 2 years, maintain brand strength and patient satisfaction metrics, increase net revenue by 8-12%.</p>
 
-            <h3>Scenario 4: FFS Transition in Competitive Market</h3>
+            <h2>Scenario 4: FFS Transition in Competitive Market</h2>
 
             <p><strong>Profile:</strong> 5-year practice, $580K production, $110K debt, competitive suburban market (15 dentists within 3 miles), current 75% insurance-dependent patient base</p>
 
@@ -1153,7 +1155,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
             <p><strong>Recommended approach:</strong> Hybrid strategy. Maintain 2 major plans for patient foundation. Begin systematic FFS brand positioning through targeted marketing to high-income demographics. Invest in cosmetic training and marketing ($20K-30K annually). Project: shift patient mix toward 50/50 insurance/FFS over 3-4 years. This preserves volume stability while building toward higher-margin FFS base. Re-evaluate for plan reduction once you achieve $750K+ production.</p>
 
             <div class="lead-form-section">
-                <h3>Ready to Evaluate Your Insurance Strategy?</h3>
+                <h2>Ready to Evaluate Your Insurance Strategy?</h2>
                 <p>Download our <strong>Insurance Decision Framework PDF</strong> with detailed worksheets for calculating your write-off costs, analyzing plan profitability, and building your specific transition strategy.</p>
 
                 <form id="leadForm" onsubmit="handleFormSubmit(event)">
@@ -1200,25 +1202,25 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 <div class="article-cards">
                     <a href="https://rid.academy/articles/ppo-fee-negotiations" class="article-card">
                         <span class="category">Insurance Strategy</span>
-                        <h4>Negotiating Better PPO Fees: Scripts and Strategy</h4>
+                        <h2>Negotiating Better PPO Fees: Scripts and Strategy</h2>
                         <p>Learn tactical approaches to renegotiating insurance contracts and increasing reimbursement rates.</p>
                     </a>
 
                     <a href="https://rid.academy/articles/ffs-transition-guide" class="article-card">
                         <span class="category">Practice Transition</span>
-                        <h4>The Step-by-Step Guide to Transitioning to Fee-for-Service</h4>
+                        <h2>The Step-by-Step Guide to Transitioning to Fee-for-Service</h2>
                         <p>A detailed roadmap for shifting your practice from insurance-dependent to FFS-focused, with timeline and milestones.</p>
                     </a>
 
                     <a href="https://rid.academy/articles/patient-communication-ffs" class="article-card">
                         <span class="category">Patient Communication</span>
-                        <h4>How to Communicate Your FFS Positioning to Patients</h4>
+                        <h2>How to Communicate Your FFS Positioning to Patients</h2>
                         <p>Scripts and frameworks for positioning FFS care as premium value rather than exclusionary.</p>
                     </a>
 
                     <a href="https://rid.academy/articles/insurance-administrative-overhead" class="article-card">
                         <span class="category">Operations</span>
-                        <h4>Calculating Your True Insurance Administrative Cost</h4>
+                        <h2>Calculating Your True Insurance Administrative Cost</h2>
                         <p>A detailed worksheet for identifying hidden administrative costs of insurance participation.</p>
                     </a>
                 </div>
@@ -1238,16 +1240,17 @@ Real impact: 12.2% reduction in net revenue from these procedures
     </div>
 
     <!-- Footer -->
-    <footer>
+    </main>
+<footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h4>About RID Academy</h4>
+                    <h2>About RID Academy</h2>
                     <p>RID Academy provides evidence-based education on practice economics, business strategy, and operations for dental professionals.</p>
                 </div>
 
                 <div class="footer-section">
-                    <h4>Resources</h4>
+                    <h2>Resources</h2>
                     <ul>
                         <li><a href="https://rid.academy/articles">All Articles</a></li>
                         <li><a href="https://rid.academy/guides">Practice Guides</a></li>
@@ -1257,7 +1260,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 </div>
 
                 <div class="footer-section">
-                    <h4>Authors</h4>
+                    <h2>Authors</h2>
                     <ul>
                         <li><a href="https://rid.academy/authors/naren">Naren Arulrajah</a></li>
                         <li><a href="https://rid.academy/authors/gary">Gary Takacs</a></li>
@@ -1265,7 +1268,7 @@ Real impact: 12.2% reduction in net revenue from these procedures
                 </div>
 
                 <div class="footer-section">
-                    <h4>Connect</h4>
+                    <h2>Connect</h2>
                     <ul>
                         <li><a href="https://twitter.com/ridacademy">Twitter</a></li>
                         <li><a href="https://linkedin.com/company/rid-academy">LinkedIn</a></li>

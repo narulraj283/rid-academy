@@ -1531,7 +1531,7 @@ tr:hover td { background: var(--teal-bg); }
 
 /* Article page inline footer logo fix */
 footer[style*="background:#0F2B46"] {
-  color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
 }
 
 footer[style*="background:#0F2B46"] a {
@@ -1822,7 +1822,7 @@ textarea:focus-visible,
 }
 
 .article-nav-links a {
-  color: rgba(255, 255, 255, 0.85);
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.9rem;
 }

@@ -18,7 +18,8 @@
 <title>Train Your Patients to Keep Their Appointments | RID Academy</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-YB2QDRNZ1D"></script>
 <script>
 window.dataLayer = window.dataLayer || [];
@@ -70,7 +71,7 @@ body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif; colo
 .back-link { color: #00B4A6; text-decoration: none; font-weight: 500; }
 .back-link:hover { text-decoration: underline; }
 nav { background: #0F2B46; padding: 1rem 2rem; display: flex; align-items: center; justify-content: space-between; position: sticky; top: 0; z-index: 100; box-shadow: 0 2px 8px rgba(0,0,0,0.1); }
-nav a { color: rgba(255,255,255,0.85); text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
+nav a { color:#ffffff; text-decoration: none; font-size: 0.9rem; transition: color 0.2s; }
 nav a:hover { color: #fff; }
 nav .logo { color: #fff; font-weight: 800; font-size: 1.1rem; }
 nav .logo span { color: #00B4A6; }
@@ -124,20 +125,20 @@ nav .logo span { color: #00B4A6; }
 }
 </style>
 
-<nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+<nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -148,6 +149,7 @@ nav .logo span { color: #00B4A6; }
       }
     </style>
   </nav>
+<main>
 
 <section class="article-hero">
   <div class="container">
@@ -374,11 +376,11 @@ nav .logo span { color: #00B4A6; }
 <div class="related-articles">
   <h3>Related Articles</h3>
   <a href="/blog/relationship-driven-practice-your-key-to-successfully-dropping-ppo-plans.html" class="article-card">
-    <h4>Building a Relationship-Driven Practice</h4>
+    <h3>Building a Relationship-Driven Practice</h3>
     <p>Create patient loyalty that transcends insurance networks through genuine relationships and systematic personal connection.</p>
   </a>
   <a href="/blog/number-1-reason-why-dentists-stay-in-network.html" class="article-card">
-    <h4>Overcoming Fear: Why You're Ready to Leave Network Dependency</h4>
+    <h3>Overcoming Fear: Why You're Ready to Leave Network Dependency</h3>
     <p>Understand the real reasons dentists stay trapped in insurance dependence and how to address them.</p>
   </a>
 </div>
@@ -386,5 +388,6 @@ nav .logo span { color: #00B4A6; }
 <div class="article-footer">
   <a href="/blog/" class="back-link">← Back to All Articles</a>
 </div>
+</main>
 </body>
 </html>

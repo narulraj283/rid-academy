@@ -34,7 +34,8 @@
     </script>
 
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"></noscript>
 
     <title>How to Get More Dental Patient Referrals - RID Academy</title>
 
@@ -629,20 +630,20 @@
     <div class="progress-bar" id="progressBar"></div>
 
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -653,6 +654,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -680,7 +682,7 @@
     <div class="content-wrapper">
         <!-- Sticky TOC -->
         <aside class="toc-sidebar">
-            <h3>Table of Contents</h3>
+            <h2>Table of Contents</h2>
             <ul>
                 <li><a href="#why-referrals">Why Referrals Matter</a></li>
                 <li><a href="#psychology">Referral Psychology</a></li>
@@ -734,14 +736,14 @@
 
             <p><strong>Compare this to other marketing channels:</strong> A $300 Google Ads spend might generate 3-5 new patient inquiries. One systematic referral effort could generate 5-10 referrals monthly—essentially free patient flow that your team is already equipped to handle.</p>
 
-            <h3>Why Fee-For-Service Patients Are Your Best Referral Sources</h3>
+            <h2>Why Fee-For-Service Patients Are Your Best Referral Sources</h2>
 
             <p>If you practice FFS dentistry, your patients are statistically more likely to refer than PPO patients. Why? Because FFS patients have made an active choice to invest in their dental health. They have higher satisfaction rates. They see value in what you do. They're also more likely to know other people who share similar values around health and investment.</p>
 
             <p>PPO patients, by contrast, are often price-shopping and comparing practices. They're less invested in the relationship and less likely to recommend because they're not as emotionally connected to their experience.</p>
 
             <div class="highlight">
-                <h4>Key Insight</h4>
+                <h2>Key Insight</h2>
                 <p>FFS patients refer at 3-4x the rate of PPO patients. Your practice philosophy isn't just better for clinical outcomes—it's your biggest referral advantage. Lean into it.</p>
             </div>
 
@@ -750,27 +752,27 @@
 
             <p>Before you can systematize referrals, you need to understand the psychology behind them. Referrals aren't random acts of kindness. They happen when specific emotional and social conditions are met.</p>
 
-            <h3>The Four Triggers of Patient Referrals</h3>
+            <h2>The Four Triggers of Patient Referrals</h2>
 
-            <h4>1. Exceptional Experience + Emotional Connection</h4>
+            <h2>1. Exceptional Experience + Emotional Connection</h2>
 
             <p>Patients don't refer because you did your job well. Lots of dentists do that. Patients refer because you made them feel something. They felt heard. They felt respected. They felt that you genuinely cared about their health, not just their payment.</p>
 
             <p>This is the foundation. Without it, even perfect technical execution won't generate referrals. But with it, even busy patients find ways to recommend you.</p>
 
-            <h4>2. Social Proof & Reciprocity</h4>
+            <h2>2. Social Proof & Reciprocity</h2>
 
             <p>When someone refers you to their friend, they're putting their social capital on the line. Implicitly, they're saying: "My judgment is good. You can trust this person." That's a big ask. But humans are wired to reciprocate—especially when you've done something meaningful for them first.</p>
 
             <p>This means: A patient who felt taken care of during a difficult root canal, or who felt heard about their anxiety, or who received a genuine solution to a problem they thought was unsolvable—that patient will naturally want to refer because they want others to experience what they experienced.</p>
 
-            <h4>3. Relevance & Proximity</h4>
+            <h2>3. Relevance & Proximity</h2>
 
             <p>Your patient just had an excellent experience. They're thinking about you. And then they're in a conversation with a friend who mentions, "I hate my dentist" or "I've been putting off going to the dentist for years."</p>
 
             <p>That's your window. The referral happens when three things align: your patient is still in an emotional high from their experience, a relevant need is mentioned, and they're with someone they're comfortable recommending to.</p>
 
-            <h4>4. Clear Ask & Social Permission</h4>
+            <h2>4. Clear Ask & Social Permission</h2>
 
             <p>Here's what most dentists miss: Patients want to refer you, but they don't know you want the referral. They might think: "That's not appropriate," or "Dentists don't work that way," or "They're probably too busy to care about my referrals."</p>
 
@@ -781,7 +783,7 @@
 
             <p>Before you ask for a single referral, you need to create moments worth referring. These are experiences so good, so thoughtful, or so unexpected that patients naturally want to talk about them.</p>
 
-            <h3>Examples of "WOW" Moments in Dental Practices</h3>
+            <h2>Examples of "WOW" Moments in Dental Practices</h2>
 
             <ul>
                 <li><strong>The courtesy call:</strong> Your office calls the patient the evening after a difficult procedure to check on pain levels and make sure they're okay. Just a genuine 2-minute check-in. That costs you nothing but registers as extraordinary.</li>
@@ -808,7 +810,7 @@
 
             <p>Here's the reality: Practices that get referrals consistently aren't getting them by chance. They have a system. A system has steps. Every step can be measured, improved, and scaled.</p>
 
-            <h3>The 5-Step Referral System</h3>
+            <h2>The 5-Step Referral System</h2>
 
             <p><strong>Step 1: Create the Experience (Weeks 1-4)</strong><br>
             Your patient has an exceptional visit. Every touchpoint is carefully considered. Comfort. Clarity. Respect. Care. This is where WOW moments happen.</p>
@@ -826,7 +828,7 @@
             When a referral comes in and especially when that referral converts to a patient, you acknowledge it. A handwritten thank-you card. A small gift. A sincere "thank you" conversation. This triggers the reciprocity loop again and makes referrals feel good, not transactional.</p>
 
             <div class="highlight">
-                <h4>The Math of Systematic Referrals</h4>
+                <h2>The Math of Systematic Referrals</h2>
                 <p>If your system results in 1 referral per active patient per year, and your practice has 400 active patients, that's 400 referrals per year or roughly 33 new patients per month—at essentially zero customer acquisition cost. This is how practices double.</p>
             </div>
 
@@ -839,7 +841,7 @@
 
             <p>The secret is asking the right way, at the right time, with the right script. Let's cover each.</p>
 
-            <h3>The Timing: When to Ask</h3>
+            <h2>The Timing: When to Ask</h2>
 
             <p><strong>Best moments:</strong></p>
             <ul>
@@ -858,7 +860,7 @@
                 <li>When the patient seems rushed or stressed</li>
             </ul>
 
-            <h3>The Scripts: Word-for-Word Examples</h3>
+            <h2>The Scripts: Word-for-Word Examples</h2>
 
             <div class="script-box">
                 <div class="script-label">Script 1: The Direct Ask (Front Desk)</div>
@@ -885,7 +887,7 @@
                 <p>"[Patient name], I realized you've been with us for almost [X] years. That kind of loyalty means everything to us, and it's because we care about doing great work for great people. I'm curious—have any of your friends ever mentioned they need a dentist? We'd love to help people you know."</p>
             </div>
 
-            <h3>Why These Scripts Work</h3>
+            <h2>Why These Scripts Work</h2>
 
             <ul>
                 <li><strong>They're genuine, not salesy:</strong> No "we'd appreciate your business." Just authentic appreciation and a clear ask.</li>
@@ -895,7 +897,7 @@
                 <li><strong>They emphasize mutual benefit:</strong> It's not "help us get business." It's "help your friends find quality care."</li>
             </ul>
 
-            <h3>The Follow-Up: Making Referrals Easy</h3>
+            <h2>The Follow-Up: Making Referrals Easy</h2>
 
             <p>After you ask, remove every barrier to referring:</p>
 
@@ -911,7 +913,7 @@
 
             <p>A referral system only works if everyone on your team understands their role and is trained to execute it. This isn't just the doctor. This isn't just the front desk. Everyone from the hygienist to the assistant to the checkout person has a role in referral generation.</p>
 
-            <h3>Front Desk Coordinator</h3>
+            <h2>Front Desk Coordinator</h2>
 
             <p><strong>Responsibility:</strong> First impression. Referral ask at checkout.</p>
 
@@ -923,7 +925,7 @@
                 <li>Never make a referred patient feel like a transaction—they're an extension of your current patient.</li>
             </ul>
 
-            <h3>Clinical Hygienist</h3>
+            <h2>Clinical Hygienist</h2>
 
             <p><strong>Responsibility:</strong> Relationship building. Problem identification. Compliment-catch asks.</p>
 
@@ -935,7 +937,7 @@
                 <li>Document in notes: "Patient mentioned friend with similar anxiety—referral opportunity."</li>
             </ul>
 
-            <h3>Doctor</h3>
+            <h2>Doctor</h2>
 
             <p><strong>Responsibility:</strong> Problem-solving moment. Deep ask.</p>
 
@@ -947,7 +949,7 @@
                 <li>Track which patients have the highest satisfaction (through feedback or recall notes) and prioritize asking them.</li>
             </ul>
 
-            <h3>Dental Assistant</h3>
+            <h2>Dental Assistant</h2>
 
             <p><strong>Responsibility:</strong> Patient comfort. Follow-up facilitation.</p>
 
@@ -958,7 +960,7 @@
                 <li>Build comfort and rapport—patients are more likely to refer to people they like and trust, not just to doctors they trust.</li>
             </ul>
 
-            <h3>Training Protocol</h3>
+            <h2>Training Protocol</h2>
 
             <p>Monthly team meetings dedicated to referral system:</p>
             <ul>
@@ -973,15 +975,15 @@
 
             <p>You can't improve what you don't measure. A referral system requires tracking. But we're not talking complex data science. We're talking simple, actionable metrics that inform your decisions.</p>
 
-            <h3>What to Track</h3>
+            <h2>What to Track</h2>
 
-            <h4>1. Referral Source (For Every New Patient)</h4>
+            <h2>1. Referral Source (For Every New Patient)</h2>
 
             <p>In your practice management software, create a field: "How did you hear about us?" The critical source: Patient Referral (and if possible, the name of the referring patient).</p>
 
             <p>Why: You need to know which patients are generating referrals, who's referring whom, and whether this is actually growing.</p>
 
-            <h4>2. Referral Conversion Rate</h4>
+            <h2>2. Referral Conversion Rate</h2>
 
             <p>If you get 10 referrals in a month but only 4 convert to new patients, you have a conversion problem (not a referral problem).</p>
 
@@ -989,21 +991,21 @@
 
             <p>Healthy range: 50-70% conversion. If you're below 50%, investigate: Are referrals not scheduling? Are they scheduling but canceling? Are they coming in but not committing to treatment?</p>
 
-            <h4>3. Referral Rate Per Patient</h4>
+            <h2>3. Referral Rate Per Patient</h2>
 
             <p>Formula: (Total referrals in period / Average active patients) = Referrals per patient</p>
 
             <p>Goal: 1 referral per active patient per year. Healthy practices: 0.5-2 referrals per patient per year.</p>
 
-            <h4>4. Lifetime Value of Referred Patient vs. Other Sources</h4>
+            <h2>4. Lifetime Value of Referred Patient vs. Other Sources</h2>
 
             <p>Track whether referred patients stay longer, accept more treatment, and return more often than patients from other sources. Referred patients typically show 40%+ higher lifetime value.</p>
 
-            <h4>5. Top Referral Sources (Patients)</h4>
+            <h2>5. Top Referral Sources (Patients)</h2>
 
             <p>Some of your patients will be natural referral generators. Maybe 20-30% of your patient base generates 70-80% of your referrals. Identify these patients. Recognize them. Ask them more frequently. They're your golden goose.</p>
 
-            <h3>Simple Tracking Method (If You Don't Have Software)</h3>
+            <h2>Simple Tracking Method (If You Don't Have Software)</h2>
 
             <p>Google Sheet with columns:</p>
             <ul>
@@ -1022,7 +1024,7 @@
 
             <p>Rewards programs for referrals can work, but they work best when they're secondary to genuine appreciation. Here's how to structure them.</p>
 
-            <h3>Recognition > Money</h3>
+            <h2>Recognition > Money</h2>
 
             <p>Patients don't refer for $25 gift cards. They refer because they genuinely like you and want to help. But recognition (which is free) is incredibly motivating. Here's what works:</p>
 
@@ -1036,7 +1038,7 @@
                 <li><strong>Referral Milestone Bonuses:</strong> "You've referred 3 patients who became our practice members. As a thank you, here's a gift certificate for dinner," or "Your referral this year saved another family member from anxiety about going to the dentist. We've made a donation in your name to the local school."</li>
             </ul>
 
-            <h3>Optional: Tangible Rewards</h3>
+            <h2>Optional: Tangible Rewards</h2>
 
             <p>If you want to offer something tangible (which can reinforce the behavior), keep it meaningful but not expensive:</p>
 
@@ -1049,7 +1051,7 @@
 
             <p>The key: Frame these as "appreciation" not "payment." "Because you've helped grow our practice and help us take care of more families, we want to show our appreciation" lands better than "We'll pay you for referrals."</p>
 
-            <h3>The "Refer a Friend" Event</h3>
+            <h2>The "Refer a Friend" Event</h2>
 
             <p>Twice a year, host a patient appreciation event: "Bring a Friend to Learn About Our Practice." Light refreshments, a brief (10-minute) presentation about something relevant (dental anxiety solutions, cosmetic treatment options, preventative care), then open conversation.</p>
 
@@ -1060,7 +1062,7 @@
 
             <p>Internal referrals (patient-to-friend) should be your bread and butter. But external partnerships—relationships with other practices and professionals—amplify your growth.</p>
 
-            <h3>Physician Partnerships</h3>
+            <h2>Physician Partnerships</h2>
 
             <p><strong>Opportunity:</strong> Primary care doctors, cardiologists, and endocrinologists often see patients with dental issues or understand the importance of oral health.</p>
 
@@ -1075,7 +1077,7 @@
                 <li>Once or twice yearly, send them an article or case study relevant to their practice (e.g., "The Relationship Between Oral Health and Cardiovascular Disease").</li>
             </ul>
 
-            <h3>Specialist Partnerships</h3>
+            <h2>Specialist Partnerships</h2>
 
             <p><strong>Opportunity:</strong> Orthodontists, periodontists, oral surgeons, prosthodontists. When you have a patient needing specialty care, you're recommending someone. Make those recommendations intentional relationships.</p>
 
@@ -1089,7 +1091,7 @@
                 <li>This relationship deepens your network and ensures your patients get the best specialty care.</li>
             </ul>
 
-            <h3>Community Partnerships</h3>
+            <h2>Community Partnerships</h2>
 
             <p><strong>Opportunity:</strong> Schools, corporate offices, community centers, senior living facilities. These are pools of potential patients who have an ongoing relationship with a trusted organization.</p>
 
@@ -1107,25 +1109,25 @@
 
             <p>In 2026, online reviews are the modern referral system. A 5-star Google review from a patient is a referral to 50-100 people searching for a dentist in your area.</p>
 
-            <h3>The Google Review Strategy</h3>
+            <h2>The Google Review Strategy</h2>
 
-            <h4>1. Make Asking Easy</h4>
+            <h2>1. Make Asking Easy</h2>
 
             <p>After a positive experience, ask directly: "Would you mind leaving us a Google review? It really helps people in our community find us." Provide a QR code or a direct link. Remove friction.</p>
 
-            <h4>2. Train Your Team</h4>
+            <h2>2. Train Your Team</h2>
 
             <p>Front desk coordinator: "Before you check out, would you be willing to leave us a Google review? It only takes 60 seconds and it really helps us grow." Make it part of checkout.</p>
 
-            <h4>3. Follow Up Digitally</h4>
+            <h2>3. Follow Up Digitally</h2>
 
             <p>Send an automated text or email 24 hours after appointment: "We loved taking care of you! If you have a moment, a Google review helps us improve and helps people in our community find us. [QR Code]"</p>
 
-            <h4>4. Respond to Every Review</h4>
+            <h2>4. Respond to Every Review</h2>
 
             <p>Thank positive reviewers publicly and specifically. Address any concerns in negative reviews professionally. This shows future patients you care about feedback.</p>
 
-            <h3>Social Proof & Digital Referrals</h3>
+            <h2>Social Proof & Digital Referrals</h2>
 
             <p>Your website and social media should showcase:</p>
 
@@ -1144,7 +1146,7 @@
             <p>Let's do the math on why referral systems matter.</p>
 
             <div class="highlight">
-                <h4>The Formula</h4>
+                <h2>The Formula</h2>
                 <p><strong>Active Patients: 400<br>
                 Referral Rate: 1 per patient per year<br>
                 Conversion Rate: 60% (conservative)<br>
@@ -1155,7 +1157,7 @@
 
             <p>But here's what's even more important: Those referred patients have higher lifetime value (40%+ more), higher treatment acceptance rates (2.5x), and are more likely to refer others. So you're not just adding 240 patients—you're adding 240 patients who will stay longer, spend more, and generate their own referrals.</p>
 
-            <h3>Year-By-Year Growth Model</h3>
+            <h2>Year-By-Year Growth Model</h2>
 
             <ul>
                 <li><strong>Year 1:</strong> Start with 400 patients. Add 240 referred patients. End with 640 patients.</li>
@@ -1168,49 +1170,49 @@
             <!-- Section 12 -->
             <h2 id="common-mistakes">The 8 Most Common Referral Mistakes (And How to Fix Them)</h2>
 
-            <h3>Mistake #1: Never Asking</h3>
+            <h2>Mistake #1: Never Asking</h2>
 
             <p><strong>The Problem:</strong> 60% of dentists never explicitly ask for referrals. They hope they happen naturally. They don't.</p>
 
             <p><strong>The Fix:</strong> Implement the scripts from Section 5. Ask once per quarter, minimum, for every patient who's had a positive experience.</p>
 
-            <h3>Mistake #2: Treating Referred Patients Like Any Other Patient</h3>
+            <h2>Mistake #2: Treating Referred Patients Like Any Other Patient</h2>
 
             <p><strong>The Problem:</strong> A referred patient comes to your office, has an average experience, and tells their referring friend: "They were fine. Nothing special." You've broken the referral chain.</p>
 
             <p><strong>The Fix:</strong> Flag referred patients in your system. Brief the team: "This patient was referred by [Referral Name]. Let's make sure we give them an exceptional experience." Extra attention. Extra care. Make sure they feel the same quality that made their friend recommend you.</p>
 
-            <h3>Mistake #3: No Follow-Up on Referred Patients</h3>
+            <h2>Mistake #3: No Follow-Up on Referred Patients</h2>
 
             <p><strong>The Problem:</strong> A referral comes in and you don't acknowledge where they came from or thank the referring patient.</p>
 
             <p><strong>The Fix:</strong> When a referred patient books, the front desk calls the referring patient: "Thank you for referring [New Patient Name]! They have an appointment on [Date]. We're excited to meet them!" Then, once the referred patient completes their first visit, send a handwritten thank-you to the referring patient.</p>
 
-            <h3>Mistake #4: Confusing Referral Rewards with Referral Triggers</h3>
+            <h2>Mistake #4: Confusing Referral Rewards with Referral Triggers</h2>
 
             <p><strong>The Problem:</strong> You offer a $25 gift card for referrals but don't ask for them or create WOW moments. The referral rate doesn't change.</p>
 
             <p><strong>The Fix:</strong> Rewards are secondary. Primary: Create exceptional experiences, ask for referrals with scripts, and recognize patients. Then, if you want to add a small reward, it amplifies—but it won't work without the first three.</p>
 
-            <h3>Mistake #5: Asking at the Wrong Time</h3>
+            <h2>Mistake #5: Asking at the Wrong Time</h2>
 
             <p><strong>The Problem:</strong> You ask during a financial discussion, or right after delivering bad news, or when a patient is stressed.</p>
 
             <p><strong>The Fix:</strong> Ask during emotional highs. After good news. After resolving a problem. After compliments. Timing is everything.</p>
 
-            <h3>Mistake #6: Not Training Your Team</h3>
+            <h2>Mistake #6: Not Training Your Team</h2>
 
             <p><strong>The Problem:</strong> You create a referral system but only you (the doctor) understand it. Your team doesn't know what they're supposed to do.</p>
 
             <p><strong>The Fix:</strong> Monthly team meeting dedicated to referrals. Train each role on their specific scripts and responsibilities. Make referral generation a team sport, not a doctor solo project.</p>
 
-            <h3>Mistake #7: Tracking Inconsistently</h3>
+            <h2>Mistake #7: Tracking Inconsistently</h2>
 
             <p><strong>The Problem:</strong> You track referrals some of the time, but not every time. You don't know where they're coming from or if the system is working.</p>
 
             <p><strong>The Fix:</strong> Make referral source tracking as automatic as taking a payment. Every new patient has a "How did you hear about us?" field. Someone reviews it weekly. You make decisions based on data, not gut feel.</p>
 
-            <h3>Mistake #8: Ignoring Your Best Referral Sources</h3>
+            <h2>Mistake #8: Ignoring Your Best Referral Sources</h2>
 
             <p><strong>The Problem:</strong> 20% of your patients generate 70% of your referrals, but you don't recognize it or ask them more often.</p>
 
@@ -1221,9 +1223,9 @@
 
             <p>Ready to build your referral system? Here's the exact playbook for the next 90 days.</p>
 
-            <h3>Month 1: Foundation & Team Training (Days 1-30)</h3>
+            <h2>Month 1: Foundation & Team Training (Days 1-30)</h2>
 
-            <h4>Week 1: Audit & Plan</h4>
+            <h2>Week 1: Audit & Plan</h2>
 
             <ul>
                 <li><strong>Day 1-2:</strong> Pull data on your current referral rate. How many new patients came from referrals last month? What's your referral source breakdown?</li>
@@ -1232,7 +1234,7 @@
                 <li><strong>Day 6-7:</strong> Design your tracking system. Set up the "How did you hear about us?" field in your PMS or create a Google Sheet.</li>
             </ul>
 
-            <h4>Week 2-4: Team Training & Scripts</h4>
+            <h2>Week 2-4: Team Training & Scripts</h2>
 
             <ul>
                 <li><strong>Day 8:</strong> Team meeting. Present the referral system. Explain why it matters. Show the math (one referral per patient = practice doubling).</li>
@@ -1242,9 +1244,9 @@
                 <li><strong>Day 22-30:</strong> First full month of implementation. Track every referral. Celebrate wins in team meetings.</li>
             </ul>
 
-            <h3>Month 2: Optimization & Momentum (Days 31-60)</h3>
+            <h2>Month 2: Optimization & Momentum (Days 31-60)</h2>
 
-            <h4>Week 5-8: Scaling What Works</h4>
+            <h2>Week 5-8: Scaling What Works</h2>
 
             <ul>
                 <li><strong>Day 31:</strong> Weekly check-in. How many referral asks happened this week? How many referrals came in?</li>
@@ -1254,9 +1256,9 @@
                 <li><strong>Day 56:</strong> Month 2 review. Referrals compared to Month 1? More asks? Better conversion? Adjust system based on what's working.</li>
             </ul>
 
-            <h3>Month 3: Culture & Long-Term Sustainability (Days 61-90)</h3>
+            <h2>Month 3: Culture & Long-Term Sustainability (Days 61-90)</h2>
 
-            <h4>Week 9-12: Making It a Practice Culture</h4>
+            <h2>Week 9-12: Making It a Practice Culture</h2>
 
             <ul>
                 <li><strong>Day 61:</strong> Implement recognition program. Wall of Champions or monthly shout-out. Make referral generation feel good.</li>
@@ -1286,7 +1288,7 @@
 
             <!-- Lead Capture Form -->
             <div class="lead-form-container">
-                <h3>Get the Free Referral System Implementation Guide</h3>
+                <h2>Get the Free Referral System Implementation Guide</h2>
                 <p>Download the complete PDF guide with scripts, tracking templates, and a detailed 90-day implementation timeline.</p>
                 <form onsubmit="handleSubmit(event)">
                     <div class="form-group">
@@ -1312,7 +1314,7 @@
 
             <!-- Related Articles -->
             <section class="related-articles">
-                <h3>Related Resources</h3>
+                <h2>Related Resources</h2>
                 <div class="related-grid">
                     <div class="related-card">
                         <div class="related-card-img"></div>
@@ -1352,23 +1354,24 @@
 
         <!-- Social Sharing Sidebar -->
         <div class="social-sidebar">
-            <a href="https://twitter.com/intent/tweet?text=How%20to%20Get%20More%20Dental%20Patient%20Referrals&url=https://rid.academy/how-to-get-more-dental-patient-referrals" class="twitter" target="_blank" title="Share on Twitter">𝕏</a>
-            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rid.academy/how-to-get-more-dental-patient-referrals" class="linkedin" target="_blank" title="Share on LinkedIn">in</a>
-            <a href="https://www.facebook.com/sharer/sharer.php?u=https://rid.academy/how-to-get-more-dental-patient-referrals" class="facebook" target="_blank" title="Share on Facebook">f</a>
+            <a href="https://twitter.com/intent/tweet?text=How%20to%20Get%20More%20Dental%20Patient%20Referrals&url=https://rid.academy/how-to-get-more-dental-patient-referrals" class="twitter" target="_blank" title="Share on Twitter" rel="noopener noreferrer">𝕏</a>
+            <a href="https://www.linkedin.com/sharing/share-offsite/?url=https://rid.academy/how-to-get-more-dental-patient-referrals" class="linkedin" target="_blank" title="Share on LinkedIn" rel="noopener noreferrer">in</a>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=https://rid.academy/how-to-get-more-dental-patient-referrals" class="facebook" target="_blank" title="Share on Facebook" rel="noopener noreferrer">f</a>
         </div>
     </div>
 
     <!-- Footer -->
-    <footer>
+    </main>
+<footer>
         <div class="footer-content">
             <div class="footer-grid">
                 <div class="footer-section">
-                    <h4>RID Academy</h4>
+                    <h2>RID Academy</h2>
                     <p>Premium dental business education and resources for FFS practices.</p>
                     <p><strong>Publisher:</strong> <a href="https://rid.academy">rid.academy</a></p>
                 </div>
                 <div class="footer-section">
-                    <h4>Quick Links</h4>
+                    <h2>Quick Links</h2>
                     <ul>
                         <li><a href="https://rid.academy/courses">Courses</a></li>
                         <li><a href="https://rid.academy/blog">Resources</a></li>
@@ -1377,7 +1380,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Articles</h4>
+                    <h2>Articles</h2>
                     <ul>
                         <li><a href="https://rid.academy/patient-acquisition">Patient Acquisition</a></li>
                         <li><a href="https://rid.academy/practice-management">Practice Management</a></li>
@@ -1386,7 +1389,7 @@
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h4>Authors</h4>
+                    <h2>Authors</h2>
                     <p><strong>Naren Arulrajah</strong><br>Practice growth strategist and founder of RID Academy.</p>
                     <p><strong>Gary Takacs</strong><br>Dental business consultant and clinical advisor.</p>
                 </div>

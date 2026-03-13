@@ -23,7 +23,8 @@
   <!-- Fonts -->
   <link href="https://fonts.googleapis.com" rel="preconnect"/>
   <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" rel="stylesheet"/>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;family=DM+Mono:wght@400;500&amp;display=swap"></noscript>
   <!-- Styles -->
   <link href="/css/styles.css" rel="stylesheet"/>
   <!-- Article Schema.org -->
@@ -168,20 +169,20 @@
 </style>
 
   <!-- ═══ NAVIGATION ═══ -->
-  <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+  <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -192,6 +193,7 @@
       }
     </style>
   </nav>
+<main>
   <!-- ═══ HERO ═══ -->
   <section class="hero">
    <div class="hero-bg">
@@ -234,9 +236,9 @@
    <div class="container" style="max-width: 720px;">
     <!-- TABLE OF CONTENTS -->
     <div style="background: var(--bg-subtle); padding: 24px; border-radius: var(--radius-md); margin-bottom: 48px;">
-     <h3 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       Table of Contents
-     </h3>
+     </h2>
      <ol style="margin: 0; padding-left: 24px; color: var(--text-secondary); line-height: 1.8;">
       <li>
        <a href="#what-is" style="color: var(--teal);">
@@ -307,15 +309,15 @@
     <p>
      In its simplest form: patients pay you a membership fee and receive covered services at no additional cost, plus discounts on other services. You keep 100% of that revenue immediately—no claims processing, no denials, no write-offs.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      The Core Difference from Insurance
-    </h3>
+    </h2>
     <div style="background: var(--bg-subtle); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px;">
      <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px;">
       <div>
-       <h4 style="color: var(--coral); margin-top: 0;">
+       <h2 style="color: var(--coral); margin-top: 0;">
         Traditional Insurance
-       </h4>
+       </h2>
        <ul style="font-size: 0.95rem; line-height: 1.7;">
         <li>
          Patient pays monthly premium to insurer
@@ -338,9 +340,9 @@
        </ul>
       </div>
       <div>
-       <h4 style="color: var(--teal); margin-top: 0;">
+       <h2 style="color: var(--teal); margin-top: 0;">
         Membership Plan
-       </h4>
+       </h2>
        <ul style="font-size: 0.95rem; line-height: 1.7;">
         <li>
          Patient pays monthly fee directly to you
@@ -371,16 +373,16 @@
     <p>
      Data from hundreds of successful practices shows consistent results: membership plans generate superior revenue while simultaneously improving patient relationships and reducing administrative stress.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      The Financial Case
-    </h3>
+    </h2>
     <p>
      Consider a practice with 1,200 active patients, currently earning $850,000 annually with an average PPO collection rate of 60% (standard for most practices).
     </p>
     <div style="background: linear-gradient(135deg, rgba(0, 180, 166, 0.1), rgba(51, 195, 184, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--teal);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       Current PPO Model
-     </h4>
+     </h2>
      <ul style="margin-bottom: 0; font-size: 0.95rem;">
       <li>
        <strong>
@@ -415,9 +417,9 @@
      </ul>
     </div>
     <div style="background: linear-gradient(135deg, rgba(34, 197, 94, 0.1), rgba(52, 211, 153, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--green);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       Membership Model (70% adoption)
-     </h4>
+     </h2>
      <ul style="margin-bottom: 0; font-size: 0.95rem;">
       <li>
        <strong>
@@ -457,9 +459,9 @@
      </strong>
      $20,800 more in annual net revenue, 60% reduction in administrative overhead, 100% payment predictability, and stronger patient relationships—all from a plan that requires an upfront time investment but virtually no capital.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Beyond the Numbers
-    </h3>
+    </h2>
     <ul style="line-height: 1.8;">
      <li>
       <strong>
@@ -499,9 +501,9 @@
     <p>
      Pricing is the most critical decision in your membership program. Set it too high and adoption suffers; too low and you leave money on the table.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      The Data-Driven Approach
-    </h3>
+    </h2>
     <p>
      <strong>
       Step 1: Calculate Your Patient Baseline
@@ -559,9 +561,9 @@
     </p>
     <div style="background: var(--bg-subtle); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px;">
      <div style="margin-bottom: 24px;">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Essential Plan ($79-99/month)
-      </h4>
+      </h2>
       <ul style="margin-bottom: 0; font-size: 0.95rem;">
        <li>
         2 exams + cleanings annually
@@ -581,9 +583,9 @@
       </ul>
      </div>
      <div style="margin-bottom: 24px;">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Premium Plan ($149-179/month)
-      </h4>
+      </h2>
       <ul style="margin-bottom: 0; font-size: 0.95rem;">
        <li>
         Everything in Essential plus:
@@ -606,9 +608,9 @@
       </ul>
      </div>
      <div>
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Implant/Advanced Plan ($199-249/month)
-      </h4>
+      </h2>
       <ul style="margin-bottom: 0; font-size: 0.95rem;">
        <li>
         Everything in Premium plus:
@@ -643,9 +645,9 @@
     <p>
      The services you include define the value proposition and directly impact your profitability. You need to balance generous benefits that drive adoption with financial sustainability.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Recommended Coverage Matrix
-    </h3>
+    </h2>
     <div style="overflow-x: auto; margin-bottom: 32px;">
      <table style="width: 100%; font-size: 0.95rem; border-collapse: collapse;">
       <thead style="background: var(--navy); color: white;">
@@ -752,9 +754,9 @@
       </tbody>
      </table>
     </div>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Clear Exclusions
-    </h3>
+    </h2>
     <p style="margin-bottom: 16px;">
      Be explicit about what is NOT covered. Typical exclusions include:
     </p>
@@ -785,45 +787,45 @@
     <p>
      In-house dental plans are legal in all 50 states, but proper structure is critical. Compliance protects both you and your patients.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Key Legal Requirements
-    </h3>
+    </h2>
     <div style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 92, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--coral);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       1. Avoid Insurance Language
-     </h4>
+     </h2>
      <p style="margin-bottom: 0;">
       Your membership plan is NOT insurance. Never use terms like "coverage," "premiums," "claims," "deductibles," or "co-insurance." Use "membership," "membership fee," "member benefits," and "discount."
      </p>
     </div>
     <div style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 92, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--coral);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       2. Written Membership Agreement
-     </h4>
+     </h2>
      <p style="margin-bottom: 0;">
       Create a clear, one-page agreement that outlines membership costs, what's included, limitations, cancellation terms, and how disputes are handled. Have patients sign before enrollment.
      </p>
     </div>
     <div style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 92, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--coral);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       3. Transparent Pricing
-     </h4>
+     </h2>
      <p style="margin-bottom: 0;">
       All fees must be clear and conspicuous. Display membership pricing prominently on your website and in your office. Include pricing in all patient communications.
      </p>
     </div>
     <div style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 92, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--coral);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       4. Compliance with State Regulations
-     </h4>
+     </h2>
      <p style="margin-bottom: 0;">
       Some states have specific regulations about membership plans. Most align with the FTC's "Endorsement Guides," requiring that membership plans benefit patients and represent fair value. Consult with a healthcare attorney in your state for specific requirements.
      </p>
     </div>
     <div style="background: linear-gradient(135deg, rgba(255, 107, 53, 0.1), rgba(255, 138, 92, 0.1)); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px; border-left: 4px solid var(--coral);">
-     <h4 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       5. No Network Restrictions
-     </h4>
+     </h2>
      <p style="margin-bottom: 0;">
       Unlike insurance, your membership should be available to any patient in your service area. Don't create artificial limitations based on location, employment, or other factors.
      </p>
@@ -835,9 +837,9 @@
     <p>
      A perfect membership plan doesn't matter if nobody knows about it. Your marketing strategy should reach existing patients, prospects, and your local community.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Phase 1: Internal Launch (Weeks 1-4)
-    </h3>
+    </h2>
     <ul style="line-height: 1.8;">
      <li>
       <strong>
@@ -870,9 +872,9 @@
       At the end of each appointment, dentists and hygienists should mention the membership plan to every patient.
      </li>
     </ul>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Phase 2: Community Outreach (Weeks 5-12)
-    </h3>
+    </h2>
     <ul style="line-height: 1.8;">
      <li>
       <strong>
@@ -905,9 +907,9 @@
       Pitch local news outlets on a story about your practice offering an alternative to insurance.
      </li>
     </ul>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Phase 3: Ongoing Growth (Month 4+)
-    </h3>
+    </h2>
     <ul style="line-height: 1.8;">
      <li>
       <strong>
@@ -941,33 +943,33 @@
     <p>
      What you say matters as much as what you offer. Here are proven scripts your team can use at every patient touchpoint.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      The Initial Introduction (Reception)
-    </h3>
+    </h2>
     <div style="background: var(--bg-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 32px; font-style: italic; border-left: 4px solid var(--teal);">
      <p style="margin: 0;">
       "Hi [Patient Name], thanks for being here today. Before we get started, I wanted to mention something that might interest you. We've just launched our membership plan, and it's a great alternative to traditional insurance. Instead of dealing with insurance companies, you'd pay one simple monthly fee to us and get all your preventive care included. Would you like to hear more about it?"
      </p>
     </div>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      After Treatment Recommendation
-    </h3>
+    </h2>
     <div style="background: var(--bg-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 32px; font-style: italic; border-left: 4px solid var(--teal);">
      <p style="margin: 0;">
       "So I'd recommend a crown on this tooth. Now, if you were on our membership plan, that crown would be 40% off—you'd save about $400. Plus your exams and cleanings would be completely included. That membership pays for itself. Should we get you signed up?"
      </p>
     </div>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Addressing Insurance Switching
-    </h3>
+    </h2>
     <div style="background: var(--bg-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 32px; font-style: italic; border-left: 4px solid var(--teal);">
      <p style="margin: 0;">
       "I understand you have insurance. The thing is, most insurance plans pay only 50% of major work and have annual limits. Our membership plan guarantees a specific discount on everything, includes unlimited preventive care, and gives you predictable costs every month. A lot of our patients find it's a better value, especially if they need more than just basic care."
      </p>
     </div>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Enrollment Email Template
-    </h3>
+    </h2>
     <div style="background: var(--bg-subtle); padding: 20px; border-radius: var(--radius-md); margin-bottom: 32px; font-family: 'DM Mono', monospace; font-size: 0.85rem; overflow-x: auto;">
      <pre style="margin: 0; white-space: pre-wrap; word-wrap: break-word;">Subject: Join Our Membership Plan - Save $200+/Year
 
@@ -996,54 +998,54 @@ Questions? Reply to this email or call us at [Phone]</pre>
     <p>
      What gets measured gets managed. Track these metrics from day one to understand what's working and where to adjust.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Essential KPIs
-    </h3>
+    </h2>
     <div style="background: var(--bg-subtle); padding: 24px; border-radius: var(--radius-md); margin-bottom: 32px;">
      <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Enrollment Rate
-      </h4>
+      </h2>
       <p style="margin-bottom: 0; color: var(--text-secondary);">
        Percentage of active patients enrolled in membership. Target: 50-70% after 6 months. Track weekly conversion by offering and staff member.
       </p>
      </div>
      <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Adoption Rate
-      </h4>
+      </h2>
       <p style="margin-bottom: 0; color: var(--text-secondary);">
        Percentage of new patients enrolling directly into membership. Target: 40-60% of new patient onboarding.
       </p>
      </div>
      <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Retention Rate
-      </h4>
+      </h2>
       <p style="margin-bottom: 0; color: var(--text-secondary);">
        Percentage of members renewing annually. Target: 85-95%. Less than 80% indicates pricing or value issues.
       </p>
      </div>
      <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Monthly Recurring Revenue (MRR)
-      </h4>
+      </h2>
       <p style="margin-bottom: 0; color: var(--text-secondary);">
        Total membership fees collected monthly. This is your most important metric. Target growth: 10-15% month-over-month.
       </p>
      </div>
      <div style="margin-bottom: 20px; padding-bottom: 20px; border-bottom: 1px solid var(--border);">
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Average Member Revenue
-      </h4>
+      </h2>
       <p style="margin-bottom: 0; color: var(--text-secondary);">
        Total annual revenue per member (membership fee + additional services). Track to ensure you're hitting financial targets.
       </p>
      </div>
      <div>
-      <h4 style="margin-top: 0; color: var(--navy);">
+      <h2 style="margin-top: 0; color: var(--navy);">
        Visit Frequency
-      </h4>
+      </h2>
       <p style="margin-bottom: 0; color: var(--text-secondary);">
        Average visits per member annually. Members should visit 20% more frequently than non-members, validating the relationship.
       </p>
@@ -1053,9 +1055,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
     <h2 id="case-studies" style="margin-top: 64px; margin-bottom: 24px;">
      9. Real-World Case Studies
     </h2>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Case Study 1: Dr. James Chen - General Dentistry, Seattle WA
-    </h3>
+    </h2>
     <p>
      <strong>
       Starting Position:
@@ -1082,9 +1084,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
      </strong>
      620 active members (69% adoption), $38,200 monthly MRR, 35% improvement in overall collections, team morale improvement, virtually eliminated insurance-related stress.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Case Study 2: Dr. Sarah Williams - Pediatric Dentistry, Austin TX
-    </h3>
+    </h2>
     <p>
      <strong>
       Starting Position:
@@ -1111,9 +1113,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
      </strong>
      Positioned membership as "stress-free dentistry for families"—messaging that resonated with busy parents.
     </p>
-    <h3 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
+    <h2 style="color: var(--navy); margin-top: 32px; margin-bottom: 16px; font-size: 1.2rem;">
      Case Study 3: Dr. Michael Torres - Multi-Location Practice, Miami FL
-    </h3>
+    </h2>
     <p>
      <strong>
       Starting Position:
@@ -1145,74 +1147,74 @@ Questions? Reply to this email or call us at [Phone]</pre>
      10. Frequently Asked Questions
     </h2>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: Will patients still want insurance if I offer a membership plan?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Yes, some will keep their insurance. That's fine—they can use both. Your membership plan is designed to be a superior option for most patients, but offering choice removes objections. Many patients will see membership as supplemental coverage that gives them better value.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: How much does it cost to implement a membership plan?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Minimal. If you have a practice management software, you likely have membership functionality built in. The biggest investment is time: designing the plan, staff training, and creating marketing materials. Budget 20-30 hours for launch. If you use design/marketing professionals, expect $3,000-8,000. Software typically costs $0-500/month.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: Can I require patients to join my membership plan?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Legally, no. Your membership plan must be optional. However, many practices offer strong incentives to choose membership over insurance (lower prices, better terms) which makes it the obvious choice for patients.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: What if a member has a dental emergency and can't pay for unplanned treatment?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Build a clear policy into your membership agreement. Most practices include emergency exams and treatment at discounted rates (or included) as part of the membership. For major unplanned work, offer payment plans. This is actually an advantage over insurance—you have full control of how to handle the situation.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: How do I calculate the break-even point for my membership plan?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Break-even is typically 40-50 active members at the Essential tier. At that volume, your membership revenue covers your administrative time and overhead. Everything beyond that is profit. Use the Membership Calculator tool to model your specific scenario.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: Should I grandfather existing insurance patients?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: You don't have to, but many practices do for a limited time to ease the transition. A common approach: offer a 6-month "transition period" where patients can choose to join membership at a discount, after which new patients default to membership. This speeds adoption while being fair to your existing patient base.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: Can I use membership plans alongside PPO insurance?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Absolutely. You can accept some PPO plans while simultaneously offering your membership plan. The best practices often operate a "dual" model—accepting 1-2 preferred PPOs while pushing new patients and those with poor insurance to membership. This gives you flexibility during the transition.
      </p>
     </div>
     <div style="margin-bottom: 32px;">
-     <h3 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
+     <h2 style="color: var(--navy); margin-top: 0; margin-bottom: 16px; font-size: 1.1rem;">
       Q: How often should I increase membership prices?
-     </h3>
+     </h2>
      <p style="margin-bottom: 0; color: var(--text-secondary);">
       A: Typical inflation in dental is 2-3% annually. Increase membership prices once per year, typically at the annual renewal period. Grandfather existing members at their current rate for up to 12 months to reduce churn. Always communicate price increases clearly and in advance.
      </p>
     </div>
     <!-- CTA SECTION -->
     <div style="background: linear-gradient(135deg, rgba(0, 180, 166, 0.1), rgba(51, 195, 184, 0.1)); padding: 32px; border-radius: var(--radius-md); margin-top: 64px; text-align: center;">
-     <h3 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       Find Your Optimal Membership Pricing
-     </h3>
+     </h2>
      <p style="color: var(--text-secondary); font-size: 1.05rem;">
       Model different pricing scenarios and see exactly how much revenue your practice gains with in-house membership plans.
      </p>
@@ -1221,9 +1223,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
      </a>
     </div>
     <div style="background: var(--bg-subtle); padding: 32px; border-radius: var(--radius-md); margin-top: 24px; text-align: center;">
-     <h3 style="margin-top: 0; color: var(--navy);">
+     <h2 style="margin-top: 0; color: var(--navy);">
       See Your PPO Impact First
-     </h3>
+     </h2>
      <p style="color: var(--text-secondary); font-size: 1.05rem;">
       Before launching membership, understand exactly how much you're losing to write-offs so you know the real value of your plan.
      </p>
@@ -1268,9 +1270,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
        <span class="badge badge-teal mb-sm">
         Membership Plans
        </span>
-       <h3>
+       <h2>
         In-House Membership Plans vs. Dental Insurance: Complete Comparison
-       </h3>
+       </h2>
        <p>
         Which model is right for your practice? We break down the pros, cons, profitability, and patient satisfaction across both approaches.
        </p>
@@ -1292,9 +1294,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
        <span class="badge badge-coral mb-sm">
         PPO Strategy
        </span>
-       <h3>
+       <h2>
         6 Steps to Successfully Resign from PPO Plans
-       </h3>
+       </h2>
        <p>
         The definitive step-by-step process covering everything from your first analysis to your final termination letter. Based on 100+ successful practice transitions.
        </p>
@@ -1316,9 +1318,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
        <span class="badge badge-green mb-sm">
         Patient Communication
        </span>
-       <h3>
+       <h2>
         How to Tell Patients You're Leaving Their Insurance Network
-       </h3>
+       </h2>
        <p>
         The conversation you're probably worried about. Scripts, email templates, and timing strategies to minimize patient loss during the transition.
        </p>
@@ -1334,7 +1336,8 @@ Questions? Reply to this email or call us at [Phone]</pre>
    </div>
   </section>
   <!-- ═══ FOOTER ═══ -->
-  <footer class="footer">
+  </main>
+<footer class="footer">
    <div class="container">
     <div class="grid grid-4" style="gap: 48px;">
      <div>
@@ -1349,9 +1352,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
       </p>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Tools
-      </h4>
+      </h2>
       <ul class="footer-links">
        <li>
         <a href="/tools/ppo-calculator.html">
@@ -1376,9 +1379,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
       </ul>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Learn
-      </h4>
+      </h2>
       <ul class="footer-links">
        <li>
         <a href="/blog/">
@@ -1403,9 +1406,9 @@ Questions? Reply to this email or call us at [Phone]</pre>
       </ul>
      </div>
      <div>
-      <h4 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
+      <h2 style="color: white; margin-bottom: 16px; font-size: 0.9rem; font-weight: 600;">
        Company
-      </h4>
+      </h2>
       <ul class="footer-links">
        <li>
         <a href="/pages/about.html">

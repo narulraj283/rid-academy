@@ -39,7 +39,8 @@
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"></noscript>
 
     <title>Navigating Dental Insurance Changes | RID Academy</title>
 
@@ -627,20 +628,20 @@
     <div class="reading-progress" id="readingProgress"></div>
 
     <!-- Navigation Bar -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -675,7 +676,7 @@
     <div class="container">
         <!-- Sticky Table of Contents -->
         <aside class="sidebar-toc">
-            <h3>Table of Contents</h3>
+            <h2>Table of Contents</h2>
             <ul>
                 <li><a href="#current-state">The Current State</a></li>
                 <li><a href="#fee-schedules">Fee Schedule Trends</a></li>
@@ -711,12 +712,12 @@
 
             <h2 id="fee-schedules">Fee Schedule Trends: Are PPO Plans Lowering Reimbursements?</h2>
 
-            <h3>The Data Behind Fee Reductions</h3>
+            <h2>The Data Behind Fee Reductions</h2>
 
             <p>Yes. PPO plans are systematically lowering reimbursements, and the data is unambiguous. Here's what we're seeing in 2026:</p>
 
             <div class="data-box">
-                <h4>Fee Schedule Reduction Patterns</h4>
+                <h2>Fee Schedule Reduction Patterns</h2>
                 <p><strong>Preventive Services (Cleanings, Exams):</strong> Average reductions of 2-5% annually across major carriers, with some regional variants implementing more aggressive cuts (up to 8-10% in competitive markets).</p>
                 <p><strong>Basic Services (Fillings, Extractions):</strong> Reductions of 3-7% annually, with particular pressure on amalgam versus composite differentials.</p>
                 <p><strong>Major Restorative (Crowns, Bridges):</strong> Reductions of 4-9% annually, with significant variation based on geographic region and network competition.</p>
@@ -724,7 +725,7 @@
                 <div class="stat-highlight">Average dentist impact: 4-6% annual revenue compression from fee schedule changes alone</div>
             </div>
 
-            <h3>Why Are Carriers Doing This?</h3>
+            <h2>Why Are Carriers Doing This?</h2>
 
             <p>Understanding the "why" helps you anticipate future changes. Carriers justify fee reductions through several mechanisms:</p>
 
@@ -736,7 +737,7 @@
                 <li><strong>Consolidation Synergies:</strong> When carriers merge, they often implement the lower fee schedule across the combined entity, arguing for "standardization."</li>
             </ol>
 
-            <h3>The Inflation-Adjusted Reality</h3>
+            <h2>The Inflation-Adjusted Reality</h2>
 
             <p>Here's the uncomfortable truth: while your practice costs have risen 15-25% over the past three years (staff wages, supplies, rent, utilities), your PPO reimbursements have declined by 8-18%. This creates a $5,000-$15,000 annual revenue gap for a typical general practice, which compounds annually.</p>
 
@@ -744,12 +745,12 @@
 
             <h2 id="claim-denials">Insurance Claim Denials: Why They're Increasing and What to Do</h2>
 
-            <h3>The Denial Epidemic</h3>
+            <h2>The Denial Epidemic</h2>
 
             <p>Claim denials are rising across the industry, and the trend is troubling. In 2023, the average first-pass denial rate across the industry was approximately 8-12%. By 2025, we're seeing first-pass denial rates of 12-18% at major carriers, with some specialty carriers exceeding 20%.</p>
 
             <div class="data-box">
-                <h4>2025-2026 Claim Denial Trends</h4>
+                <h2>2025-2026 Claim Denial Trends</h2>
                 <ul>
                     <li>Average first-pass denial rate: 12-18% (up from 8-12% in 2023)</li>
                     <li>Average days to appeal resolution: 35-60 days (up from 20-30 days)</li>
@@ -758,7 +759,7 @@
                 </ul>
             </div>
 
-            <h3>Common Denial Categories and Strategies</h3>
+            <h2>Common Denial Categories and Strategies</h2>
 
             <p><strong>Missing or Incorrect Information:</strong> These denials are usually fast to resolve but require immediate action. Ensure your submission software is pre-populating fields correctly. Implement a daily audit of submissions before they reach the carrier system.</p>
 
@@ -771,7 +772,7 @@
             <p><strong>Non-Covered Services or Exclusions:</strong> Carriers are actively using exclusions listed in fine print. Familiarize yourself with specific plan exclusions (often unlisted codes, experimental procedures, esthetic services). When you encounter these, discuss payment options with the patient before treatment.</p>
 
             <div class="action-steps">
-                <h3>Reducing Your Denial Rate: 5-Step Process</h3>
+                <h2>Reducing Your Denial Rate: 5-Step Process</h2>
                 <ol>
                     <li><strong>Audit Your Current Denials:</strong> Pull your denial reports for the past 90 days. Categorize them by reason. This gives you your specific problem areas.</li>
                     <li><strong>Implement Pre-Submission Verification:</strong> Before each claim submits, verify eligibility, benefits, and frequency limitations. This catches 40-50% of denials before they happen.</li>
@@ -783,13 +784,13 @@
 
             <h2 id="ppo-networks">PPO Lease Networks: The Hidden Threat to Your Reimbursement</h2>
 
-            <h3>What Is a Lease Network?</h3>
+            <h2>What Is a Lease Network?</h2>
 
             <p>A PPO lease network (also called a "leased network" or "rented panel") is a network of providers that a carrier doesn't own but "leases" from a third-party aggregator. Rather than building their own network through direct contracting, the carrier purchases access to an established network of dentists who have already agreed to that network's fee schedules and contract terms.</p>
 
             <p>This sounds like a minor administrative difference, but it has profound implications for you as a provider.</p>
 
-            <h3>How Lease Networks Reduce Your Reimbursement</h3>
+            <h2>How Lease Networks Reduce Your Reimbursement</h2>
 
             <p>When your practice joins a lease network—typically through a third-party agreement—you're often binding yourself to fee schedules that are dramatically lower than direct contracts with the same carrier. Here's the mechanism:</p>
 
@@ -804,13 +805,13 @@
                 <strong>Industry Estimate:</strong> Participation in a major lease network typically costs a practice 10-20% of potential revenue compared to direct contracting with the same carrier. For a $500,000 annual practice revenue, this represents $50,000-$100,000 in annual forgone income.
             </div>
 
-            <h3>The Carrier Motivation</h3>
+            <h2>The Carrier Motivation</h2>
 
             <p>Carriers benefit enormously from lease networks. They reduce administrative burden (the aggregator manages credentialing and contracting), reduce provider relations costs, and create fee schedule flexibility without direct negotiation. It's an efficiency play that transfers margin pressure directly to dentists.</p>
 
             <h2 id="identifying-networks">How to Identify If You're in a Lease Network</h2>
 
-            <h3>10 Warning Signs You're in a Lease Network</h3>
+            <h2>10 Warning Signs You're in a Lease Network</h2>
 
             <ol>
                 <li><strong>Your contract is with a company name, not the insurance carrier:</strong> You contracted with "FirstChoice Dental Network" rather than "Aetna Dental"</li>
@@ -825,7 +826,7 @@
                 <li><strong>You don't have a direct relationship with the carrier:</strong> All communication flows through the aggregator; the carrier doesn't contact you directly about contract issues</li>
             </ol>
 
-            <h3>What to Do If You're in a Lease Network</h3>
+            <h2>What to Do If You're in a Lease Network</h2>
 
             <p><strong>Immediate Action:</strong> Request a detailed fee schedule and contract termination terms. Calculate your actual reimbursement versus publicly available direct PPO schedules. You need this data.</p>
 
@@ -837,12 +838,12 @@
 
             <h2 id="negotiating">Negotiating with PPO Plans: Does It Work in Today's Market?</h2>
 
-            <h3>The Honest Answer</h3>
+            <h2>The Honest Answer</h2>
 
             <p>Yes, negotiation works—but the window for negotiation and the leverage available have both narrowed. Here's the current landscape:</p>
 
             <div class="data-box">
-                <h4>2026 Negotiation Success Rates</h4>
+                <h2>2026 Negotiation Success Rates</h2>
                 <ul>
                     <li><strong>Practices generating $500K-$1M annually:</strong> 20-30% success rate in negotiating meaningful fee improvements (2-5% increases)</li>
                     <li><strong>Practices generating $1M-$2M annually:</strong> 40-50% success rate in negotiating fee improvements (3-8% increases)</li>
@@ -851,7 +852,7 @@
                 </ul>
             </div>
 
-            <h3>Negotiation Strategies That Work</h3>
+            <h2>Negotiation Strategies That Work</h2>
 
             <p><strong>Bundle Your Leverage:</strong> Rather than individual practices negotiating, form local study clubs or practice associations. A carrier is far more interested in keeping 10 practices that collectively generate $5M in volume than 10 individual practices generating $500K each.</p>
 
@@ -869,7 +870,7 @@
 
             <p>Network adequacy regulations are evolving, and this creates both challenges and opportunities for dentists. Most states now have some form of network adequacy requirements—rules that insurance carriers must maintain sufficient providers to ensure patient access.</p>
 
-            <h3>How Network Adequacy Affects You</h3>
+            <h2>How Network Adequacy Affects You</h2>
 
             <p><strong>Geographic Adequacy Requirements:</strong> Many states now require carriers to maintain providers within specific geographic radiuses. In rural areas, you may have significant negotiation leverage because you're one of few providers in your region.</p>
 
@@ -877,7 +878,7 @@
 
             <p><strong>Capacity Adequacy Requirements:</strong> States increasingly require carriers to demonstrate that their networks can handle patient volume. A carrier can't maintain 100,000 members with access to only 20 dentists. This creates demand for network expansion, which benefits you as you negotiate.</p>
 
-            <h3>Leveraging Network Adequacy in Negotiations</h3>
+            <h2>Leveraging Network Adequacy in Negotiations</h2>
 
             <p>If you're in a geographically underserved area or specialize in a required service, reference network adequacy regulations explicitly in negotiations. "Our market requires one dentist per 2,000 members. You currently have 12 dentists for 28,000 members. That puts you out of compliance. I'm proposing we address this gap with improved fees that reflect the market reality."</p>
 
@@ -885,13 +886,13 @@
 
             <p>Dental discount plans (non-insurance membership programs) represent a growing alternative to traditional dental insurance. In 2025, approximately 1.2 million Americans used dental discount plans as their primary dental benefit alternative, up 25% from 2023.</p>
 
-            <h3>Why Dentists Should Care</h3>
+            <h2>Why Dentists Should Care</h2>
 
             <p>Discount plans directly affect your patient mix and fee structure. These plans typically offer 10-60% discounts (with the discount varying by procedure) in exchange for membership fees. The critical distinction: they're not insurance. They don't have coverage limits, waiting periods, or claim denial processes.</p>
 
             <p>For patients, discount plans are increasingly attractive compared to insurance. A patient paying $100-150 annually for 30-50% discounts on treatment often comes out ahead compared to insurance premiums, deductibles, and coverage limitations.</p>
 
-            <h3>Impact on Your Practice</h3>
+            <h2>Impact on Your Practice</h2>
 
             <p><strong>Revenue Pressure:</strong> If you participate in discount plans, you're potentially reducing fees on a significant patient population. A 40% discount on a $300 crown reduces your revenue from $300 to $180. Scale this across your patient base, and the impact is substantial.</p>
 
@@ -899,7 +900,7 @@
 
             <p><strong>Negotiation with Insurance:</strong> The existence of viable discount plan alternatives actually strengthens your negotiating position with carriers. You can suggest, "If PPO reimbursement continues declining, we may shift focus to discount plans and reduced-fee capitation models. That's not beneficial for member access to our high-quality practice."</p>
 
-            <h3>Strategic Response</h3>
+            <h2>Strategic Response</h2>
 
             <p>Most practices should evaluate discount plans as a secondary benefit tool, not a primary revenue model. Participation in 1-2 solid discount plans can expand your patient base without requiring deep fees across your entire patient population. The key is controlling which treatments fall under discount plan pricing and which maintain full fees.</p>
 
@@ -907,7 +908,7 @@
 
             <p>The dental insurance landscape has consolidated significantly. In 2015, there were 8 major dental insurance companies. By 2026, there are effectively 4-5 dominant players (Aetna, Delta, Cigna, United Healthcare, and Humana/regional carriers). This consolidation has profound implications.</p>
 
-            <h3>Impact of Consolidation</h3>
+            <h2>Impact of Consolidation</h2>
 
             <p><strong>Reduced Negotiation Leverage:</strong> When there are 8 competitors, each carrier is more flexible in negotiations. With 4-5 dominant players controlling 75%+ of the market, their willingness to negotiate decreases. You're negotiating from a position of weakness.</p>
 
@@ -917,7 +918,7 @@
 
             <p><strong>Administrative Standardization:</strong> Consolidated entities often implement single claims systems, eligibility verification systems, and authorization processes. This sometimes improves efficiency, but often creates transition problems and reduced personal relationships with the carrier.</p>
 
-            <h3>Strategic Response to Consolidation</h3>
+            <h2>Strategic Response to Consolidation</h2>
 
             <p><strong>Monitor Merger and Acquisition Activity:</strong> When two carriers merge, contract renegotiation is typically triggered 6-12 months after close. Prepare in advance. Document your volume, quality metrics, and negotiating points. When the merger closes, have your negotiation package ready for presentation.</p>
 
@@ -929,7 +930,7 @@
 
             <p>State legislatures are increasingly active in regulating dental insurance. Several state-level trends are worth tracking because they affect your contracts and negotiating position:</p>
 
-            <h3>Key Legislative Trends (2024-2026)</h3>
+            <h2>Key Legislative Trends (2024-2026)</h2>
 
             <p><strong>Provider Balance Billing Restrictions:</strong> Some states prohibit dentists from balance-billing patients for covered services, limiting your ability to collect differences between your fee and insurance allowances. Know your state's specific rules.</p>
 
@@ -941,13 +942,13 @@
 
             <p><strong>Surprise Billing Protections:</strong> Some states now include dental services in surprise billing protections, meaning patients can't be balance-billed for emergency or unexpected dental care. This affects your emergency protocols and patient communication.</p>
 
-            <h3>How to Leverage Legislation</h3>
+            <h2>How to Leverage Legislation</h2>
 
             <p>When you negotiate with carriers, reference applicable state legislation. "State law requires payment of clean claims within 45 days. We've documented that 35% of our claims take 60+ days. We need a specific plan for improvement as part of this contract renewal."</p>
 
             <h2 id="staying-informed">How to Stay Informed About Insurance Changes</h2>
 
-            <h3>Critical Information Sources</h3>
+            <h2>Critical Information Sources</h2>
 
             <p><strong>Carrier Communications:</strong> Most carriers send contract amendments and fee schedule changes via email. Create a specific folder for these and review them monthly. Many dentists miss fee reductions because they don't actively monitor these communications.</p>
 
@@ -963,12 +964,12 @@
 
             <h2 id="insurance-resistant">Building Your Practice to Be Insurance-Change-Resistant</h2>
 
-            <h3>The Resilience Framework</h3>
+            <h2>The Resilience Framework</h2>
 
             <p>The most successful dental practices in the current environment don't focus on fighting insurance changes—they focus on building resilience to absorb change. Here's how:</p>
 
             <div class="action-steps">
-                <h3>5 Pillars of Insurance Resilience</h3>
+                <h2>5 Pillars of Insurance Resilience</h2>
                 <ol>
                     <li><strong>Diversify Your Payer Mix:</strong> Rather than 60% insurance, 20% fee-for-service, 20% other, target 40% insurance, 40% fee-for-service, 20% other. When insurance reimbursement drops, other revenue sources buffer the impact.</li>
                     <li><strong>Develop a Robust Fee-For-Service Program:</strong> Create clear messaging around what patients pay when they pay directly. Offer transparency. Many patients prefer direct payment if they understand the value and have payment options.</li>
@@ -982,7 +983,7 @@
 
             <p>Your practice should conduct a formal insurance review annually, ideally three months before contract renewals. Here's the process:</p>
 
-            <h3>Annual Insurance Audit Checklist</h3>
+            <h2>Annual Insurance Audit Checklist</h2>
 
             <ol>
                 <li><strong>Revenue Analysis:</strong> For each carrier, calculate total annual revenue, average fee per service, and year-over-year change. Identify carriers with declining reimbursement.</li>
@@ -1000,7 +1001,7 @@
 
             <p>Many practices benefit from engaging dental insurance consultants, particularly around contract renegotiation. Here's what to look for:</p>
 
-            <h3>Consultant Value</h3>
+            <h2>Consultant Value</h2>
 
             <p><strong>Industry Knowledge:</strong> Good consultants understand carrier decision-making, fee schedule trends, and negotiating leverage. They can save you thousands in negotiation value.</p>
 
@@ -1008,7 +1009,7 @@
 
             <p><strong>Negotiation Representation:</strong> Some consultants negotiate on your behalf. They may achieve better results than you would independently due to their experience and carrier relationships.</p>
 
-            <h3>What to Ask Consultants</h3>
+            <h2>What to Ask Consultants</h2>
 
             <ul>
                 <li>What is your experience with carriers in our state and region?</li>
@@ -1025,7 +1026,7 @@
 
             <p>The insurance landscape will continue evolving unpredictably. The practices that thrive are those that prepare for multiple scenarios, not those that optimize for today's situation.</p>
 
-            <h3>Scenario Planning</h3>
+            <h2>Scenario Planning</h2>
 
             <p><strong>Scenario A: Gradual Fee Decline Continues (60% probability):</strong> Assume 3-5% annual fee reductions for next 3 years. What does your practice look like with 10-15% cumulative revenue compression? Where do you cut costs? What revenue alternatives do you develop?</p>
 
@@ -1037,7 +1038,7 @@
 
             <p>Work through these scenarios with your team. Document your responses. When reality matches a scenario, you're prepared to respond rapidly.</p>
 
-            <h3>Final Recommendations</h3>
+            <h2>Final Recommendations</h2>
 
             <ol>
                 <li><strong>Don't Ignore Insurance Trends:</strong> Dental insurance is often boring, but ignoring it is expensive. Allocate meaningful time to insurance management and monitoring.</li>
@@ -1049,7 +1050,7 @@
 
             <!-- Lead Capture Form -->
             <section class="lead-form-section" id="lead-form">
-                <h3>Download Your Complete Insurance Trends Monitor PDF</h3>
+                <h2>Download Your Complete Insurance Trends Monitor PDF</h2>
                 <p>Ready to take control of your insurance relationships? Download our comprehensive Insurance Trends Monitor—a 40-page guide with templates, benchmarks, and action checklists you can implement immediately.</p>
 
                 <form class="insurance-lead-form" onsubmit="return handleFormSubmit(event)">
@@ -1091,10 +1092,10 @@
 
             <!-- Related Articles -->
             <section class="related-articles">
-                <h3>Related Articles</h3>
+                <h2>Related Articles</h2>
                 <div class="articles-grid">
                     <article class="article-card">
-                        <h4>PPO vs. Fee-For-Service: Building Your Ideal Practice Model</h4>
+                        <h2>PPO vs. Fee-For-Service: Building Your Ideal Practice Model</h2>
                         <p>Explore the financial implications of different practice models and how to structure your payer mix for maximum profitability and control.</p>
                         <a href="https://rid.academy/ppo-vs-fee-for-service">Read Article →</a>
                     
@@ -1110,12 +1111,12 @@
 
 </article>
                     <article class="article-card">
-                        <h4>Implant Economics: Protecting High-Value Revenue Streams</h4>
+                        <h2>Implant Economics: Protecting High-Value Revenue Streams</h2>
                         <p>Dental implant treatment is often more resilient to insurance changes. Learn how to position implants as your practice's financial foundation.</p>
                         <a href="https://rid.academy/implant-economics">Read Article →</a>
                     </article>
                     <article class="article-card">
-                        <h4>Building Membership Plans That Patients Actually Join</h4>
+                        <h2>Building Membership Plans That Patients Actually Join</h2>
                         <p>Create predictable revenue through patient membership programs. Templates, pricing strategies, and enrollment tactics included.</p>
                         <a href="https://rid.academy/membership-plans">Read Article →</a>
                     </article>
@@ -1128,11 +1129,11 @@
     <footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About RID Academy</h4>
+                <h2>About RID Academy</h2>
                 <p>RID Academy is the premier education platform for dental practice leaders committed to mastering the business of dentistry. We provide data-driven insights, practical strategies, and continuing education for dental professionals.</p>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h2>Resources</h2>
                 <ul>
                     <li><a href="https://rid.academy">Home</a></li>
                     <li><a href="https://rid.academy/courses">Courses</a></li>
@@ -1142,7 +1143,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Categories</h4>
+                <h2>Categories</h2>
                 <ul>
                     <li><a href="https://rid.academy/category/insurance">Insurance Knowledge</a></li>
                     <li><a href="https://rid.academy/category/practice-management">Practice Management</a></li>
@@ -1152,7 +1153,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Connect</h4>
+                <h2>Connect</h2>
                 <ul>
                     <li><a href="https://linkedin.com/company/rid-academy">LinkedIn</a></li>
                     <li><a href="https://twitter.com/ridacademy">Twitter</a></li>

@@ -28,7 +28,8 @@
         gtag('config', 'G-YB2QDRNZ1D');
     </script>
 
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" onload="this.onload=null;this.rel=\'stylesheet\'">
+<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"></noscript>
 
     <title>How to Build a Referral System in Your Dental Practice - RID...</title>
 
@@ -635,20 +636,20 @@
     <div class="reading-progress" id="readingProgress"></div>
 
     <!-- Navigation -->
-    <nav style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
+    <nav aria-label="Main navigation" style="background:#0F2B46;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;position:sticky;top:0;z-index:100">
     <a href="/" style="color:white;font-weight:800;font-size:1.1rem;text-decoration:none">RID<span style="color:#00B4A6">.academy</span></a>
     <button onclick="document.getElementById('mobileNav').style.display=document.getElementById('mobileNav').style.display==='flex'?'none':'flex';this.setAttribute('aria-expanded',document.getElementById('mobileNav').style.display==='flex')" aria-label="Toggle menu" aria-expanded="false" style="display:none;background:none;border:none;cursor:pointer;padding:8px" id="navToggle">
       <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2"><path d="M3 12h18M3 6h18M3 18h18"/></svg>
     </button>
     <div id="mobileNav" style="display:flex;gap:1.5rem;align-items:center;flex-wrap:wrap">
-      <a href="/tools/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Tools</a>
-      <a href="/blog/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Learn</a>
-      <a href="/podcast/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Podcast</a>
-      <a href="/resources/" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Resources</a>
-      <a href="/pages/summit.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Summit</a>
-      <a href="/pages/community.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Community</a>
-      <a href="/pages/glossary.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">Glossary</a>
-      <a href="/pages/about.html" style="color:rgba(255,255,255,0.85);text-decoration:none;font-size:0.9rem">About</a>
+      <a href="/tools/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Tools</a>
+      <a href="/blog/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Learn</a>
+      <a href="/podcast/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Podcast</a>
+      <a href="/resources/" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Resources</a>
+      <a href="/pages/summit.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Summit</a>
+      <a href="/pages/community.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Community</a>
+      <a href="/pages/glossary.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">Glossary</a>
+      <a href="/pages/about.html" style="color:#ffffff;text-decoration:none;font-size:0.9rem">About</a>
       <a href="/#join" style="background:#00B4A6;color:white;padding:0.4rem 1rem;border-radius:6px;text-decoration:none;font-size:0.85rem;font-weight:600">Join Free</a>
     </div>
     <style>
@@ -659,6 +660,7 @@
       }
     </style>
   </nav>
+<main>
 
     <!-- Hero Section -->
     <section class="hero">
@@ -728,7 +730,7 @@
             <p>A referral system has four interdependent components. Remove any one, and the system breaks. Master all four, and you've created an engine for growth.</p>
 
             <div class="framework-box">
-                <h4>The 4-Component Referral System Framework</h4>
+                <h3>The 4-Component Referral System Framework</h3>
                 <ol>
                     <li><strong>Generation:</strong> Creating referral moments and asking for referrals systematically</li>
                     <li><strong>Tracking:</strong> Capturing and organizing referral data so you understand what works</li>
@@ -770,19 +772,19 @@
 
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h4>Tier 1: Champions (Top 10%)</h4>
+                    <h3>Tier 1: Champions (Top 10%)</h3>
                     <p>Highly satisfied patients who proactively refer without being asked. They account for 40-50% of all patient referrals despite being a small percentage of your patient base.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Tier 2: Active Participants (Next 20%)</h4>
+                    <h3>Tier 2: Active Participants (Next 20%)</h3>
                     <p>Satisfied patients who refer when asked directly. They respond well to clear calls-to-action and appreciate gentle reminders about your referral process.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Tier 3: Willing Contributors (Next 30%)</h4>
+                    <h3>Tier 3: Willing Contributors (Next 30%)</h3>
                     <p>Satisfied patients who will refer if making a referral is extremely easy and top-of-mind. They need systems, reminders, and multiple touchpoints.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Tier 4: The Majority (Remaining 40%)</h4>
+                    <h3>Tier 4: The Majority (Remaining 40%)</h3>
                     <p>Satisfied patients who may refer occasionally but aren't engaged in a systematic referral process. Most practices focus almost exclusively on this tier.</p>
                 </div>
             </div>
@@ -983,7 +985,7 @@
             <p>If you implement a formal incentive program, keep it simple:</p>
 
             <div class="framework-box">
-                <h4>Simple Referral Incentive Structure</h4>
+                <h3>Simple Referral Incentive Structure</h3>
                 <p><strong>For patient referrer:</strong> $25 service credit after referred patient completes first treatment (not just first visit)</p>
                 <p><strong>For referred patient:</strong> $25 service credit when they book first appointment</p>
                 <p><strong>For physician/specialist referrer:</strong> Handwritten thank-you note from dentist + periodic educational updates + direct communication line</p>
@@ -997,27 +999,27 @@
 
             <div class="metric-grid">
                 <div class="metric-card">
-                    <h4>Referral Rate</h4>
+                    <h3>Referral Rate</h3>
                     <p>The percentage of new patients who came from referrals (either patient or professional). Target: 40-60% of new patients.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Conversion Rate by Source</h4>
+                    <h3>Conversion Rate by Source</h3>
                     <p>Of all referrals received, how many convert to patients? Professional referrals typically convert at 70-90%, patient referrals at 30-50%.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Lifetime Value: Referred vs. Marketing</h4>
+                    <h3>Lifetime Value: Referred vs. Marketing</h3>
                     <p>Compare the average lifetime value of a referred patient to a marketing-acquired patient. Referred patients typically have 25-40% higher lifetime value.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Referral Source Distribution</h4>
+                    <h3>Referral Source Distribution</h3>
                     <p>Where are your referrals coming from? Track breakdowns: % from patient referrals, specialists, physicians, community, etc.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Referral Volume Trend</h4>
+                    <h3>Referral Volume Trend</h3>
                     <p>Are referrals increasing month-over-month? A 10-15% monthly increase indicates an improving system.</p>
                 </div>
                 <div class="metric-card">
-                    <h4>Top Referral Sources (People)</h4>
+                    <h3>Top Referral Sources (People)</h3>
                     <p>Which patients, specialists, and physicians are your top referrers? These are your champions.</p>
                 </div>
             </div>
@@ -1232,14 +1234,14 @@
                 <div class="articles-grid">
                     <div class="article-card">
                         <div class="article-card-content">
-                            <h4>The Patient Experience Framework: Creating Loyalty That Drives Growth</h4>
+                            <h3>The Patient Experience Framework: Creating Loyalty That Drives Growth</h3>
                             <p>Build a systematic patient experience that increases retention, referrals, and lifetime value. Learn the 5-point framework used by top-performing practices.</p>
                             <a href="https://rid.academy/patient-experience-framework" class="article-card-link">Read Article →</a>
                         </div>
                     </div>
                     <div class="article-card">
                         <div class="article-card-content">
-                            <h4>Digital Marketing for Dental Practices: SEO, Paid Ads, and Social Strategy</h4>
+                            <h3>Digital Marketing for Dental Practices: SEO, Paid Ads, and Social Strategy</h3>
                             <p>Comprehensive guide to modern digital marketing channels for dental practices. Learn which tactics deliver ROI and how to integrate them with your referral system.</p>
                             <a href="https://rid.academy/digital-marketing-dental" class="article-card-link">Read Article →</a>
                         </div>
@@ -1292,14 +1294,15 @@
     </div>
 
     <!-- Footer -->
-    <footer>
+    </main>
+<footer>
         <div class="footer-content">
             <div class="footer-section">
-                <h4>About RID Academy</h4>
+                <h3>About RID Academy</h3>
                 <p>RID Academy is the leading dental education platform providing evidence-based content and frameworks to help dentists build profitable, sustainable practices.</p>
             </div>
             <div class="footer-section">
-                <h4>Popular Articles</h4>
+                <h3>Popular Articles</h3>
                 <ul>
                     <li><a href="https://rid.academy">Home</a></li>
                     <li><a href="https://rid.academy/articles">All Articles</a></li>
@@ -1308,7 +1311,7 @@
                 </ul>
             </div>
             <div class="footer-section">
-                <h4>Resources</h4>
+                <h3>Resources</h3>
                 <ul>
                     <li><a href="https://rid.academy/templates">Templates & Tools</a></li>
                     <li><a href="https://rid.academy/newsletter">Newsletter</a></li>
