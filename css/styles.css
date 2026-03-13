@@ -279,10 +279,11 @@ p.large { font-size: 1.125rem; line-height: 1.8; }
 
 .btn-primary {
   background: var(--teal);
-  color: white;
+  color: var(--navy);
   border-color: var(--teal);
+  font-weight: 700;
 }
-.btn-primary:hover { background: var(--teal-dark); border-color: var(--teal-dark); color: white; }
+.btn-primary:hover { background: var(--teal-dark); border-color: var(--teal-dark); color: var(--navy); }
 
 .btn-secondary {
   background: transparent;
